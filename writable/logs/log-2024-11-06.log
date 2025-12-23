@@ -1,0 +1,292 @@
+INFO - 2024-11-06 00:25:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 01:09:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 01:09:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 02:01:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 02:02:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 03:22:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 03:57:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 04:06:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-11-06 04:06:43 --> mysqli_sql_exception: Unknown column 'sa' in 'where clause' in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query(' SELECT *  FROM...', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM...')
+#3 /var/www/html/app/Controllers/HomepageController.php(135): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('67&sa=U&ved=2ah...')
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-11-06 04:06:43 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'sa' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 APPPATH/Controllers/HomepageController.php(135): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = 67&sa=U&ved=2ahUKEwiVpf7z98SJAxVDkokEHRsZDAAQFnoECB8QAg&usg=AOvVaw0XvkHFoPJL4EmMZXaHaBUz')
+ 2 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('67&sa=U&ved=2ahUKEwiVpf7z98SJAxVDkokEHRsZDAAQFnoECB8QAg&usg=AOvVaw0XvkHFoPJL4EmMZXaHaBUz')
+ 3 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-06 04:06:43 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'sa' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 311.
+ 1 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM course_batch
+                                WHERE course_id = 67&sa=U&ved=2ahUKEwiVpf7z98SJAxVDkokEHRsZDAAQFnoECB8QAg&usg=AOvVaw0XvkHFoPJL4EmMZXaHaBUz')
+ 2 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM course_batch
+                                WHERE course_id = 67&sa=U&ved=2ahUKEwiVpf7z98SJAxVDkokEHRsZDAAQFnoECB8QAg&usg=AOvVaw0XvkHFoPJL4EmMZXaHaBUz')
+ 3 APPPATH/Controllers/HomepageController.php(135): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = 67&sa=U&ved=2ahUKEwiVpf7z98SJAxVDkokEHRsZDAAQFnoECB8QAg&usg=AOvVaw0XvkHFoPJL4EmMZXaHaBUz')
+ 4 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('67&sa=U&ved=2ahUKEwiVpf7z98SJAxVDkokEHRsZDAAQFnoECB8QAg&usg=AOvVaw0XvkHFoPJL4EmMZXaHaBUz')
+ 5 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-06 04:06:43 --> [Caused by] mysqli_sql_exception: Unknown column 'sa' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 306.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(306): mysqli->query(' SELECT *  FROM course_batch
+                                WHERE course_id = 67&sa=U&ved=2ahUKEwiVpf7z98SJAxVDkokEHRsZDAAQFnoECB8QAg&usg=AOvVaw0XvkHFoPJL4EmMZXaHaBUz', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM course_batch
+                                WHERE course_id = 67&sa=U&ved=2ahUKEwiVpf7z98SJAxVDkokEHRsZDAAQFnoECB8QAg&usg=AOvVaw0XvkHFoPJL4EmMZXaHaBUz')
+ 3 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM course_batch
+                                WHERE course_id = 67&sa=U&ved=2ahUKEwiVpf7z98SJAxVDkokEHRsZDAAQFnoECB8QAg&usg=AOvVaw0XvkHFoPJL4EmMZXaHaBUz')
+ 4 APPPATH/Controllers/HomepageController.php(135): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = 67&sa=U&ved=2ahUKEwiVpf7z98SJAxVDkokEHRsZDAAQFnoECB8QAg&usg=AOvVaw0XvkHFoPJL4EmMZXaHaBUz')
+ 5 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('67&sa=U&ved=2ahUKEwiVpf7z98SJAxVDkokEHRsZDAAQFnoECB8QAg&usg=AOvVaw0XvkHFoPJL4EmMZXaHaBUz')
+ 6 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-06 04:06:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 04:06:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 04:30:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 04:33:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 04:33:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 06:32:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 07:35:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 09:10:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 09:43:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 11:12:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 11:15:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 11:55:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 11:55:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 11:55:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-11-06 11:55:26 --> mysqli_sql_exception: Unknown column 'homepage_assets' in 'where clause' in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query(' SELECT *  FROM...', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM...')
+#3 /var/www/html/app/Controllers/HomepageController.php(135): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-ico...')
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-11-06 11:55:26 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 APPPATH/Controllers/HomepageController.php(135): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 2 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-icon.png')
+ 3 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-06 11:55:26 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 311.
+ 1 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 2 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 3 APPPATH/Controllers/HomepageController.php(135): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 4 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-icon.png')
+ 5 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-06 11:55:26 --> [Caused by] mysqli_sql_exception: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 306.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(306): mysqli->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 3 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 4 APPPATH/Controllers/HomepageController.php(135): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 5 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-icon.png')
+ 6 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-06 11:55:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-11-06 11:55:26 --> mysqli_sql_exception: Unknown column 'homepage_assets' in 'where clause' in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query(' SELECT *  FROM...', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM...')
+#3 /var/www/html/app/Controllers/HomepageController.php(135): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-11-06 11:55:26 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 APPPATH/Controllers/HomepageController.php(135): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 2 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-06 11:55:26 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 311.
+ 1 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 2 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 3 APPPATH/Controllers/HomepageController.php(135): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 4 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+ 5 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-06 11:55:26 --> [Caused by] mysqli_sql_exception: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 306.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(306): mysqli->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 3 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 4 APPPATH/Controllers/HomepageController.php(135): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 5 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+ 6 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-06 11:55:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-11-06 11:55:27 --> mysqli_sql_exception: Unknown column 'homepage_assets' in 'where clause' in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query(' SELECT *  FROM...', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM...')
+#3 /var/www/html/app/Controllers/HomepageController.php(135): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-11-06 11:55:27 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 APPPATH/Controllers/HomepageController.php(135): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 2 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-06 11:55:27 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 311.
+ 1 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 2 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 3 APPPATH/Controllers/HomepageController.php(135): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 4 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+ 5 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-06 11:55:27 --> [Caused by] mysqli_sql_exception: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 306.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(306): mysqli->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 3 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 4 APPPATH/Controllers/HomepageController.php(135): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 5 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+ 6 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-06 11:55:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-11-06 11:55:32 --> mysqli_sql_exception: Unknown column 'homepage_assets' in 'where clause' in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query(' SELECT *  FROM...', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM...')
+#3 /var/www/html/app/Controllers/HomepageController.php(135): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-ico...')
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-11-06 11:55:32 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 APPPATH/Controllers/HomepageController.php(135): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 2 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-icon.png')
+ 3 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-06 11:55:32 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 311.
+ 1 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 2 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 3 APPPATH/Controllers/HomepageController.php(135): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 4 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-icon.png')
+ 5 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-06 11:55:32 --> [Caused by] mysqli_sql_exception: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 306.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(306): mysqli->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 3 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 4 APPPATH/Controllers/HomepageController.php(135): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 5 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-icon.png')
+ 6 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-06 12:01:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 12:01:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 12:01:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 12:02:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 12:11:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 12:57:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 12:58:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 16:06:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 16:06:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 16:06:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 16:06:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 16:06:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 16:06:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 16:06:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 16:06:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 16:06:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 16:06:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 16:58:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 18:44:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 18:54:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 19:37:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 19:37:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 19:37:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 20:08:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-06 20:08:29 --> ErrorException: Undefined property: stdClass::$course_start_date
+in APPPATH/Views/include/CourseShowAcademicView.php on line 76.
+ 1 APPPATH/Views/include/CourseShowAcademicView.php(76): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$course_start_date', '/var/www/html/app/Views/include/CourseShowAcademicView.php', 76, [...])
+ 2 SYSTEMPATH/View/View.php(228): include('/var/www/html/app/Views/include/CourseShowAcademicView.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render('include/CourseShowAcademicView', [], true)
+ 5 APPPATH/Controllers/CourseCategoryDetailsController.php(96): view('include/CourseShowAcademicView', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\CourseCategoryDetailsController->CourseShowAcademic('35')
+ 7 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseCategoryDetailsController))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-06 21:20:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 21:42:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 21:42:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 22:44:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 22:50:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 22:50:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-06 23:55:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

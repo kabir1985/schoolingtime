@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+<meta charset="UTF-8">
+
+    <style>
+   @font-face {
+        font-family: 'SolaimanLipi';
+        src: url('<?= base_url("/homepage_assets/SolaimanLipi.ttf") ?>') format('truetype');
+ /*
+src: url('/var/www/html/public/Nikosh.ttf') format('truetype'); */
+/*src: url(data:font/truetype;charset=utf-8;base64,YOUR_BASE64_ENCODED_FONT_DATA_HERE) format('truetype'); */
+ }
+
+        body {
+            font-family: 'SolaimanLipi',Nikosh, sans-serif;
+        }
+
+        .question-container {
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .question-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .option {
+            margin-bottom: 5px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #ffffff;
+            /* Ensures the option background is white */
+        }
+
+        .correct-answer {
+            background-color: #d4edda;
+        }
+
+        .incorrect-answer {
+            background-color: #FF5733;
+        }
+
+        .option input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .summary {
+            font-weight: bold;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f0f0f0;
+        }
+
+        .summary span {
+            display: inline-block;
+            margin-right: 15px;
+        }
+
+        .answer-label {
+            font-weight: bold;
+            margin-top: 6px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Questions & Answer </h2>
+<p>বাংলা টেক্সট প্রদর্শন</p>
+    <h3>
+        <?php $session = \Config\Services::session();
+        echo $session->get('student_name')." (". $session->get('student_id').")";
+        ?>
+    </h3>
+
+    <?php
+    $correctCount = 0;
+    $incorrectCount = 0;
+    $totalScore = 0;
+    $totalQuestions = count($questions);
+    $questionNumber = 1;
+    ?>
+
+    <?php if (!empty($questions)): ?>
+        <?php foreach ($questions as $question): ?>
+            <div class="question-container">
+                <div class="question-title">
+                    <?= "Question " . $questionNumber . ": " . esc($question['question_title']) ?>
+                </div>
+                <?php
+                $options = json_decode($question['options'], true);
+                $yourAnswer = "Not Answered";
+                $correctAnswer = "Not Available";
+
+                if (is_array($options)) {
+                    foreach ($options as $option) {
+                        $isCorrect = ($option['correct_answer'] == 1);
+                        $userSelected = ($option['your_answer_option'] == $option['question_option']);
+
+                        // Track the correct answer and the user's selected answer
+                        if ($userSelected) {
+                            $yourAnswer = $option['question_option'];
+                        }
+                        if ($isCorrect) {
+                            $correctAnswer = $option['question_option'];
+                        }
+
+                        $class = '';
+                        if ($isCorrect) {
+                            $class = 'correct-answer';
+                        } elseif ($userSelected) {
+                            $class = 'incorrect-answer';
+                        }
+
+                        // Count correct and incorrect answers
+                        if ($isCorrect && $userSelected) {
+                            $correctCount++;
+                        } elseif (!$isCorrect && $userSelected) {
+                            $incorrectCount++;
+                        }
+                ?>
+                        <div class="option <?= $class ?>">
+                            <input type="radio" disabled <?= $userSelected ? 'checked' : '' ?>>
+                            <?= esc($option['question_option']) ?>
+                        </div>
+                <?php }
+                } else {
+                    echo '<p>No options available.</p>';
+                }
+                ?>
+                <p class="answer-label">Your Answer: <?= esc($yourAnswer) ?></p>
+                <p class="answer-label">Correct Answer: <?= esc($correctAnswer) ?></p>
+            </div>
+            <?php $questionNumber++; ?>
+        <?php endforeach; ?>
+
+        <?php
+        $totalScore = $correctCount; // Assuming 1 point per correct answer
+        $percentage = $totalQuestions > 0 ? round(($correctCount / $totalQuestions) * 100, 2) : 0;
+        ?>
+
+        <!-- Display summary of correct, incorrect answers, total score, and percentage -->
+        <div class="summary">
+            <h2>Result Summary</h2>
+            <span>Correct Answers: <?= $correctCount ?></span><br>
+            <span>Incorrect Answers: <?= $incorrectCount ?></span><br>
+            <span>Total Score: <?= $totalScore ?></span><br>
+            <span>Percentage: <?= $percentage ?>%</span>
+        </div>
+
+    <?php else: ?>
+        <p>No questions found.</p>
+    <?php endif; ?>
+
+</body>
+
+</html>

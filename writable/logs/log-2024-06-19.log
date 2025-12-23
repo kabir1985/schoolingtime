@@ -1,0 +1,663 @@
+INFO - 2024-06-19 00:17:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-19 00:17:49 --> Error connecting to the database: mysqli_sql_exception: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('104.251.219.20', 'root', 'root', 'school_tutor_db', 3306, '', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-06-19 00:17:49 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\' AND tc.course_type_name = \'Online_Live_Coaching\'')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-19 01:05:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-19 01:05:42 --> Error connecting to the database: mysqli_sql_exception: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('104.251.219.20', 'root', 'root', 'school_tutor_db', 3306, '', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-06-19 01:05:42 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\' AND tc.course_type_name = \'Online_Live_Coaching\'')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-19 01:13:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-19 01:13:52 --> Error connecting to the database: mysqli_sql_exception: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('104.251.219.20', 'root', 'root', 'school_tutor_db', 3306, '', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-06-19 01:13:52 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\' AND tc.course_type_name = \'Online_Live_Coaching\'')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-19 01:20:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-19 01:20:01 --> Error connecting to the database: mysqli_sql_exception: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('104.251.219.20', 'root', 'root', 'school_tutor_db', 3306, '', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-06-19 01:20:01 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\' AND tc.course_type_name = \'Online_Live_Coaching\'')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-19 01:29:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-19 01:29:03 --> Error connecting to the database: mysqli_sql_exception: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('104.251.219.20', 'root', 'root', 'school_tutor_db', 3306, '', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-06-19 01:29:03 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\' AND tc.course_type_name = \'Online_Live_Coaching\'')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-19 01:30:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-19 01:30:53 --> Error connecting to the database: mysqli_sql_exception: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('104.251.219.20', 'root', 'root', 'school_tutor_db', 3306, '', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-06-19 01:30:53 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\' AND tc.course_type_name = \'Online_Live_Coaching\'')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-19 01:57:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-19 01:57:59 --> Error connecting to the database: mysqli_sql_exception: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('104.251.219.20', 'root', 'root', 'school_tutor_db', 3306, '', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-06-19 01:57:59 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\' AND tc.course_type_name = \'Online_Live_Coaching\'')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-19 02:37:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-19 02:37:54 --> Error connecting to the database: mysqli_sql_exception: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('104.251.219.20', 'root', 'root', 'school_tutor_db', 3306, '', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-06-19 02:37:54 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\' AND tc.course_type_name = \'Online_Live_Coaching\'')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-19 03:25:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-19 03:25:36 --> Error connecting to the database: mysqli_sql_exception: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('104.251.219.20', 'root', 'root', 'school_tutor_db', 3306, '', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-06-19 03:25:36 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\' AND tc.course_type_name = \'Online_Live_Coaching\'')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-19 03:45:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-19 03:45:45 --> Error connecting to the database: mysqli_sql_exception: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('104.251.219.20', 'root', 'root', 'school_tutor_db', 3306, '', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-06-19 03:45:45 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\' AND tc.course_type_name = \'Online_Live_Coaching\'')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-19 03:58:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-19 03:58:42 --> Error connecting to the database: mysqli_sql_exception: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('104.251.219.20', 'root', 'root', 'school_tutor_db', 3306, '', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-06-19 03:58:42 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\' AND tc.course_type_name = \'Online_Live_Coaching\'')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-19 04:03:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-19 04:03:26 --> Error connecting to the database: mysqli_sql_exception: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('104.251.219.20', 'root', 'root', 'school_tutor_db', 3306, '', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-06-19 04:03:26 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\' AND tc.course_type_name = \'Online_Live_Coaching\'')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-19 04:31:02 --> Class 'Locale' not found
+in SYSTEMPATH/CodeIgniter.php on line 218.
+ 1 FCPATH/index.php(68): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-06-19 04:31:02 --> Uncaught Error: Class 'Locale' not found in /var/www/html/vendor/codeigniter4/framework/system/Helpers/number_helper.php:136
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Helpers/number_helper.php(55): format_number(22, 2, NULL, Array)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Debug/BaseExceptionHandler.php(145): number_to_size(22, 2)
+#2 /var/www/html/app/Views/errors/html/error_exception.php(360): CodeIgniter\Debug\BaseExceptionHandler::describeMemory(23068672)
+#3 /var/www/html/vendor/codeigniter4/framework/system/Debug/BaseExceptionHandler.php(241): include('/var/www/html/a...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/Debug/BaseExceptionHandler.php(244): CodeIgniter\Debug\BaseExceptionHandler->CodeIgniter\Debug\{closure}()
+#5 /var/www/html/vendor/codeigniter4/framework/system/Debug/ExceptionHandler.php(112): CodeIgniter\Debug\BaseExceptionHandler->render(Object(Error), 500, '/var/www/html/a...')
+#6 /var/www/html/vendor/codeigniter4/framework/system/Debug/Except
+【Previous Exception】
+Error
+Class 'Locale' not found
+#0 /var/www/html/public/index.php(68): CodeIgniter\CodeIgniter->initialize()
+#1 {main}
+in SYSTEMPATH/Helpers/number_helper.php on line 136.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-06-19 04:31:40 --> Class 'Locale' not found
+in SYSTEMPATH/CodeIgniter.php on line 218.
+ 1 FCPATH/index.php(68): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-06-19 04:31:40 --> Uncaught Error: Class 'Locale' not found in /var/www/html/vendor/codeigniter4/framework/system/Helpers/number_helper.php:136
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Helpers/number_helper.php(55): format_number(22, 2, NULL, Array)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Debug/BaseExceptionHandler.php(145): number_to_size(22, 2)
+#2 /var/www/html/app/Views/errors/html/error_exception.php(360): CodeIgniter\Debug\BaseExceptionHandler::describeMemory(23068672)
+#3 /var/www/html/vendor/codeigniter4/framework/system/Debug/BaseExceptionHandler.php(241): include('/var/www/html/a...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/Debug/BaseExceptionHandler.php(244): CodeIgniter\Debug\BaseExceptionHandler->CodeIgniter\Debug\{closure}()
+#5 /var/www/html/vendor/codeigniter4/framework/system/Debug/ExceptionHandler.php(112): CodeIgniter\Debug\BaseExceptionHandler->render(Object(Error), 500, '/var/www/html/a...')
+#6 /var/www/html/vendor/codeigniter4/framework/system/Debug/Except
+【Previous Exception】
+Error
+Class 'Locale' not found
+#0 /var/www/html/public/index.php(68): CodeIgniter\CodeIgniter->initialize()
+#1 {main}
+in SYSTEMPATH/Helpers/number_helper.php on line 136.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-06-19 04:39:18 --> Class 'Locale' not found
+in SYSTEMPATH/CodeIgniter.php on line 218.
+ 1 FCPATH/index.php(68): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-06-19 04:39:18 --> Uncaught Error: Class 'Locale' not found in /var/www/html/vendor/codeigniter4/framework/system/Helpers/number_helper.php:136
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Helpers/number_helper.php(55): format_number(22, 2, NULL, Array)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Debug/BaseExceptionHandler.php(145): number_to_size(22, 2)
+#2 /var/www/html/app/Views/errors/html/error_exception.php(360): CodeIgniter\Debug\BaseExceptionHandler::describeMemory(23068672)
+#3 /var/www/html/vendor/codeigniter4/framework/system/Debug/BaseExceptionHandler.php(241): include('/var/www/html/a...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/Debug/BaseExceptionHandler.php(244): CodeIgniter\Debug\BaseExceptionHandler->CodeIgniter\Debug\{closure}()
+#5 /var/www/html/vendor/codeigniter4/framework/system/Debug/ExceptionHandler.php(112): CodeIgniter\Debug\BaseExceptionHandler->render(Object(Error), 500, '/var/www/html/a...')
+#6 /var/www/html/vendor/codeigniter4/framework/system/Debug/Except
+【Previous Exception】
+Error
+Class 'Locale' not found
+#0 /var/www/html/public/index.php(68): CodeIgniter\CodeIgniter->initialize()
+#1 {main}
+in SYSTEMPATH/Helpers/number_helper.php on line 136.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-06-19 05:34:03 --> Class 'Locale' not found
+in SYSTEMPATH/CodeIgniter.php on line 218.
+ 1 FCPATH/index.php(68): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-06-19 05:34:03 --> Uncaught Error: Class 'Locale' not found in /var/www/html/vendor/codeigniter4/framework/system/Helpers/number_helper.php:136
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Helpers/number_helper.php(55): format_number(22, 2, NULL, Array)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Debug/BaseExceptionHandler.php(145): number_to_size(22, 2)
+#2 /var/www/html/app/Views/errors/html/error_exception.php(360): CodeIgniter\Debug\BaseExceptionHandler::describeMemory(23068672)
+#3 /var/www/html/vendor/codeigniter4/framework/system/Debug/BaseExceptionHandler.php(241): include('/var/www/html/a...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/Debug/BaseExceptionHandler.php(244): CodeIgniter\Debug\BaseExceptionHandler->CodeIgniter\Debug\{closure}()
+#5 /var/www/html/vendor/codeigniter4/framework/system/Debug/ExceptionHandler.php(112): CodeIgniter\Debug\BaseExceptionHandler->render(Object(Error), 500, '/var/www/html/a...')
+#6 /var/www/html/vendor/codeigniter4/framework/system/Debug/Except
+【Previous Exception】
+Error
+Class 'Locale' not found
+#0 /var/www/html/public/index.php(68): CodeIgniter\CodeIgniter->initialize()
+#1 {main}
+in SYSTEMPATH/Helpers/number_helper.php on line 136.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-06-19 05:39:45 --> Class 'Locale' not found
+in SYSTEMPATH/CodeIgniter.php on line 218.
+ 1 FCPATH/index.php(68): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-06-19 05:39:45 --> Uncaught Error: Class 'Locale' not found in /var/www/html/vendor/codeigniter4/framework/system/Helpers/number_helper.php:136
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Helpers/number_helper.php(55): format_number(22, 2, NULL, Array)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Debug/BaseExceptionHandler.php(145): number_to_size(22, 2)
+#2 /var/www/html/app/Views/errors/html/error_exception.php(360): CodeIgniter\Debug\BaseExceptionHandler::describeMemory(23068672)
+#3 /var/www/html/vendor/codeigniter4/framework/system/Debug/BaseExceptionHandler.php(241): include('/var/www/html/a...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/Debug/BaseExceptionHandler.php(244): CodeIgniter\Debug\BaseExceptionHandler->CodeIgniter\Debug\{closure}()
+#5 /var/www/html/vendor/codeigniter4/framework/system/Debug/ExceptionHandler.php(112): CodeIgniter\Debug\BaseExceptionHandler->render(Object(Error), 500, '/var/www/html/a...')
+#6 /var/www/html/vendor/codeigniter4/framework/system/Debug/Except
+【Previous Exception】
+Error
+Class 'Locale' not found
+#0 /var/www/html/public/index.php(68): CodeIgniter\CodeIgniter->initialize()
+#1 {main}
+in SYSTEMPATH/Helpers/number_helper.php on line 136.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-06-19 06:51:55 --> Class 'Locale' not found
+in SYSTEMPATH/CodeIgniter.php on line 218.
+ 1 FCPATH/index.php(68): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-06-19 06:51:55 --> Uncaught Error: Class 'Locale' not found in /var/www/html/vendor/codeigniter4/framework/system/Helpers/number_helper.php:136
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Helpers/number_helper.php(55): format_number(12, 2, NULL, Array)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Debug/BaseExceptionHandler.php(145): number_to_size(12, 2)
+#2 /var/www/html/app/Views/errors/html/error_exception.php(360): CodeIgniter\Debug\BaseExceptionHandler::describeMemory(12582912)
+#3 /var/www/html/vendor/codeigniter4/framework/system/Debug/BaseExceptionHandler.php(241): include('/var/www/html/a...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/Debug/BaseExceptionHandler.php(244): CodeIgniter\Debug\BaseExceptionHandler->CodeIgniter\Debug\{closure}()
+#5 /var/www/html/vendor/codeigniter4/framework/system/Debug/ExceptionHandler.php(112): CodeIgniter\Debug\BaseExceptionHandler->render(Object(Error), 500, '/var/www/html/a...')
+#6 /var/www/html/vendor/codeigniter4/framework/system/Debug/Except
+【Previous Exception】
+Error
+Class 'Locale' not found
+#0 /var/www/html/public/index.php(68): CodeIgniter\CodeIgniter->initialize()
+#1 {main}
+in SYSTEMPATH/Helpers/number_helper.php on line 136.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-06-19 07:02:41 --> Class 'Locale' not found
+in SYSTEMPATH/CodeIgniter.php on line 218.
+ 1 FCPATH/index.php(68): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-06-19 07:02:41 --> Uncaught Error: Class 'Locale' not found in /var/www/html/vendor/codeigniter4/framework/system/Helpers/number_helper.php:136
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Helpers/number_helper.php(55): format_number(22, 2, NULL, Array)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Debug/BaseExceptionHandler.php(145): number_to_size(22, 2)
+#2 /var/www/html/app/Views/errors/html/error_exception.php(360): CodeIgniter\Debug\BaseExceptionHandler::describeMemory(23068672)
+#3 /var/www/html/vendor/codeigniter4/framework/system/Debug/BaseExceptionHandler.php(241): include('/var/www/html/a...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/Debug/BaseExceptionHandler.php(244): CodeIgniter\Debug\BaseExceptionHandler->CodeIgniter\Debug\{closure}()
+#5 /var/www/html/vendor/codeigniter4/framework/system/Debug/ExceptionHandler.php(112): CodeIgniter\Debug\BaseExceptionHandler->render(Object(Error), 500, '/var/www/html/a...')
+#6 /var/www/html/vendor/codeigniter4/framework/system/Debug/Except
+【Previous Exception】
+Error
+Class 'Locale' not found
+#0 /var/www/html/public/index.php(68): CodeIgniter\CodeIgniter->initialize()
+#1 {main}
+in SYSTEMPATH/Helpers/number_helper.php on line 136.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-06-19 07:19:08 --> Class 'Locale' not found
+in SYSTEMPATH/CodeIgniter.php on line 218.
+ 1 FCPATH/index.php(68): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-06-19 07:19:08 --> Uncaught Error: Class 'Locale' not found in /var/www/html/vendor/codeigniter4/framework/system/Helpers/number_helper.php:136
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Helpers/number_helper.php(55): format_number(22, 2, NULL, Array)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Debug/BaseExceptionHandler.php(145): number_to_size(22, 2)
+#2 /var/www/html/app/Views/errors/html/error_exception.php(360): CodeIgniter\Debug\BaseExceptionHandler::describeMemory(23068672)
+#3 /var/www/html/vendor/codeigniter4/framework/system/Debug/BaseExceptionHandler.php(241): include('/var/www/html/a...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/Debug/BaseExceptionHandler.php(244): CodeIgniter\Debug\BaseExceptionHandler->CodeIgniter\Debug\{closure}()
+#5 /var/www/html/vendor/codeigniter4/framework/system/Debug/ExceptionHandler.php(112): CodeIgniter\Debug\BaseExceptionHandler->render(Object(Error), 500, '/var/www/html/a...')
+#6 /var/www/html/vendor/codeigniter4/framework/system/Debug/Except
+【Previous Exception】
+Error
+Class 'Locale' not found
+#0 /var/www/html/public/index.php(68): CodeIgniter\CodeIgniter->initialize()
+#1 {main}
+in SYSTEMPATH/Helpers/number_helper.php on line 136.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-06-19 07:19:11 --> Class 'Locale' not found
+in SYSTEMPATH/CodeIgniter.php on line 218.
+ 1 FCPATH/index.php(68): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-06-19 07:19:11 --> Uncaught Error: Class 'Locale' not found in /var/www/html/vendor/codeigniter4/framework/system/Helpers/number_helper.php:136
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Helpers/number_helper.php(55): format_number(22, 2, NULL, Array)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Debug/BaseExceptionHandler.php(145): number_to_size(22, 2)
+#2 /var/www/html/app/Views/errors/html/error_exception.php(360): CodeIgniter\Debug\BaseExceptionHandler::describeMemory(23068672)
+#3 /var/www/html/vendor/codeigniter4/framework/system/Debug/BaseExceptionHandler.php(241): include('/var/www/html/a...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/Debug/BaseExceptionHandler.php(244): CodeIgniter\Debug\BaseExceptionHandler->CodeIgniter\Debug\{closure}()
+#5 /var/www/html/vendor/codeigniter4/framework/system/Debug/ExceptionHandler.php(112): CodeIgniter\Debug\BaseExceptionHandler->render(Object(Error), 500, '/var/www/html/a...')
+#6 /var/www/html/vendor/codeigniter4/framework/system/Debug/Except
+【Previous Exception】
+Error
+Class 'Locale' not found
+#0 /var/www/html/public/index.php(68): CodeIgniter\CodeIgniter->initialize()
+#1 {main}
+in SYSTEMPATH/Helpers/number_helper.php on line 136.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()

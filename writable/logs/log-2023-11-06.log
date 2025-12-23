@@ -1,0 +1,96 @@
+INFO - 2023-11-06 14:39:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-06 14:39:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-06 14:39:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-06 14:39:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-06 14:39:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-06 14:39:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-06 14:39:32 --> mysqli_sql_exception: Unknown column 'created_at' in 'field list' in D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `st...', 0)
+#1 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `st...')
+#2 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `st...')
+#3 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#4 D:\laragon\www\ci4\app\Models\Google_login_model.php(35): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\laragon\www\ci4\app\Controllers\AuthController.php(73): App\Models\Google_login_model->Insert_user_data(Array)
+#6 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+#7 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#8 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\laragon\www\ci4\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-11-06 14:39:32 --> Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `student_registration` (`student_id`, `student_name`, `student_email`, `third_party_id`, `created_at`) VALUES (:student_id:, :student_name:, :student_email :, :third_party_id:, :created_at:)', [...], false)
+ 2 APPPATH\Models\Google_login_model.php(35): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\AuthController.php(73): App\Models\Google_login_model->Insert_user_data([...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-06 14:39:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-06 14:39:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-06 14:39:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-06 14:39:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-06 14:39:48 --> mysqli_sql_exception: Unknown column 'created_at' in 'field list' in D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `st...', 0)
+#1 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `st...')
+#2 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `st...')
+#3 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#4 D:\laragon\www\ci4\app\Models\Google_login_model.php(35): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\laragon\www\ci4\app\Controllers\AuthController.php(73): App\Models\Google_login_model->Insert_user_data(Array)
+#6 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+#7 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#8 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\laragon\www\ci4\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-11-06 14:39:48 --> Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `student_registration` (`student_id`, `student_name`, `student_email`, `third_party_id`, `created_at`) VALUES (:student_id:, :student_name:, :student_email :, :third_party_id:, :created_at:)', [...], false)
+ 2 APPPATH\Models\Google_login_model.php(35): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\AuthController.php(73): App\Models\Google_login_model->Insert_user_data([...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-06 14:41:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-06 14:41:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-06 14:41:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-06 14:41:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-06 14:41:45 --> mysqli_sql_exception: Unknown column 'created_at' in 'field list' in D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `st...', 0)
+#1 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `st...')
+#2 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `st...')
+#3 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#4 D:\laragon\www\ci4\app\Models\Google_login_model.php(35): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\laragon\www\ci4\app\Controllers\AuthController.php(73): App\Models\Google_login_model->Insert_user_data(Array)
+#6 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+#7 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#8 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\laragon\www\ci4\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-11-06 14:41:45 --> Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `student_registration` (`student_id`, `student_name`, `student_email`, `third_party_id`, `created_at`) VALUES (:student_id:, :student_name:, :student_email :, :third_party_id:, :created_at:)', [...], false)
+ 2 APPPATH\Models\Google_login_model.php(35): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\AuthController.php(73): App\Models\Google_login_model->Insert_user_data([...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-06 14:45:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-06 14:45:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-06 14:45:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-06 14:45:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-06 14:45:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-06 14:54:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-06 14:54:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-06 14:54:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-06 14:54:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-06 14:54:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-06 14:54:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-06 14:54:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-06 14:54:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-06 14:54:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-06 16:03:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-06 16:03:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

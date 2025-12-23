@@ -1,0 +1,1121 @@
+INFO - 2024-01-22 04:28:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 04:28:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 04:28:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 04:28:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 04:28:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 04:29:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-22 04:29:34 --> mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY' in C:\laragon\www\st\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\st\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `qu...', 0)
+#1 C:\laragon\www\st\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `qu...')
+#2 C:\laragon\www\st\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `qu...')
+#3 C:\laragon\www\st\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `qu...', Array, false)
+#4 C:\laragon\www\st\vendor\codeigniter4\framework\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\st\vendor\codeigniter4\framework\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\st\vendor\codeigniter4\framework\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\laragon\www\st\app\Controllers\ExamController.php(59): CodeIgniter\Model->insert(Array)
+#8 C:\laragon\www\st\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\ExamController->question_insert_db()
+#9 C:\laragon\www\st\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExamController))
+#10 C:\laragon\www\st\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\st\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-01-22 04:29:34 --> Duplicate entry '0' for key 'PRIMARY'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `question_bank` (`subject_id`, `question_title`) VALUES (:subject_id:, :question_title:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\ExamController.php(59): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ExamController->question_insert_db()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExamController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 04:36:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 04:36:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 04:37:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 04:37:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 04:37:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 04:37:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 04:37:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 04:37:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 04:37:29 --> Undefined index: id
+in APPPATH\Controllers\QuestionSetController.php on line 97.
+ 1 APPPATH\Controllers\QuestionSetController.php(97): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: id', 'C:\\laragon\\www\\st\\app\\Controllers\\QuestionSetController.php', 97, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_set_insert_db()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 04:37:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 04:37:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 04:37:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 04:44:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 04:44:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 04:54:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 04:54:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 04:54:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 04:54:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 04:54:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 04:57:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 04:57:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 04:57:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 04:57:55 --> Undefined variable: allQuestions
+in APPPATH\Controllers\QuestionSetController.php on line 51.
+ 1 APPPATH\Controllers\QuestionSetController.php(51): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: allQuestions', 'C:\\laragon\\www\\st\\app\\Controllers\\QuestionSetController.php', 51, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 04:57:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 04:58:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 04:58:00 --> Undefined variable: allQuestions
+in APPPATH\Controllers\QuestionSetController.php on line 51.
+ 1 APPPATH\Controllers\QuestionSetController.php(51): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: allQuestions', 'C:\\laragon\\www\\st\\app\\Controllers\\QuestionSetController.php', 51, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-22 04:58:50 --> syntax error, unexpected 'else' (T_ELSE)
+in APPPATH\Controllers\QuestionSetController.php on line 67.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\st\\app\\Controllers\\QuestionSetController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\QuestionSetController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\QuestionSetController')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\QuestionSetController')
+ 5 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\QuestionSetController', true)
+ 6 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 04:59:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 04:59:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 04:59:08 --> Undefined variable: allQuestions
+in APPPATH\Controllers\QuestionSetController.php on line 51.
+ 1 APPPATH\Controllers\QuestionSetController.php(51): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: allQuestions', 'C:\\laragon\\www\\st\\app\\Controllers\\QuestionSetController.php', 51, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 04:59:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 04:59:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 04:59:26 --> Undefined variable: allQuestions
+in APPPATH\Controllers\QuestionSetController.php on line 51.
+ 1 APPPATH\Controllers\QuestionSetController.php(51): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: allQuestions', 'C:\\laragon\\www\\st\\app\\Controllers\\QuestionSetController.php', 51, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 04:59:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:00:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:00:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:00:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:00:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:01:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:01:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:01:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:02:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:02:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:02:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:14:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:14:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:14:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 05:14:35 --> Object of class stdClass could not be converted to string
+in APPPATH\Controllers\QuestionSetController.php on line 45.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 05:14:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:14:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 05:14:45 --> Object of class stdClass could not be converted to string
+in APPPATH\Controllers\QuestionSetController.php on line 45.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 05:17:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:18:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 05:18:00 --> Object of class stdClass could not be converted to string
+in APPPATH\Controllers\QuestionSetController.php on line 45.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 05:18:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:18:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 05:18:08 --> Object of class stdClass could not be converted to string
+in APPPATH\Controllers\QuestionSetController.php on line 45.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 05:18:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:18:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 05:18:17 --> Object of class stdClass could not be converted to string
+in APPPATH\Controllers\QuestionSetController.php on line 45.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 05:18:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:18:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:18:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:18:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:19:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:19:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 05:19:13 --> Object of class stdClass could not be converted to string
+in APPPATH\Controllers\QuestionSetController.php on line 45.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 05:19:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 05:19:30 --> syntax error, unexpected '$question_set_exist' (T_VARIABLE), expecting ';' or ','
+in APPPATH\Controllers\QuestionSetController.php on line 45.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\st\\app\\Controllers\\QuestionSetController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\QuestionSetController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\QuestionSetController')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\QuestionSetController')
+ 5 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\QuestionSetController', true)
+ 6 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 05:19:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:19:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:19:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 05:19:55 --> Object of class stdClass could not be converted to string
+in APPPATH\Controllers\QuestionSetController.php on line 45.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 05:20:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:20:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 05:20:04 --> Object of class stdClass could not be converted to string
+in APPPATH\Controllers\QuestionSetController.php on line 45.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 05:20:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:20:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 05:20:12 --> Object of class stdClass could not be converted to string
+in APPPATH\Controllers\QuestionSetController.php on line 45.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 05:20:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:20:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 05:20:40 --> Object of class stdClass could not be converted to string
+in APPPATH\Controllers\QuestionSetController.php on line 45.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 05:20:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:20:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:20:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:21:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:21:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:21:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:21:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:21:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:21:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:21:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:21:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:22:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:22:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:22:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:24:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:24:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 05:24:18 --> Undefined variable: query
+in APPPATH\Controllers\QuestionSetController.php on line 45.
+ 1 APPPATH\Controllers\QuestionSetController.php(45): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: query', 'C:\\laragon\\www\\st\\app\\Controllers\\QuestionSetController.php', 45, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 05:24:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:30:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:30:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:31:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:31:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:31:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:31:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:31:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:33:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:33:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:33:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:33:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:33:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:34:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:35:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:35:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:35:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:36:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:36:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:39:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:39:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:42:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:42:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 05:42:20 --> Undefined variable: return_exist_question
+in APPPATH\Controllers\QuestionSetController.php on line 52.
+ 1 APPPATH\Controllers\QuestionSetController.php(52): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: return_exist_question', 'C:\\laragon\\www\\st\\app\\Controllers\\QuestionSetController.php', 52, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 05:42:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:42:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 05:42:26 --> Undefined variable: return_exist_question
+in APPPATH\Controllers\QuestionSetController.php on line 52.
+ 1 APPPATH\Controllers\QuestionSetController.php(52): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: return_exist_question', 'C:\\laragon\\www\\st\\app\\Controllers\\QuestionSetController.php', 52, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 05:42:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:42:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 05:42:53 --> Undefined variable: return_exist_question
+in APPPATH\Controllers\QuestionSetController.php on line 52.
+ 1 APPPATH\Controllers\QuestionSetController.php(52): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: return_exist_question', 'C:\\laragon\\www\\st\\app\\Controllers\\QuestionSetController.php', 52, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 05:42:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:42:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 05:42:58 --> Undefined variable: return_exist_question
+in APPPATH\Controllers\QuestionSetController.php on line 52.
+ 1 APPPATH\Controllers\QuestionSetController.php(52): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: return_exist_question', 'C:\\laragon\\www\\st\\app\\Controllers\\QuestionSetController.php', 52, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 05:43:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:43:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 05:43:50 --> Undefined variable: return_exist_question
+in APPPATH\Controllers\QuestionSetController.php on line 52.
+ 1 APPPATH\Controllers\QuestionSetController.php(52): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: return_exist_question', 'C:\\laragon\\www\\st\\app\\Controllers\\QuestionSetController.php', 52, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 05:47:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:47:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 05:47:09 --> Undefined variable: return_exist_question
+in APPPATH\Controllers\QuestionSetController.php on line 96.
+ 1 APPPATH\Controllers\QuestionSetController.php(96): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: return_exist_question', 'C:\\laragon\\www\\st\\app\\Controllers\\QuestionSetController.php', 96, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 05:47:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 05:47:21 --> Undefined variable: return_exist_question
+in APPPATH\Controllers\QuestionSetController.php on line 52.
+ 1 APPPATH\Controllers\QuestionSetController.php(52): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: return_exist_question', 'C:\\laragon\\www\\st\\app\\Controllers\\QuestionSetController.php', 52, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 05:47:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:47:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 05:47:31 --> Undefined variable: return_exist_question
+in APPPATH\Controllers\QuestionSetController.php on line 52.
+ 1 APPPATH\Controllers\QuestionSetController.php(52): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: return_exist_question', 'C:\\laragon\\www\\st\\app\\Controllers\\QuestionSetController.php', 52, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 05:47:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 05:47:33 --> Undefined variable: return_exist_question
+in APPPATH\Controllers\QuestionSetController.php on line 96.
+ 1 APPPATH\Controllers\QuestionSetController.php(96): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: return_exist_question', 'C:\\laragon\\www\\st\\app\\Controllers\\QuestionSetController.php', 96, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 05:48:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:48:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 05:48:07 --> Undefined variable: return_exist_question
+in APPPATH\Controllers\QuestionSetController.php on line 52.
+ 1 APPPATH\Controllers\QuestionSetController.php(52): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: return_exist_question', 'C:\\laragon\\www\\st\\app\\Controllers\\QuestionSetController.php', 52, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 05:48:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:48:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 05:48:15 --> Undefined variable: return_exist_question
+in APPPATH\Controllers\QuestionSetController.php on line 52.
+ 1 APPPATH\Controllers\QuestionSetController.php(52): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: return_exist_question', 'C:\\laragon\\www\\st\\app\\Controllers\\QuestionSetController.php', 52, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 05:49:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:49:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 05:49:52 --> Undefined variable: returnData
+in APPPATH\Controllers\QuestionSetController.php on line 52.
+ 1 APPPATH\Controllers\QuestionSetController.php(52): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: returnData', 'C:\\laragon\\www\\st\\app\\Controllers\\QuestionSetController.php', 52, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 05:49:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:50:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 05:50:00 --> Undefined variable: returnData
+in APPPATH\Controllers\QuestionSetController.php on line 52.
+ 1 APPPATH\Controllers\QuestionSetController.php(52): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: returnData', 'C:\\laragon\\www\\st\\app\\Controllers\\QuestionSetController.php', 52, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-22 05:50:32 --> syntax error, unexpected 'echo' (T_ECHO)
+in APPPATH\Controllers\QuestionSetController.php on line 48.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\st\\app\\Controllers\\QuestionSetController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\QuestionSetController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\QuestionSetController')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\QuestionSetController')
+ 5 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\QuestionSetController', true)
+ 6 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-22 05:50:47 --> syntax error, unexpected 'echo' (T_ECHO)
+in APPPATH\Controllers\QuestionSetController.php on line 48.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\st\\app\\Controllers\\QuestionSetController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\QuestionSetController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\QuestionSetController')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\QuestionSetController')
+ 5 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\QuestionSetController', true)
+ 6 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-22 05:50:48 --> syntax error, unexpected 'echo' (T_ECHO)
+in APPPATH\Controllers\QuestionSetController.php on line 48.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\st\\app\\Controllers\\QuestionSetController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\QuestionSetController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\QuestionSetController')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\QuestionSetController')
+ 5 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\QuestionSetController', true)
+ 6 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-22 05:53:04 --> syntax error, unexpected 'echo' (T_ECHO)
+in APPPATH\Controllers\QuestionSetController.php on line 45.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\st\\app\\Controllers\\QuestionSetController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\QuestionSetController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\QuestionSetController')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\QuestionSetController')
+ 5 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\QuestionSetController', true)
+ 6 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 05:53:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:53:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:53:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:53:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:55:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:55:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 05:55:44 --> Undefined variable: EXAM-240185CF33<br>
+in APPPATH\Controllers\QuestionSetController.php on line 61.
+ 1 APPPATH\Controllers\QuestionSetController.php(61): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: EXAM-240185CF33<br>', 'C:\\laragon\\www\\st\\app\\Controllers\\QuestionSetController.php', 61, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 05:55:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:55:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 05:55:49 --> Undefined variable: EXAM-240185CF33<br>
+in APPPATH\Controllers\QuestionSetController.php on line 61.
+ 1 APPPATH\Controllers\QuestionSetController.php(61): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: EXAM-240185CF33<br>', 'C:\\laragon\\www\\st\\app\\Controllers\\QuestionSetController.php', 61, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 05:56:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:56:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:56:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:56:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:56:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:57:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:57:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 05:57:06 --> Undefined variable: return_exist_data
+in APPPATH\Controllers\QuestionSetController.php on line 52.
+ 1 APPPATH\Controllers\QuestionSetController.php(52): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: return_exist_data', 'C:\\laragon\\www\\st\\app\\Controllers\\QuestionSetController.php', 52, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 05:57:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:57:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 05:57:11 --> Undefined variable: return_exist_data
+in APPPATH\Controllers\QuestionSetController.php on line 52.
+ 1 APPPATH\Controllers\QuestionSetController.php(52): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: return_exist_data', 'C:\\laragon\\www\\st\\app\\Controllers\\QuestionSetController.php', 52, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 05:57:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:57:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 05:57:55 --> Undefined variable: return_exist_data
+in APPPATH\Controllers\QuestionSetController.php on line 49.
+ 1 APPPATH\Controllers\QuestionSetController.php(49): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: return_exist_data', 'C:\\laragon\\www\\st\\app\\Controllers\\QuestionSetController.php', 49, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 05:57:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:57:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 05:57:59 --> Undefined variable: return_exist_data
+in APPPATH\Controllers\QuestionSetController.php on line 49.
+ 1 APPPATH\Controllers\QuestionSetController.php(49): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: return_exist_data', 'C:\\laragon\\www\\st\\app\\Controllers\\QuestionSetController.php', 49, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 05:58:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 05:58:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 05:58:05 --> Undefined variable: return_exist_data
+in APPPATH\Controllers\QuestionSetController.php on line 49.
+ 1 APPPATH\Controllers\QuestionSetController.php(49): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: return_exist_data', 'C:\\laragon\\www\\st\\app\\Controllers\\QuestionSetController.php', 49, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 06:00:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 06:00:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 06:01:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 06:01:00 --> Undefined variable: return_exist_data
+in APPPATH\Controllers\QuestionSetController.php on line 49.
+ 1 APPPATH\Controllers\QuestionSetController.php(49): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: return_exist_data', 'C:\\laragon\\www\\st\\app\\Controllers\\QuestionSetController.php', 49, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 06:02:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 06:02:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 06:02:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 06:02:24 --> Undefined variable: return_exist_data
+in APPPATH\Controllers\QuestionSetController.php on line 91.
+ 1 APPPATH\Controllers\QuestionSetController.php(91): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: return_exist_data', 'C:\\laragon\\www\\st\\app\\Controllers\\QuestionSetController.php', 91, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 06:02:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 06:02:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 06:02:28 --> Undefined variable: return_exist_data
+in APPPATH\Controllers\QuestionSetController.php on line 91.
+ 1 APPPATH\Controllers\QuestionSetController.php(91): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: return_exist_data', 'C:\\laragon\\www\\st\\app\\Controllers\\QuestionSetController.php', 91, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 06:02:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 06:02:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 06:02:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 06:02:36 --> Undefined variable: return_exist_data
+in APPPATH\Controllers\QuestionSetController.php on line 91.
+ 1 APPPATH\Controllers\QuestionSetController.php(91): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: return_exist_data', 'C:\\laragon\\www\\st\\app\\Controllers\\QuestionSetController.php', 91, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 06:03:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 06:03:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 06:03:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 06:03:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 06:03:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 06:03:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 06:04:48 --> syntax error, unexpected '"<br>"' (T_CONSTANT_ENCAPSED_STRING)
+in APPPATH\Controllers\QuestionSetController.php on line 45.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\st\\app\\Controllers\\QuestionSetController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\QuestionSetController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\QuestionSetController')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\QuestionSetController')
+ 5 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\QuestionSetController', true)
+ 6 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 06:05:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 06:05:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 06:06:06 --> syntax error, unexpected 'checkbox' (T_STRING)
+in APPPATH\Controllers\QuestionSetController.php on line 45.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\st\\app\\Controllers\\QuestionSetController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\QuestionSetController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\QuestionSetController')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\QuestionSetController')
+ 5 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\QuestionSetController', true)
+ 6 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 06:06:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 06:06:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 06:07:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 06:07:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 06:08:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 06:08:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 06:08:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 06:08:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 06:09:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 06:09:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 06:09:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 06:09:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 06:09:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 06:09:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 06:10:29 --> syntax error, unexpected 'checkbox' (T_STRING)
+in APPPATH\Controllers\QuestionSetController.php on line 46.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\st\\app\\Controllers\\QuestionSetController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\QuestionSetController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\QuestionSetController')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\QuestionSetController')
+ 5 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\QuestionSetController', true)
+ 6 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 06:11:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 06:11:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 06:11:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 06:11:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 06:13:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 06:13:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 06:13:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 06:14:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 06:14:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 06:14:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 06:15:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 06:15:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 06:15:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 06:15:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 06:15:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 06:17:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 06:21:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 06:21:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 06:21:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 07:06:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 07:06:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 07:06:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 07:06:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 07:06:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 07:06:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-22 07:06:24 --> mysqli_sql_exception: Unknown column 'question_bank.subject_title' in 'field list' in C:\laragon\www\st\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\st\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('Select question...', 0)
+#1 C:\laragon\www\st\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('Select question...')
+#2 C:\laragon\www\st\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('Select question...')
+#3 C:\laragon\www\st\app\Controllers\QuestionSetController.php(41): CodeIgniter\Database\BaseConnection->query('Select question...')
+#4 C:\laragon\www\st\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+#5 C:\laragon\www\st\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+#6 C:\laragon\www\st\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\st\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-01-22 07:06:24 --> Unknown column 'question_bank.subject_title' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Controllers\QuestionSetController.php(41): CodeIgniter\Database\BaseConnection->query('Select question_set.subject_id AS Q_Set_Sub_id, question_set.question_set_id AS Q_Set_id,
+         question_set.question_id,
+        question_bank.subject_id, question_bank.subject_title AS Q_title
+        FROM question_bank
+        LEFT JOIN question_set ON question_bank.subject_id = question_set.subject_id
+        ORDER BY question_bank.id')
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 07:06:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 07:06:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-22 07:06:30 --> mysqli_sql_exception: Unknown column 'question_bank.subject_title' in 'field list' in C:\laragon\www\st\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\st\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('Select question...', 0)
+#1 C:\laragon\www\st\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('Select question...')
+#2 C:\laragon\www\st\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('Select question...')
+#3 C:\laragon\www\st\app\Controllers\QuestionSetController.php(41): CodeIgniter\Database\BaseConnection->query('Select question...')
+#4 C:\laragon\www\st\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+#5 C:\laragon\www\st\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+#6 C:\laragon\www\st\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\st\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-01-22 07:06:30 --> Unknown column 'question_bank.subject_title' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Controllers\QuestionSetController.php(41): CodeIgniter\Database\BaseConnection->query('Select question_set.subject_id AS Q_Set_Sub_id, question_set.question_set_id AS Q_Set_id,
+         question_set.question_id,
+        question_bank.subject_id, question_bank.subject_title AS Q_title
+        FROM question_bank
+        LEFT JOIN question_set ON question_bank.subject_id = question_set.subject_id
+        ORDER BY question_bank.id')
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 07:06:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 07:06:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-22 07:06:39 --> mysqli_sql_exception: Unknown column 'question_bank.subject_title' in 'field list' in C:\laragon\www\st\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\st\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('Select question...', 0)
+#1 C:\laragon\www\st\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('Select question...')
+#2 C:\laragon\www\st\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('Select question...')
+#3 C:\laragon\www\st\app\Controllers\QuestionSetController.php(41): CodeIgniter\Database\BaseConnection->query('Select question...')
+#4 C:\laragon\www\st\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+#5 C:\laragon\www\st\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+#6 C:\laragon\www\st\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\st\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-01-22 07:06:39 --> Unknown column 'question_bank.subject_title' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Controllers\QuestionSetController.php(41): CodeIgniter\Database\BaseConnection->query('Select question_set.subject_id AS Q_Set_Sub_id, question_set.question_set_id AS Q_Set_id,
+         question_set.question_id,
+        question_bank.subject_id, question_bank.subject_title AS Q_title
+        FROM question_bank
+        LEFT JOIN question_set ON question_bank.subject_id = question_set.subject_id
+        ORDER BY question_bank.id')
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 07:07:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 07:07:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 07:07:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 07:07:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-22 07:07:28 --> mysqli_sql_exception: Unknown column 'question_bank.subject_title' in 'field list' in C:\laragon\www\st\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\st\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('Select question...', 0)
+#1 C:\laragon\www\st\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('Select question...')
+#2 C:\laragon\www\st\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('Select question...')
+#3 C:\laragon\www\st\app\Controllers\QuestionSetController.php(41): CodeIgniter\Database\BaseConnection->query('Select question...')
+#4 C:\laragon\www\st\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+#5 C:\laragon\www\st\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+#6 C:\laragon\www\st\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\st\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-01-22 07:07:28 --> Unknown column 'question_bank.subject_title' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Controllers\QuestionSetController.php(41): CodeIgniter\Database\BaseConnection->query('Select question_set.subject_id AS Q_Set_Sub_id, question_set.question_set_id AS Q_Set_id,
+         question_set.question_id,
+        question_bank.subject_id, question_bank.subject_title AS Q_title
+        FROM question_bank
+        LEFT JOIN question_set ON question_bank.subject_id = question_set.subject_id
+        ORDER BY question_bank.id')
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 07:08:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 07:08:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-22 07:08:30 --> mysqli_sql_exception: Unknown column 'question_bank.subject_title' in 'field list' in C:\laragon\www\st\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\st\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('Select question...', 0)
+#1 C:\laragon\www\st\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('Select question...')
+#2 C:\laragon\www\st\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('Select question...')
+#3 C:\laragon\www\st\app\Controllers\QuestionSetController.php(41): CodeIgniter\Database\BaseConnection->query('Select question...')
+#4 C:\laragon\www\st\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+#5 C:\laragon\www\st\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+#6 C:\laragon\www\st\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\st\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-01-22 07:08:30 --> Unknown column 'question_bank.subject_title' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Controllers\QuestionSetController.php(41): CodeIgniter\Database\BaseConnection->query('Select question_set.subject_id AS Q_Set_Sub_id, question_set.question_set_id AS Q_Set_id,
+         question_set.question_id,
+        question_bank.subject_id, question_bank.subject_title AS Q_title
+        FROM question_bank
+        LEFT JOIN question_set ON question_bank.subject_id = question_set.subject_id
+        ORDER BY question_bank.id')
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 07:09:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 07:09:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 07:09:41 --> Undefined property: stdClass::$Q_Set_Sub_id
+in APPPATH\Controllers\QuestionSetController.php on line 59.
+ 1 APPPATH\Controllers\QuestionSetController.php(59): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$Q_Set_Sub_id', 'C:\\laragon\\www\\st\\app\\Controllers\\QuestionSetController.php', 59, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-22 07:10:17 --> syntax error, unexpected '(array)' (array) (T_ARRAY_CAST)
+in APPPATH\Controllers\QuestionSetController.php on line 48.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\st\\app\\Controllers\\QuestionSetController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\QuestionSetController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\QuestionSetController')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\QuestionSetController')
+ 5 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\QuestionSetController', true)
+ 6 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 07:10:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 07:10:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 07:11:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 07:11:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 07:50:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 07:51:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 07:51:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 07:51:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 07:52:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 07:52:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 07:52:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 07:52:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 07:52:34 --> Cannot use object of type stdClass as array
+in APPPATH\Controllers\QuestionSetController.php on line 59.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 07:52:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 07:52:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 07:52:39 --> Cannot use object of type stdClass as array
+in APPPATH\Controllers\QuestionSetController.php on line 59.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 08:05:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 08:05:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 08:07:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 08:07:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 08:07:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 08:12:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 08:12:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 08:13:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 08:13:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-22 08:13:44 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 3 in C:\laragon\www\st\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\st\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('Select *\r\n     ...', 0)
+#1 C:\laragon\www\st\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('Select *\r\n     ...')
+#2 C:\laragon\www\st\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('Select *\r\n     ...')
+#3 C:\laragon\www\st\app\Controllers\QuestionSetController.php(46): CodeIgniter\Database\BaseConnection->query('Select *\r\n     ...')
+#4 C:\laragon\www\st\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+#5 C:\laragon\www\st\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+#6 C:\laragon\www\st\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\st\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-01-22 08:13:44 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Controllers\QuestionSetController.php(46): CodeIgniter\Database\BaseConnection->query('Select *
+        FROM question_bank
+        LEFT JOIN question_set')
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 08:13:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 08:13:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-22 08:13:48 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 3 in C:\laragon\www\st\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\st\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('Select *\r\n     ...', 0)
+#1 C:\laragon\www\st\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('Select *\r\n     ...')
+#2 C:\laragon\www\st\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('Select *\r\n     ...')
+#3 C:\laragon\www\st\app\Controllers\QuestionSetController.php(46): CodeIgniter\Database\BaseConnection->query('Select *\r\n     ...')
+#4 C:\laragon\www\st\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+#5 C:\laragon\www\st\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+#6 C:\laragon\www\st\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\st\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-01-22 08:13:48 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Controllers\QuestionSetController.php(46): CodeIgniter\Database\BaseConnection->query('Select *
+        FROM question_bank
+        LEFT JOIN question_set')
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 08:14:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 08:14:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 08:15:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 08:15:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 08:16:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 08:16:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 08:16:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 08:18:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 08:18:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 08:18:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 08:18:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 08:19:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 08:19:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 08:24:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 08:24:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 08:28:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 08:28:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 08:29:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 08:29:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 08:35:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 08:35:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 08:36:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 08:50:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 08:50:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 08:55:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 08:55:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 08:55:32 --> Trying to get property 'question_id' of non-object
+in APPPATH\Controllers\QuestionSetController.php on line 54.
+ 1 APPPATH\Controllers\QuestionSetController.php(54): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'question_id\' of non-object', 'C:\\laragon\\www\\st\\app\\Controllers\\QuestionSetController.php', 54, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 08:55:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 08:55:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 08:55:38 --> Trying to get property 'question_id' of non-object
+in APPPATH\Controllers\QuestionSetController.php on line 54.
+ 1 APPPATH\Controllers\QuestionSetController.php(54): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'question_id\' of non-object', 'C:\\laragon\\www\\st\\app\\Controllers\\QuestionSetController.php', 54, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 08:56:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 08:56:02 --> Trying to get property 'question_id' of non-object
+in APPPATH\Controllers\QuestionSetController.php on line 54.
+ 1 APPPATH\Controllers\QuestionSetController.php(54): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'question_id\' of non-object', 'C:\\laragon\\www\\st\\app\\Controllers\\QuestionSetController.php', 54, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 08:56:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 08:56:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 08:56:04 --> Trying to get property 'question_id' of non-object
+in APPPATH\Controllers\QuestionSetController.php on line 54.
+ 1 APPPATH\Controllers\QuestionSetController.php(54): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'question_id\' of non-object', 'C:\\laragon\\www\\st\\app\\Controllers\\QuestionSetController.php', 54, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 08:56:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 08:56:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 08:56:11 --> Trying to get property 'question_id' of non-object
+in APPPATH\Controllers\QuestionSetController.php on line 54.
+ 1 APPPATH\Controllers\QuestionSetController.php(54): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'question_id\' of non-object', 'C:\\laragon\\www\\st\\app\\Controllers\\QuestionSetController.php', 54, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 08:56:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 08:56:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 08:56:15 --> Trying to get property 'question_id' of non-object
+in APPPATH\Controllers\QuestionSetController.php on line 54.
+ 1 APPPATH\Controllers\QuestionSetController.php(54): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'question_id\' of non-object', 'C:\\laragon\\www\\st\\app\\Controllers\\QuestionSetController.php', 54, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 08:56:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 08:56:17 --> Undefined index: id
+in APPPATH\Controllers\QuestionSetController.php on line 20.
+ 1 APPPATH\Controllers\QuestionSetController.php(20): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: id', 'C:\\laragon\\www\\st\\app\\Controllers\\QuestionSetController.php', 20, [])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 08:56:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 08:56:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 08:56:23 --> Trying to get property 'question_id' of non-object
+in APPPATH\Controllers\QuestionSetController.php on line 54.
+ 1 APPPATH\Controllers\QuestionSetController.php(54): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'question_id\' of non-object', 'C:\\laragon\\www\\st\\app\\Controllers\\QuestionSetController.php', 54, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 08:57:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 08:57:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 08:57:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 08:57:15 --> Trying to get property 'is_exist' of non-object
+in APPPATH\Controllers\QuestionSetController.php on line 58.
+ 1 APPPATH\Controllers\QuestionSetController.php(58): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'is_exist\' of non-object', 'C:\\laragon\\www\\st\\app\\Controllers\\QuestionSetController.php', 58, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 08:57:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 08:57:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 08:57:22 --> Trying to get property 'is_exist' of non-object
+in APPPATH\Controllers\QuestionSetController.php on line 58.
+ 1 APPPATH\Controllers\QuestionSetController.php(58): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'is_exist\' of non-object', 'C:\\laragon\\www\\st\\app\\Controllers\\QuestionSetController.php', 58, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_show_for_set_creation()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 08:57:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 08:57:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 08:59:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 08:59:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:00:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:00:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:00:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:01:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:01:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:02:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:02:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:02:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:02:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:02:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:02:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:02:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:02:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:02:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:02:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:03:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:03:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:07:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:07:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:07:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:07:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:07:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:13:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:13:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:14:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:14:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:14:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:14:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:14:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:14:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:15:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:15:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:19:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:19:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:20:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:20:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:20:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:23:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:23:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:28:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:28:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:28:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:29:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:30:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:30:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:31:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:31:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:32:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:32:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:32:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:33:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:33:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:35:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:35:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:37:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:38:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:38:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:43:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:43:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:48:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:48:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:49:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:49:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:50:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:50:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:51:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:51:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:51:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:51:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:53:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:53:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:54:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:54:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:54:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:54:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:56:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:56:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:59:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 09:59:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 10:03:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 10:03:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 10:06:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 10:06:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 10:07:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 10:07:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 10:08:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 10:08:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 10:08:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 10:11:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 10:11:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 10:11:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 10:11:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 10:11:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 10:12:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 10:12:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 10:12:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 10:13:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 10:13:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 10:13:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 10:13:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 10:14:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 10:14:08 --> Undefined index: id
+in APPPATH\Controllers\QuestionSetController.php on line 95.
+ 1 APPPATH\Controllers\QuestionSetController.php(95): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: id', 'C:\\laragon\\www\\st\\app\\Controllers\\QuestionSetController.php', 95, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_set_insert_db()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 10:14:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 10:14:10 --> Undefined index: id
+in APPPATH\Controllers\QuestionSetController.php on line 95.
+ 1 APPPATH\Controllers\QuestionSetController.php(95): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: id', 'C:\\laragon\\www\\st\\app\\Controllers\\QuestionSetController.php', 95, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_set_insert_db()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 10:15:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 10:15:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 10:15:37 --> Undefined index: id
+in APPPATH\Controllers\QuestionSetController.php on line 95.
+ 1 APPPATH\Controllers\QuestionSetController.php(95): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: id', 'C:\\laragon\\www\\st\\app\\Controllers\\QuestionSetController.php', 95, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_set_insert_db()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 10:15:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 10:15:39 --> Undefined index: id
+in APPPATH\Controllers\QuestionSetController.php on line 95.
+ 1 APPPATH\Controllers\QuestionSetController.php(95): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: id', 'C:\\laragon\\www\\st\\app\\Controllers\\QuestionSetController.php', 95, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_set_insert_db()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 10:16:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 10:16:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 10:16:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 10:16:40 --> Undefined index: id
+in APPPATH\Controllers\QuestionSetController.php on line 95.
+ 1 APPPATH\Controllers\QuestionSetController.php(95): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: id', 'C:\\laragon\\www\\st\\app\\Controllers\\QuestionSetController.php', 95, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_set_insert_db()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 10:16:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 10:16:49 --> Undefined index: id
+in APPPATH\Controllers\QuestionSetController.php on line 95.
+ 1 APPPATH\Controllers\QuestionSetController.php(95): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: id', 'C:\\laragon\\www\\st\\app\\Controllers\\QuestionSetController.php', 95, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_set_insert_db()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 10:17:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 10:17:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 10:17:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 10:17:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 10:27:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 10:27:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 10:28:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 10:28:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 10:29:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 10:31:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 10:31:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 10:31:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 10:31:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 10:37:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 10:37:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 10:37:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 10:37:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-22 10:37:43 --> Undefined index: id
+in APPPATH\Controllers\QuestionSetController.php on line 95.
+ 1 APPPATH\Controllers\QuestionSetController.php(95): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: id', 'C:\\laragon\\www\\st\\app\\Controllers\\QuestionSetController.php', 95, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\QuestionSetController->question_set_insert_db()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-22 10:37:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 10:37:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 10:41:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 10:41:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 10:41:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 10:41:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 10:42:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-22 10:42:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

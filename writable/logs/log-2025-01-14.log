@@ -1,0 +1,125 @@
+INFO - 2025-01-14 02:32:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 02:36:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 02:43:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 02:54:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 03:11:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 03:47:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 04:40:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 04:58:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 05:55:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 07:17:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 07:17:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 08:13:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 08:24:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 08:59:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 09:54:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 09:54:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 09:54:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 09:54:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 09:54:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 09:54:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 09:54:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 09:54:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 09:54:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 09:55:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 10:59:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 11:17:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-14 11:17:41 --> ErrorException: Undefined variable: course_title
+in APPPATH/Views/student/course_details_left_contain.php on line 24.
+ 1 APPPATH/Views/student/course_details_left_contain.php(24): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_title', '/var/www/html/app/Views/student/course_details_left_contain.php', 24, [...])
+ 2 APPPATH/Views/student/CourseDetailsView.php(67): include_once('/var/www/html/app/Views/student/course_details_left_contain.php')
+ 3 SYSTEMPATH/View/View.php(228): include('/var/www/html/app/Views/student/CourseDetailsView.php')
+ 4 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render('student/CourseDetailsView', [], true)
+ 6 APPPATH/Controllers/HomepageController.php(157): view('student/CourseDetailsView', [...])
+ 7 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('66')
+ 8 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 9 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2025-01-14 12:04:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 12:05:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 12:05:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 12:12:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 13:27:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 14:11:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-14 14:11:30 --> mysqli_sql_exception: Column 'teacher_name' cannot be null in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query('INSERT INTO `te...', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `te...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `te...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `te...', Array, false)
+#4 /var/www/html/vendor/codeigniter4/framework/system/Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/html/vendor/codeigniter4/framework/system/BaseModel.php(805): CodeIgniter\Model->doInsert(Array)
+#6 /var/www/html/vendor/codeigniter4/framework/system/Model.php(749): CodeIgniter\BaseModel->insert(Array, true)
+#7 /var/www/html/app/Controllers/TeacherregistrationController.php(64): CodeIgniter\Model->insert(Array)
+#8 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(943): App\Controllers\TeacherregistrationController->store()
+#9 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TeacherregistrationController))
+#10 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2025-01-14 14:11:30 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'teacher_name' cannot be null
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `teacher_registration` (`teacher_id`, `teacher_name`, `teacher_email`, `teacher_mobile`, `teacher_password`) VALUES (:teacher_id:, :teacher_name:, :teacher_email:, :teacher_mobile:, :teacher_password:)', [...], false)
+ 2 SYSTEMPATH/Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH/Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH/Controllers/TeacherregistrationController.php(64): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\TeacherregistrationController->store()
+ 7 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TeacherregistrationController))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-14 14:11:30 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'teacher_name' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 311.
+ 1 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `teacher_registration` (`teacher_id`, `teacher_name`, `teacher_email`, `teacher_mobile`, `teacher_password`) VALUES (\'TEA2501492E23\', NULL, NULL, NULL, NULL)')
+ 2 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `teacher_registration` (`teacher_id`, `teacher_name`, `teacher_email`, `teacher_mobile`, `teacher_password`) VALUES (\'TEA2501492E23\', NULL, NULL, NULL, NULL)')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `teacher_registration` (`teacher_id`, `teacher_name`, `teacher_email`, `teacher_mobile`, `teacher_password`) VALUES (:teacher_id:, :teacher_name:, :teacher_email:, :teacher_mobile:, :teacher_password:)', [...], false)
+ 4 SYSTEMPATH/Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH/BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH/Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH/Controllers/TeacherregistrationController.php(64): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\TeacherregistrationController->store()
+ 9 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TeacherregistrationController))
+10 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-14 14:11:30 --> [Caused by] mysqli_sql_exception: Column 'teacher_name' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 306.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(306): mysqli->query('INSERT INTO `teacher_registration` (`teacher_id`, `teacher_name`, `teacher_email`, `teacher_mobile`, `teacher_password`) VALUES (\'TEA2501492E23\', NULL, NULL, NULL, NULL)', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `teacher_registration` (`teacher_id`, `teacher_name`, `teacher_email`, `teacher_mobile`, `teacher_password`) VALUES (\'TEA2501492E23\', NULL, NULL, NULL, NULL)')
+ 3 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `teacher_registration` (`teacher_id`, `teacher_name`, `teacher_email`, `teacher_mobile`, `teacher_password`) VALUES (\'TEA2501492E23\', NULL, NULL, NULL, NULL)')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `teacher_registration` (`teacher_id`, `teacher_name`, `teacher_email`, `teacher_mobile`, `teacher_password`) VALUES (:teacher_id:, :teacher_name:, :teacher_email:, :teacher_mobile:, :teacher_password:)', [...], false)
+ 5 SYSTEMPATH/Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH/Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH/Controllers/TeacherregistrationController.php(64): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\TeacherregistrationController->store()
+10 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TeacherregistrationController))
+11 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2025-01-14 14:38:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:35:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 15:50:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 16:07:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 16:36:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 16:36:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-14 16:36:45 --> ErrorException: Undefined variable: course_title
+in APPPATH/Views/student/course_details_left_contain.php on line 24.
+ 1 APPPATH/Views/student/course_details_left_contain.php(24): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_title', '/var/www/html/app/Views/student/course_details_left_contain.php', 24, [...])
+ 2 APPPATH/Views/student/CourseDetailsView.php(67): include_once('/var/www/html/app/Views/student/course_details_left_contain.php')
+ 3 SYSTEMPATH/View/View.php(228): include('/var/www/html/app/Views/student/CourseDetailsView.php')
+ 4 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render('student/CourseDetailsView', [], true)
+ 6 APPPATH/Controllers/HomepageController.php(157): view('student/CourseDetailsView', [...])
+ 7 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('66')
+ 8 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 9 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2025-01-14 17:19:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 19:26:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 21:42:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 21:42:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 21:42:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 22:28:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 23:13:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 23:13:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 23:13:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 23:13:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

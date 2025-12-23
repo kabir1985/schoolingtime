@@ -1,0 +1,286 @@
+INFO - 2024-06-11 04:27:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-11 04:27:02 --> mysqli_sql_exception: Expression #3 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'school_tutor_db.course_feedback.course_id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in C:\laragon\www\SchoolingTime\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\SchoolingTime\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query(' SELECT tc.*, r...', 0)
+#1 C:\laragon\www\SchoolingTime\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT tc.*, r...')
+#2 C:\laragon\www\SchoolingTime\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT tc.*, r...')
+#3 C:\laragon\www\SchoolingTime\app\Controllers\HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#4 C:\laragon\www\SchoolingTime\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#5 C:\laragon\www\SchoolingTime\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 C:\laragon\www\SchoolingTime\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\SchoolingTime\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-06-11 04:27:02 --> Expression #3 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'school_tutor_db.course_feedback.course_id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Controllers\HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\' AND tc.course_type_name = \'Online_Live_Coaching\'')
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-11 04:27:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-11 04:27:19 --> mysqli_sql_exception: Expression #3 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'school_tutor_db.course_feedback.course_id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in C:\laragon\www\SchoolingTime\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\SchoolingTime\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query(' SELECT tc.*, r...', 0)
+#1 C:\laragon\www\SchoolingTime\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT tc.*, r...')
+#2 C:\laragon\www\SchoolingTime\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT tc.*, r...')
+#3 C:\laragon\www\SchoolingTime\app\Controllers\HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#4 C:\laragon\www\SchoolingTime\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#5 C:\laragon\www\SchoolingTime\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 C:\laragon\www\SchoolingTime\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\SchoolingTime\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-06-11 04:27:19 --> Expression #3 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'school_tutor_db.course_feedback.course_id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Controllers\HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\' AND tc.course_type_name = \'Online_Live_Coaching\'')
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-11 04:28:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-11 04:29:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-11 04:29:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-11 04:29:28 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 83.
+ 1 APPPATH\Controllers\HomepageController.php(83): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 83, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-11 04:29:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-11 04:29:29 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 83.
+ 1 APPPATH\Controllers\HomepageController.php(83): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 83, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-11 04:29:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-11 04:29:29 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 83.
+ 1 APPPATH\Controllers\HomepageController.php(83): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 83, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-icon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-11 04:29:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-11 04:29:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-11 04:29:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-11 04:29:46 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 83.
+ 1 APPPATH\Controllers\HomepageController.php(83): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 83, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-11 04:29:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-11 04:29:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-11 04:30:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-11 04:30:04 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 83.
+ 1 APPPATH\Controllers\HomepageController.php(83): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 83, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-11 04:30:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-11 04:30:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-11 04:30:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-11 04:30:26 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 83.
+ 1 APPPATH\Controllers\HomepageController.php(83): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 83, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-11 04:31:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-11 04:36:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-11 04:36:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-11 04:36:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-11 04:36:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-11 04:36:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-11 04:36:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-11 04:36:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-11 04:36:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-11 04:36:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-11 04:36:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-11 04:36:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-11 04:36:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-11 04:36:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-11 04:36:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-11 04:36:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-11 04:36:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-11 04:36:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-11 04:36:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-11 04:36:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-11 04:36:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-11 04:36:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-11 04:36:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-11 04:36:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-11 04:36:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-11 04:36:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-11 04:36:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-11 04:36:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-11 04:36:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-11 04:36:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-11 04:36:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-11 04:36:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-11 04:36:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-11 04:36:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-11 04:36:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-11 04:36:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-11 04:36:31 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 83.
+ 1 APPPATH\Controllers\HomepageController.php(83): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 83, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-11 04:41:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-11 04:41:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-11 04:41:19 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 83.
+ 1 APPPATH\Controllers\HomepageController.php(83): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 83, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-11 04:41:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-11 04:41:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-11 04:41:29 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 83.
+ 1 APPPATH\Controllers\HomepageController.php(83): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 83, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-11 04:50:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-11 04:50:28 --> mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'school_tutor_db.course_content.course_content_id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in C:\laragon\www\SchoolingTime\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\SchoolingTime\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query(' SELECT *  FROM...', 0)
+#1 C:\laragon\www\SchoolingTime\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM...')
+#2 C:\laragon\www\SchoolingTime\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM...')
+#3 C:\laragon\www\SchoolingTime\app\Controllers\HomepageController.php(93): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM...')
+#4 C:\laragon\www\SchoolingTime\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('65')
+#5 C:\laragon\www\SchoolingTime\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 C:\laragon\www\SchoolingTime\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\SchoolingTime\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-06-11 04:50:28 --> Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'school_tutor_db.course_content.course_content_id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Controllers\HomepageController.php(93): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_content
+                                WHERE course_id = 65
+                                GROUP BY chapter_id
+                                ORDER BY course_content_id ')
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('65')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-11 04:50:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-11 04:50:30 --> mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'school_tutor_db.course_content.course_content_id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in C:\laragon\www\SchoolingTime\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\SchoolingTime\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query(' SELECT *  FROM...', 0)
+#1 C:\laragon\www\SchoolingTime\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM...')
+#2 C:\laragon\www\SchoolingTime\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM...')
+#3 C:\laragon\www\SchoolingTime\app\Controllers\HomepageController.php(93): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM...')
+#4 C:\laragon\www\SchoolingTime\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('65')
+#5 C:\laragon\www\SchoolingTime\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 C:\laragon\www\SchoolingTime\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\SchoolingTime\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-06-11 04:50:30 --> Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'school_tutor_db.course_content.course_content_id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Controllers\HomepageController.php(93): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_content
+                                WHERE course_id = 65
+                                GROUP BY chapter_id
+                                ORDER BY course_content_id ')
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('65')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-11 04:50:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-11 04:50:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-11 04:50:57 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 83.
+ 1 APPPATH\Controllers\HomepageController.php(83): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 83, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-11 11:05:53 --> Use of undefined constant MYSQLI_STORE_RESULT - assumed 'MYSQLI_STORE_RESULT' (this will throw an Error in a future version of PHP)
+in SYSTEMPATH/Database/Database.php on line 137.
+ 1 SYSTEMPATH/Database/Database.php(137): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefined constant MYSQLI_STORE_RESULT - assumed \'MYSQLI_STORE_RESULT\' (this will throw an Error in a future version of PHP)', '/var/www/html/vendor/codeigniter4/framework/system/Database/Database.php', 137, [...])
+ 2 SYSTEMPATH/Database/Database.php(55): CodeIgniter\Database\Database->initDriver('MySQLi', 'Connection', [...])
+ 3 SYSTEMPATH/Database/Config.php(83): CodeIgniter\Database\Database->load([...], 'default')
+ 4 APPPATH/Controllers/HomepageController.php(10): CodeIgniter\Database\Config::connect()
+ 5 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\HomepageController->__construct()
+ 6 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-11 11:07:00 --> Use of undefined constant MYSQLI_STORE_RESULT - assumed 'MYSQLI_STORE_RESULT' (this will throw an Error in a future version of PHP)
+in SYSTEMPATH/Database/Database.php on line 137.
+ 1 SYSTEMPATH/Database/Database.php(137): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefined constant MYSQLI_STORE_RESULT - assumed \'MYSQLI_STORE_RESULT\' (this will throw an Error in a future version of PHP)', '/var/www/html/vendor/codeigniter4/framework/system/Database/Database.php', 137, [...])
+ 2 SYSTEMPATH/Database/Database.php(55): CodeIgniter\Database\Database->initDriver('MySQLi', 'Connection', [...])
+ 3 SYSTEMPATH/Database/Config.php(83): CodeIgniter\Database\Database->load([...], 'default')
+ 4 APPPATH/Controllers/HomepageController.php(10): CodeIgniter\Database\Config::connect()
+ 5 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\HomepageController->__construct()
+ 6 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-11 11:08:41 --> Use of undefined constant MYSQLI_STORE_RESULT - assumed 'MYSQLI_STORE_RESULT' (this will throw an Error in a future version of PHP)
+in SYSTEMPATH/Database/Database.php on line 137.
+ 1 SYSTEMPATH/Database/Database.php(137): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefined constant MYSQLI_STORE_RESULT - assumed \'MYSQLI_STORE_RESULT\' (this will throw an Error in a future version of PHP)', '/var/www/html/vendor/codeigniter4/framework/system/Database/Database.php', 137, [...])
+ 2 SYSTEMPATH/Database/Database.php(55): CodeIgniter\Database\Database->initDriver('MySQLi', 'Connection', [...])
+ 3 SYSTEMPATH/Database/Config.php(83): CodeIgniter\Database\Database->load([...], 'default')
+ 4 APPPATH/Controllers/HomepageController.php(10): CodeIgniter\Database\Config::connect()
+ 5 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\HomepageController->__construct()
+ 6 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-11 11:08:44 --> Use of undefined constant MYSQLI_STORE_RESULT - assumed 'MYSQLI_STORE_RESULT' (this will throw an Error in a future version of PHP)
+in SYSTEMPATH/Database/Database.php on line 137.
+ 1 SYSTEMPATH/Database/Database.php(137): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefined constant MYSQLI_STORE_RESULT - assumed \'MYSQLI_STORE_RESULT\' (this will throw an Error in a future version of PHP)', '/var/www/html/vendor/codeigniter4/framework/system/Database/Database.php', 137, [...])
+ 2 SYSTEMPATH/Database/Database.php(55): CodeIgniter\Database\Database->initDriver('MySQLi', 'Connection', [...])
+ 3 SYSTEMPATH/Database/Config.php(83): CodeIgniter\Database\Database->load([...], 'default')
+ 4 APPPATH/Controllers/HomepageController.php(10): CodeIgniter\Database\Config::connect()
+ 5 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\HomepageController->__construct()
+ 6 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-11 11:08:47 --> Use of undefined constant MYSQLI_STORE_RESULT - assumed 'MYSQLI_STORE_RESULT' (this will throw an Error in a future version of PHP)
+in SYSTEMPATH/Database/Database.php on line 137.
+ 1 SYSTEMPATH/Database/Database.php(137): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefined constant MYSQLI_STORE_RESULT - assumed \'MYSQLI_STORE_RESULT\' (this will throw an Error in a future version of PHP)', '/var/www/html/vendor/codeigniter4/framework/system/Database/Database.php', 137, [...])
+ 2 SYSTEMPATH/Database/Database.php(55): CodeIgniter\Database\Database->initDriver('MySQLi', 'Connection', [...])
+ 3 SYSTEMPATH/Database/Config.php(83): CodeIgniter\Database\Database->load([...], 'default')
+ 4 APPPATH/Controllers/HomepageController.php(10): CodeIgniter\Database\Config::connect()
+ 5 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\HomepageController->__construct()
+ 6 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-11 11:09:22 --> Use of undefined constant MYSQLI_STORE_RESULT - assumed 'MYSQLI_STORE_RESULT' (this will throw an Error in a future version of PHP)
+in SYSTEMPATH/Database/Database.php on line 137.
+ 1 SYSTEMPATH/Database/Database.php(137): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefined constant MYSQLI_STORE_RESULT - assumed \'MYSQLI_STORE_RESULT\' (this will throw an Error in a future version of PHP)', '/var/www/html/vendor/codeigniter4/framework/system/Database/Database.php', 137, [...])
+ 2 SYSTEMPATH/Database/Database.php(55): CodeIgniter\Database\Database->initDriver('MySQLi', 'Connection', [...])
+ 3 SYSTEMPATH/Database/Config.php(83): CodeIgniter\Database\Database->load([...], 'default')
+ 4 APPPATH/Controllers/HomepageController.php(10): CodeIgniter\Database\Config::connect()
+ 5 SYSTEMPATH/CodeIgniter.php(914): App\Controllers\HomepageController->__construct()
+ 6 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()

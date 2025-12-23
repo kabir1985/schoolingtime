@@ -1,0 +1,160 @@
+INFO - 2024-02-20 05:51:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 05:51:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 05:54:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 05:54:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 06:09:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-20 06:09:18 --> Undefined property: stdClass::$chapter_name
+in APPPATH\Views\student\CourseDetailsView.php on line 339.
+ 1 APPPATH\Views\student\CourseDetailsView.php(339): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$chapter_name', 'C:\\laragon\\www\\SchoolingTime\\app\\Views\\student\\CourseDetailsView.php', 339, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\SchoolingTime\\app\\Views\\student\\CourseDetailsView.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('student/CourseDetailsView', [], true)
+ 5 APPPATH\Controllers\HomepageController.php(54): view('student/CourseDetailsView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-02-20 06:09:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 06:12:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-02-20 06:12:14 --> mysqli_sql_exception: Table 'school_tutor_db.course_videos' doesn't exist in C:\laragon\www\SchoolingTime\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\SchoolingTime\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT CONCAT(c...', 0)
+#1 C:\laragon\www\SchoolingTime\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT CONCAT(c...')
+#2 C:\laragon\www\SchoolingTime\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT CONCAT(c...')
+#3 C:\laragon\www\SchoolingTime\app\Controllers\HomepageController.php(40): CodeIgniter\Database\BaseConnection->query('SELECT CONCAT(c...')
+#4 C:\laragon\www\SchoolingTime\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view()
+#5 C:\laragon\www\SchoolingTime\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 C:\laragon\www\SchoolingTime\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\SchoolingTime\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-02-20 06:12:14 --> Table 'school_tutor_db.course_videos' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Controllers\HomepageController.php(40): CodeIgniter\Database\BaseConnection->query('SELECT CONCAT(chapter_name, \'
+\',
+           GROUP_CONCAT(CONCAT(video_title, \'	\', video_link) ORDER BY video_title SEPARATOR \'
+\')) AS chapter_videos
+   FROM 
+       course_videos
+   WHERE
+       course_id = 13
+   GROUP BY 
+       chapter_name; ')
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-02-20 06:12:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 06:13:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 08:05:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 08:06:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 08:11:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 08:12:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 08:19:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 08:20:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 08:21:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 08:21:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-20 08:21:58 --> Undefined property: stdClass::$chapter_name
+in APPPATH\Views\student\CourseDetailsView.php on line 339.
+ 1 APPPATH\Views\student\CourseDetailsView.php(339): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$chapter_name', 'C:\\laragon\\www\\SchoolingTime\\app\\Views\\student\\CourseDetailsView.php', 339, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\SchoolingTime\\app\\Views\\student\\CourseDetailsView.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('student/CourseDetailsView', [], true)
+ 5 APPPATH\Controllers\HomepageController.php(55): view('student/CourseDetailsView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-02-20 08:23:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-20 08:23:54 --> Undefined property: stdClass::$video_title
+in APPPATH\Views\student\CourseDetailsView.php on line 346.
+ 1 APPPATH\Views\student\CourseDetailsView.php(346): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$video_title', 'C:\\laragon\\www\\SchoolingTime\\app\\Views\\student\\CourseDetailsView.php', 346, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\SchoolingTime\\app\\Views\\student\\CourseDetailsView.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('student/CourseDetailsView', [], true)
+ 5 APPPATH\Controllers\HomepageController.php(55): view('student/CourseDetailsView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-02-20 08:24:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-20 08:24:13 --> Undefined property: stdClass::$video_link
+in APPPATH\Views\student\CourseDetailsView.php on line 361.
+ 1 APPPATH\Views\student\CourseDetailsView.php(361): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$video_link', 'C:\\laragon\\www\\SchoolingTime\\app\\Views\\student\\CourseDetailsView.php', 361, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\SchoolingTime\\app\\Views\\student\\CourseDetailsView.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('student/CourseDetailsView', [], true)
+ 5 APPPATH\Controllers\HomepageController.php(55): view('student/CourseDetailsView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-02-20 08:24:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 08:26:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 09:01:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 09:01:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 09:01:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 09:02:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 09:14:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 09:14:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 09:15:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-20 09:25:03 --> syntax error, unexpected '$data' (T_VARIABLE)
+in APPPATH\Controllers\HomepageController.php on line 47.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(256): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\SchoolingTime\\vendor\\composer/../../app/Controllers/HomepageController.php')
+ 2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClassmap('App\\Controllers\\HomepageController')
+ 3 [internal function]: spl_autoload_call('App\\Controllers\\HomepageController')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\HomepageController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-20 09:27:02 --> syntax error, unexpected '$data' (T_VARIABLE)
+in APPPATH\Controllers\HomepageController.php on line 47.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(256): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\SchoolingTime\\vendor\\composer/../../app/Controllers/HomepageController.php')
+ 2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClassmap('App\\Controllers\\HomepageController')
+ 3 [internal function]: spl_autoload_call('App\\Controllers\\HomepageController')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\HomepageController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-02-20 09:30:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 09:32:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 09:32:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 09:38:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 09:38:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 09:38:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 09:38:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 09:38:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 09:38:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 09:39:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 09:41:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 09:41:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 09:52:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 09:52:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 14:49:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 14:51:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 14:52:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 14:52:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 14:53:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 14:54:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 14:54:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 14:54:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 14:54:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 14:55:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 14:55:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 15:23:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 15:23:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 15:55:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 15:56:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 15:59:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 15:59:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 15:59:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 15:59:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 15:59:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 16:00:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 16:02:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 16:04:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 16:06:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 16:07:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 16:15:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 16:23:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 16:24:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 16:27:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

@@ -1,0 +1,849 @@
+INFO - 2025-11-30 11:02:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:02:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:03:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-30 11:03:41 --> mysqli_sql_exception: Expression #3 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'sctime_db.course_feedback.course_id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query(' SELECT tc.*, r...', 0)
+#1 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT tc.*, r...')
+#2 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT tc.*, r...')
+#3 C:\laragon\www\sctime20251125\app\Controllers\CourseCategoryDetailsController.php(124): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#4 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\CourseCategoryDetailsController->CourseShowCateryWise('29')
+#5 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseCategoryDetailsController))
+#6 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\sctime20251125\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2025-11-30 11:03:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Expression #3 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'sctime_db.course_feedback.course_id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Controllers\CourseCategoryDetailsController.php(124): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\'
+        AND tc.course_category_id = \'29\' ')
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\CourseCategoryDetailsController->CourseShowCateryWise('29')
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseCategoryDetailsController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-11-30 11:03:41 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Expression #3 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'sctime_db.course_feedback.course_id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\'
+        AND tc.course_category_id = \'29\' ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\'
+        AND tc.course_category_id = \'29\' ')
+ 3 APPPATH\Controllers\CourseCategoryDetailsController.php(124): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\'
+        AND tc.course_category_id = \'29\' ')
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\CourseCategoryDetailsController->CourseShowCateryWise('29')
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseCategoryDetailsController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-11-30 11:03:41 --> [Caused by] mysqli_sql_exception: Expression #3 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'sctime_db.course_feedback.course_id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\'
+        AND tc.course_category_id = \'29\' ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\'
+        AND tc.course_category_id = \'29\' ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\'
+        AND tc.course_category_id = \'29\' ')
+ 4 APPPATH\Controllers\CourseCategoryDetailsController.php(124): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\'
+        AND tc.course_category_id = \'29\' ')
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\CourseCategoryDetailsController->CourseShowCateryWise('29')
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseCategoryDetailsController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2025-11-30 11:03:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:03:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-30 11:03:47 --> mysqli_sql_exception: Expression #3 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'sctime_db.course_feedback.course_id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query(' SELECT tc.*, r...', 0)
+#1 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT tc.*, r...')
+#2 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT tc.*, r...')
+#3 C:\laragon\www\sctime20251125\app\Controllers\CourseCategoryDetailsController.php(124): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#4 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\CourseCategoryDetailsController->CourseShowCateryWise('31')
+#5 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseCategoryDetailsController))
+#6 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\sctime20251125\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2025-11-30 11:03:47 --> CodeIgniter\Database\Exceptions\DatabaseException: Expression #3 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'sctime_db.course_feedback.course_id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Controllers\CourseCategoryDetailsController.php(124): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\'
+        AND tc.course_category_id = \'31\' ')
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\CourseCategoryDetailsController->CourseShowCateryWise('31')
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseCategoryDetailsController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-11-30 11:03:47 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Expression #3 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'sctime_db.course_feedback.course_id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\'
+        AND tc.course_category_id = \'31\' ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\'
+        AND tc.course_category_id = \'31\' ')
+ 3 APPPATH\Controllers\CourseCategoryDetailsController.php(124): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\'
+        AND tc.course_category_id = \'31\' ')
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\CourseCategoryDetailsController->CourseShowCateryWise('31')
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseCategoryDetailsController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-11-30 11:03:47 --> [Caused by] mysqli_sql_exception: Expression #3 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'sctime_db.course_feedback.course_id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\'
+        AND tc.course_category_id = \'31\' ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\'
+        AND tc.course_category_id = \'31\' ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\'
+        AND tc.course_category_id = \'31\' ')
+ 4 APPPATH\Controllers\CourseCategoryDetailsController.php(124): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\'
+        AND tc.course_category_id = \'31\' ')
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\CourseCategoryDetailsController->CourseShowCateryWise('31')
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseCategoryDetailsController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2025-11-30 11:03:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:03:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:04:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:04:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-30 11:04:02 --> mysqli_sql_exception: Unknown column 'homepage_assets' in 'where clause' in C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query(' SELECT *  FROM...', 0)
+#1 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM...')
+#2 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM...')
+#3 C:\laragon\www\sctime20251125\app\Controllers\HomepageController.php(173): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM...')
+#4 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+#5 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\sctime20251125\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2025-11-30 11:04:02 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Controllers\HomepageController.php(173): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-11-30 11:04:02 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 3 APPPATH\Controllers\HomepageController.php(173): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-11-30 11:04:02 --> [Caused by] mysqli_sql_exception: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 4 APPPATH\Controllers\HomepageController.php(173): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2025-11-30 11:04:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-30 11:04:02 --> mysqli_sql_exception: Unknown column 'homepage_assets' in 'where clause' in C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query(' SELECT *  FROM...', 0)
+#1 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM...')
+#2 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM...')
+#3 C:\laragon\www\sctime20251125\app\Controllers\HomepageController.php(173): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM...')
+#4 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-ico...')
+#5 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\sctime20251125\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2025-11-30 11:04:02 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Controllers\HomepageController.php(173): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-icon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-11-30 11:04:02 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 3 APPPATH\Controllers\HomepageController.php(173): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-icon.png')
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-11-30 11:04:02 --> [Caused by] mysqli_sql_exception: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 4 APPPATH\Controllers\HomepageController.php(173): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-icon.png')
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2025-11-30 11:04:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:04:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:04:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:04:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:06:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:08:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:09:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:09:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:09:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-30 11:09:28 --> mysqli_sql_exception: Unknown column 'homepage_assets' in 'where clause' in C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query(' SELECT *  FROM...', 0)
+#1 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM...')
+#2 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM...')
+#3 C:\laragon\www\sctime20251125\app\Controllers\HomepageController.php(173): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM...')
+#4 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+#5 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\sctime20251125\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2025-11-30 11:09:28 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Controllers\HomepageController.php(173): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-11-30 11:09:28 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 3 APPPATH\Controllers\HomepageController.php(173): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-11-30 11:09:28 --> [Caused by] mysqli_sql_exception: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 4 APPPATH\Controllers\HomepageController.php(173): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2025-11-30 11:09:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-30 11:09:28 --> mysqli_sql_exception: Unknown column 'homepage_assets' in 'where clause' in C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query(' SELECT *  FROM...', 0)
+#1 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM...')
+#2 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM...')
+#3 C:\laragon\www\sctime20251125\app\Controllers\HomepageController.php(173): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM...')
+#4 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-ico...')
+#5 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\sctime20251125\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2025-11-30 11:09:28 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Controllers\HomepageController.php(173): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-icon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-11-30 11:09:28 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 3 APPPATH\Controllers\HomepageController.php(173): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-icon.png')
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-11-30 11:09:28 --> [Caused by] mysqli_sql_exception: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 4 APPPATH\Controllers\HomepageController.php(173): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-icon.png')
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2025-11-30 11:09:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:10:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:14:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-30 11:14:33 --> ErrorException: Undefined variable $course
+in APPPATH\Views\homepage\part\course.php on line 29.
+ 1 APPPATH\Views\homepage\part\course.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $course', 'C:\\laragon\\www\\sctime20251125\\app\\Views\\homepage\\part\\course.php', 29)
+ 2 APPPATH\Views\homepage\homepageView.php(16): include_once('C:\\laragon\\www\\sctime20251125\\app\\Views\\homepage\\part\\course.php')
+ 3 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\sctime20251125\\app\\Views\\homepage\\homepageView.php')
+ 4 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('homepage/homepageView', [], true)
+ 6 APPPATH\Controllers\HomepageController.php(114): view('homepage/homepageView', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\HomepageController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2025-11-30 11:15:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-30 11:15:59 --> ErrorException: Undefined variable $course
+in APPPATH\Views\homepage\part\course.php on line 69.
+ 1 APPPATH\Views\homepage\part\course.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $course', 'C:\\laragon\\www\\sctime20251125\\app\\Views\\homepage\\part\\course.php', 69)
+ 2 APPPATH\Views\homepage\homepageView.php(16): include_once('C:\\laragon\\www\\sctime20251125\\app\\Views\\homepage\\part\\course.php')
+ 3 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\sctime20251125\\app\\Views\\homepage\\homepageView.php')
+ 4 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('homepage/homepageView', [], true)
+ 6 APPPATH\Controllers\HomepageController.php(114): view('homepage/homepageView', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\HomepageController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2025-11-30 11:16:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-30 11:16:00 --> ErrorException: Undefined variable $course
+in APPPATH\Views\homepage\part\course.php on line 69.
+ 1 APPPATH\Views\homepage\part\course.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $course', 'C:\\laragon\\www\\sctime20251125\\app\\Views\\homepage\\part\\course.php', 69)
+ 2 APPPATH\Views\homepage\homepageView.php(16): include_once('C:\\laragon\\www\\sctime20251125\\app\\Views\\homepage\\part\\course.php')
+ 3 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\sctime20251125\\app\\Views\\homepage\\homepageView.php')
+ 4 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('homepage/homepageView', [], true)
+ 6 APPPATH\Controllers\HomepageController.php(114): view('homepage/homepageView', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\HomepageController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2025-11-30 11:17:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:18:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:29:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:29:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:29:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-30 11:29:55 --> mysqli_sql_exception: Unknown column 'homepage_assets' in 'where clause' in C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query(' SELECT *  FROM...', 0)
+#1 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM...')
+#2 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM...')
+#3 C:\laragon\www\sctime20251125\app\Controllers\HomepageController.php(173): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM...')
+#4 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+#5 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\sctime20251125\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2025-11-30 11:29:55 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Controllers\HomepageController.php(173): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-11-30 11:29:55 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 3 APPPATH\Controllers\HomepageController.php(173): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-11-30 11:29:55 --> [Caused by] mysqli_sql_exception: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 4 APPPATH\Controllers\HomepageController.php(173): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2025-11-30 11:29:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-30 11:29:55 --> mysqli_sql_exception: Unknown column 'homepage_assets' in 'where clause' in C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query(' SELECT *  FROM...', 0)
+#1 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM...')
+#2 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM...')
+#3 C:\laragon\www\sctime20251125\app\Controllers\HomepageController.php(173): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM...')
+#4 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-ico...')
+#5 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\sctime20251125\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2025-11-30 11:29:55 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Controllers\HomepageController.php(173): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-icon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-11-30 11:29:55 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 3 APPPATH\Controllers\HomepageController.php(173): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-icon.png')
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-11-30 11:29:55 --> [Caused by] mysqli_sql_exception: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 4 APPPATH\Controllers\HomepageController.php(173): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-icon.png')
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2025-11-30 11:30:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:30:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:31:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:31:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:31:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:31:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:31:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:31:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:31:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:31:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-30 11:31:50 --> mysqli_sql_exception: Expression #3 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'sctime_db.course_feedback.course_id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query(' SELECT tc.*, r...', 0)
+#1 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT tc.*, r...')
+#2 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT tc.*, r...')
+#3 C:\laragon\www\sctime20251125\app\Controllers\CourseCategoryDetailsController.php(29): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#4 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\CourseCategoryDetailsController->index()
+#5 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseCategoryDetailsController))
+#6 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\sctime20251125\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2025-11-30 11:31:50 --> CodeIgniter\Database\Exceptions\DatabaseException: Expression #3 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'sctime_db.course_feedback.course_id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Controllers\CourseCategoryDetailsController.php(29): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\'')
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\CourseCategoryDetailsController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseCategoryDetailsController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-11-30 11:31:50 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Expression #3 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'sctime_db.course_feedback.course_id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\'')
+ 3 APPPATH\Controllers\CourseCategoryDetailsController.php(29): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\'')
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\CourseCategoryDetailsController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseCategoryDetailsController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-11-30 11:31:50 --> [Caused by] mysqli_sql_exception: Expression #3 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'sctime_db.course_feedback.course_id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\'')
+ 4 APPPATH\Controllers\CourseCategoryDetailsController.php(29): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\'')
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\CourseCategoryDetailsController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseCategoryDetailsController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2025-11-30 11:33:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:33:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:33:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-30 11:33:56 --> mysqli_sql_exception: Unknown column 'homepage_assets' in 'where clause' in C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query(' SELECT *  FROM...', 0)
+#1 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM...')
+#2 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM...')
+#3 C:\laragon\www\sctime20251125\app\Controllers\HomepageController.php(173): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM...')
+#4 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+#5 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\sctime20251125\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2025-11-30 11:33:56 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Controllers\HomepageController.php(173): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-11-30 11:33:56 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 3 APPPATH\Controllers\HomepageController.php(173): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-11-30 11:33:56 --> [Caused by] mysqli_sql_exception: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 4 APPPATH\Controllers\HomepageController.php(173): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2025-11-30 11:33:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-30 11:33:56 --> mysqli_sql_exception: Unknown column 'homepage_assets' in 'where clause' in C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query(' SELECT *  FROM...', 0)
+#1 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM...')
+#2 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM...')
+#3 C:\laragon\www\sctime20251125\app\Controllers\HomepageController.php(173): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM...')
+#4 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-ico...')
+#5 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 C:\laragon\www\sctime20251125\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\sctime20251125\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2025-11-30 11:33:56 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Controllers\HomepageController.php(173): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-icon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-11-30 11:33:56 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 3 APPPATH\Controllers\HomepageController.php(173): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-icon.png')
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-11-30 11:33:56 --> [Caused by] mysqli_sql_exception: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 4 APPPATH\Controllers\HomepageController.php(173): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-icon.png')
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2025-11-30 11:34:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:34:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:34:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:34:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:34:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:34:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:34:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:36:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:36:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:37:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:38:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:38:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:38:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:38:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:39:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:39:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:39:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:39:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:39:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:40:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-30 11:40:02 --> ErrorException: Undefined property: stdClass::$course_start_date
+in APPPATH\Views\include\CourseShowAcademicView.php on line 76.
+ 1 APPPATH\Views\include\CourseShowAcademicView.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$course_start_date', 'C:\\laragon\\www\\sctime20251125\\app\\Views\\include\\CourseShowAcademicView.php', 76)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\sctime20251125\\app\\Views\\include\\CourseShowAcademicView.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('include/CourseShowAcademicView', [], true)
+ 5 APPPATH\Controllers\CourseCategoryDetailsController.php(96): view('include/CourseShowAcademicView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\CourseCategoryDetailsController->CourseShowAcademic('30')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseCategoryDetailsController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2025-11-30 11:40:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:40:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-30 11:40:09 --> ErrorException: Undefined property: stdClass::$course_start_date
+in APPPATH\Views\include\CourseShowAcademicView.php on line 76.
+ 1 APPPATH\Views\include\CourseShowAcademicView.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$course_start_date', 'C:\\laragon\\www\\sctime20251125\\app\\Views\\include\\CourseShowAcademicView.php', 76)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\sctime20251125\\app\\Views\\include\\CourseShowAcademicView.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('include/CourseShowAcademicView', [], true)
+ 5 APPPATH\Controllers\CourseCategoryDetailsController.php(96): view('include/CourseShowAcademicView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\CourseCategoryDetailsController->CourseShowAcademic('37')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseCategoryDetailsController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2025-11-30 11:40:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:40:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:40:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:40:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:40:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:40:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:41:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:44:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:44:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:44:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:44:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:44:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:44:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:44:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:44:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:45:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:47:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:48:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:48:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:48:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-30 11:48:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

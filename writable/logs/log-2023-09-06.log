@@ -1,0 +1,1559 @@
+ERROR - 2023-09-06 04:16:35 --> mysqli_sql_exception: Column 'student_name' cannot be null in D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `st...', 0)
+#1 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `st...')
+#2 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `st...')
+#3 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#4 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 D:\laragon\www\ci4\app\Controllers\StudentregistrationController.php(39): CodeIgniter\Model->insert(Array)
+#8 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(915): App\Controllers\StudentregistrationController->store()
+#9 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentregistrationController))
+#10 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\laragon\www\ci4\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-09-06 04:16:35 --> Column 'student_name' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `student_registration` (`student_id`, `student_name`, `student_email`, `student_mobile`, `student_password`) VALUES (:student_id:, :student_name:, :student_email:, :student_mobile:, :student_password:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\StudentregistrationController.php(39): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\StudentregistrationController->store()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentregistrationController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-06 05:49:37 --> Undefined variable: result
+in APPPATH\Controllers\StudentloginController.php on line 39.
+ 1 APPPATH\Controllers\StudentloginController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: result', 'D:\\laragon\\www\\ci4\\app\\Controllers\\StudentloginController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\StudentloginController->store()
+ 3 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentloginController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-06 06:04:29 --> Use of undefined constant ‘controller - assumed '‘controller' (this will throw an Error in a future version of PHP)
+in APPPATH\Controllers\StudentloginController.php on line 47.
+ 1 APPPATH\Controllers\StudentloginController.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefined constant ‘controller - assumed \'‘controller\' (this will throw an Error in a future version of PHP)', 'D:\\laragon\\www\\ci4\\app\\Controllers\\StudentloginController.php', 47, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\StudentloginController->store()
+ 3 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentloginController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-06 06:08:25 --> The route for "https://www.tutorialspoint.com" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('https://www.tutorialspoint.com')
+ 2 SYSTEMPATH\Common.php(878): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Controllers\StudentloginController.php(48): redirect('https://www.tutorialspoint.com')
+ 4 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\StudentloginController->store()
+ 5 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentloginController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-06 06:09:17 --> Undefined property: App\Controllers\StudentloginController::$load
+in APPPATH\Controllers\StudentloginController.php on line 48.
+ 1 APPPATH\Controllers\StudentloginController.php(48): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\StudentloginController::$load', 'D:\\laragon\\www\\ci4\\app\\Controllers\\StudentloginController.php', 48, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\StudentloginController->store()
+ 3 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentloginController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-06 06:41:02 --> mysqli_sql_exception: Column 'student_name' cannot be null in D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `st...', 0)
+#1 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `st...')
+#2 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `st...')
+#3 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#4 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 D:\laragon\www\ci4\app\Controllers\StudentregistrationController.php(39): CodeIgniter\Model->insert(Array)
+#8 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(915): App\Controllers\StudentregistrationController->store()
+#9 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentregistrationController))
+#10 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\laragon\www\ci4\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-09-06 06:41:02 --> Column 'student_name' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `student_registration` (`student_id`, `student_name`, `student_email`, `student_mobile`, `student_password`) VALUES (:student_id:, :student_name:, :student_email:, :student_mobile:, :student_password:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\StudentregistrationController.php(39): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\StudentregistrationController->store()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentregistrationController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-06 06:45:33 --> mysqli_sql_exception: Column 'student_name' cannot be null in D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `st...', 0)
+#1 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `st...')
+#2 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `st...')
+#3 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#4 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 D:\laragon\www\ci4\app\Controllers\StudentregistrationController.php(39): CodeIgniter\Model->insert(Array)
+#8 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(915): App\Controllers\StudentregistrationController->store()
+#9 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentregistrationController))
+#10 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\laragon\www\ci4\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-09-06 06:45:33 --> Column 'student_name' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `student_registration` (`student_id`, `student_name`, `student_email`, `student_mobile`, `student_password`) VALUES (:student_id:, :student_name:, :student_email:, :student_mobile:, :student_password:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\StudentregistrationController.php(39): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\StudentregistrationController->store()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentregistrationController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-06 06:45:43 --> mysqli_sql_exception: Column 'student_name' cannot be null in D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `st...', 0)
+#1 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `st...')
+#2 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `st...')
+#3 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#4 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 D:\laragon\www\ci4\app\Controllers\StudentregistrationController.php(39): CodeIgniter\Model->insert(Array)
+#8 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(915): App\Controllers\StudentregistrationController->store()
+#9 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentregistrationController))
+#10 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\laragon\www\ci4\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-09-06 06:45:43 --> Column 'student_name' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `student_registration` (`student_id`, `student_name`, `student_email`, `student_mobile`, `student_password`) VALUES (:student_id:, :student_name:, :student_email:, :student_mobile:, :student_password:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\StudentregistrationController.php(39): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\StudentregistrationController->store()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentregistrationController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-06 06:47:28 --> mysqli_sql_exception: Column 'student_name' cannot be null in D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `st...', 0)
+#1 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `st...')
+#2 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `st...')
+#3 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#4 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 D:\laragon\www\ci4\app\Controllers\StudentregistrationController.php(39): CodeIgniter\Model->insert(Array)
+#8 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(915): App\Controllers\StudentregistrationController->store()
+#9 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentregistrationController))
+#10 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\laragon\www\ci4\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-09-06 06:47:28 --> Column 'student_name' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `student_registration` (`student_id`, `student_name`, `student_email`, `student_mobile`, `student_password`) VALUES (:student_id:, :student_name:, :student_email:, :student_mobile:, :student_password:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\StudentregistrationController.php(39): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\StudentregistrationController->store()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentregistrationController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-06 06:53:22 --> Invalid file: "student/admin.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('student/admin.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('student/admin', [], true)
+ 3 APPPATH\Controllers\StudentloginController.php(46): view('student/admin')
+ 4 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\StudentloginController->store()
+ 5 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentloginController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-06 06:54:16 --> Invalid file: "/.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/', [], true)
+ 3 APPPATH\Controllers\StudentloginController.php(46): view('/')
+ 4 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\StudentloginController->store()
+ 5 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentloginController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-06 06:57:13 --> Invalid file: "student/admin.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('student/admin.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('student/admin', [], true)
+ 3 APPPATH\Controllers\StudentloginController.php(46): view('student/admin', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\StudentloginController->store()
+ 5 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentloginController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-06 06:59:29 --> Argument 2 passed to CodeIgniter\HTTP\RedirectResponse::to() must be of the type int or null, string given, called in D:\laragon\www\ci4\app\Controllers\StudentloginController.php on line 45
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 32.
+ 1 APPPATH\Controllers\StudentloginController.php(45): CodeIgniter\HTTP\RedirectResponse->to('http://localhost/ci4/students/admin', '$results')
+ 2 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\StudentloginController->store()
+ 3 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentloginController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-06 07:05:03 --> Array to string conversion
+in APPPATH\Controllers\StudentloginController.php on line 45.
+ 1 APPPATH\Controllers\StudentloginController.php(45): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'D:\\laragon\\www\\ci4\\app\\Controllers\\StudentloginController.php', 45, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\StudentloginController->store()
+ 3 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentloginController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-06 08:49:23 --> Undefined variable: config
+in APPPATH\Controllers\StudentloginController.php on line 6.
+ 1 APPPATH\Controllers\StudentloginController.php(6): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: config', 'D:\\laragon\\www\\ci4\\app\\Controllers\\StudentloginController.php', 6, [...])
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(306): include_once('D:\\laragon\\www\\ci4\\app\\Controllers\\StudentloginController.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\laragon\\www\\ci4\\app\\Controllers\\StudentloginController.php')
+ 4 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\StudentloginController')
+ 5 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\StudentloginController')
+ 6 [internal function]: spl_autoload_call('App\\Controllers\\StudentloginController')
+ 7 SYSTEMPATH\CodeIgniter.php(873): class_exists('\\App\\Controllers\\StudentloginController', true)
+ 8 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\CodeIgniter->startController()
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-06 08:52:59 --> Undefined variable: config
+in APPPATH\Controllers\StudentloginController.php on line 40.
+ 1 APPPATH\Controllers\StudentloginController.php(40): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: config', 'D:\\laragon\\www\\ci4\\app\\Controllers\\StudentloginController.php', 40, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\StudentloginController->store()
+ 3 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentloginController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 09:20:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 09:20:35 --> Undefined variable: id
+in APPPATH\Views\adminpanelView.php on line 7.
+ 1 APPPATH\Views\adminpanelView.php(7): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: id', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 7, [])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(9): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-06 09:21:23 --> Undefined variable: id
+in APPPATH\Views\adminpanelView.php on line 7.
+ 1 APPPATH\Views\adminpanelView.php(7): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: id', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 7, [])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(9): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-06 09:21:24 --> Undefined variable: id
+in APPPATH\Views\adminpanelView.php on line 7.
+ 1 APPPATH\Views\adminpanelView.php(7): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: id', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 7, [])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(9): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-06 09:25:10 --> Undefined variable: _SESSION
+in APPPATH\Views\adminpanelView.php on line 8.
+ 1 APPPATH\Views\adminpanelView.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: _SESSION', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 8, [])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(9): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-06 09:25:11 --> Undefined variable: _SESSION
+in APPPATH\Views\adminpanelView.php on line 8.
+ 1 APPPATH\Views\adminpanelView.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: _SESSION', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 8, [])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(9): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-06 09:27:24 --> Undefined variable: _SESSION
+in APPPATH\Views\adminpanelView.php on line 8.
+ 1 APPPATH\Views\adminpanelView.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: _SESSION', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 8, [])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(9): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-06 09:27:25 --> Undefined variable: _SESSION
+in APPPATH\Views\adminpanelView.php on line 8.
+ 1 APPPATH\Views\adminpanelView.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: _SESSION', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 8, [])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(9): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-06 09:27:25 --> Undefined variable: _SESSION
+in APPPATH\Views\adminpanelView.php on line 8.
+ 1 APPPATH\Views\adminpanelView.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: _SESSION', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 8, [])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(9): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-06 09:27:25 --> Undefined variable: _SESSION
+in APPPATH\Views\adminpanelView.php on line 8.
+ 1 APPPATH\Views\adminpanelView.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: _SESSION', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 8, [])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(9): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-06 09:44:35 --> Undefined variable: _SESSION
+in APPPATH\Views\adminpanelView.php on line 8.
+ 1 APPPATH\Views\adminpanelView.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: _SESSION', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 8, [])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(9): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-06 09:46:21 --> Undefined variable: _SESSION
+in APPPATH\Views\adminpanelView.php on line 8.
+ 1 APPPATH\Views\adminpanelView.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: _SESSION', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 8, [])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(9): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-06 09:46:22 --> Undefined variable: _SESSION
+in APPPATH\Views\adminpanelView.php on line 8.
+ 1 APPPATH\Views\adminpanelView.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: _SESSION', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 8, [])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(9): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-06 09:46:41 --> Undefined variable: _SESSION
+in APPPATH\Views\adminpanelView.php on line 8.
+ 1 APPPATH\Views\adminpanelView.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: _SESSION', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 8, [])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\StudentloginController.php(53): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\StudentloginController->store()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentloginController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-06 10:33:49 --> Argument 2 passed to view() must be of the type array, string given, called in D:\laragon\www\ci4\app\Controllers\StudentloginController.php on line 54
+in SYSTEMPATH\Common.php on line 1166.
+ 1 APPPATH\Controllers\StudentloginController.php(54): view('adminpanelView', '$student_email')
+ 2 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\StudentloginController->store()
+ 3 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentloginController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-06 10:35:16 --> Undefined variable: data
+in APPPATH\Views\adminpanelView.php on line 8.
+ 1 APPPATH\Views\adminpanelView.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: data', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 8, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\StudentloginController.php(54): view('adminpanelView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\StudentloginController->store()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentloginController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-06 10:38:20 --> Undefined variable: data
+in APPPATH\Views\adminpanelView.php on line 8.
+ 1 APPPATH\Views\adminpanelView.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: data', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 8, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\StudentloginController.php(54): view('adminpanelView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\StudentloginController->store()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentloginController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-06 10:43:01 --> Undefined variable: data
+in APPPATH\Views\adminpanelView.php on line 8.
+ 1 APPPATH\Views\adminpanelView.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: data', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 8, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\StudentloginController.php(54): view('adminpanelView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\StudentloginController->store()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentloginController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-06 10:47:08 --> Cannot use object of type stdClass as array
+in APPPATH\Views\adminpanelView.php on line 10.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 4 APPPATH\Controllers\StudentloginController.php(54): view('adminpanelView', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\StudentloginController->store()
+ 6 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentloginController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-06 11:01:08 --> Undefined variable: session
+in APPPATH\Controllers\StudentloginController.php on line 50.
+ 1 APPPATH\Controllers\StudentloginController.php(50): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: session', 'D:\\laragon\\www\\ci4\\app\\Controllers\\StudentloginController.php', 50, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\StudentloginController->store()
+ 3 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentloginController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-06 11:01:39 --> Undefined variable: session
+in APPPATH\Controllers\StudentloginController.php on line 50.
+ 1 APPPATH\Controllers\StudentloginController.php(50): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: session', 'D:\\laragon\\www\\ci4\\app\\Controllers\\StudentloginController.php', 50, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\StudentloginController->store()
+ 3 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentloginController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-06 11:01:53 --> Undefined variable: session
+in APPPATH\Controllers\StudentloginController.php on line 54.
+ 1 APPPATH\Controllers\StudentloginController.php(54): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: session', 'D:\\laragon\\www\\ci4\\app\\Controllers\\StudentloginController.php', 54, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\StudentloginController->store()
+ 3 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentloginController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 11:02:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 11:14:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 11:14:25 --> Undefined index: student_email
+in APPPATH\Views\adminpanelView.php on line 12.
+ 1 APPPATH\Views\adminpanelView.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: student_email', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 12, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(9): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 11:15:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 11:15:33 --> Undefined index: student_email
+in APPPATH\Views\adminpanelView.php on line 12.
+ 1 APPPATH\Views\adminpanelView.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: student_email', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 12, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(9): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 11:15:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 11:15:34 --> Undefined index: student_email
+in APPPATH\Views\adminpanelView.php on line 12.
+ 1 APPPATH\Views\adminpanelView.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: student_email', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 12, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(9): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 11:19:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 11:19:24 --> Undefined variable: data
+in APPPATH\Views\adminpanelView.php on line 11.
+ 1 APPPATH\Views\adminpanelView.php(11): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: data', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 11, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(9): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-06 11:31:32 --> Undefined variable: student_email
+in APPPATH\Views\adminpanelView.php on line 11.
+ 1 APPPATH\Views\adminpanelView.php(11): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: student_email', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 11, [])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(9): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-06 11:31:35 --> Undefined variable: student_email
+in APPPATH\Views\adminpanelView.php on line 11.
+ 1 APPPATH\Views\adminpanelView.php(11): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: student_email', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 11, [])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(9): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 11:32:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 11:32:40 --> Undefined variable: student_email
+in APPPATH\Views\adminpanelView.php on line 11.
+ 1 APPPATH\Views\adminpanelView.php(11): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: student_email', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 11, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(9): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 11:32:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 11:32:41 --> Undefined variable: student_email
+in APPPATH\Views\adminpanelView.php on line 11.
+ 1 APPPATH\Views\adminpanelView.php(11): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: student_email', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 11, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(9): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 11:32:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 11:32:42 --> Undefined variable: student_email
+in APPPATH\Views\adminpanelView.php on line 11.
+ 1 APPPATH\Views\adminpanelView.php(11): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: student_email', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 11, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(9): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 11:32:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 11:32:56 --> Undefined variable: student_email
+in APPPATH\Views\adminpanelView.php on line 11.
+ 1 APPPATH\Views\adminpanelView.php(11): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: student_email', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 11, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(9): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 11:32:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 11:32:58 --> Undefined variable: student_email
+in APPPATH\Views\adminpanelView.php on line 11.
+ 1 APPPATH\Views\adminpanelView.php(11): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: student_email', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 11, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(9): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 12:24:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 12:26:21 --> Undefined property: App\Controllers\StudentloginController::$session
+in APPPATH\Controllers\StudentloginController.php on line 61.
+ 1 APPPATH\Controllers\StudentloginController.php(61): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\StudentloginController::$session', 'D:\\laragon\\www\\ci4\\app\\Controllers\\StudentloginController.php', 61, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\StudentloginController->store()
+ 3 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentloginController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 12:27:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 12:27:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 13:35:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 13:35:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 13:35:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 13:35:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 13:35:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 13:35:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 13:36:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 13:36:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 13:37:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 13:37:53 --> Undefined index: student_id
+in APPPATH\Controllers\StudentloginController.php on line 42.
+ 1 APPPATH\Controllers\StudentloginController.php(42): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: student_id', 'D:\\laragon\\www\\ci4\\app\\Controllers\\StudentloginController.php', 42, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\StudentloginController->store()
+ 3 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentloginController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 13:38:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 13:38:23 --> Object of class stdClass could not be converted to string
+in APPPATH\Controllers\StudentloginController.php on line 42.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\StudentloginController->store()
+ 2 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentloginController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 13:41:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 13:41:58 --> Cannot use object of type stdClass as array
+in APPPATH\Controllers\StudentloginController.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\StudentloginController->store()
+ 2 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentloginController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 13:43:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 13:43:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 13:47:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 13:47:55 --> Cannot use object of type stdClass as array
+in APPPATH\Controllers\StudentloginController.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\StudentloginController->store()
+ 2 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentloginController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 13:48:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 13:50:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 13:50:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 13:56:26 --> Namespace declaration statement has to be the very first statement or after any declare call in the script
+in APPPATH\Controllers\AdminpanelController.php on line 3.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-09-06 13:56:28 --> Namespace declaration statement has to be the very first statement or after any declare call in the script
+in APPPATH\Controllers\AdminpanelController.php on line 3.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2023-09-06 14:02:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:03:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:25:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:25:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:26:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:31:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:31:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:31:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:31:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:31:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:31:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:31:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:31:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:31:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:32:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:32:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:32:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:32:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:32:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:32:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:32:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:32:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:32:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:32:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:32:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:32:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:32:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:32:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:32:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:32:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:32:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:32:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:32:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:32:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:32:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:32:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:32:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:32:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:32:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:32:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:32:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:32:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:32:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:33:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:35:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:35:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:35:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:35:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:41:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 14:41:46 --> Undefined index: student_name
+in APPPATH\Views\adminpanelView.php on line 11.
+ 1 APPPATH\Views\adminpanelView.php(11): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: student_name', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 11, [])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(8): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 14:42:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 14:42:04 --> Undefined index: student_name
+in APPPATH\Views\adminpanelView.php on line 11.
+ 1 APPPATH\Views\adminpanelView.php(11): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: student_name', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 11, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(8): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 14:42:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 14:42:04 --> Undefined index: student_name
+in APPPATH\Views\adminpanelView.php on line 11.
+ 1 APPPATH\Views\adminpanelView.php(11): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: student_name', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 11, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(8): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 14:42:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 14:42:05 --> Undefined index: student_name
+in APPPATH\Views\adminpanelView.php on line 11.
+ 1 APPPATH\Views\adminpanelView.php(11): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: student_name', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 11, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(8): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 14:42:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 14:42:05 --> Undefined index: student_name
+in APPPATH\Views\adminpanelView.php on line 11.
+ 1 APPPATH\Views\adminpanelView.php(11): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: student_name', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 11, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(8): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 14:42:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:44:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 14:44:08 --> Undefined index: student_name
+in APPPATH\Views\adminpanelView.php on line 12.
+ 1 APPPATH\Views\adminpanelView.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: student_name', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 12, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(8): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 14:45:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 14:45:01 --> Undefined index: student_name
+in APPPATH\Views\adminpanelView.php on line 12.
+ 1 APPPATH\Views\adminpanelView.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: student_name', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 12, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(8): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 14:45:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 14:45:01 --> Undefined index: student_name
+in APPPATH\Views\adminpanelView.php on line 12.
+ 1 APPPATH\Views\adminpanelView.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: student_name', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 12, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(8): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 14:45:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 14:45:02 --> Undefined index: student_name
+in APPPATH\Views\adminpanelView.php on line 12.
+ 1 APPPATH\Views\adminpanelView.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: student_name', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 12, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(8): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 14:49:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 14:49:29 --> Undefined index: student_name
+in APPPATH\Views\adminpanelView.php on line 12.
+ 1 APPPATH\Views\adminpanelView.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: student_name', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 12, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(8): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-06 14:49:55 --> syntax error, unexpected '}', expecting ';'
+in APPPATH\Controllers\StudentloginController.php on line 54.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\laragon\\www\\ci4\\app\\Controllers\\StudentloginController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\StudentloginController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\StudentloginController')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\StudentloginController')
+ 5 SYSTEMPATH\CodeIgniter.php(873): class_exists('\\App\\Controllers\\StudentloginController', true)
+ 6 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-06 14:49:57 --> syntax error, unexpected '}', expecting ';'
+in APPPATH\Controllers\StudentloginController.php on line 54.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\laragon\\www\\ci4\\app\\Controllers\\StudentloginController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\StudentloginController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\StudentloginController')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\StudentloginController')
+ 5 SYSTEMPATH\CodeIgniter.php(873): class_exists('\\App\\Controllers\\StudentloginController', true)
+ 6 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 14:49:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:50:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 14:50:02 --> syntax error, unexpected '}', expecting ';'
+in APPPATH\Controllers\StudentloginController.php on line 54.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\laragon\\www\\ci4\\app\\Controllers\\StudentloginController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\StudentloginController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\StudentloginController')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\StudentloginController')
+ 5 SYSTEMPATH\CodeIgniter.php(873): class_exists('\\App\\Controllers\\StudentloginController', true)
+ 6 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 14:50:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:50:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:50:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:50:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 14:50:55 --> Undefined variable: session
+in APPPATH\Controllers\StudentloginController.php on line 44.
+ 1 APPPATH\Controllers\StudentloginController.php(44): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: session', 'D:\\laragon\\www\\ci4\\app\\Controllers\\StudentloginController.php', 44, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\StudentloginController->store()
+ 3 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentloginController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 14:51:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 14:51:29 --> Undefined variable: session
+in APPPATH\Controllers\StudentloginController.php on line 47.
+ 1 APPPATH\Controllers\StudentloginController.php(47): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: session', 'D:\\laragon\\www\\ci4\\app\\Controllers\\StudentloginController.php', 47, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\StudentloginController->store()
+ 3 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentloginController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 14:52:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:53:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:53:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:53:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:53:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:54:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:54:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:54:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:55:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 14:55:52 --> Undefined index: StudentName
+in APPPATH\Views\adminpanelView.php on line 12.
+ 1 APPPATH\Views\adminpanelView.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: StudentName', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 12, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(8): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 14:55:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 14:55:55 --> Undefined index: StudentName
+in APPPATH\Views\adminpanelView.php on line 12.
+ 1 APPPATH\Views\adminpanelView.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: StudentName', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 12, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(8): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 14:56:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 14:56:20 --> Undefined index: StudentName
+in APPPATH\Views\adminpanelView.php on line 12.
+ 1 APPPATH\Views\adminpanelView.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: StudentName', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 12, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(8): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 14:56:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 14:56:21 --> Undefined index: StudentName
+in APPPATH\Views\adminpanelView.php on line 12.
+ 1 APPPATH\Views\adminpanelView.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: StudentName', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 12, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(8): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 14:56:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 14:56:21 --> Undefined index: StudentName
+in APPPATH\Views\adminpanelView.php on line 12.
+ 1 APPPATH\Views\adminpanelView.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: StudentName', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 12, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(8): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 14:56:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 14:56:22 --> Undefined index: StudentName
+in APPPATH\Views\adminpanelView.php on line 12.
+ 1 APPPATH\Views\adminpanelView.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: StudentName', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 12, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(8): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 14:57:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 14:57:03 --> Undefined index: StudentName
+in APPPATH\Views\adminpanelView.php on line 12.
+ 1 APPPATH\Views\adminpanelView.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: StudentName', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 12, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(8): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 14:57:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 14:57:03 --> Undefined index: StudentName
+in APPPATH\Views\adminpanelView.php on line 12.
+ 1 APPPATH\Views\adminpanelView.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: StudentName', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 12, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(8): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 14:57:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 14:57:04 --> Undefined index: StudentName
+in APPPATH\Views\adminpanelView.php on line 12.
+ 1 APPPATH\Views\adminpanelView.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: StudentName', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 12, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(8): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 14:57:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 14:57:37 --> Undefined index: Student
+in APPPATH\Views\adminpanelView.php on line 12.
+ 1 APPPATH\Views\adminpanelView.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: Student', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 12, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(8): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 14:57:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 14:57:38 --> Undefined index: Student
+in APPPATH\Views\adminpanelView.php on line 12.
+ 1 APPPATH\Views\adminpanelView.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: Student', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 12, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(8): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 14:57:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 14:57:39 --> Undefined index: Student
+in APPPATH\Views\adminpanelView.php on line 12.
+ 1 APPPATH\Views\adminpanelView.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: Student', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 12, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(8): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 14:57:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:58:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 14:58:22 --> Undefined index: Aname
+in APPPATH\Views\adminpanelView.php on line 12.
+ 1 APPPATH\Views\adminpanelView.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: Aname', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 12, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(8): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 14:58:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 14:58:41 --> Undefined index: sdfsdfds
+in APPPATH\Views\adminpanelView.php on line 12.
+ 1 APPPATH\Views\adminpanelView.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: sdfsdfds', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 12, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(8): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 14:58:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 14:58:43 --> Undefined index: sdfsdfds
+in APPPATH\Views\adminpanelView.php on line 12.
+ 1 APPPATH\Views\adminpanelView.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: sdfsdfds', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 12, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(8): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 14:58:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 14:58:43 --> Undefined index: sdfsdfds
+in APPPATH\Views\adminpanelView.php on line 12.
+ 1 APPPATH\Views\adminpanelView.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: sdfsdfds', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 12, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(8): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 14:58:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 14:58:43 --> Undefined index: sdfsdfds
+in APPPATH\Views\adminpanelView.php on line 12.
+ 1 APPPATH\Views\adminpanelView.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: sdfsdfds', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 12, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(8): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 14:58:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 14:58:44 --> Undefined index: sdfsdfds
+in APPPATH\Views\adminpanelView.php on line 12.
+ 1 APPPATH\Views\adminpanelView.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: sdfsdfds', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 12, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(8): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 14:58:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 14:58:44 --> Undefined index: sdfsdfds
+in APPPATH\Views\adminpanelView.php on line 12.
+ 1 APPPATH\Views\adminpanelView.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: sdfsdfds', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 12, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(8): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 14:58:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 14:58:45 --> Undefined index: sdfsdfds
+in APPPATH\Views\adminpanelView.php on line 12.
+ 1 APPPATH\Views\adminpanelView.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: sdfsdfds', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 12, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(8): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 14:58:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 14:58:46 --> Undefined index: sdfsdfds
+in APPPATH\Views\adminpanelView.php on line 12.
+ 1 APPPATH\Views\adminpanelView.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: sdfsdfds', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 12, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(8): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 14:59:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 14:59:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 14:59:28 --> Undefined index: student_name
+in APPPATH\Views\adminpanelView.php on line 12.
+ 1 APPPATH\Views\adminpanelView.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: student_name', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 12, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(8): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 14:59:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 14:59:29 --> Undefined index: student_name
+in APPPATH\Views\adminpanelView.php on line 12.
+ 1 APPPATH\Views\adminpanelView.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: student_name', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 12, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(8): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 14:59:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 14:59:46 --> Undefined index: studentname
+in APPPATH\Views\adminpanelView.php on line 12.
+ 1 APPPATH\Views\adminpanelView.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: studentname', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 12, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(8): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 14:59:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 14:59:47 --> Undefined index: studentname
+in APPPATH\Views\adminpanelView.php on line 12.
+ 1 APPPATH\Views\adminpanelView.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: studentname', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 12, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(8): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 14:59:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 14:59:47 --> Undefined index: studentname
+in APPPATH\Views\adminpanelView.php on line 12.
+ 1 APPPATH\Views\adminpanelView.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: studentname', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 12, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(8): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 14:59:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 14:59:50 --> Undefined index: studentname
+in APPPATH\Views\adminpanelView.php on line 12.
+ 1 APPPATH\Views\adminpanelView.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: studentname', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 12, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(8): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 14:59:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 14:59:50 --> Undefined index: studentname
+in APPPATH\Views\adminpanelView.php on line 12.
+ 1 APPPATH\Views\adminpanelView.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: studentname', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 12, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(8): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 14:59:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 14:59:53 --> Undefined index: studentname
+in APPPATH\Views\adminpanelView.php on line 12.
+ 1 APPPATH\Views\adminpanelView.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: studentname', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 12, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(8): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 15:00:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 15:00:15 --> Undefined index: StudentEmail
+in APPPATH\Views\adminpanelView.php on line 11.
+ 1 APPPATH\Views\adminpanelView.php(11): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: StudentEmail', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 11, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(8): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 15:00:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 15:00:16 --> Undefined index: StudentEmail
+in APPPATH\Views\adminpanelView.php on line 11.
+ 1 APPPATH\Views\adminpanelView.php(11): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: StudentEmail', 'D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php', 11, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminpanelView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+ 5 APPPATH\Controllers\AdminpanelController.php(8): view('adminpanelView')
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 15:00:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 15:01:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 15:02:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 15:02:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 15:02:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 15:02:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 15:02:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 15:02:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 15:03:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 15:03:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 15:03:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 15:05:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 15:07:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 15:07:05 --> Undefined index: mobile
+in APPPATH\Views\include\leftmenu.php on line 6.
+ 1 APPPATH\Views\include\leftmenu.php(6): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: mobile', 'D:\\laragon\\www\\ci4\\app\\Views\\include\\leftmenu.php', 6, [])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\include\\leftmenu.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(467): CodeIgniter\View\View->render('include/leftmenu', null, true)
+ 5 APPPATH\Views\adminlayout.php(30): CodeIgniter\View\View->include('include/leftmenu')
+ 6 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminlayout.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('adminlayout', [], true)
+ 9 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+10 APPPATH\Controllers\AdminpanelController.php(8): view('adminpanelView')
+11 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+12 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+13 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 15:07:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 15:07:14 --> Undefined index: mobile
+in APPPATH\Views\include\leftmenu.php on line 6.
+ 1 APPPATH\Views\include\leftmenu.php(6): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: mobile', 'D:\\laragon\\www\\ci4\\app\\Views\\include\\leftmenu.php', 6, [])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\include\\leftmenu.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(467): CodeIgniter\View\View->render('include/leftmenu', null, true)
+ 5 APPPATH\Views\adminlayout.php(30): CodeIgniter\View\View->include('include/leftmenu')
+ 6 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminlayout.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('adminlayout', [], true)
+ 9 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+10 APPPATH\Controllers\AdminpanelController.php(8): view('adminpanelView')
+11 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+12 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+13 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 15:07:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 15:07:15 --> Undefined index: mobile
+in APPPATH\Views\include\leftmenu.php on line 6.
+ 1 APPPATH\Views\include\leftmenu.php(6): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: mobile', 'D:\\laragon\\www\\ci4\\app\\Views\\include\\leftmenu.php', 6, [])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\include\\leftmenu.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(467): CodeIgniter\View\View->render('include/leftmenu', null, true)
+ 5 APPPATH\Views\adminlayout.php(30): CodeIgniter\View\View->include('include/leftmenu')
+ 6 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminlayout.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('adminlayout', [], true)
+ 9 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+10 APPPATH\Controllers\AdminpanelController.php(8): view('adminpanelView')
+11 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+12 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+13 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 15:07:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 15:07:41 --> Undefined index: mob
+in APPPATH\Views\include\leftmenu.php on line 6.
+ 1 APPPATH\Views\include\leftmenu.php(6): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: mob', 'D:\\laragon\\www\\ci4\\app\\Views\\include\\leftmenu.php', 6, [])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\include\\leftmenu.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(467): CodeIgniter\View\View->render('include/leftmenu', null, true)
+ 5 APPPATH\Views\adminlayout.php(30): CodeIgniter\View\View->include('include/leftmenu')
+ 6 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminlayout.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('adminlayout', [], true)
+ 9 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+10 APPPATH\Controllers\AdminpanelController.php(8): view('adminpanelView')
+11 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+12 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+13 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 15:07:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 15:07:42 --> Undefined index: mob
+in APPPATH\Views\include\leftmenu.php on line 6.
+ 1 APPPATH\Views\include\leftmenu.php(6): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: mob', 'D:\\laragon\\www\\ci4\\app\\Views\\include\\leftmenu.php', 6, [])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\include\\leftmenu.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(467): CodeIgniter\View\View->render('include/leftmenu', null, true)
+ 5 APPPATH\Views\adminlayout.php(30): CodeIgniter\View\View->include('include/leftmenu')
+ 6 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminlayout.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('adminlayout', [], true)
+ 9 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+10 APPPATH\Controllers\AdminpanelController.php(8): view('adminpanelView')
+11 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+12 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+13 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 15:08:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 15:08:38 --> Undefined index: mob
+in APPPATH\Views\include\leftmenu.php on line 6.
+ 1 APPPATH\Views\include\leftmenu.php(6): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: mob', 'D:\\laragon\\www\\ci4\\app\\Views\\include\\leftmenu.php', 6, [])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\include\\leftmenu.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(467): CodeIgniter\View\View->render('include/leftmenu', null, true)
+ 5 APPPATH\Views\adminlayout.php(30): CodeIgniter\View\View->include('include/leftmenu')
+ 6 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminlayout.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('adminlayout', [], true)
+ 9 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+10 APPPATH\Controllers\AdminpanelController.php(8): view('adminpanelView')
+11 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+12 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+13 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 15:08:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 15:08:39 --> Undefined index: mob
+in APPPATH\Views\include\leftmenu.php on line 6.
+ 1 APPPATH\Views\include\leftmenu.php(6): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: mob', 'D:\\laragon\\www\\ci4\\app\\Views\\include\\leftmenu.php', 6, [])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\include\\leftmenu.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(467): CodeIgniter\View\View->render('include/leftmenu', null, true)
+ 5 APPPATH\Views\adminlayout.php(30): CodeIgniter\View\View->include('include/leftmenu')
+ 6 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminlayout.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('adminlayout', [], true)
+ 9 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+10 APPPATH\Controllers\AdminpanelController.php(8): view('adminpanelView')
+11 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+12 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+13 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 15:08:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 15:08:39 --> Undefined index: mob
+in APPPATH\Views\include\leftmenu.php on line 6.
+ 1 APPPATH\Views\include\leftmenu.php(6): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: mob', 'D:\\laragon\\www\\ci4\\app\\Views\\include\\leftmenu.php', 6, [])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\include\\leftmenu.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(467): CodeIgniter\View\View->render('include/leftmenu', null, true)
+ 5 APPPATH\Views\adminlayout.php(30): CodeIgniter\View\View->include('include/leftmenu')
+ 6 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminlayout.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('adminlayout', [], true)
+ 9 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+10 APPPATH\Controllers\AdminpanelController.php(8): view('adminpanelView')
+11 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+12 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+13 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 15:09:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 15:09:21 --> Undefined index: mobile
+in APPPATH\Views\include\leftmenu.php on line 6.
+ 1 APPPATH\Views\include\leftmenu.php(6): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: mobile', 'D:\\laragon\\www\\ci4\\app\\Views\\include\\leftmenu.php', 6, [])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\include\\leftmenu.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(467): CodeIgniter\View\View->render('include/leftmenu', null, true)
+ 5 APPPATH\Views\adminlayout.php(30): CodeIgniter\View\View->include('include/leftmenu')
+ 6 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminlayout.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('adminlayout', [], true)
+ 9 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+10 APPPATH\Controllers\AdminpanelController.php(8): view('adminpanelView')
+11 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+12 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+13 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 15:09:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 15:09:22 --> Undefined index: mobile
+in APPPATH\Views\include\leftmenu.php on line 6.
+ 1 APPPATH\Views\include\leftmenu.php(6): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: mobile', 'D:\\laragon\\www\\ci4\\app\\Views\\include\\leftmenu.php', 6, [])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\include\\leftmenu.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(467): CodeIgniter\View\View->render('include/leftmenu', null, true)
+ 5 APPPATH\Views\adminlayout.php(30): CodeIgniter\View\View->include('include/leftmenu')
+ 6 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminlayout.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('adminlayout', [], true)
+ 9 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+10 APPPATH\Controllers\AdminpanelController.php(8): view('adminpanelView')
+11 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+12 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+13 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 15:09:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 15:10:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 15:26:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 15:26:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 15:26:50 --> syntax error, unexpected '}', expecting ';'
+in APPPATH\Controllers\StudentloginController.php on line 48.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\laragon\\www\\ci4\\app\\Controllers\\StudentloginController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\StudentloginController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\StudentloginController')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\StudentloginController')
+ 5 SYSTEMPATH\CodeIgniter.php(873): class_exists('\\App\\Controllers\\StudentloginController', true)
+ 6 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-06 15:26:53 --> syntax error, unexpected '}', expecting ';'
+in APPPATH\Controllers\StudentloginController.php on line 48.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\laragon\\www\\ci4\\app\\Controllers\\StudentloginController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\StudentloginController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\StudentloginController')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\StudentloginController')
+ 5 SYSTEMPATH\CodeIgniter.php(873): class_exists('\\App\\Controllers\\StudentloginController', true)
+ 6 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-06 15:26:54 --> syntax error, unexpected '}', expecting ';'
+in APPPATH\Controllers\StudentloginController.php on line 48.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\laragon\\www\\ci4\\app\\Controllers\\StudentloginController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\StudentloginController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\StudentloginController')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\StudentloginController')
+ 5 SYSTEMPATH\CodeIgniter.php(873): class_exists('\\App\\Controllers\\StudentloginController', true)
+ 6 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 15:27:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 15:27:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 15:28:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 15:28:38 --> Undefined variable: _ESSION
+in APPPATH\Controllers\StudentloginController.php on line 45.
+ 1 APPPATH\Controllers\StudentloginController.php(45): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: _ESSION', 'D:\\laragon\\www\\ci4\\app\\Controllers\\StudentloginController.php', 45, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\StudentloginController->store()
+ 3 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentloginController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 15:36:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 15:36:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 15:36:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 15:36:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 15:36:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 15:36:59 --> Undefined variable: student_mobile
+in APPPATH\Views\include\leftmenu.php on line 6.
+ 1 APPPATH\Views\include\leftmenu.php(6): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: student_mobile', 'D:\\laragon\\www\\ci4\\app\\Views\\include\\leftmenu.php', 6, [])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\include\\leftmenu.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(467): CodeIgniter\View\View->render('include/leftmenu', null, true)
+ 5 APPPATH\Views\adminlayout.php(30): CodeIgniter\View\View->include('include/leftmenu')
+ 6 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminlayout.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('adminlayout', [], true)
+ 9 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+10 APPPATH\Controllers\AdminpanelController.php(8): view('adminpanelView')
+11 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+12 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+13 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 15:37:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 15:37:04 --> Undefined variable: student_mobile
+in APPPATH\Views\include\leftmenu.php on line 6.
+ 1 APPPATH\Views\include\leftmenu.php(6): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: student_mobile', 'D:\\laragon\\www\\ci4\\app\\Views\\include\\leftmenu.php', 6, [])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\include\\leftmenu.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(467): CodeIgniter\View\View->render('include/leftmenu', null, true)
+ 5 APPPATH\Views\adminlayout.php(30): CodeIgniter\View\View->include('include/leftmenu')
+ 6 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminlayout.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('adminlayout', [], true)
+ 9 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+10 APPPATH\Controllers\AdminpanelController.php(8): view('adminpanelView')
+11 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+12 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+13 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 15:37:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 15:37:05 --> Undefined variable: student_mobile
+in APPPATH\Views\include\leftmenu.php on line 6.
+ 1 APPPATH\Views\include\leftmenu.php(6): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: student_mobile', 'D:\\laragon\\www\\ci4\\app\\Views\\include\\leftmenu.php', 6, [])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\include\\leftmenu.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(467): CodeIgniter\View\View->render('include/leftmenu', null, true)
+ 5 APPPATH\Views\adminlayout.php(30): CodeIgniter\View\View->include('include/leftmenu')
+ 6 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminlayout.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('adminlayout', [], true)
+ 9 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+10 APPPATH\Controllers\AdminpanelController.php(8): view('adminpanelView')
+11 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+12 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+13 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 15:37:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 15:37:05 --> Undefined variable: student_mobile
+in APPPATH\Views\include\leftmenu.php on line 6.
+ 1 APPPATH\Views\include\leftmenu.php(6): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: student_mobile', 'D:\\laragon\\www\\ci4\\app\\Views\\include\\leftmenu.php', 6, [])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\include\\leftmenu.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(467): CodeIgniter\View\View->render('include/leftmenu', null, true)
+ 5 APPPATH\Views\adminlayout.php(30): CodeIgniter\View\View->include('include/leftmenu')
+ 6 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminlayout.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('adminlayout', [], true)
+ 9 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+10 APPPATH\Controllers\AdminpanelController.php(8): view('adminpanelView')
+11 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+12 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+13 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 15:37:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-06 15:37:06 --> Undefined variable: student_mobile
+in APPPATH\Views\include\leftmenu.php on line 6.
+ 1 APPPATH\Views\include\leftmenu.php(6): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: student_mobile', 'D:\\laragon\\www\\ci4\\app\\Views\\include\\leftmenu.php', 6, [])
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\include\\leftmenu.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(467): CodeIgniter\View\View->render('include/leftmenu', null, true)
+ 5 APPPATH\Views\adminlayout.php(30): CodeIgniter\View\View->include('include/leftmenu')
+ 6 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\adminlayout.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('adminlayout', [], true)
+ 9 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminpanelView', [], true)
+10 APPPATH\Controllers\AdminpanelController.php(8): view('adminpanelView')
+11 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\AdminpanelController->index()
+12 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminpanelController))
+13 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-06 15:42:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 15:43:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 15:44:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 15:44:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 15:44:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 15:45:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 15:45:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 15:45:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 15:45:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 15:47:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 15:48:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 15:48:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 15:48:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 15:48:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 15:48:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 15:48:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 15:48:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-06 15:48:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

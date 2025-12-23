@@ -1,0 +1,1480 @@
+INFO - 2024-06-03 04:25:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 04:25:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-03 04:25:48 --> mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'school_tutor_db.course_content.course_content_id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in C:\laragon\www\SchoolingTime\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\SchoolingTime\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query(' SELECT *  FROM...', 0)
+#1 C:\laragon\www\SchoolingTime\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM...')
+#2 C:\laragon\www\SchoolingTime\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM...')
+#3 C:\laragon\www\SchoolingTime\app\Controllers\HomepageController.php(49): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM...')
+#4 C:\laragon\www\SchoolingTime\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('46')
+#5 C:\laragon\www\SchoolingTime\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 C:\laragon\www\SchoolingTime\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\SchoolingTime\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-06-03 04:25:48 --> Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'school_tutor_db.course_content.course_content_id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Controllers\HomepageController.php(49): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_content
+                                WHERE course_id = 46
+                                GROUP BY chapter_id
+                                ORDER BY course_content_id ')
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('46')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 04:26:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 04:26:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 04:26:33 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 04:26:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 04:26:33 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'testimonials', 'testimonials-1.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 04:26:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 04:26:33 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-icon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 04:26:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 04:26:33 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 04:26:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 04:26:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 04:26:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 04:26:51 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'testimonials', 'testimonials-1.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 04:26:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 04:26:51 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 04:27:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 04:27:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 04:27:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 04:27:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 04:28:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 04:31:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 04:31:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 04:32:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 04:44:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 04:44:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 04:45:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 04:45:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 04:46:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 04:49:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 04:50:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 04:51:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 04:51:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 04:51:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 04:52:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 04:53:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 04:53:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 04:54:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 04:55:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 04:56:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 04:56:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 05:06:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 05:06:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 05:28:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 05:30:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 05:31:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 05:32:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 05:32:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 05:32:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 05:44:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 05:44:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 05:44:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 05:44:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 05:44:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 05:44:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 05:44:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 05:44:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 05:44:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 05:44:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 05:44:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 05:44:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 05:44:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 05:44:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 05:44:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 05:44:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 05:45:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 05:45:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 05:46:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 05:47:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 05:47:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 05:52:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 06:01:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 06:01:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 06:02:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 06:02:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 06:02:04 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'testimonials', 'testimonials-1.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 06:02:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 06:02:04 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 06:02:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 06:02:04 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-icon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 06:02:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 06:02:04 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 06:02:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 06:02:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 06:02:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 06:02:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 06:02:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 06:02:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 06:02:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 06:02:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 06:02:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 06:02:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 06:02:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 06:02:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 06:02:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 06:02:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 06:02:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 06:02:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 06:02:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 06:02:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 06:02:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 06:02:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 06:02:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 06:02:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 06:02:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 06:03:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 06:03:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 06:03:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 06:03:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 06:03:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 06:03:53 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 06:03:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 06:03:53 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'testimonials', 'testimonials-1.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 06:03:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 06:03:53 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 06:03:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 06:03:53 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-icon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 06:19:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 06:19:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 06:19:39 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 06:19:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 06:19:39 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'testimonials', 'testimonials-1.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 06:19:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 06:19:40 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 06:19:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 06:19:40 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-icon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 06:20:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 06:20:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 06:20:14 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 06:20:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 06:20:14 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'testimonials', 'testimonials-1.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 06:20:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 06:21:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 06:21:00 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'testimonials', 'testimonials-1.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 06:21:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 06:21:00 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 06:21:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 06:21:00 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'testimonials', 'testimonials-1.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 06:21:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 06:21:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 06:21:41 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'testimonials', 'testimonials-1.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 06:21:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 06:21:41 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 06:21:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 06:21:41 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'testimonials', 'testimonials-1.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 06:25:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 06:25:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 06:25:19 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 06:25:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 06:25:19 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'testimonials', 'testimonials-1.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 06:27:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 06:27:38 --> Undefined variable: TEA24113453B8
+in APPPATH\Views\student\CourseDetailsView.php on line 455.
+ 1 APPPATH\Views\student\CourseDetailsView.php(455): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: TEA24113453B8', 'C:\\laragon\\www\\SchoolingTime\\app\\Views\\student\\CourseDetailsView.php', 455, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\SchoolingTime\\app\\Views\\student\\CourseDetailsView.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('student/CourseDetailsView', [], true)
+ 5 APPPATH\Controllers\HomepageController.php(55): view('student/CourseDetailsView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('45')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 06:28:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 06:28:00 --> Undefined variable: TEA24113453B8
+in APPPATH\Views\student\CourseDetailsView.php on line 455.
+ 1 APPPATH\Views\student\CourseDetailsView.php(455): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: TEA24113453B8', 'C:\\laragon\\www\\SchoolingTime\\app\\Views\\student\\CourseDetailsView.php', 455, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\SchoolingTime\\app\\Views\\student\\CourseDetailsView.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('student/CourseDetailsView', [], true)
+ 5 APPPATH\Controllers\HomepageController.php(55): view('student/CourseDetailsView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('45')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 06:28:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 06:28:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 06:28:12 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'testimonials', 'testimonials-1.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 06:28:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 06:28:12 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 06:29:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 06:29:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 06:29:12 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'testimonials', 'testimonials-1.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 06:29:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 06:29:12 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 06:29:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 06:29:13 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'testimonials', 'testimonials-1.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 06:35:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 06:35:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 06:35:21 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'testimonials', 'testimonials-1.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 06:35:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 06:35:21 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 06:39:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 06:39:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 06:39:32 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 06:39:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 06:39:32 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'testimonials', 'testimonials-1.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 06:39:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 06:39:33 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 06:39:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 06:39:33 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'testimonials', 'testimonials-1.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 06:39:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 06:39:33 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-icon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 06:39:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 06:39:33 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 06:41:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 06:41:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 06:41:08 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'testimonials', 'testimonials-1.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 06:41:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 06:41:08 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 06:41:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 06:41:08 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'testimonials', 'testimonials-1.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 06:41:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 06:41:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 06:41:24 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 06:41:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 06:41:24 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'testimonials', 'testimonials-1.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 06:50:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 06:50:43 --> syntax error, unexpected '<', expecting end of file
+in APPPATH\Views\student\CourseDetailsView.php on line 457.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('student/CourseDetailsView', [], true)
+ 3 APPPATH\Controllers\HomepageController.php(55): view('student/CourseDetailsView', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('45')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 06:52:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 06:52:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 06:52:05 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 06:52:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 06:52:05 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'testimonials', 'testimonials-1.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 06:53:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 06:53:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 06:53:33 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'testimonials', 'testimonials-1.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 06:53:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 06:53:33 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 06:53:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 06:53:34 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'testimonials', 'testimonials-1.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 06:53:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 06:53:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 06:53:51 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 06:53:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 06:53:51 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'testimonials', 'testimonials-1.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 06:53:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 06:53:52 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'testimonials', 'testimonials-1.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 07:02:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:02:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 07:02:59 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 07:02:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 07:02:59 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'testimonials', 'testimonials-1.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 07:04:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:04:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 07:04:57 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 07:04:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 07:04:57 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'testimonials', 'testimonials-1.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 07:04:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 07:04:58 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'testimonials', 'testimonials-1.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 07:04:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 07:04:58 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 07:04:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 07:04:58 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-icon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 07:06:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:06:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 07:06:05 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 07:06:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 07:06:05 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'testimonials', 'testimonials-1.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 07:06:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 07:06:05 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 07:06:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 07:06:06 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'testimonials', 'testimonials-1.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 07:06:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 07:06:06 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 07:06:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 07:06:06 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-icon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 07:08:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:08:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 07:08:22 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 07:08:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 07:08:22 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'testimonials', 'testimonials-1.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 07:08:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 07:08:23 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'testimonials', 'testimonials-1.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 07:08:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 07:08:23 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-icon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 07:08:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 07:08:23 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 07:09:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:09:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 07:09:23 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 07:09:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 07:09:23 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'testimonials', 'testimonials-1.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 07:09:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:09:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 07:09:38 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'testimonials', 'testimonials-1.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 07:09:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 07:09:38 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 07:09:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:16:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:16:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 07:16:18 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 07:16:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 07:16:19 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-icon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 07:16:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 07:16:19 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 07:16:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:16:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 07:16:59 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 07:17:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:17:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 07:17:02 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 07:17:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:17:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 07:17:06 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 07:17:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:17:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:17:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:17:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:17:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:17:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:17:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:17:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:17:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:17:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:17:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:17:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:17:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:17:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:17:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:17:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:17:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:17:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:17:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:17:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:17:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:17:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:17:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:17:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:17:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:17:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:17:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:17:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 07:17:09 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 07:17:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 07:17:10 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 07:17:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 07:17:10 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-icon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 07:17:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:17:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:18:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:18:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:18:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:19:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:19:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:19:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:19:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:19:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:19:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:19:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:19:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:19:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:19:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:19:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:19:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:19:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:19:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:19:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:19:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:19:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:19:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:19:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:19:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:19:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:20:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:20:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:20:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:20:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:20:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:20:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:20:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:20:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 07:20:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 08:00:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 08:00:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 08:00:57 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 08:01:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 08:01:08 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-icon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 08:01:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 08:01:08 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 08:01:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 08:01:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 08:01:24 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 08:02:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 08:02:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 08:02:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 08:02:42 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 08:02:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 08:02:42 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 08:02:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 08:02:42 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-icon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 08:02:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 08:02:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 08:02:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 08:02:56 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 08:02:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 08:02:57 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-icon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 08:02:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 08:02:57 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 08:07:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 08:08:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 08:08:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 08:08:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 08:08:33 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 08:08:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 08:08:33 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 08:08:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 08:08:33 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-icon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 08:08:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 08:10:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 08:10:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 08:10:54 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 09:12:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 09:12:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 09:12:42 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 09:12:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 09:12:43 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 09:12:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 09:12:43 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-icon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 09:17:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 09:17:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 09:17:07 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 09:17:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 09:17:08 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 09:17:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 09:17:08 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-icon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 09:17:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 09:17:08 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 09:20:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 09:20:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 09:20:02 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 09:21:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 09:21:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 09:21:01 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 09:22:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 09:22:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 09:22:11 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 09:22:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 09:22:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 09:22:20 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 09:23:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 09:23:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 09:23:41 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 09:51:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 09:51:53 --> Undefined variable: rating
+in APPPATH\Views\student\CourseDetailsView.php on line 481.
+ 1 APPPATH\Views\student\CourseDetailsView.php(481): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: rating', 'C:\\laragon\\www\\SchoolingTime\\app\\Views\\student\\CourseDetailsView.php', 481, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\SchoolingTime\\app\\Views\\student\\CourseDetailsView.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('student/CourseDetailsView', [], true)
+ 5 APPPATH\Controllers\HomepageController.php(55): view('student/CourseDetailsView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('45')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 09:53:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 09:53:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 09:53:13 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 09:53:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 09:53:14 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 09:53:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 09:53:14 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-icon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 09:53:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 09:53:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 09:53:48 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 09:54:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 09:54:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 09:54:17 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 09:54:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 09:54:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 09:54:39 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 09:55:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 09:55:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 09:55:11 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 09:55:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 09:55:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 09:55:28 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 09:55:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 09:55:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 09:55:44 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 09:57:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 09:57:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 09:57:05 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 09:57:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 09:57:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 09:57:14 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 09:58:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 09:58:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 09:58:38 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 10:14:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 10:14:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 10:14:00 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 10:14:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 10:14:01 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-icon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 10:14:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 10:14:01 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 11:26:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 11:26:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 11:26:58 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 11:26:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 11:26:59 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 11:26:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 11:26:59 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-icon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 11:26:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 11:26:59 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 11:27:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 11:27:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 11:27:44 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 11:27:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 11:28:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 11:28:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 11:28:04 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 11:28:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 11:28:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 11:28:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 11:28:15 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 11:28:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 11:28:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 11:28:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 11:28:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 11:28:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 11:28:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 11:28:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 11:28:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 11:28:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 11:28:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 11:28:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 11:28:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 11:28:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 11:28:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 11:28:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 11:28:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 11:28:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 11:28:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 11:31:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 11:31:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 11:31:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 11:39:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 11:40:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 11:40:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 11:40:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 11:41:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 11:41:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 11:41:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 11:45:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 11:45:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 11:45:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 11:46:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 11:46:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 11:46:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 11:46:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 11:52:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 11:52:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 11:52:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 11:53:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 11:53:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 11:53:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 11:54:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 11:54:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 11:55:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 11:55:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 12:06:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 12:06:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 12:06:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 12:06:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 12:06:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 12:06:12 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 12:06:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 12:06:13 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-icon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 12:06:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 12:06:13 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 12:06:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 12:06:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 12:06:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 12:06:22 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 12:07:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 12:07:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 12:07:04 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 12:07:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 12:07:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 12:07:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 12:07:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 12:07:08 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 12:07:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 12:07:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 12:07:17 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 12:12:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-03 12:12:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 12:12:06 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 12:12:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 12:12:07 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-03 12:12:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-03 12:12:07 --> Undefined variable: course_teacher_id
+in APPPATH\Controllers\HomepageController.php on line 39.
+ 1 APPPATH\Controllers\HomepageController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', 'C:\\laragon\\www\\SchoolingTime\\app\\Controllers\\HomepageController.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-icon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

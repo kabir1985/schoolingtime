@@ -1,0 +1,118 @@
+INFO - 2023-10-14 04:35:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 04:35:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 04:36:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 04:36:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 05:01:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 05:02:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 05:02:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 05:02:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 05:02:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 06:01:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 06:06:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 06:06:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 06:06:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 06:06:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 06:17:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-14 06:17:05 --> mysqli_sql_exception: Unknown column '$course_id' in 'where clause' in D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT * FROM  ...', 0)
+#1 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM  ...')
+#2 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM  ...')
+#3 D:\laragon\www\ci4\app\Views\teacherDashboardView.php(26): CodeIgniter\Database\BaseConnection->query('SELECT * FROM  ...')
+#4 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\View\View.php(226): include('D:\\laragon\\www\\...')
+#5 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Common.php(1178): CodeIgniter\View\View->render('teacherDashboar...', Array, true)
+#7 D:\laragon\www\ci4\app\Controllers\TeacherDashboardController.php(43): view('teacherDashboar...', Array)
+#8 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(915): App\Controllers\TeacherDashboardController->index()
+#9 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TeacherDashboardController))
+#10 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\laragon\www\ci4\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-10-14 06:17:05 --> Unknown column '$course_id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Views\teacherDashboardView.php(26): CodeIgniter\Database\BaseConnection->query('SELECT * FROM  teacher_course WHERE course_id = $course_id')
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\laragon\\www\\ci4\\app\\Views\\teacherDashboardView.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('teacherDashboardView', [], true)
+ 5 APPPATH\Controllers\TeacherDashboardController.php(43): view('teacherDashboardView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\TeacherDashboardController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TeacherDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-14 06:18:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-14 06:18:57 --> syntax error, unexpected '$course_id' (T_VARIABLE), expecting ')'
+in APPPATH\Views\teacherDashboardView.php on line 26.
+ 1 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('teacherDashboardView', [], true)
+ 3 APPPATH\Controllers\TeacherDashboardController.php(43): view('teacherDashboardView', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\TeacherDashboardController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TeacherDashboardController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-14 06:20:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-14 06:20:30 --> Cannot use object of type stdClass as array
+in APPPATH\Views\teacherDashboardView.php on line 32.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('teacherDashboardView', [], true)
+ 4 APPPATH\Controllers\TeacherDashboardController.php(43): view('teacherDashboardView', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\TeacherDashboardController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TeacherDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-14 13:24:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 13:24:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 13:24:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 13:24:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-14 13:24:44 --> Cannot use object of type stdClass as array
+in APPPATH\Views\teacherDashboardView.php on line 32.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('teacherDashboardView', [], true)
+ 4 APPPATH\Controllers\TeacherDashboardController.php(43): view('teacherDashboardView', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\TeacherDashboardController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TeacherDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-14 13:26:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-14 13:26:31 --> Cannot use object of type stdClass as array
+in APPPATH\Views\teacherDashboardView.php on line 32.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('teacherDashboardView', [], true)
+ 4 APPPATH\Controllers\TeacherDashboardController.php(43): view('teacherDashboardView', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\TeacherDashboardController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TeacherDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-14 13:28:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 13:29:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 13:40:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 13:41:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 13:41:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 13:41:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 13:41:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 13:41:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 13:53:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 14:03:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 14:03:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-14 14:03:56 --> Cannot use object of type stdClass as array
+in APPPATH\Views\teacherDashboardView.php on line 41.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('teacherDashboardView', [], true)
+ 4 APPPATH\Controllers\TeacherDashboardController.php(43): view('teacherDashboardView', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\TeacherDashboardController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TeacherDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-14 14:06:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 14:07:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 14:09:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 14:09:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 14:12:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 14:13:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 14:13:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 14:13:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 14:14:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 14:14:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

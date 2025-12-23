@@ -1,0 +1,1351 @@
+INFO - 2023-11-02 03:42:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 03:42:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 03:43:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 03:43:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 03:43:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 03:43:18 --> Undefined array key "student_id"
+in APPPATH\Controllers\StudentDashboardController.php on line 19.
+ 1 APPPATH\Controllers\StudentDashboardController.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "student_id"', 'D:\\laragon\\www\\ci4\\app\\Controllers\\StudentDashboardController.php', 19)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\StudentDashboardController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentDashboardController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 03:43:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:21:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:21:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:21:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:21:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:22:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:22:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:22:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:23:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:23:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:25:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:25:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:25:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:29:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 04:29:51 --> {
+  "error": {
+    "code": 401,
+    "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "errors": [
+      {
+        "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+        "domain": "global",
+        "reason": "unauthorized"
+      }
+    ],
+    "status": "UNAUTHENTICATED"
+  }
+}
+
+in FCPATH\vendor\google\apiclient\src\Http\REST.php on line 134.
+ 1 FCPATH\vendor\google\apiclient\src\Http\REST.php(107): Google\Http\REST::decodeHttpResponse(Object(GuzzleHttp\Psr7\Response), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 2 [internal function]: Google\Http\REST::doExecute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 3 FCPATH\vendor\google\apiclient\src\Task\Runner.php(187): call_user_func_array([...], [...])
+ 4 FCPATH\vendor\google\apiclient\src\Http\REST.php(66): Google\Task\Runner->run()
+ 5 FCPATH\vendor\google\apiclient\src\Client.php(926): Google\Http\REST::execute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo', [], null)
+ 6 FCPATH\vendor\google\apiclient\src\Service\Resource.php(238): Google\Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 7 FCPATH\vendor\google\apiclient-services\src\Oauth2\Resource\Userinfo.php(42): Google\Service\Resource->call('get', [...], 'Google\\Service\\Oauth2\\Userinfo')
+ 8 APPPATH\Controllers\AuthController.php(40): Google\Service\Oauth2\Resource\Userinfo->get()
+ 9 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 04:30:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 04:30:12 --> {
+  "error": {
+    "code": 401,
+    "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "errors": [
+      {
+        "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+        "domain": "global",
+        "reason": "unauthorized"
+      }
+    ],
+    "status": "UNAUTHENTICATED"
+  }
+}
+
+in FCPATH\vendor\google\apiclient\src\Http\REST.php on line 134.
+ 1 FCPATH\vendor\google\apiclient\src\Http\REST.php(107): Google\Http\REST::decodeHttpResponse(Object(GuzzleHttp\Psr7\Response), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 2 [internal function]: Google\Http\REST::doExecute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 3 FCPATH\vendor\google\apiclient\src\Task\Runner.php(187): call_user_func_array([...], [...])
+ 4 FCPATH\vendor\google\apiclient\src\Http\REST.php(66): Google\Task\Runner->run()
+ 5 FCPATH\vendor\google\apiclient\src\Client.php(926): Google\Http\REST::execute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo', [], null)
+ 6 FCPATH\vendor\google\apiclient\src\Service\Resource.php(238): Google\Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 7 FCPATH\vendor\google\apiclient-services\src\Oauth2\Resource\Userinfo.php(42): Google\Service\Resource->call('get', [...], 'Google\\Service\\Oauth2\\Userinfo')
+ 8 APPPATH\Controllers\AuthController.php(40): Google\Service\Oauth2\Resource\Userinfo->get()
+ 9 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 04:52:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 04:52:58 --> {
+  "error": {
+    "code": 401,
+    "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "errors": [
+      {
+        "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+        "domain": "global",
+        "reason": "unauthorized"
+      }
+    ],
+    "status": "UNAUTHENTICATED"
+  }
+}
+
+in FCPATH\vendor\google\apiclient\src\Http\REST.php on line 134.
+ 1 FCPATH\vendor\google\apiclient\src\Http\REST.php(107): Google\Http\REST::decodeHttpResponse(Object(GuzzleHttp\Psr7\Response), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 2 [internal function]: Google\Http\REST::doExecute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 3 FCPATH\vendor\google\apiclient\src\Task\Runner.php(187): call_user_func_array([...], [...])
+ 4 FCPATH\vendor\google\apiclient\src\Http\REST.php(66): Google\Task\Runner->run()
+ 5 FCPATH\vendor\google\apiclient\src\Client.php(926): Google\Http\REST::execute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo', [], null)
+ 6 FCPATH\vendor\google\apiclient\src\Service\Resource.php(238): Google\Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 7 FCPATH\vendor\google\apiclient-services\src\Oauth2\Resource\Userinfo.php(42): Google\Service\Resource->call('get', [...], 'Google\\Service\\Oauth2\\Userinfo')
+ 8 APPPATH\Controllers\AuthController.php(40): Google\Service\Oauth2\Resource\Userinfo->get()
+ 9 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 04:53:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 04:53:26 --> {
+  "error": {
+    "code": 401,
+    "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "errors": [
+      {
+        "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+        "domain": "global",
+        "reason": "unauthorized"
+      }
+    ],
+    "status": "UNAUTHENTICATED"
+  }
+}
+
+in FCPATH\vendor\google\apiclient\src\Http\REST.php on line 134.
+ 1 FCPATH\vendor\google\apiclient\src\Http\REST.php(107): Google\Http\REST::decodeHttpResponse(Object(GuzzleHttp\Psr7\Response), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 2 [internal function]: Google\Http\REST::doExecute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 3 FCPATH\vendor\google\apiclient\src\Task\Runner.php(187): call_user_func_array([...], [...])
+ 4 FCPATH\vendor\google\apiclient\src\Http\REST.php(66): Google\Task\Runner->run()
+ 5 FCPATH\vendor\google\apiclient\src\Client.php(926): Google\Http\REST::execute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo', [], null)
+ 6 FCPATH\vendor\google\apiclient\src\Service\Resource.php(238): Google\Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 7 FCPATH\vendor\google\apiclient-services\src\Oauth2\Resource\Userinfo.php(42): Google\Service\Resource->call('get', [...], 'Google\\Service\\Oauth2\\Userinfo')
+ 8 APPPATH\Controllers\AuthController.php(40): Google\Service\Oauth2\Resource\Userinfo->get()
+ 9 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 04:53:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:55:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 04:55:06 --> {
+  "error": {
+    "code": 401,
+    "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "errors": [
+      {
+        "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+        "domain": "global",
+        "reason": "unauthorized"
+      }
+    ],
+    "status": "UNAUTHENTICATED"
+  }
+}
+
+in FCPATH\vendor\google\apiclient\src\Http\REST.php on line 134.
+ 1 FCPATH\vendor\google\apiclient\src\Http\REST.php(107): Google\Http\REST::decodeHttpResponse(Object(GuzzleHttp\Psr7\Response), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 2 [internal function]: Google\Http\REST::doExecute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 3 FCPATH\vendor\google\apiclient\src\Task\Runner.php(187): call_user_func_array([...], [...])
+ 4 FCPATH\vendor\google\apiclient\src\Http\REST.php(66): Google\Task\Runner->run()
+ 5 FCPATH\vendor\google\apiclient\src\Client.php(926): Google\Http\REST::execute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo', [], null)
+ 6 FCPATH\vendor\google\apiclient\src\Service\Resource.php(238): Google\Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 7 FCPATH\vendor\google\apiclient-services\src\Oauth2\Resource\Userinfo.php(42): Google\Service\Resource->call('get', [...], 'Google\\Service\\Oauth2\\Userinfo')
+ 8 APPPATH\Controllers\AuthController.php(40): Google\Service\Oauth2\Resource\Userinfo->get()
+ 9 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 04:56:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 04:56:05 --> {
+  "error": {
+    "code": 401,
+    "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "errors": [
+      {
+        "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+        "domain": "global",
+        "reason": "unauthorized"
+      }
+    ],
+    "status": "UNAUTHENTICATED"
+  }
+}
+
+in FCPATH\vendor\google\apiclient\src\Http\REST.php on line 134.
+ 1 FCPATH\vendor\google\apiclient\src\Http\REST.php(107): Google\Http\REST::decodeHttpResponse(Object(GuzzleHttp\Psr7\Response), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 2 [internal function]: Google\Http\REST::doExecute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 3 FCPATH\vendor\google\apiclient\src\Task\Runner.php(187): call_user_func_array([...], [...])
+ 4 FCPATH\vendor\google\apiclient\src\Http\REST.php(66): Google\Task\Runner->run()
+ 5 FCPATH\vendor\google\apiclient\src\Client.php(926): Google\Http\REST::execute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo', [], null)
+ 6 FCPATH\vendor\google\apiclient\src\Service\Resource.php(238): Google\Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 7 FCPATH\vendor\google\apiclient-services\src\Oauth2\Resource\Userinfo.php(42): Google\Service\Resource->call('get', [...], 'Google\\Service\\Oauth2\\Userinfo')
+ 8 APPPATH\Controllers\AuthController.php(40): Google\Service\Oauth2\Resource\Userinfo->get()
+ 9 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 05:02:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 05:02:44 --> {
+  "error": {
+    "code": 401,
+    "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "errors": [
+      {
+        "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+        "domain": "global",
+        "reason": "unauthorized"
+      }
+    ],
+    "status": "UNAUTHENTICATED"
+  }
+}
+
+in FCPATH\vendor\google\apiclient\src\Http\REST.php on line 134.
+ 1 FCPATH\vendor\google\apiclient\src\Http\REST.php(107): Google\Http\REST::decodeHttpResponse(Object(GuzzleHttp\Psr7\Response), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 2 [internal function]: Google\Http\REST::doExecute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 3 FCPATH\vendor\google\apiclient\src\Task\Runner.php(187): call_user_func_array([...], [...])
+ 4 FCPATH\vendor\google\apiclient\src\Http\REST.php(66): Google\Task\Runner->run()
+ 5 FCPATH\vendor\google\apiclient\src\Client.php(926): Google\Http\REST::execute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo', [], null)
+ 6 FCPATH\vendor\google\apiclient\src\Service\Resource.php(238): Google\Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 7 FCPATH\vendor\google\apiclient-services\src\Oauth2\Resource\Userinfo.php(42): Google\Service\Resource->call('get', [...], 'Google\\Service\\Oauth2\\Userinfo')
+ 8 APPPATH\Controllers\AuthController.php(40): Google\Service\Oauth2\Resource\Userinfo->get()
+ 9 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 05:03:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 05:03:00 --> {
+  "error": {
+    "code": 401,
+    "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "errors": [
+      {
+        "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+        "domain": "global",
+        "reason": "unauthorized"
+      }
+    ],
+    "status": "UNAUTHENTICATED"
+  }
+}
+
+in FCPATH\vendor\google\apiclient\src\Http\REST.php on line 134.
+ 1 FCPATH\vendor\google\apiclient\src\Http\REST.php(107): Google\Http\REST::decodeHttpResponse(Object(GuzzleHttp\Psr7\Response), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 2 [internal function]: Google\Http\REST::doExecute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 3 FCPATH\vendor\google\apiclient\src\Task\Runner.php(187): call_user_func_array([...], [...])
+ 4 FCPATH\vendor\google\apiclient\src\Http\REST.php(66): Google\Task\Runner->run()
+ 5 FCPATH\vendor\google\apiclient\src\Client.php(926): Google\Http\REST::execute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo', [], null)
+ 6 FCPATH\vendor\google\apiclient\src\Service\Resource.php(238): Google\Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 7 FCPATH\vendor\google\apiclient-services\src\Oauth2\Resource\Userinfo.php(42): Google\Service\Resource->call('get', [...], 'Google\\Service\\Oauth2\\Userinfo')
+ 8 APPPATH\Controllers\AuthController.php(40): Google\Service\Oauth2\Resource\Userinfo->get()
+ 9 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 05:03:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 05:03:02 --> {
+  "error": {
+    "code": 401,
+    "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "errors": [
+      {
+        "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+        "domain": "global",
+        "reason": "unauthorized"
+      }
+    ],
+    "status": "UNAUTHENTICATED"
+  }
+}
+
+in FCPATH\vendor\google\apiclient\src\Http\REST.php on line 134.
+ 1 FCPATH\vendor\google\apiclient\src\Http\REST.php(107): Google\Http\REST::decodeHttpResponse(Object(GuzzleHttp\Psr7\Response), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 2 [internal function]: Google\Http\REST::doExecute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 3 FCPATH\vendor\google\apiclient\src\Task\Runner.php(187): call_user_func_array([...], [...])
+ 4 FCPATH\vendor\google\apiclient\src\Http\REST.php(66): Google\Task\Runner->run()
+ 5 FCPATH\vendor\google\apiclient\src\Client.php(926): Google\Http\REST::execute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo', [], null)
+ 6 FCPATH\vendor\google\apiclient\src\Service\Resource.php(238): Google\Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 7 FCPATH\vendor\google\apiclient-services\src\Oauth2\Resource\Userinfo.php(42): Google\Service\Resource->call('get', [...], 'Google\\Service\\Oauth2\\Userinfo')
+ 8 APPPATH\Controllers\AuthController.php(40): Google\Service\Oauth2\Resource\Userinfo->get()
+ 9 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 05:03:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 05:06:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 05:06:15 --> {
+  "error": {
+    "code": 401,
+    "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "errors": [
+      {
+        "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+        "domain": "global",
+        "reason": "unauthorized"
+      }
+    ],
+    "status": "UNAUTHENTICATED"
+  }
+}
+
+in FCPATH\vendor\google\apiclient\src\Http\REST.php on line 134.
+ 1 FCPATH\vendor\google\apiclient\src\Http\REST.php(107): Google\Http\REST::decodeHttpResponse(Object(GuzzleHttp\Psr7\Response), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 2 [internal function]: Google\Http\REST::doExecute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 3 FCPATH\vendor\google\apiclient\src\Task\Runner.php(187): call_user_func_array([...], [...])
+ 4 FCPATH\vendor\google\apiclient\src\Http\REST.php(66): Google\Task\Runner->run()
+ 5 FCPATH\vendor\google\apiclient\src\Client.php(926): Google\Http\REST::execute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo', [], null)
+ 6 FCPATH\vendor\google\apiclient\src\Service\Resource.php(238): Google\Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 7 FCPATH\vendor\google\apiclient-services\src\Oauth2\Resource\Userinfo.php(42): Google\Service\Resource->call('get', [...], 'Google\\Service\\Oauth2\\Userinfo')
+ 8 APPPATH\Controllers\AuthController.php(40): Google\Service\Oauth2\Resource\Userinfo->get()
+ 9 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 05:06:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 05:06:26 --> {
+  "error": {
+    "code": 401,
+    "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "errors": [
+      {
+        "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+        "domain": "global",
+        "reason": "unauthorized"
+      }
+    ],
+    "status": "UNAUTHENTICATED"
+  }
+}
+
+in FCPATH\vendor\google\apiclient\src\Http\REST.php on line 134.
+ 1 FCPATH\vendor\google\apiclient\src\Http\REST.php(107): Google\Http\REST::decodeHttpResponse(Object(GuzzleHttp\Psr7\Response), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 2 [internal function]: Google\Http\REST::doExecute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 3 FCPATH\vendor\google\apiclient\src\Task\Runner.php(187): call_user_func_array([...], [...])
+ 4 FCPATH\vendor\google\apiclient\src\Http\REST.php(66): Google\Task\Runner->run()
+ 5 FCPATH\vendor\google\apiclient\src\Client.php(926): Google\Http\REST::execute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo', [], null)
+ 6 FCPATH\vendor\google\apiclient\src\Service\Resource.php(238): Google\Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 7 FCPATH\vendor\google\apiclient-services\src\Oauth2\Resource\Userinfo.php(42): Google\Service\Resource->call('get', [...], 'Google\\Service\\Oauth2\\Userinfo')
+ 8 APPPATH\Controllers\AuthController.php(40): Google\Service\Oauth2\Resource\Userinfo->get()
+ 9 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 05:06:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 05:06:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 05:06:41 --> {
+  "error": {
+    "code": 401,
+    "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "errors": [
+      {
+        "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+        "domain": "global",
+        "reason": "unauthorized"
+      }
+    ],
+    "status": "UNAUTHENTICATED"
+  }
+}
+
+in FCPATH\vendor\google\apiclient\src\Http\REST.php on line 134.
+ 1 FCPATH\vendor\google\apiclient\src\Http\REST.php(107): Google\Http\REST::decodeHttpResponse(Object(GuzzleHttp\Psr7\Response), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 2 [internal function]: Google\Http\REST::doExecute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 3 FCPATH\vendor\google\apiclient\src\Task\Runner.php(187): call_user_func_array([...], [...])
+ 4 FCPATH\vendor\google\apiclient\src\Http\REST.php(66): Google\Task\Runner->run()
+ 5 FCPATH\vendor\google\apiclient\src\Client.php(926): Google\Http\REST::execute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo', [], null)
+ 6 FCPATH\vendor\google\apiclient\src\Service\Resource.php(238): Google\Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 7 FCPATH\vendor\google\apiclient-services\src\Oauth2\Resource\Userinfo.php(42): Google\Service\Resource->call('get', [...], 'Google\\Service\\Oauth2\\Userinfo')
+ 8 APPPATH\Controllers\AuthController.php(40): Google\Service\Oauth2\Resource\Userinfo->get()
+ 9 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 05:07:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 05:07:03 --> Undefined variable $session
+in APPPATH\Controllers\AuthController.php on line 44.
+ 1 APPPATH\Controllers\AuthController.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $session', 'D:\\laragon\\www\\ci4\\app\\Controllers\\AuthController.php', 44)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 05:07:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 05:07:34 --> {
+  "error": {
+    "code": 401,
+    "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "errors": [
+      {
+        "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+        "domain": "global",
+        "reason": "unauthorized"
+      }
+    ],
+    "status": "UNAUTHENTICATED"
+  }
+}
+
+in FCPATH\vendor\google\apiclient\src\Http\REST.php on line 134.
+ 1 FCPATH\vendor\google\apiclient\src\Http\REST.php(107): Google\Http\REST::decodeHttpResponse(Object(GuzzleHttp\Psr7\Response), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 2 [internal function]: Google\Http\REST::doExecute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 3 FCPATH\vendor\google\apiclient\src\Task\Runner.php(187): call_user_func_array([...], [...])
+ 4 FCPATH\vendor\google\apiclient\src\Http\REST.php(66): Google\Task\Runner->run()
+ 5 FCPATH\vendor\google\apiclient\src\Client.php(926): Google\Http\REST::execute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo', [], null)
+ 6 FCPATH\vendor\google\apiclient\src\Service\Resource.php(238): Google\Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 7 FCPATH\vendor\google\apiclient-services\src\Oauth2\Resource\Userinfo.php(42): Google\Service\Resource->call('get', [...], 'Google\\Service\\Oauth2\\Userinfo')
+ 8 APPPATH\Controllers\AuthController.php(40): Google\Service\Oauth2\Resource\Userinfo->get()
+ 9 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 05:07:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 05:07:43 --> Undefined constant "App\Controllers\session"
+in APPPATH\Controllers\AuthController.php on line 46.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 05:21:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 05:21:05 --> {
+  "error": {
+    "code": 401,
+    "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "errors": [
+      {
+        "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+        "domain": "global",
+        "reason": "unauthorized"
+      }
+    ],
+    "status": "UNAUTHENTICATED"
+  }
+}
+
+in FCPATH\vendor\google\apiclient\src\Http\REST.php on line 134.
+ 1 FCPATH\vendor\google\apiclient\src\Http\REST.php(107): Google\Http\REST::decodeHttpResponse(Object(GuzzleHttp\Psr7\Response), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 2 [internal function]: Google\Http\REST::doExecute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 3 FCPATH\vendor\google\apiclient\src\Task\Runner.php(187): call_user_func_array([...], [...])
+ 4 FCPATH\vendor\google\apiclient\src\Http\REST.php(66): Google\Task\Runner->run()
+ 5 FCPATH\vendor\google\apiclient\src\Client.php(926): Google\Http\REST::execute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo', [], null)
+ 6 FCPATH\vendor\google\apiclient\src\Service\Resource.php(238): Google\Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 7 FCPATH\vendor\google\apiclient-services\src\Oauth2\Resource\Userinfo.php(42): Google\Service\Resource->call('get', [...], 'Google\\Service\\Oauth2\\Userinfo')
+ 8 APPPATH\Controllers\AuthController.php(40): Google\Service\Oauth2\Resource\Userinfo->get()
+ 9 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 05:21:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 05:21:15 --> Undefined constant "App\Controllers\session"
+in APPPATH\Controllers\AuthController.php on line 46.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 05:24:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 05:24:56 --> {
+  "error": {
+    "code": 401,
+    "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "errors": [
+      {
+        "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+        "domain": "global",
+        "reason": "unauthorized"
+      }
+    ],
+    "status": "UNAUTHENTICATED"
+  }
+}
+
+in FCPATH\vendor\google\apiclient\src\Http\REST.php on line 134.
+ 1 FCPATH\vendor\google\apiclient\src\Http\REST.php(107): Google\Http\REST::decodeHttpResponse(Object(GuzzleHttp\Psr7\Response), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 2 [internal function]: Google\Http\REST::doExecute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 3 FCPATH\vendor\google\apiclient\src\Task\Runner.php(187): call_user_func_array([...], [...])
+ 4 FCPATH\vendor\google\apiclient\src\Http\REST.php(66): Google\Task\Runner->run()
+ 5 FCPATH\vendor\google\apiclient\src\Client.php(926): Google\Http\REST::execute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo', [], null)
+ 6 FCPATH\vendor\google\apiclient\src\Service\Resource.php(238): Google\Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 7 FCPATH\vendor\google\apiclient-services\src\Oauth2\Resource\Userinfo.php(42): Google\Service\Resource->call('get', [...], 'Google\\Service\\Oauth2\\Userinfo')
+ 8 APPPATH\Controllers\AuthController.php(40): Google\Service\Oauth2\Resource\Userinfo->get()
+ 9 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 05:25:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 05:25:05 --> Undefined constant "App\Controllers\session"
+in APPPATH\Controllers\AuthController.php on line 46.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 05:28:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 05:28:22 --> Call to undefined method CodeIgniter\Session\Session::userdata()
+in APPPATH\Controllers\AuthController.php on line 47.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 05:54:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 05:54:32 --> {
+  "error": {
+    "code": 401,
+    "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "errors": [
+      {
+        "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+        "domain": "global",
+        "reason": "unauthorized"
+      }
+    ],
+    "status": "UNAUTHENTICATED"
+  }
+}
+
+in FCPATH\vendor\google\apiclient\src\Http\REST.php on line 134.
+ 1 FCPATH\vendor\google\apiclient\src\Http\REST.php(107): Google\Http\REST::decodeHttpResponse(Object(GuzzleHttp\Psr7\Response), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 2 [internal function]: Google\Http\REST::doExecute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 3 FCPATH\vendor\google\apiclient\src\Task\Runner.php(187): call_user_func_array([...], [...])
+ 4 FCPATH\vendor\google\apiclient\src\Http\REST.php(66): Google\Task\Runner->run()
+ 5 FCPATH\vendor\google\apiclient\src\Client.php(926): Google\Http\REST::execute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo', [], null)
+ 6 FCPATH\vendor\google\apiclient\src\Service\Resource.php(238): Google\Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 7 FCPATH\vendor\google\apiclient-services\src\Oauth2\Resource\Userinfo.php(42): Google\Service\Resource->call('get', [...], 'Google\\Service\\Oauth2\\Userinfo')
+ 8 APPPATH\Controllers\AuthController.php(40): Google\Service\Oauth2\Resource\Userinfo->get()
+ 9 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 05:54:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 05:54:41 --> Call to undefined method CodeIgniter\Session\Session::userdata()
+in APPPATH\Controllers\AuthController.php on line 47.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 05:56:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 05:56:18 --> {
+  "error": {
+    "code": 401,
+    "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "errors": [
+      {
+        "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+        "domain": "global",
+        "reason": "unauthorized"
+      }
+    ],
+    "status": "UNAUTHENTICATED"
+  }
+}
+
+in FCPATH\vendor\google\apiclient\src\Http\REST.php on line 134.
+ 1 FCPATH\vendor\google\apiclient\src\Http\REST.php(107): Google\Http\REST::decodeHttpResponse(Object(GuzzleHttp\Psr7\Response), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 2 [internal function]: Google\Http\REST::doExecute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 3 FCPATH\vendor\google\apiclient\src\Task\Runner.php(187): call_user_func_array([...], [...])
+ 4 FCPATH\vendor\google\apiclient\src\Http\REST.php(66): Google\Task\Runner->run()
+ 5 FCPATH\vendor\google\apiclient\src\Client.php(926): Google\Http\REST::execute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo', [], null)
+ 6 FCPATH\vendor\google\apiclient\src\Service\Resource.php(238): Google\Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 7 FCPATH\vendor\google\apiclient-services\src\Oauth2\Resource\Userinfo.php(42): Google\Service\Resource->call('get', [...], 'Google\\Service\\Oauth2\\Userinfo')
+ 8 APPPATH\Controllers\AuthController.php(40): Google\Service\Oauth2\Resource\Userinfo->get()
+ 9 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 05:56:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 05:56:26 --> Undefined property: App\Controllers\AuthController::$google
+in APPPATH\Controllers\AuthController.php on line 42.
+ 1 APPPATH\Controllers\AuthController.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\AuthController::$google', 'D:\\laragon\\www\\ci4\\app\\Controllers\\AuthController.php', 42)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 05:57:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 05:57:29 --> {
+  "error": {
+    "code": 401,
+    "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "errors": [
+      {
+        "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+        "domain": "global",
+        "reason": "unauthorized"
+      }
+    ],
+    "status": "UNAUTHENTICATED"
+  }
+}
+
+in FCPATH\vendor\google\apiclient\src\Http\REST.php on line 134.
+ 1 FCPATH\vendor\google\apiclient\src\Http\REST.php(107): Google\Http\REST::decodeHttpResponse(Object(GuzzleHttp\Psr7\Response), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 2 [internal function]: Google\Http\REST::doExecute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 3 FCPATH\vendor\google\apiclient\src\Task\Runner.php(187): call_user_func_array([...], [...])
+ 4 FCPATH\vendor\google\apiclient\src\Http\REST.php(66): Google\Task\Runner->run()
+ 5 FCPATH\vendor\google\apiclient\src\Client.php(926): Google\Http\REST::execute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo', [], null)
+ 6 FCPATH\vendor\google\apiclient\src\Service\Resource.php(238): Google\Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 7 FCPATH\vendor\google\apiclient-services\src\Oauth2\Resource\Userinfo.php(42): Google\Service\Resource->call('get', [...], 'Google\\Service\\Oauth2\\Userinfo')
+ 8 APPPATH\Controllers\AuthController.php(40): Google\Service\Oauth2\Resource\Userinfo->get()
+ 9 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 05:57:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 05:57:40 --> Undefined constant "App\Controllers\session"
+in APPPATH\Controllers\AuthController.php on line 47.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 05:59:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 06:00:00 --> Undefined constant "App\Controllers\session"
+in APPPATH\Controllers\AuthController.php on line 48.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 06:01:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 06:01:49 --> {
+  "error": {
+    "code": 401,
+    "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "errors": [
+      {
+        "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+        "domain": "global",
+        "reason": "unauthorized"
+      }
+    ],
+    "status": "UNAUTHENTICATED"
+  }
+}
+
+in FCPATH\vendor\google\apiclient\src\Http\REST.php on line 134.
+ 1 FCPATH\vendor\google\apiclient\src\Http\REST.php(107): Google\Http\REST::decodeHttpResponse(Object(GuzzleHttp\Psr7\Response), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 2 [internal function]: Google\Http\REST::doExecute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 3 FCPATH\vendor\google\apiclient\src\Task\Runner.php(187): call_user_func_array([...], [...])
+ 4 FCPATH\vendor\google\apiclient\src\Http\REST.php(66): Google\Task\Runner->run()
+ 5 FCPATH\vendor\google\apiclient\src\Client.php(926): Google\Http\REST::execute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo', [], null)
+ 6 FCPATH\vendor\google\apiclient\src\Service\Resource.php(238): Google\Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 7 FCPATH\vendor\google\apiclient-services\src\Oauth2\Resource\Userinfo.php(42): Google\Service\Resource->call('get', [...], 'Google\\Service\\Oauth2\\Userinfo')
+ 8 APPPATH\Controllers\AuthController.php(40): Google\Service\Oauth2\Resource\Userinfo->get()
+ 9 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 06:02:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 06:02:06 --> Undefined constant "App\Controllers\session"
+in APPPATH\Controllers\AuthController.php on line 47.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 06:39:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 06:39:52 --> {
+  "error": {
+    "code": 401,
+    "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "errors": [
+      {
+        "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+        "domain": "global",
+        "reason": "unauthorized"
+      }
+    ],
+    "status": "UNAUTHENTICATED"
+  }
+}
+
+in FCPATH\vendor\google\apiclient\src\Http\REST.php on line 134.
+ 1 FCPATH\vendor\google\apiclient\src\Http\REST.php(107): Google\Http\REST::decodeHttpResponse(Object(GuzzleHttp\Psr7\Response), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 2 [internal function]: Google\Http\REST::doExecute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 3 FCPATH\vendor\google\apiclient\src\Task\Runner.php(187): call_user_func_array([...], [...])
+ 4 FCPATH\vendor\google\apiclient\src\Http\REST.php(66): Google\Task\Runner->run()
+ 5 FCPATH\vendor\google\apiclient\src\Client.php(926): Google\Http\REST::execute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo', [], null)
+ 6 FCPATH\vendor\google\apiclient\src\Service\Resource.php(238): Google\Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 7 FCPATH\vendor\google\apiclient-services\src\Oauth2\Resource\Userinfo.php(42): Google\Service\Resource->call('get', [...], 'Google\\Service\\Oauth2\\Userinfo')
+ 8 APPPATH\Controllers\AuthController.php(40): Google\Service\Oauth2\Resource\Userinfo->get()
+ 9 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 06:39:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 06:41:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 06:41:30 --> {
+  "error": {
+    "code": 401,
+    "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "errors": [
+      {
+        "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+        "domain": "global",
+        "reason": "unauthorized"
+      }
+    ],
+    "status": "UNAUTHENTICATED"
+  }
+}
+
+in FCPATH\vendor\google\apiclient\src\Http\REST.php on line 134.
+ 1 FCPATH\vendor\google\apiclient\src\Http\REST.php(107): Google\Http\REST::decodeHttpResponse(Object(GuzzleHttp\Psr7\Response), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 2 [internal function]: Google\Http\REST::doExecute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 3 FCPATH\vendor\google\apiclient\src\Task\Runner.php(187): call_user_func_array([...], [...])
+ 4 FCPATH\vendor\google\apiclient\src\Http\REST.php(66): Google\Task\Runner->run()
+ 5 FCPATH\vendor\google\apiclient\src\Client.php(926): Google\Http\REST::execute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo', [], null)
+ 6 FCPATH\vendor\google\apiclient\src\Service\Resource.php(238): Google\Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 7 FCPATH\vendor\google\apiclient-services\src\Oauth2\Resource\Userinfo.php(42): Google\Service\Resource->call('get', [...], 'Google\\Service\\Oauth2\\Userinfo')
+ 8 APPPATH\Controllers\AuthController.php(40): Google\Service\Oauth2\Resource\Userinfo->get()
+ 9 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 06:41:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 06:43:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 06:43:02 --> {
+  "error": {
+    "code": 401,
+    "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "errors": [
+      {
+        "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+        "domain": "global",
+        "reason": "unauthorized"
+      }
+    ],
+    "status": "UNAUTHENTICATED"
+  }
+}
+
+in FCPATH\vendor\google\apiclient\src\Http\REST.php on line 134.
+ 1 FCPATH\vendor\google\apiclient\src\Http\REST.php(107): Google\Http\REST::decodeHttpResponse(Object(GuzzleHttp\Psr7\Response), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 2 [internal function]: Google\Http\REST::doExecute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 3 FCPATH\vendor\google\apiclient\src\Task\Runner.php(187): call_user_func_array([...], [...])
+ 4 FCPATH\vendor\google\apiclient\src\Http\REST.php(66): Google\Task\Runner->run()
+ 5 FCPATH\vendor\google\apiclient\src\Client.php(926): Google\Http\REST::execute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo', [], null)
+ 6 FCPATH\vendor\google\apiclient\src\Service\Resource.php(238): Google\Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 7 FCPATH\vendor\google\apiclient-services\src\Oauth2\Resource\Userinfo.php(42): Google\Service\Resource->call('get', [...], 'Google\\Service\\Oauth2\\Userinfo')
+ 8 APPPATH\Controllers\AuthController.php(40): Google\Service\Oauth2\Resource\Userinfo->get()
+ 9 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 06:43:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 07:14:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 07:14:52 --> cURL error 6: Could not resolve host: oauth2.googleapis.com (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://oauth2.googleapis.com/token
+in FCPATH\vendor\guzzlehttp\guzzle\src\Handler\CurlFactory.php on line 210.
+ 1 FCPATH\vendor\guzzlehttp\guzzle\src\Handler\CurlFactory.php(158): GuzzleHttp\Handler\CurlFactory::createRejection(Object(GuzzleHttp\Handler\EasyHandle), [...])
+ 2 FCPATH\vendor\guzzlehttp\guzzle\src\Handler\CurlFactory.php(110): GuzzleHttp\Handler\CurlFactory::finishError(Object(GuzzleHttp\Handler\CurlHandler), Object(GuzzleHttp\Handler\EasyHandle), Object(GuzzleHttp\Handler\CurlFactory))
+ 3 FCPATH\vendor\guzzlehttp\guzzle\src\Handler\CurlHandler.php(47): GuzzleHttp\Handler\CurlFactory::finish(Object(GuzzleHttp\Handler\CurlHandler), Object(GuzzleHttp\Handler\EasyHandle), Object(GuzzleHttp\Handler\CurlFactory))
+ 4 FCPATH\vendor\guzzlehttp\guzzle\src\Handler\Proxy.php(28): GuzzleHttp\Handler\CurlHandler->__invoke(Object(GuzzleHttp\Psr7\Request), [...])
+ 5 FCPATH\vendor\guzzlehttp\guzzle\src\Handler\Proxy.php(48): GuzzleHttp\Handler\Proxy::GuzzleHttp\Handler\{closure}(Object(GuzzleHttp\Psr7\Request), [...])
+ 6 FCPATH\vendor\guzzlehttp\guzzle\src\PrepareBodyMiddleware.php(64): GuzzleHttp\Handler\Proxy::GuzzleHttp\Handler\{closure}(Object(GuzzleHttp\Psr7\Request), [...])
+ 7 FCPATH\vendor\guzzlehttp\guzzle\src\Middleware.php(31): GuzzleHttp\PrepareBodyMiddleware->__invoke(Object(GuzzleHttp\Psr7\Request), [...])
+ 8 FCPATH\vendor\guzzlehttp\guzzle\src\RedirectMiddleware.php(71): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Request), [...])
+ 9 FCPATH\vendor\guzzlehttp\guzzle\src\Middleware.php(63): GuzzleHttp\RedirectMiddleware->__invoke(Object(GuzzleHttp\Psr7\Request), [...])
+10 FCPATH\vendor\guzzlehttp\guzzle\src\HandlerStack.php(75): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Request), [...])
+11 FCPATH\vendor\guzzlehttp\guzzle\src\Client.php(333): GuzzleHttp\HandlerStack->__invoke(Object(GuzzleHttp\Psr7\Request), [...])
+12 FCPATH\vendor\guzzlehttp\guzzle\src\Client.php(107): GuzzleHttp\Client->transfer(Object(GuzzleHttp\Psr7\Request), [...])
+13 FCPATH\vendor\guzzlehttp\guzzle\src\Client.php(124): GuzzleHttp\Client->sendAsync(Object(GuzzleHttp\Psr7\Request), [...])
+14 FCPATH\vendor\google\auth\src\HttpHandler\Guzzle6HttpHandler.php(47): GuzzleHttp\Client->send(Object(GuzzleHttp\Psr7\Request), [...])
+15 FCPATH\vendor\google\auth\src\OAuth2.php(658): Google\Auth\HttpHandler\Guzzle6HttpHandler->__invoke(Object(GuzzleHttp\Psr7\Request))
+16 FCPATH\vendor\google\apiclient\src\Client.php(260): Google\Auth\OAuth2->fetchAuthToken(Object(Google\Auth\HttpHandler\Guzzle7HttpHandler))
+17 FCPATH\vendor\google\apiclient\src\Client.php(235): Google\Client->fetchAccessTokenWithAuthCode('4/0AfJohXnFXZ-8ZZt641ZCzrpbqSQMgpjMQdGQY9Uq7steq1SJmfSOfyTH8zS4IK2UczYziQ')
+18 APPPATH\Controllers\AuthController.php(42): Google\Client->authenticate('4/0AfJohXnFXZ-8ZZt641ZCzrpbqSQMgpjMQdGQY9Uq7steq1SJmfSOfyTH8zS4IK2UczYziQ')
+19 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+20 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+21 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+22 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-02 07:17:53 --> syntax error, unexpected variable "$this", expecting "function" or "const"
+in APPPATH\Models\Google_login_model.php on line 9.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\laragon\\www\\ci4\\app\\Models\\Google_login_model.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Google_login_model')
+ 3 APPPATH\Controllers\AuthController.php(16): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Google_login_model')
+ 4 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\AuthController->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 07:18:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 07:18:36 --> {
+  "error": {
+    "code": 401,
+    "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "errors": [
+      {
+        "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+        "domain": "global",
+        "reason": "unauthorized"
+      }
+    ],
+    "status": "UNAUTHENTICATED"
+  }
+}
+
+in FCPATH\vendor\google\apiclient\src\Http\REST.php on line 134.
+ 1 FCPATH\vendor\google\apiclient\src\Http\REST.php(107): Google\Http\REST::decodeHttpResponse(Object(GuzzleHttp\Psr7\Response), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 2 [internal function]: Google\Http\REST::doExecute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 3 FCPATH\vendor\google\apiclient\src\Task\Runner.php(187): call_user_func_array([...], [...])
+ 4 FCPATH\vendor\google\apiclient\src\Http\REST.php(66): Google\Task\Runner->run()
+ 5 FCPATH\vendor\google\apiclient\src\Client.php(926): Google\Http\REST::execute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo', [], null)
+ 6 FCPATH\vendor\google\apiclient\src\Service\Resource.php(238): Google\Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 7 FCPATH\vendor\google\apiclient-services\src\Oauth2\Resource\Userinfo.php(42): Google\Service\Resource->call('get', [...], 'Google\\Service\\Oauth2\\Userinfo')
+ 8 APPPATH\Controllers\AuthController.php(47): Google\Service\Oauth2\Resource\Userinfo->get()
+ 9 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 07:18:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 07:18:46 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::where()
+in APPPATH\Models\Google_login_model.php on line 18.
+ 1 APPPATH\Controllers\AuthController.php(51): App\Models\Google_login_model->Is_already_register('106556754043661382623')
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 07:23:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 07:23:29 --> {
+  "error": {
+    "code": 401,
+    "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "errors": [
+      {
+        "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+        "domain": "global",
+        "reason": "unauthorized"
+      }
+    ],
+    "status": "UNAUTHENTICATED"
+  }
+}
+
+in FCPATH\vendor\google\apiclient\src\Http\REST.php on line 134.
+ 1 FCPATH\vendor\google\apiclient\src\Http\REST.php(107): Google\Http\REST::decodeHttpResponse(Object(GuzzleHttp\Psr7\Response), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 2 [internal function]: Google\Http\REST::doExecute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 3 FCPATH\vendor\google\apiclient\src\Task\Runner.php(187): call_user_func_array([...], [...])
+ 4 FCPATH\vendor\google\apiclient\src\Http\REST.php(66): Google\Task\Runner->run()
+ 5 FCPATH\vendor\google\apiclient\src\Client.php(926): Google\Http\REST::execute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo', [], null)
+ 6 FCPATH\vendor\google\apiclient\src\Service\Resource.php(238): Google\Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 7 FCPATH\vendor\google\apiclient-services\src\Oauth2\Resource\Userinfo.php(42): Google\Service\Resource->call('get', [...], 'Google\\Service\\Oauth2\\Userinfo')
+ 8 APPPATH\Controllers\AuthController.php(47): Google\Service\Oauth2\Resource\Userinfo->get()
+ 9 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 07:23:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 07:23:37 --> Undefined variable $builder
+in APPPATH\Models\Google_login_model.php on line 20.
+ 1 APPPATH\Models\Google_login_model.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $builder', 'D:\\laragon\\www\\ci4\\app\\Models\\Google_login_model.php', 20)
+ 2 APPPATH\Controllers\AuthController.php(51): App\Models\Google_login_model->Is_already_register('106556754043661382623')
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 07:29:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 07:29:57 --> {
+  "error": {
+    "code": 401,
+    "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "errors": [
+      {
+        "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+        "domain": "global",
+        "reason": "unauthorized"
+      }
+    ],
+    "status": "UNAUTHENTICATED"
+  }
+}
+
+in FCPATH\vendor\google\apiclient\src\Http\REST.php on line 134.
+ 1 FCPATH\vendor\google\apiclient\src\Http\REST.php(107): Google\Http\REST::decodeHttpResponse(Object(GuzzleHttp\Psr7\Response), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 2 [internal function]: Google\Http\REST::doExecute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 3 FCPATH\vendor\google\apiclient\src\Task\Runner.php(187): call_user_func_array([...], [...])
+ 4 FCPATH\vendor\google\apiclient\src\Http\REST.php(66): Google\Task\Runner->run()
+ 5 FCPATH\vendor\google\apiclient\src\Client.php(926): Google\Http\REST::execute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo', [], null)
+ 6 FCPATH\vendor\google\apiclient\src\Service\Resource.php(238): Google\Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 7 FCPATH\vendor\google\apiclient-services\src\Oauth2\Resource\Userinfo.php(42): Google\Service\Resource->call('get', [...], 'Google\\Service\\Oauth2\\Userinfo')
+ 8 APPPATH\Controllers\AuthController.php(47): Google\Service\Oauth2\Resource\Userinfo->get()
+ 9 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 07:30:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 07:30:06 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::select()
+in APPPATH\Models\Google_login_model.php on line 21.
+ 1 APPPATH\Controllers\AuthController.php(51): App\Models\Google_login_model->Is_already_register('106556754043661382623')
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 07:30:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 07:30:38 --> {
+  "error": {
+    "code": 401,
+    "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "errors": [
+      {
+        "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+        "domain": "global",
+        "reason": "unauthorized"
+      }
+    ],
+    "status": "UNAUTHENTICATED"
+  }
+}
+
+in FCPATH\vendor\google\apiclient\src\Http\REST.php on line 134.
+ 1 FCPATH\vendor\google\apiclient\src\Http\REST.php(107): Google\Http\REST::decodeHttpResponse(Object(GuzzleHttp\Psr7\Response), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 2 [internal function]: Google\Http\REST::doExecute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 3 FCPATH\vendor\google\apiclient\src\Task\Runner.php(187): call_user_func_array([...], [...])
+ 4 FCPATH\vendor\google\apiclient\src\Http\REST.php(66): Google\Task\Runner->run()
+ 5 FCPATH\vendor\google\apiclient\src\Client.php(926): Google\Http\REST::execute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo', [], null)
+ 6 FCPATH\vendor\google\apiclient\src\Service\Resource.php(238): Google\Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 7 FCPATH\vendor\google\apiclient-services\src\Oauth2\Resource\Userinfo.php(42): Google\Service\Resource->call('get', [...], 'Google\\Service\\Oauth2\\Userinfo')
+ 8 APPPATH\Controllers\AuthController.php(47): Google\Service\Oauth2\Resource\Userinfo->get()
+ 9 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 07:30:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 07:30:47 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::select()
+in APPPATH\Models\Google_login_model.php on line 21.
+ 1 APPPATH\Controllers\AuthController.php(51): App\Models\Google_login_model->Is_already_register('106556754043661382623')
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 07:31:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 07:31:41 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::select()
+in APPPATH\Models\Google_login_model.php on line 21.
+ 1 APPPATH\Controllers\AuthController.php(51): App\Models\Google_login_model->Is_already_register('106556754043661382623')
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 07:41:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 07:41:52 --> {
+  "error": {
+    "code": 401,
+    "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "errors": [
+      {
+        "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+        "domain": "global",
+        "reason": "unauthorized"
+      }
+    ],
+    "status": "UNAUTHENTICATED"
+  }
+}
+
+in FCPATH\vendor\google\apiclient\src\Http\REST.php on line 134.
+ 1 FCPATH\vendor\google\apiclient\src\Http\REST.php(107): Google\Http\REST::decodeHttpResponse(Object(GuzzleHttp\Psr7\Response), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 2 [internal function]: Google\Http\REST::doExecute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 3 FCPATH\vendor\google\apiclient\src\Task\Runner.php(187): call_user_func_array([...], [...])
+ 4 FCPATH\vendor\google\apiclient\src\Http\REST.php(66): Google\Task\Runner->run()
+ 5 FCPATH\vendor\google\apiclient\src\Client.php(926): Google\Http\REST::execute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo', [], null)
+ 6 FCPATH\vendor\google\apiclient\src\Service\Resource.php(238): Google\Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 7 FCPATH\vendor\google\apiclient-services\src\Oauth2\Resource\Userinfo.php(42): Google\Service\Resource->call('get', [...], 'Google\\Service\\Oauth2\\Userinfo')
+ 8 APPPATH\Controllers\AuthController.php(47): Google\Service\Oauth2\Resource\Userinfo->get()
+ 9 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 07:42:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 07:42:00 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::select()
+in APPPATH\Models\Google_login_model.php on line 21.
+ 1 APPPATH\Controllers\AuthController.php(51): App\Models\Google_login_model->Is_already_register('106556754043661382623')
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-02 07:43:39 --> syntax error, unexpected variable "$db", expecting "function" or "const"
+in APPPATH\Models\Google_login_model.php on line 15.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\laragon\\www\\ci4\\app\\Models\\Google_login_model.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Google_login_model')
+ 3 APPPATH\Controllers\AuthController.php(16): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Google_login_model')
+ 4 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\AuthController->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-02 07:44:13 --> syntax error, unexpected variable "$db", expecting "function" or "const"
+in APPPATH\Models\Google_login_model.php on line 10.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\laragon\\www\\ci4\\app\\Models\\Google_login_model.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Google_login_model')
+ 3 APPPATH\Controllers\AuthController.php(16): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Google_login_model')
+ 4 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\AuthController->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 07:46:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 07:46:54 --> {
+  "error": {
+    "code": 401,
+    "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "errors": [
+      {
+        "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+        "domain": "global",
+        "reason": "unauthorized"
+      }
+    ],
+    "status": "UNAUTHENTICATED"
+  }
+}
+
+in FCPATH\vendor\google\apiclient\src\Http\REST.php on line 134.
+ 1 FCPATH\vendor\google\apiclient\src\Http\REST.php(107): Google\Http\REST::decodeHttpResponse(Object(GuzzleHttp\Psr7\Response), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 2 [internal function]: Google\Http\REST::doExecute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 3 FCPATH\vendor\google\apiclient\src\Task\Runner.php(187): call_user_func_array([...], [...])
+ 4 FCPATH\vendor\google\apiclient\src\Http\REST.php(66): Google\Task\Runner->run()
+ 5 FCPATH\vendor\google\apiclient\src\Client.php(926): Google\Http\REST::execute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo', [], null)
+ 6 FCPATH\vendor\google\apiclient\src\Service\Resource.php(238): Google\Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 7 FCPATH\vendor\google\apiclient-services\src\Oauth2\Resource\Userinfo.php(42): Google\Service\Resource->call('get', [...], 'Google\\Service\\Oauth2\\Userinfo')
+ 8 APPPATH\Controllers\AuthController.php(47): Google\Service\Oauth2\Resource\Userinfo->get()
+ 9 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 07:47:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 07:48:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 07:48:04 --> {
+  "error": {
+    "code": 401,
+    "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "errors": [
+      {
+        "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+        "domain": "global",
+        "reason": "unauthorized"
+      }
+    ],
+    "status": "UNAUTHENTICATED"
+  }
+}
+
+in FCPATH\vendor\google\apiclient\src\Http\REST.php on line 134.
+ 1 FCPATH\vendor\google\apiclient\src\Http\REST.php(107): Google\Http\REST::decodeHttpResponse(Object(GuzzleHttp\Psr7\Response), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 2 [internal function]: Google\Http\REST::doExecute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 3 FCPATH\vendor\google\apiclient\src\Task\Runner.php(187): call_user_func_array([...], [...])
+ 4 FCPATH\vendor\google\apiclient\src\Http\REST.php(66): Google\Task\Runner->run()
+ 5 FCPATH\vendor\google\apiclient\src\Client.php(926): Google\Http\REST::execute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo', [], null)
+ 6 FCPATH\vendor\google\apiclient\src\Service\Resource.php(238): Google\Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 7 FCPATH\vendor\google\apiclient-services\src\Oauth2\Resource\Userinfo.php(42): Google\Service\Resource->call('get', [...], 'Google\\Service\\Oauth2\\Userinfo')
+ 8 APPPATH\Controllers\AuthController.php(47): Google\Service\Oauth2\Resource\Userinfo->get()
+ 9 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 07:48:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 07:48:17 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::insert()
+in APPPATH\Models\Google_login_model.php on line 50.
+ 1 APPPATH\Controllers\AuthController.php(77): App\Models\Google_login_model->Insert_user_data([...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 07:48:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 07:48:53 --> {
+  "error": {
+    "code": 401,
+    "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "errors": [
+      {
+        "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+        "domain": "global",
+        "reason": "unauthorized"
+      }
+    ],
+    "status": "UNAUTHENTICATED"
+  }
+}
+
+in FCPATH\vendor\google\apiclient\src\Http\REST.php on line 134.
+ 1 FCPATH\vendor\google\apiclient\src\Http\REST.php(107): Google\Http\REST::decodeHttpResponse(Object(GuzzleHttp\Psr7\Response), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 2 [internal function]: Google\Http\REST::doExecute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 3 FCPATH\vendor\google\apiclient\src\Task\Runner.php(187): call_user_func_array([...], [...])
+ 4 FCPATH\vendor\google\apiclient\src\Http\REST.php(66): Google\Task\Runner->run()
+ 5 FCPATH\vendor\google\apiclient\src\Client.php(926): Google\Http\REST::execute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo', [], null)
+ 6 FCPATH\vendor\google\apiclient\src\Service\Resource.php(238): Google\Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 7 FCPATH\vendor\google\apiclient-services\src\Oauth2\Resource\Userinfo.php(42): Google\Service\Resource->call('get', [...], 'Google\\Service\\Oauth2\\Userinfo')
+ 8 APPPATH\Controllers\AuthController.php(47): Google\Service\Oauth2\Resource\Userinfo->get()
+ 9 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 07:49:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 07:49:05 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::insert()
+in APPPATH\Models\Google_login_model.php on line 49.
+ 1 APPPATH\Controllers\AuthController.php(77): App\Models\Google_login_model->Insert_user_data([...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 07:49:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 08:36:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 08:36:53 --> {
+  "error": {
+    "code": 401,
+    "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "errors": [
+      {
+        "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+        "domain": "global",
+        "reason": "unauthorized"
+      }
+    ],
+    "status": "UNAUTHENTICATED"
+  }
+}
+
+in FCPATH\vendor\google\apiclient\src\Http\REST.php on line 134.
+ 1 FCPATH\vendor\google\apiclient\src\Http\REST.php(107): Google\Http\REST::decodeHttpResponse(Object(GuzzleHttp\Psr7\Response), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 2 [internal function]: Google\Http\REST::doExecute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 3 FCPATH\vendor\google\apiclient\src\Task\Runner.php(187): call_user_func_array([...], [...])
+ 4 FCPATH\vendor\google\apiclient\src\Http\REST.php(66): Google\Task\Runner->run()
+ 5 FCPATH\vendor\google\apiclient\src\Client.php(926): Google\Http\REST::execute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo', [], null)
+ 6 FCPATH\vendor\google\apiclient\src\Service\Resource.php(238): Google\Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 7 FCPATH\vendor\google\apiclient-services\src\Oauth2\Resource\Userinfo.php(42): Google\Service\Resource->call('get', [...], 'Google\\Service\\Oauth2\\Userinfo')
+ 8 APPPATH\Controllers\AuthController.php(47): Google\Service\Oauth2\Resource\Userinfo->get()
+ 9 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 08:47:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 08:47:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 08:47:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 08:47:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 08:47:16 --> Undefined array key "email_address"
+in APPPATH\Controllers\AuthController.php on line 82.
+ 1 APPPATH\Controllers\AuthController.php(82): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "email_address"', 'D:\\laragon\\www\\ci4\\app\\Controllers\\AuthController.php', 82)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 08:48:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 08:48:23 --> {
+  "error": {
+    "code": 401,
+    "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "errors": [
+      {
+        "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+        "domain": "global",
+        "reason": "unauthorized"
+      }
+    ],
+    "status": "UNAUTHENTICATED"
+  }
+}
+
+in FCPATH\vendor\google\apiclient\src\Http\REST.php on line 134.
+ 1 FCPATH\vendor\google\apiclient\src\Http\REST.php(107): Google\Http\REST::decodeHttpResponse(Object(GuzzleHttp\Psr7\Response), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 2 [internal function]: Google\Http\REST::doExecute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 3 FCPATH\vendor\google\apiclient\src\Task\Runner.php(187): call_user_func_array([...], [...])
+ 4 FCPATH\vendor\google\apiclient\src\Http\REST.php(66): Google\Task\Runner->run()
+ 5 FCPATH\vendor\google\apiclient\src\Client.php(926): Google\Http\REST::execute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo', [], null)
+ 6 FCPATH\vendor\google\apiclient\src\Service\Resource.php(238): Google\Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 7 FCPATH\vendor\google\apiclient-services\src\Oauth2\Resource\Userinfo.php(42): Google\Service\Resource->call('get', [...], 'Google\\Service\\Oauth2\\Userinfo')
+ 8 APPPATH\Controllers\AuthController.php(47): Google\Service\Oauth2\Resource\Userinfo->get()
+ 9 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 08:48:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-02 08:48:33 --> mysqli_sql_exception: Unknown column 'login_oauth_uid' in 'field list' in D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `student...', 0)
+#1 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `student...')
+#2 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `student...')
+#3 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2475): CodeIgniter\Database\BaseConnection->query('UPDATE `student...', Array, false)
+#4 D:\laragon\www\ci4\app\Models\Google_login_model.php(32): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 D:\laragon\www\ci4\app\Controllers\AuthController.php(63): App\Models\Google_login_model->Update_user_data(Array, '106556754043661...')
+#6 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+#7 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#8 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\laragon\www\ci4\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-11-02 08:48:33 --> Unknown column 'login_oauth_uid' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2475): CodeIgniter\Database\BaseConnection->query('UPDATE `student_registration` SET `login_oauth_uid` = :login_oauth_uid:, `first_name` = :first_name:, `last_name` = :last_name:, `email_address` = :email_address:, `profile_picture` = :profile_picture:, `created_at` = :created_at:
+WHERE `student_id` = :student_id:', [...], false)
+ 2 APPPATH\Models\Google_login_model.php(32): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 APPPATH\Controllers\AuthController.php(63): App\Models\Google_login_model->Update_user_data([...], '106556754043661382623')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 08:49:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 08:49:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 08:50:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 08:50:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 08:50:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 08:50:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 08:50:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 09:45:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:30:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:30:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:31:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:31:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:31:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:31:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:31:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:31:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:32:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:32:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:32:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:32:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:32:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 10:32:41 --> Undefined variable $user_data
+in APPPATH\Controllers\AuthController.php on line 95.
+ 1 APPPATH\Controllers\AuthController.php(95): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user_data', 'D:\\laragon\\www\\ci4\\app\\Controllers\\AuthController.php', 95)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 10:33:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 10:33:20 --> {
+  "error": {
+    "code": 401,
+    "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+    "errors": [
+      {
+        "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+        "domain": "global",
+        "reason": "unauthorized"
+      }
+    ],
+    "status": "UNAUTHENTICATED"
+  }
+}
+
+in FCPATH\vendor\google\apiclient\src\Http\REST.php on line 134.
+ 1 FCPATH\vendor\google\apiclient\src\Http\REST.php(107): Google\Http\REST::decodeHttpResponse(Object(GuzzleHttp\Psr7\Response), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 2 [internal function]: Google\Http\REST::doExecute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 3 FCPATH\vendor\google\apiclient\src\Task\Runner.php(187): call_user_func_array([...], [...])
+ 4 FCPATH\vendor\google\apiclient\src\Http\REST.php(66): Google\Task\Runner->run()
+ 5 FCPATH\vendor\google\apiclient\src\Client.php(926): Google\Http\REST::execute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo', [], null)
+ 6 FCPATH\vendor\google\apiclient\src\Service\Resource.php(238): Google\Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\Oauth2\\Userinfo')
+ 7 FCPATH\vendor\google\apiclient-services\src\Oauth2\Resource\Userinfo.php(42): Google\Service\Resource->call('get', [...], 'Google\\Service\\Oauth2\\Userinfo')
+ 8 APPPATH\Controllers\AuthController.php(47): Google\Service\Oauth2\Resource\Userinfo->get()
+ 9 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->callback()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 10:33:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:33:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:34:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:34:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:35:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:35:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:35:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:35:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:35:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:35:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:36:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:36:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:36:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:36:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:36:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:36:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:37:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:37:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:37:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:37:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:37:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:37:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:37:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:37:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:37:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:38:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:38:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:39:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:39:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:39:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 10:39:46 --> Undefined array key "name"
+in APPPATH\Views\student\profile_createView.php on line 22.
+ 1 APPPATH\Views\student\profile_createView.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', 'D:\\laragon\\www\\ci4\\app\\Views\\student\\profile_createView.php', 22)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\laragon\\www\\ci4\\app\\Views\\student\\profile_createView.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('student/profile_createView', [], true)
+ 5 APPPATH\Controllers\StudentDashboardController.php(47): view('student/profile_createView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\StudentDashboardController->student_profile_create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 10:41:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:41:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:41:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:41:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:41:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:41:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:41:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:41:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:41:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:41:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 10:41:38 --> Undefined array key "name"
+in APPPATH\Views\student\profile_createView.php on line 22.
+ 1 APPPATH\Views\student\profile_createView.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', 'D:\\laragon\\www\\ci4\\app\\Views\\student\\profile_createView.php', 22)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\laragon\\www\\ci4\\app\\Views\\student\\profile_createView.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('student/profile_createView', [], true)
+ 5 APPPATH\Controllers\StudentDashboardController.php(47): view('student/profile_createView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\StudentDashboardController->student_profile_create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 10:45:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:45:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:45:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:45:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:45:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 10:45:28 --> Undefined variable $row
+in APPPATH\Views\student\profile_createView.php on line 49.
+ 1 APPPATH\Views\student\profile_createView.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $row', 'D:\\laragon\\www\\ci4\\app\\Views\\student\\profile_createView.php', 49)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\laragon\\www\\ci4\\app\\Views\\student\\profile_createView.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('student/profile_createView', [], true)
+ 5 APPPATH\Controllers\StudentDashboardController.php(45): view('student/profile_createView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\StudentDashboardController->student_profile_create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 10:49:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 10:49:30 --> Undefined variable $row
+in APPPATH\Views\student\profile_createView.php on line 49.
+ 1 APPPATH\Views\student\profile_createView.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $row', 'D:\\laragon\\www\\ci4\\app\\Views\\student\\profile_createView.php', 49)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\laragon\\www\\ci4\\app\\Views\\student\\profile_createView.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('student/profile_createView', [], true)
+ 5 APPPATH\Controllers\StudentDashboardController.php(47): view('student/profile_createView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\StudentDashboardController->student_profile_create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 10:49:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:50:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:51:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:51:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:52:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:52:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 10:53:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 10:53:42 --> Undefined variable $row
+in APPPATH\Views\student\profile_createView.php on line 61.
+ 1 APPPATH\Views\student\profile_createView.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $row', 'D:\\laragon\\www\\ci4\\app\\Views\\student\\profile_createView.php', 61)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\laragon\\www\\ci4\\app\\Views\\student\\profile_createView.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('student/profile_createView', [], true)
+ 5 APPPATH\Controllers\StudentDashboardController.php(46): view('student/profile_createView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\StudentDashboardController->student_profile_create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-02 10:54:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

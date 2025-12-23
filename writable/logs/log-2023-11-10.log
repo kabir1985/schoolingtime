@@ -1,0 +1,130 @@
+INFO - 2023-11-10 02:33:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-10 02:54:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-10 02:54:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-10 02:54:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-10 02:54:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-10 02:54:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-10 02:54:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-10 02:54:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-10 02:54:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-10 09:59:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-10 09:59:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-10 09:59:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-10 09:59:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-10 09:59:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-10 09:59:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-10 09:59:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-10 12:34:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-10 12:34:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-10 12:34:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-10 12:51:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-10 12:51:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-10 12:51:28 --> mysqli_sql_exception: Table 'school_tutor_db.users' doesn't exist in D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php(212): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Validation\Validation.php(311): CodeIgniter\Validation\StrictRules\Rules->is_unique('skabir@gmail.co...', 'email', Array, NULL, 'email')
+#6 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Validation\Validation.php(197): CodeIgniter\Validation\Validation->processRules('email', 'email', 'skabir@gmail.co...', Array, Array)
+#7 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Controller.php(152): CodeIgniter\Validation\Validation->run()
+#8 D:\laragon\www\ci4\app\Controllers\StudentregistrationController.php(41): CodeIgniter\Controller->validate(Array)
+#9 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\StudentregistrationController->store()
+#10 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentregistrationController))
+#11 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\laragon\www\ci4\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-11-10 12:51:29 --> Table 'school_tutor_db.users' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(212): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(311): CodeIgniter\Validation\StrictRules\Rules->is_unique('skabir@gmail.com', 'email', [...], null, 'email')
+ 4 SYSTEMPATH\Validation\Validation.php(197): CodeIgniter\Validation\Validation->processRules('email', 'email', 'skabir@gmail.com', [...], [...])
+ 5 SYSTEMPATH\Controller.php(152): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Controllers\StudentregistrationController.php(41): CodeIgniter\Controller->validate([...])
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\StudentregistrationController->store()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentregistrationController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-10 12:53:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-10 12:53:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-10 12:54:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-10 13:12:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-10 13:12:42 --> Call to undefined function set_value()
+in APPPATH\Views\student\student_registrationView.php on line 94.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('student/student_registrationView', [], true)
+ 4 APPPATH\Controllers\StudentregistrationController.php(22): view('student/student_registrationView')
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\StudentregistrationController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentregistrationController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-10 13:13:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-10 13:13:21 --> syntax error, unexpected token ";"
+in APPPATH\Views\student\student_registrationView.php on line 94.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('student/student_registrationView', [], true)
+ 3 APPPATH\Controllers\StudentregistrationController.php(22): view('student/student_registrationView')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\StudentregistrationController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentregistrationController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-10 13:13:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-10 13:14:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-10 13:14:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-10 13:14:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-10 13:35:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-10 13:35:04 --> Call to undefined function set_value()
+in APPPATH\Views\student\student_registrationView.php on line 94.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('student/student_registrationView', [], true)
+ 4 APPPATH\Controllers\StudentregistrationController.php(22): view('student/student_registrationView')
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\StudentregistrationController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentregistrationController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-10 13:35:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-10 13:36:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-10 13:36:02 --> mysqli_sql_exception: Table 'school_tutor_db.users' doesn't exist in D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php(212): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Validation\Validation.php(311): CodeIgniter\Validation\StrictRules\Rules->is_unique('ssdfdsf@gmail.c...', 'email', Array, NULL, 'email')
+#6 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Validation\Validation.php(197): CodeIgniter\Validation\Validation->processRules('email', 'email', 'ssdfdsf@gmail.c...', Array, Array)
+#7 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\Controller.php(152): CodeIgniter\Validation\Validation->run()
+#8 D:\laragon\www\ci4\app\Controllers\StudentregistrationController.php(37): CodeIgniter\Controller->validate(Array)
+#9 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\StudentregistrationController->store()
+#10 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentregistrationController))
+#11 D:\laragon\www\ci4\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\laragon\www\ci4\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-11-10 13:36:02 --> Table 'school_tutor_db.users' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(212): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(311): CodeIgniter\Validation\StrictRules\Rules->is_unique('ssdfdsf@gmail.com', 'email', [...], null, 'email')
+ 4 SYSTEMPATH\Validation\Validation.php(197): CodeIgniter\Validation\Validation->processRules('email', 'email', 'ssdfdsf@gmail.com', [...], [...])
+ 5 SYSTEMPATH\Controller.php(152): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Controllers\StudentregistrationController.php(37): CodeIgniter\Controller->validate([...])
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\StudentregistrationController->store()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentregistrationController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-10 13:37:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-10 13:38:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-10 13:38:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-10 13:38:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-10 13:39:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-10 13:39:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

@@ -1,0 +1,1647 @@
+ERROR - 2024-10-15 06:42:23 --> mysqli_sql_exception: Column 'teacher_name' cannot be null in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query('INSERT INTO `te...', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `te...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `te...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `te...', Array, false)
+#4 /var/www/html/vendor/codeigniter4/framework/system/Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/html/vendor/codeigniter4/framework/system/BaseModel.php(805): CodeIgniter\Model->doInsert(Array)
+#6 /var/www/html/vendor/codeigniter4/framework/system/Model.php(749): CodeIgniter\BaseModel->insert(Array, true)
+#7 /var/www/html/app/Controllers/TeacherregistrationController.php(64): CodeIgniter\Model->insert(Array)
+#8 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(943): App\Controllers\TeacherregistrationController->store()
+#9 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TeacherregistrationController))
+#10 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-10-15 06:42:23 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'teacher_name' cannot be null
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `teacher_registration` (`teacher_id`, `teacher_name`, `teacher_email`, `teacher_mobile`, `teacher_password`) VALUES (:teacher_id:, :teacher_name:, :teacher_email:, :teacher_mobile:, :teacher_password:)', [...], false)
+ 2 SYSTEMPATH/Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH/Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH/Controllers/TeacherregistrationController.php(64): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\TeacherregistrationController->store()
+ 7 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TeacherregistrationController))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-15 06:42:23 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'teacher_name' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 311.
+ 1 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `teacher_registration` (`teacher_id`, `teacher_name`, `teacher_email`, `teacher_mobile`, `teacher_password`) VALUES (\'TEA24289AA461\', NULL, NULL, NULL, NULL)')
+ 2 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `teacher_registration` (`teacher_id`, `teacher_name`, `teacher_email`, `teacher_mobile`, `teacher_password`) VALUES (\'TEA24289AA461\', NULL, NULL, NULL, NULL)')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `teacher_registration` (`teacher_id`, `teacher_name`, `teacher_email`, `teacher_mobile`, `teacher_password`) VALUES (:teacher_id:, :teacher_name:, :teacher_email:, :teacher_mobile:, :teacher_password:)', [...], false)
+ 4 SYSTEMPATH/Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH/BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH/Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH/Controllers/TeacherregistrationController.php(64): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\TeacherregistrationController->store()
+ 9 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TeacherregistrationController))
+10 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-15 06:42:23 --> [Caused by] mysqli_sql_exception: Column 'teacher_name' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 306.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(306): mysqli->query('INSERT INTO `teacher_registration` (`teacher_id`, `teacher_name`, `teacher_email`, `teacher_mobile`, `teacher_password`) VALUES (\'TEA24289AA461\', NULL, NULL, NULL, NULL)', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `teacher_registration` (`teacher_id`, `teacher_name`, `teacher_email`, `teacher_mobile`, `teacher_password`) VALUES (\'TEA24289AA461\', NULL, NULL, NULL, NULL)')
+ 3 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `teacher_registration` (`teacher_id`, `teacher_name`, `teacher_email`, `teacher_mobile`, `teacher_password`) VALUES (\'TEA24289AA461\', NULL, NULL, NULL, NULL)')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `teacher_registration` (`teacher_id`, `teacher_name`, `teacher_email`, `teacher_mobile`, `teacher_password`) VALUES (:teacher_id:, :teacher_name:, :teacher_email:, :teacher_mobile:, :teacher_password:)', [...], false)
+ 5 SYSTEMPATH/Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH/Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH/Controllers/TeacherregistrationController.php(64): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\TeacherregistrationController->store()
+10 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TeacherregistrationController))
+11 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-10-15 09:08:11 --> mysqli_sql_exception: Unknown column 'homepage_assets' in 'where clause' in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query(' SELECT *  FROM...', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM...')
+#3 /var/www/html/app/Controllers/HomepageController.php(98): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-10-15 09:08:11 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 APPPATH/Controllers/HomepageController.php(98): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_content
+                                WHERE course_id = homepage_assets
+                                GROUP BY chapter_id
+                                ORDER BY course_content_id ')
+ 2 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-15 09:08:11 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 311.
+ 1 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM course_content
+                                WHERE course_id = homepage_assets
+                                GROUP BY chapter_id
+                                ORDER BY course_content_id ')
+ 2 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM course_content
+                                WHERE course_id = homepage_assets
+                                GROUP BY chapter_id
+                                ORDER BY course_content_id ')
+ 3 APPPATH/Controllers/HomepageController.php(98): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_content
+                                WHERE course_id = homepage_assets
+                                GROUP BY chapter_id
+                                ORDER BY course_content_id ')
+ 4 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+ 5 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-15 09:08:11 --> [Caused by] mysqli_sql_exception: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 306.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(306): mysqli->query(' SELECT *  FROM course_content
+                                WHERE course_id = homepage_assets
+                                GROUP BY chapter_id
+                                ORDER BY course_content_id ', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM course_content
+                                WHERE course_id = homepage_assets
+                                GROUP BY chapter_id
+                                ORDER BY course_content_id ')
+ 3 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM course_content
+                                WHERE course_id = homepage_assets
+                                GROUP BY chapter_id
+                                ORDER BY course_content_id ')
+ 4 APPPATH/Controllers/HomepageController.php(98): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_content
+                                WHERE course_id = homepage_assets
+                                GROUP BY chapter_id
+                                ORDER BY course_content_id ')
+ 5 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+ 6 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-10-15 09:08:11 --> mysqli_sql_exception: Unknown column 'homepage_assets' in 'where clause' in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query(' SELECT *  FROM...', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM...')
+#3 /var/www/html/app/Controllers/HomepageController.php(98): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-ico...')
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-10-15 09:08:11 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 APPPATH/Controllers/HomepageController.php(98): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_content
+                                WHERE course_id = homepage_assets
+                                GROUP BY chapter_id
+                                ORDER BY course_content_id ')
+ 2 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-icon.png')
+ 3 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-15 09:08:11 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 311.
+ 1 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM course_content
+                                WHERE course_id = homepage_assets
+                                GROUP BY chapter_id
+                                ORDER BY course_content_id ')
+ 2 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM course_content
+                                WHERE course_id = homepage_assets
+                                GROUP BY chapter_id
+                                ORDER BY course_content_id ')
+ 3 APPPATH/Controllers/HomepageController.php(98): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_content
+                                WHERE course_id = homepage_assets
+                                GROUP BY chapter_id
+                                ORDER BY course_content_id ')
+ 4 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-icon.png')
+ 5 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-15 09:08:11 --> [Caused by] mysqli_sql_exception: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 306.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(306): mysqli->query(' SELECT *  FROM course_content
+                                WHERE course_id = homepage_assets
+                                GROUP BY chapter_id
+                                ORDER BY course_content_id ', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM course_content
+                                WHERE course_id = homepage_assets
+                                GROUP BY chapter_id
+                                ORDER BY course_content_id ')
+ 3 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM course_content
+                                WHERE course_id = homepage_assets
+                                GROUP BY chapter_id
+                                ORDER BY course_content_id ')
+ 4 APPPATH/Controllers/HomepageController.php(98): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_content
+                                WHERE course_id = homepage_assets
+                                GROUP BY chapter_id
+                                ORDER BY course_content_id ')
+ 5 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-icon.png')
+ 6 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-10-15 09:30:02 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'sctime_db', 3306, '', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/app/Controllers/HomepageController.php(111): CodeIgniter\Database\BaseConnection->query('      SELECT \n ...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(943): App\Controllers\HomepageController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/app/Controllers/HomepageController.php(111): CodeIgniter\Database\BaseConnection->query('      SELECT \n ...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(943): App\Controllers\HomepageController->index()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-10-15 09:30:02 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Controllers/HomepageController.php(111): CodeIgniter\Database\BaseConnection->query('      SELECT 
+                            tc.course_type_name,
+                            tc.*, 
+                            rt.feedback_rating, 
+                            rt.number_of_student,
+                            tr.teacher_name,
+                            tr.last_educational_institute,
+                            tr.teacher_pro_his,
+                            cb.start_date
+                        FROM 
+                            teacher_course AS tc
+                        LEFT JOIN (
+                            SELECT 
+                                AVG(feedback_rating) AS feedback_rating, 
+                                COUNT(student_id) AS number_of_student, 
+                                course_id,
+                                teacher_course_id
+                            FROM 
+                                course_feedback 
+                            GROUP BY 
+                                teacher_course_id, course_id
+                        ) AS rt
+                        ON rt.course_id = tc.course_id 
+                        LEFT JOIN (
+                            SELECT 
+                                teacher_registration.teacher_name, 
+                                teacher_profile.last_educational_institute, 
+                                teacher_profile.teacher_pro_his, 
+                                teacher_registration.teacher_id 
+                            FROM 
+                                teacher_registration 
+                            LEFT JOIN 
+                                teacher_profile 
+                            ON 
+                                teacher_registration.teacher_id = teacher_profile.teacher_id 
+                        ) AS tr
+                        ON tr.teacher_id = tc.course_teacher_id
+                        LEFT JOIN course_batch AS cb 
+                        ON cb.course_id = tc.course_id
+                        WHERE 
+                            tc.course_status != \'pending\'
+                            GROUP BY 
+                                            tc.course_type_name, 
+                                                tc.course_id,
+                                                rt.feedback_rating,
+                                            rt.number_of_student,
+                                                tr.teacher_name, 
+                                                tr.last_educational_institute, 
+                                            tr.teacher_pro_his ')
+ 3 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\HomepageController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-10-15 09:31:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-10-15 09:31:14 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'sctime_db', 3306, '', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/app/Controllers/HomepageController.php(111): CodeIgniter\Database\BaseConnection->query('      SELECT \n ...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(943): App\Controllers\HomepageController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/app/Controllers/HomepageController.php(111): CodeIgniter\Database\BaseConnection->query('      SELECT \n ...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(943): App\Controllers\HomepageController->index()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-10-15 09:31:14 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Controllers/HomepageController.php(111): CodeIgniter\Database\BaseConnection->query('      SELECT 
+                            tc.course_type_name,
+                            tc.*, 
+                            rt.feedback_rating, 
+                            rt.number_of_student,
+                            tr.teacher_name,
+                            tr.last_educational_institute,
+                            tr.teacher_pro_his,
+                            cb.start_date
+                        FROM 
+                            teacher_course AS tc
+                        LEFT JOIN (
+                            SELECT 
+                                AVG(feedback_rating) AS feedback_rating, 
+                                COUNT(student_id) AS number_of_student, 
+                                course_id,
+                                teacher_course_id
+                            FROM 
+                                course_feedback 
+                            GROUP BY 
+                                teacher_course_id, course_id
+                        ) AS rt
+                        ON rt.course_id = tc.course_id 
+                        LEFT JOIN (
+                            SELECT 
+                                teacher_registration.teacher_name, 
+                                teacher_profile.last_educational_institute, 
+                                teacher_profile.teacher_pro_his, 
+                                teacher_registration.teacher_id 
+                            FROM 
+                                teacher_registration 
+                            LEFT JOIN 
+                                teacher_profile 
+                            ON 
+                                teacher_registration.teacher_id = teacher_profile.teacher_id 
+                        ) AS tr
+                        ON tr.teacher_id = tc.course_teacher_id
+                        LEFT JOIN course_batch AS cb 
+                        ON cb.course_id = tc.course_id
+                        WHERE 
+                            tc.course_status != \'pending\'
+                            GROUP BY 
+                                            tc.course_type_name, 
+                                                tc.course_id,
+                                                rt.feedback_rating,
+                                            rt.number_of_student,
+                                                tr.teacher_name, 
+                                                tr.last_educational_institute, 
+                                            tr.teacher_pro_his ')
+ 3 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\HomepageController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-10-15 09:33:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-15 09:33:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-15 09:33:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-15 09:33:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-15 09:34:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-15 09:34:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-15 09:34:09 --> ErrorException: include_once(/var/www/html/app/Models/SearchCourseModel.php): failed to open stream: Permission denied
+in SYSTEMPATH/Autoloader/Autoloader.php on line 311.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(311): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include_once(/var/www/html/app/Models/SearchCourseModel.php): failed to open stream: Permission denied', '/var/www/html/vendor/codeigniter4/framework/system/Autoloader/Autoloader.php', 311, [...])
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(311): include_once()
+ 3 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('/var/www/html/app/Models/SearchCourseModel.php')
+ 4 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\SearchCourseModel')
+ 5 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\SearchCourseModel')
+ 6 APPPATH/Controllers/CourseCategoryDetailsController.php(33): spl_autoload_call('App\\Models\\SearchCourseModel')
+ 7 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\CourseCategoryDetailsController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseCategoryDetailsController))
+ 9 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-10-15 09:35:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-15 09:35:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-15 09:36:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-15 09:36:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-15 09:36:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-15 09:36:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-15 09:36:20 --> ErrorException: include_once(/var/www/html/app/Views/student/course_details_syllabus.php): failed to open stream: Permission denied
+in APPPATH/Views/student/course_details_left_contain.php on line 135.
+ 1 APPPATH/Views/student/course_details_left_contain.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include_once(/var/www/html/app/Views/student/course_details_syllabus.php): failed to open stream: Permission denied', '/var/www/html/app/Views/student/course_details_left_contain.php', 135, [...])
+ 2 APPPATH/Views/student/course_details_left_contain.php(135): include_once()
+ 3 APPPATH/Views/student/CourseDetailsView.php(67): include_once('/var/www/html/app/Views/student/course_details_left_contain.php')
+ 4 SYSTEMPATH/View/View.php(228): include('/var/www/html/app/Views/student/CourseDetailsView.php')
+ 5 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render('student/CourseDetailsView', [], true)
+ 7 APPPATH/Controllers/HomepageController.php(220): view('student/CourseDetailsView', [...])
+ 8 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('65')
+ 9 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+10 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-10-15 09:39:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-15 09:39:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-10-15 09:39:40 --> mysqli_sql_exception: Unknown column 'homepage_assets' in 'where clause' in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query(' SELECT *  FROM...', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM...')
+#3 /var/www/html/app/Controllers/HomepageController.php(208): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-ico...')
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-10-15 09:39:40 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 APPPATH/Controllers/HomepageController.php(208): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 2 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-icon.png')
+ 3 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-15 09:39:40 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 311.
+ 1 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 2 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 3 APPPATH/Controllers/HomepageController.php(208): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 4 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-icon.png')
+ 5 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-15 09:39:40 --> [Caused by] mysqli_sql_exception: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 306.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(306): mysqli->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 3 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 4 APPPATH/Controllers/HomepageController.php(208): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 5 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-icon.png')
+ 6 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-10-15 09:39:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-10-15 09:39:40 --> mysqli_sql_exception: Unknown column 'homepage_assets' in 'where clause' in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query(' SELECT *  FROM...', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM...')
+#3 /var/www/html/app/Controllers/HomepageController.php(208): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-10-15 09:39:40 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 APPPATH/Controllers/HomepageController.php(208): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 2 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-15 09:39:40 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 311.
+ 1 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 2 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 3 APPPATH/Controllers/HomepageController.php(208): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 4 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+ 5 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-15 09:39:40 --> [Caused by] mysqli_sql_exception: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 306.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(306): mysqli->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 3 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 4 APPPATH/Controllers/HomepageController.php(208): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 5 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+ 6 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-10-15 09:39:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-15 09:39:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-15 09:39:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-10-15 09:39:53 --> mysqli_sql_exception: Unknown column 'homepage_assets' in 'where clause' in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query(' SELECT *  FROM...', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM...')
+#3 /var/www/html/app/Controllers/HomepageController.php(208): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-10-15 09:39:53 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 APPPATH/Controllers/HomepageController.php(208): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 2 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-15 09:39:53 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 311.
+ 1 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 2 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 3 APPPATH/Controllers/HomepageController.php(208): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 4 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+ 5 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-15 09:39:53 --> [Caused by] mysqli_sql_exception: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 306.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(306): mysqli->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 3 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 4 APPPATH/Controllers/HomepageController.php(208): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 5 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+ 6 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-10-15 09:39:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-10-15 09:39:53 --> mysqli_sql_exception: Unknown column 'homepage_assets' in 'where clause' in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query(' SELECT *  FROM...', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM...')
+#3 /var/www/html/app/Controllers/HomepageController.php(208): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-ico...')
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-10-15 09:39:53 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 APPPATH/Controllers/HomepageController.php(208): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 2 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-icon.png')
+ 3 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-15 09:39:53 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 311.
+ 1 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 2 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 3 APPPATH/Controllers/HomepageController.php(208): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 4 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-icon.png')
+ 5 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-15 09:39:53 --> [Caused by] mysqli_sql_exception: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 306.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(306): mysqli->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 3 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 4 APPPATH/Controllers/HomepageController.php(208): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 5 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-icon.png')
+ 6 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-10-15 09:40:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-15 09:40:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-15 09:40:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-10-15 09:40:15 --> mysqli_sql_exception: Unknown column 'homepage_assets' in 'where clause' in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query(' SELECT *  FROM...', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM...')
+#3 /var/www/html/app/Controllers/HomepageController.php(208): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-10-15 09:40:15 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 APPPATH/Controllers/HomepageController.php(208): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 2 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-15 09:40:15 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 311.
+ 1 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 2 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 3 APPPATH/Controllers/HomepageController.php(208): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 4 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+ 5 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-15 09:40:15 --> [Caused by] mysqli_sql_exception: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 306.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(306): mysqli->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 3 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 4 APPPATH/Controllers/HomepageController.php(208): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 5 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+ 6 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-10-15 09:40:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-10-15 09:40:15 --> mysqli_sql_exception: Unknown column 'homepage_assets' in 'where clause' in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query(' SELECT *  FROM...', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM...')
+#3 /var/www/html/app/Controllers/HomepageController.php(208): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-ico...')
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-10-15 09:40:15 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 APPPATH/Controllers/HomepageController.php(208): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 2 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-icon.png')
+ 3 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-15 09:40:15 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 311.
+ 1 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 2 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 3 APPPATH/Controllers/HomepageController.php(208): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 4 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-icon.png')
+ 5 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-15 09:40:15 --> [Caused by] mysqli_sql_exception: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 306.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(306): mysqli->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 3 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 4 APPPATH/Controllers/HomepageController.php(208): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 5 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-icon.png')
+ 6 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-10-15 09:40:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-15 09:40:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-15 09:40:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-15 09:40:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-15 09:40:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-15 09:40:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-15 09:40:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-15 09:41:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-15 09:41:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-15 09:41:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-15 09:41:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-15 09:41:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-15 09:41:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-15 09:41:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-15 09:42:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-15 09:43:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-15 09:43:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-15 09:45:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-15 09:45:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-15 09:47:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-15 09:47:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-15 09:48:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-15 09:48:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-15 13:08:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-10-15 13:08:29 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'sctime_db', 3306, '', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/app/Controllers/HomepageController.php(111): CodeIgniter\Database\BaseConnection->query('      SELECT \n ...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(943): App\Controllers\HomepageController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/app/Controllers/HomepageController.php(111): CodeIgniter\Database\BaseConnection->query('      SELECT \n ...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(943): App\Controllers\HomepageController->index()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-10-15 13:08:29 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Controllers/HomepageController.php(111): CodeIgniter\Database\BaseConnection->query('      SELECT 
+                            tc.course_type_name,
+                            tc.*, 
+                            rt.feedback_rating, 
+                            rt.number_of_student,
+                            tr.teacher_name,
+                            tr.last_educational_institute,
+                            tr.teacher_pro_his,
+                            cb.start_date
+                        FROM 
+                            teacher_course AS tc
+                        LEFT JOIN (
+                            SELECT 
+                                AVG(feedback_rating) AS feedback_rating, 
+                                COUNT(student_id) AS number_of_student, 
+                                course_id,
+                                teacher_course_id
+                            FROM 
+                                course_feedback 
+                            GROUP BY 
+                                teacher_course_id, course_id
+                        ) AS rt
+                        ON rt.course_id = tc.course_id 
+                        LEFT JOIN (
+                            SELECT 
+                                teacher_registration.teacher_name, 
+                                teacher_profile.last_educational_institute, 
+                                teacher_profile.teacher_pro_his, 
+                                teacher_registration.teacher_id 
+                            FROM 
+                                teacher_registration 
+                            LEFT JOIN 
+                                teacher_profile 
+                            ON 
+                                teacher_registration.teacher_id = teacher_profile.teacher_id 
+                        ) AS tr
+                        ON tr.teacher_id = tc.course_teacher_id
+                        LEFT JOIN course_batch AS cb 
+                        ON cb.course_id = tc.course_id
+                        WHERE 
+                            tc.course_status != \'pending\'
+                            GROUP BY 
+                                            tc.course_type_name, 
+                                                tc.course_id,
+                                                rt.feedback_rating,
+                                            rt.number_of_student,
+                                                tr.teacher_name, 
+                                                tr.last_educational_institute, 
+                                            tr.teacher_pro_his ')
+ 3 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\HomepageController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-10-15 13:09:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-10-15 13:09:03 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'sctime_db', 3306, '', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/app/Controllers/HomepageController.php(111): CodeIgniter\Database\BaseConnection->query('      SELECT \n ...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(943): App\Controllers\HomepageController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/app/Controllers/HomepageController.php(111): CodeIgniter\Database\BaseConnection->query('      SELECT \n ...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(943): App\Controllers\HomepageController->index()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-10-15 13:09:03 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Controllers/HomepageController.php(111): CodeIgniter\Database\BaseConnection->query('      SELECT 
+                            tc.course_type_name,
+                            tc.*, 
+                            rt.feedback_rating, 
+                            rt.number_of_student,
+                            tr.teacher_name,
+                            tr.last_educational_institute,
+                            tr.teacher_pro_his,
+                            cb.start_date
+                        FROM 
+                            teacher_course AS tc
+                        LEFT JOIN (
+                            SELECT 
+                                AVG(feedback_rating) AS feedback_rating, 
+                                COUNT(student_id) AS number_of_student, 
+                                course_id,
+                                teacher_course_id
+                            FROM 
+                                course_feedback 
+                            GROUP BY 
+                                teacher_course_id, course_id
+                        ) AS rt
+                        ON rt.course_id = tc.course_id 
+                        LEFT JOIN (
+                            SELECT 
+                                teacher_registration.teacher_name, 
+                                teacher_profile.last_educational_institute, 
+                                teacher_profile.teacher_pro_his, 
+                                teacher_registration.teacher_id 
+                            FROM 
+                                teacher_registration 
+                            LEFT JOIN 
+                                teacher_profile 
+                            ON 
+                                teacher_registration.teacher_id = teacher_profile.teacher_id 
+                        ) AS tr
+                        ON tr.teacher_id = tc.course_teacher_id
+                        LEFT JOIN course_batch AS cb 
+                        ON cb.course_id = tc.course_id
+                        WHERE 
+                            tc.course_status != \'pending\'
+                            GROUP BY 
+                                            tc.course_type_name, 
+                                                tc.course_id,
+                                                rt.feedback_rating,
+                                            rt.number_of_student,
+                                                tr.teacher_name, 
+                                                tr.last_educational_institute, 
+                                            tr.teacher_pro_his ')
+ 3 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\HomepageController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-10-15 13:50:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-10-15 13:50:13 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'sctime_db', 3306, '', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/app/Controllers/CourseCategoryDetailsController.php(106): CodeIgniter\Database\BaseConnection->query('SELECT * From c...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(943): App\Controllers\CourseCategoryDetailsController->CourseShowCateryWise('29')
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseCategoryDetailsController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/app/Controllers/CourseCategoryDetailsController.php(106): CodeIgniter\Database\BaseConnection->query('SELECT * From c...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(943): App\Controllers\CourseCategoryDetailsController->CourseShowCateryWise('29')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseCategoryDetailsController))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-10-15 13:50:13 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Controllers/CourseCategoryDetailsController.php(106): CodeIgniter\Database\BaseConnection->query('SELECT * From course_category')
+ 3 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\CourseCategoryDetailsController->CourseShowCateryWise('29')
+ 4 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseCategoryDetailsController))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-10-15 14:30:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-10-15 14:30:21 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'sctime_db', 3306, '', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/app/Controllers/HomepageController.php(111): CodeIgniter\Database\BaseConnection->query('      SELECT \n ...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(943): App\Controllers\HomepageController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/app/Controllers/HomepageController.php(111): CodeIgniter\Database\BaseConnection->query('      SELECT \n ...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(943): App\Controllers\HomepageController->index()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-10-15 14:30:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Controllers/HomepageController.php(111): CodeIgniter\Database\BaseConnection->query('      SELECT 
+                            tc.course_type_name,
+                            tc.*, 
+                            rt.feedback_rating, 
+                            rt.number_of_student,
+                            tr.teacher_name,
+                            tr.last_educational_institute,
+                            tr.teacher_pro_his,
+                            cb.start_date
+                        FROM 
+                            teacher_course AS tc
+                        LEFT JOIN (
+                            SELECT 
+                                AVG(feedback_rating) AS feedback_rating, 
+                                COUNT(student_id) AS number_of_student, 
+                                course_id,
+                                teacher_course_id
+                            FROM 
+                                course_feedback 
+                            GROUP BY 
+                                teacher_course_id, course_id
+                        ) AS rt
+                        ON rt.course_id = tc.course_id 
+                        LEFT JOIN (
+                            SELECT 
+                                teacher_registration.teacher_name, 
+                                teacher_profile.last_educational_institute, 
+                                teacher_profile.teacher_pro_his, 
+                                teacher_registration.teacher_id 
+                            FROM 
+                                teacher_registration 
+                            LEFT JOIN 
+                                teacher_profile 
+                            ON 
+                                teacher_registration.teacher_id = teacher_profile.teacher_id 
+                        ) AS tr
+                        ON tr.teacher_id = tc.course_teacher_id
+                        LEFT JOIN course_batch AS cb 
+                        ON cb.course_id = tc.course_id
+                        WHERE 
+                            tc.course_status != \'pending\'
+                            GROUP BY 
+                                            tc.course_type_name, 
+                                                tc.course_id,
+                                                rt.feedback_rating,
+                                            rt.number_of_student,
+                                                tr.teacher_name, 
+                                                tr.last_educational_institute, 
+                                            tr.teacher_pro_his ')
+ 3 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\HomepageController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-10-15 14:44:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-10-15 14:44:44 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'sctime_db', 3306, '', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/app/Controllers/HomepageController.php(111): CodeIgniter\Database\BaseConnection->query('      SELECT \n ...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(943): App\Controllers\HomepageController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/app/Controllers/HomepageController.php(111): CodeIgniter\Database\BaseConnection->query('      SELECT \n ...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(943): App\Controllers\HomepageController->index()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-10-15 14:44:44 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Controllers/HomepageController.php(111): CodeIgniter\Database\BaseConnection->query('      SELECT 
+                            tc.course_type_name,
+                            tc.*, 
+                            rt.feedback_rating, 
+                            rt.number_of_student,
+                            tr.teacher_name,
+                            tr.last_educational_institute,
+                            tr.teacher_pro_his,
+                            cb.start_date
+                        FROM 
+                            teacher_course AS tc
+                        LEFT JOIN (
+                            SELECT 
+                                AVG(feedback_rating) AS feedback_rating, 
+                                COUNT(student_id) AS number_of_student, 
+                                course_id,
+                                teacher_course_id
+                            FROM 
+                                course_feedback 
+                            GROUP BY 
+                                teacher_course_id, course_id
+                        ) AS rt
+                        ON rt.course_id = tc.course_id 
+                        LEFT JOIN (
+                            SELECT 
+                                teacher_registration.teacher_name, 
+                                teacher_profile.last_educational_institute, 
+                                teacher_profile.teacher_pro_his, 
+                                teacher_registration.teacher_id 
+                            FROM 
+                                teacher_registration 
+                            LEFT JOIN 
+                                teacher_profile 
+                            ON 
+                                teacher_registration.teacher_id = teacher_profile.teacher_id 
+                        ) AS tr
+                        ON tr.teacher_id = tc.course_teacher_id
+                        LEFT JOIN course_batch AS cb 
+                        ON cb.course_id = tc.course_id
+                        WHERE 
+                            tc.course_status != \'pending\'
+                            GROUP BY 
+                                            tc.course_type_name, 
+                                                tc.course_id,
+                                                rt.feedback_rating,
+                                            rt.number_of_student,
+                                                tr.teacher_name, 
+                                                tr.last_educational_institute, 
+                                            tr.teacher_pro_his ')
+ 3 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\HomepageController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-10-15 15:46:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-10-15 15:46:19 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'sctime_db', 3306, '', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/app/Controllers/HomepageController.php(111): CodeIgniter\Database\BaseConnection->query('      SELECT \n ...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(943): App\Controllers\HomepageController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/app/Controllers/HomepageController.php(111): CodeIgniter\Database\BaseConnection->query('      SELECT \n ...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(943): App\Controllers\HomepageController->index()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-10-15 15:46:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Controllers/HomepageController.php(111): CodeIgniter\Database\BaseConnection->query('      SELECT 
+                            tc.course_type_name,
+                            tc.*, 
+                            rt.feedback_rating, 
+                            rt.number_of_student,
+                            tr.teacher_name,
+                            tr.last_educational_institute,
+                            tr.teacher_pro_his,
+                            cb.start_date
+                        FROM 
+                            teacher_course AS tc
+                        LEFT JOIN (
+                            SELECT 
+                                AVG(feedback_rating) AS feedback_rating, 
+                                COUNT(student_id) AS number_of_student, 
+                                course_id,
+                                teacher_course_id
+                            FROM 
+                                course_feedback 
+                            GROUP BY 
+                                teacher_course_id, course_id
+                        ) AS rt
+                        ON rt.course_id = tc.course_id 
+                        LEFT JOIN (
+                            SELECT 
+                                teacher_registration.teacher_name, 
+                                teacher_profile.last_educational_institute, 
+                                teacher_profile.teacher_pro_his, 
+                                teacher_registration.teacher_id 
+                            FROM 
+                                teacher_registration 
+                            LEFT JOIN 
+                                teacher_profile 
+                            ON 
+                                teacher_registration.teacher_id = teacher_profile.teacher_id 
+                        ) AS tr
+                        ON tr.teacher_id = tc.course_teacher_id
+                        LEFT JOIN course_batch AS cb 
+                        ON cb.course_id = tc.course_id
+                        WHERE 
+                            tc.course_status != \'pending\'
+                            GROUP BY 
+                                            tc.course_type_name, 
+                                                tc.course_id,
+                                                rt.feedback_rating,
+                                            rt.number_of_student,
+                                                tr.teacher_name, 
+                                                tr.last_educational_institute, 
+                                            tr.teacher_pro_his ')
+ 3 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\HomepageController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-10-15 18:09:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-10-15 18:09:03 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'sctime_db', 3306, '', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/app/Controllers/HomepageController.php(111): CodeIgniter\Database\BaseConnection->query('      SELECT \n ...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(943): App\Controllers\HomepageController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/app/Controllers/HomepageController.php(111): CodeIgniter\Database\BaseConnection->query('      SELECT \n ...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(943): App\Controllers\HomepageController->index()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-10-15 18:09:03 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Controllers/HomepageController.php(111): CodeIgniter\Database\BaseConnection->query('      SELECT 
+                            tc.course_type_name,
+                            tc.*, 
+                            rt.feedback_rating, 
+                            rt.number_of_student,
+                            tr.teacher_name,
+                            tr.last_educational_institute,
+                            tr.teacher_pro_his,
+                            cb.start_date
+                        FROM 
+                            teacher_course AS tc
+                        LEFT JOIN (
+                            SELECT 
+                                AVG(feedback_rating) AS feedback_rating, 
+                                COUNT(student_id) AS number_of_student, 
+                                course_id,
+                                teacher_course_id
+                            FROM 
+                                course_feedback 
+                            GROUP BY 
+                                teacher_course_id, course_id
+                        ) AS rt
+                        ON rt.course_id = tc.course_id 
+                        LEFT JOIN (
+                            SELECT 
+                                teacher_registration.teacher_name, 
+                                teacher_profile.last_educational_institute, 
+                                teacher_profile.teacher_pro_his, 
+                                teacher_registration.teacher_id 
+                            FROM 
+                                teacher_registration 
+                            LEFT JOIN 
+                                teacher_profile 
+                            ON 
+                                teacher_registration.teacher_id = teacher_profile.teacher_id 
+                        ) AS tr
+                        ON tr.teacher_id = tc.course_teacher_id
+                        LEFT JOIN course_batch AS cb 
+                        ON cb.course_id = tc.course_id
+                        WHERE 
+                            tc.course_status != \'pending\'
+                            GROUP BY 
+                                            tc.course_type_name, 
+                                                tc.course_id,
+                                                rt.feedback_rating,
+                                            rt.number_of_student,
+                                                tr.teacher_name, 
+                                                tr.last_educational_institute, 
+                                            tr.teacher_pro_his ')
+ 3 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\HomepageController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-10-15 19:54:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-10-15 19:54:22 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'sctime_db', 3306, '', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/app/Controllers/HomepageController.php(111): CodeIgniter\Database\BaseConnection->query('      SELECT \n ...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(943): App\Controllers\HomepageController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/app/Controllers/HomepageController.php(111): CodeIgniter\Database\BaseConnection->query('      SELECT \n ...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(943): App\Controllers\HomepageController->index()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-10-15 19:54:22 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Controllers/HomepageController.php(111): CodeIgniter\Database\BaseConnection->query('      SELECT 
+                            tc.course_type_name,
+                            tc.*, 
+                            rt.feedback_rating, 
+                            rt.number_of_student,
+                            tr.teacher_name,
+                            tr.last_educational_institute,
+                            tr.teacher_pro_his,
+                            cb.start_date
+                        FROM 
+                            teacher_course AS tc
+                        LEFT JOIN (
+                            SELECT 
+                                AVG(feedback_rating) AS feedback_rating, 
+                                COUNT(student_id) AS number_of_student, 
+                                course_id,
+                                teacher_course_id
+                            FROM 
+                                course_feedback 
+                            GROUP BY 
+                                teacher_course_id, course_id
+                        ) AS rt
+                        ON rt.course_id = tc.course_id 
+                        LEFT JOIN (
+                            SELECT 
+                                teacher_registration.teacher_name, 
+                                teacher_profile.last_educational_institute, 
+                                teacher_profile.teacher_pro_his, 
+                                teacher_registration.teacher_id 
+                            FROM 
+                                teacher_registration 
+                            LEFT JOIN 
+                                teacher_profile 
+                            ON 
+                                teacher_registration.teacher_id = teacher_profile.teacher_id 
+                        ) AS tr
+                        ON tr.teacher_id = tc.course_teacher_id
+                        LEFT JOIN course_batch AS cb 
+                        ON cb.course_id = tc.course_id
+                        WHERE 
+                            tc.course_status != \'pending\'
+                            GROUP BY 
+                                            tc.course_type_name, 
+                                                tc.course_id,
+                                                rt.feedback_rating,
+                                            rt.number_of_student,
+                                                tr.teacher_name, 
+                                                tr.last_educational_institute, 
+                                            tr.teacher_pro_his ')
+ 3 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\HomepageController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-10-15 20:23:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-10-15 20:23:17 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'sctime_db', 3306, '', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/app/Controllers/HomepageController.php(111): CodeIgniter\Database\BaseConnection->query('      SELECT \n ...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(943): App\Controllers\HomepageController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/app/Controllers/HomepageController.php(111): CodeIgniter\Database\BaseConnection->query('      SELECT \n ...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(943): App\Controllers\HomepageController->index()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-10-15 20:23:17 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Controllers/HomepageController.php(111): CodeIgniter\Database\BaseConnection->query('      SELECT 
+                            tc.course_type_name,
+                            tc.*, 
+                            rt.feedback_rating, 
+                            rt.number_of_student,
+                            tr.teacher_name,
+                            tr.last_educational_institute,
+                            tr.teacher_pro_his,
+                            cb.start_date
+                        FROM 
+                            teacher_course AS tc
+                        LEFT JOIN (
+                            SELECT 
+                                AVG(feedback_rating) AS feedback_rating, 
+                                COUNT(student_id) AS number_of_student, 
+                                course_id,
+                                teacher_course_id
+                            FROM 
+                                course_feedback 
+                            GROUP BY 
+                                teacher_course_id, course_id
+                        ) AS rt
+                        ON rt.course_id = tc.course_id 
+                        LEFT JOIN (
+                            SELECT 
+                                teacher_registration.teacher_name, 
+                                teacher_profile.last_educational_institute, 
+                                teacher_profile.teacher_pro_his, 
+                                teacher_registration.teacher_id 
+                            FROM 
+                                teacher_registration 
+                            LEFT JOIN 
+                                teacher_profile 
+                            ON 
+                                teacher_registration.teacher_id = teacher_profile.teacher_id 
+                        ) AS tr
+                        ON tr.teacher_id = tc.course_teacher_id
+                        LEFT JOIN course_batch AS cb 
+                        ON cb.course_id = tc.course_id
+                        WHERE 
+                            tc.course_status != \'pending\'
+                            GROUP BY 
+                                            tc.course_type_name, 
+                                                tc.course_id,
+                                                rt.feedback_rating,
+                                            rt.number_of_student,
+                                                tr.teacher_name, 
+                                                tr.last_educational_institute, 
+                                            tr.teacher_pro_his ')
+ 3 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\HomepageController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-10-15 20:23:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-10-15 20:23:19 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'sctime_db', 3306, '', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/app/Controllers/HomepageController.php(111): CodeIgniter\Database\BaseConnection->query('      SELECT \n ...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(943): App\Controllers\HomepageController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/app/Controllers/HomepageController.php(111): CodeIgniter\Database\BaseConnection->query('      SELECT \n ...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(943): App\Controllers\HomepageController->index()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-10-15 20:23:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Controllers/HomepageController.php(111): CodeIgniter\Database\BaseConnection->query('      SELECT 
+                            tc.course_type_name,
+                            tc.*, 
+                            rt.feedback_rating, 
+                            rt.number_of_student,
+                            tr.teacher_name,
+                            tr.last_educational_institute,
+                            tr.teacher_pro_his,
+                            cb.start_date
+                        FROM 
+                            teacher_course AS tc
+                        LEFT JOIN (
+                            SELECT 
+                                AVG(feedback_rating) AS feedback_rating, 
+                                COUNT(student_id) AS number_of_student, 
+                                course_id,
+                                teacher_course_id
+                            FROM 
+                                course_feedback 
+                            GROUP BY 
+                                teacher_course_id, course_id
+                        ) AS rt
+                        ON rt.course_id = tc.course_id 
+                        LEFT JOIN (
+                            SELECT 
+                                teacher_registration.teacher_name, 
+                                teacher_profile.last_educational_institute, 
+                                teacher_profile.teacher_pro_his, 
+                                teacher_registration.teacher_id 
+                            FROM 
+                                teacher_registration 
+                            LEFT JOIN 
+                                teacher_profile 
+                            ON 
+                                teacher_registration.teacher_id = teacher_profile.teacher_id 
+                        ) AS tr
+                        ON tr.teacher_id = tc.course_teacher_id
+                        LEFT JOIN course_batch AS cb 
+                        ON cb.course_id = tc.course_id
+                        WHERE 
+                            tc.course_status != \'pending\'
+                            GROUP BY 
+                                            tc.course_type_name, 
+                                                tc.course_id,
+                                                rt.feedback_rating,
+                                            rt.number_of_student,
+                                                tr.teacher_name, 
+                                                tr.last_educational_institute, 
+                                            tr.teacher_pro_his ')
+ 3 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\HomepageController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-10-15 20:23:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-10-15 20:23:22 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'sctime_db', 3306, '', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/app/Controllers/HomepageController.php(111): CodeIgniter\Database\BaseConnection->query('      SELECT \n ...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(943): App\Controllers\HomepageController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/app/Controllers/HomepageController.php(111): CodeIgniter\Database\BaseConnection->query('      SELECT \n ...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(943): App\Controllers\HomepageController->index()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-10-15 20:23:22 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Controllers/HomepageController.php(111): CodeIgniter\Database\BaseConnection->query('      SELECT 
+                            tc.course_type_name,
+                            tc.*, 
+                            rt.feedback_rating, 
+                            rt.number_of_student,
+                            tr.teacher_name,
+                            tr.last_educational_institute,
+                            tr.teacher_pro_his,
+                            cb.start_date
+                        FROM 
+                            teacher_course AS tc
+                        LEFT JOIN (
+                            SELECT 
+                                AVG(feedback_rating) AS feedback_rating, 
+                                COUNT(student_id) AS number_of_student, 
+                                course_id,
+                                teacher_course_id
+                            FROM 
+                                course_feedback 
+                            GROUP BY 
+                                teacher_course_id, course_id
+                        ) AS rt
+                        ON rt.course_id = tc.course_id 
+                        LEFT JOIN (
+                            SELECT 
+                                teacher_registration.teacher_name, 
+                                teacher_profile.last_educational_institute, 
+                                teacher_profile.teacher_pro_his, 
+                                teacher_registration.teacher_id 
+                            FROM 
+                                teacher_registration 
+                            LEFT JOIN 
+                                teacher_profile 
+                            ON 
+                                teacher_registration.teacher_id = teacher_profile.teacher_id 
+                        ) AS tr
+                        ON tr.teacher_id = tc.course_teacher_id
+                        LEFT JOIN course_batch AS cb 
+                        ON cb.course_id = tc.course_id
+                        WHERE 
+                            tc.course_status != \'pending\'
+                            GROUP BY 
+                                            tc.course_type_name, 
+                                                tc.course_id,
+                                                rt.feedback_rating,
+                                            rt.number_of_student,
+                                                tr.teacher_name, 
+                                                tr.last_educational_institute, 
+                                            tr.teacher_pro_his ')
+ 3 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\HomepageController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-10-15 21:26:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-10-15 21:26:08 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'sctime_db', 3306, '', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/app/Views/include/homepage_header_top_nav.php(28): CodeIgniter\Database\BaseConnection->query('SELECT course_c...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(228): include('/var/www/html/a...')
+#5 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(469): CodeIgniter\View\View->render('include/homepag...', NULL, true)
+#7 /var/www/html/app/Views/homepage/layout.php(29): CodeIgniter\View\View->include('include/homepag...')
+#8 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(228): include('/var/www/html/a...')
+#9 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#10 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(244): CodeIgniter\View\View->render('homepage/layout', Array, true)
+#11 /var/www/html/vendor/codeigniter4/framework/system/Common.php(1178): CodeIgniter\View\View->render('student/student...', Array, true)
+#12 /var/www/html/app/Controllers/StudentloginController.php(17): view('student/student...')
+#13 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(943): App\Controllers\StudentloginController->index()
+#14 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentloginController))
+#15 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#16 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#17 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/app/Views/include/homepage_header_top_nav.php(28): CodeIgniter\Database\BaseConnection->query('SELECT course_c...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(228): include('/var/www/html/a...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#5 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(469): CodeIgniter\View\View->render('include/homepag...', NULL, true)
+#6 /var/www/html/app/Views/homepage/layout.php(29): CodeIgniter\View\View->include('include/homepag...')
+#7 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(228): include('/var/www/html/a...')
+#8 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#9 /var/www/html/vendor/codeigniter4/framework/system/View/View.php(244): CodeIgniter\View\View->render('homepage/layout', Array, true)
+#10 /var/www/html/vendor/codeigniter4/framework/system/Common.php(1178): CodeIgniter\View\View->render('student/student...', Array, true)
+#11 /var/www/html/app/Controllers/StudentloginController.php(17): view('student/student...')
+#12 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(943): App\Controllers\StudentloginController->index()
+#13 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentloginController))
+#14 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#15 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#16 {main}
+CRITICAL - 2024-10-15 21:26:08 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Views/include/homepage_header_top_nav.php(28): CodeIgniter\Database\BaseConnection->query('SELECT course_category_name,course_category_id
+                                                               From course_category')
+ 3 SYSTEMPATH/View/View.php(228): include('/var/www/html/app/Views/include/homepage_header_top_nav.php')
+ 4 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH/View/View.php(469): CodeIgniter\View\View->render('include/homepage_header_top_nav', null, true)
+ 6 APPPATH/Views/homepage/layout.php(29): CodeIgniter\View\View->include('include/homepage_header_top_nav')
+ 7 SYSTEMPATH/View/View.php(228): include('/var/www/html/app/Views/homepage/layout.php')
+ 8 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 9 SYSTEMPATH/View/View.php(244): CodeIgniter\View\View->render('homepage/layout', [], true)
+10 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render('student/student_loginView', [], true)
+11 APPPATH/Controllers/StudentloginController.php(17): view('student/student_loginView')
+12 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\StudentloginController->index()
+13 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentloginController))
+14 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+15 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-10-15 22:37:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-10-15 22:37:56 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'sctime_db', 3306, '', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/app/Controllers/HomepageController.php(111): CodeIgniter\Database\BaseConnection->query('      SELECT \n ...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(943): App\Controllers\HomepageController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/app/Controllers/HomepageController.php(111): CodeIgniter\Database\BaseConnection->query('      SELECT \n ...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(943): App\Controllers\HomepageController->index()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-10-15 22:37:56 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Controllers/HomepageController.php(111): CodeIgniter\Database\BaseConnection->query('      SELECT 
+                            tc.course_type_name,
+                            tc.*, 
+                            rt.feedback_rating, 
+                            rt.number_of_student,
+                            tr.teacher_name,
+                            tr.last_educational_institute,
+                            tr.teacher_pro_his,
+                            cb.start_date
+                        FROM 
+                            teacher_course AS tc
+                        LEFT JOIN (
+                            SELECT 
+                                AVG(feedback_rating) AS feedback_rating, 
+                                COUNT(student_id) AS number_of_student, 
+                                course_id,
+                                teacher_course_id
+                            FROM 
+                                course_feedback 
+                            GROUP BY 
+                                teacher_course_id, course_id
+                        ) AS rt
+                        ON rt.course_id = tc.course_id 
+                        LEFT JOIN (
+                            SELECT 
+                                teacher_registration.teacher_name, 
+                                teacher_profile.last_educational_institute, 
+                                teacher_profile.teacher_pro_his, 
+                                teacher_registration.teacher_id 
+                            FROM 
+                                teacher_registration 
+                            LEFT JOIN 
+                                teacher_profile 
+                            ON 
+                                teacher_registration.teacher_id = teacher_profile.teacher_id 
+                        ) AS tr
+                        ON tr.teacher_id = tc.course_teacher_id
+                        LEFT JOIN course_batch AS cb 
+                        ON cb.course_id = tc.course_id
+                        WHERE 
+                            tc.course_status != \'pending\'
+                            GROUP BY 
+                                            tc.course_type_name, 
+                                                tc.course_id,
+                                                rt.feedback_rating,
+                                            rt.number_of_student,
+                                                tr.teacher_name, 
+                                                tr.last_educational_institute, 
+                                            tr.teacher_pro_his ')
+ 3 SYSTEMPATH/CodeIgniter.php(943): App\Controllers\HomepageController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()

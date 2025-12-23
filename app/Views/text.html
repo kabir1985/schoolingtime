@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table class="table table-bordered table-hover" id="dynamic_field">
+      <tbody>
+        <tr data-colid="0" class="parent_group">
+          <td colspan="2">
+            <div class="row mt-2">
+              <div class="col-3"><b>Main Question:</b></div>
+              <div class="col-8">
+                <!-- Required -->
+                <input
+                  type="text"
+                  class="form-control question"
+                  name="item[0][question][] "
+                  placeholder="Main Question"
+                />
+              </div>
+              <div class="col-1"></div>
+              <div class="row mt-2">
+                <div class="option_group">
+                  <div class="col-3">
+                    Question Choice:
+                    <div class="form-check form-switch">
+                      <!-- Required -->
+                      <input
+                        class="check_option_hidden"
+                        value="0"
+                        type="hidden"
+                        name="item[0][answers][]"
+                      />
+                      <!-- Required -->
+                      <input
+                        class="form-check-input check_option"
+                        type="checkbox"
+                      />
+                      <label
+                        class="form-check-label"
+                        for="flexSwitchCheckDefault"
+                        >is correct?</label
+                      >
+                    </div>
+                  </div>
+                  <div class="col-8">
+                    <!-- Required -->
+                    <input
+                      type="text"
+                      name="item[0][option][]"
+                      class="form-control ans_item"
+                      placeholder="Question Choise"
+                    />
+                  </div>
+                  <div class="col-1">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-secondary add_chapter_row_child"
+                    >
+                      <i class="fas fa-plus-circle" style="font-size: 20px"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="delete_child option_group">
+                  <div class="row mt-2">
+                    <div class="col-11"></div>
+                  </div>
+                  <div class="row mt-2">
+                    <div class="col-3">
+                      Question Choice:
+                      <div class="form-check form-switch">
+                        <input
+                          class="check_option_hidden"
+                          value="0"
+                          type="hidden"
+                          name="item[0][answers][]"
+                        /><input
+                          class="form-check-input check_option"
+                          type="checkbox"
+                        /><label
+                          class="form-check-label"
+                          for="flexSwitchCheckDefault"
+                          >is correct?</label
+                        >
+                      </div>
+                    </div>
+                    <div class="col-8">
+                      <input
+                        type="text"
+                        name="item[0][option][]"
+                        class="form-control ans_item"
+                        placeholder="Question Choice"
+                      />
+                    </div>
+                    <div class="col-1">
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-danger delete_chapter_row_child"
+                      >
+                        <i class="far fa-trash-alt" style="font-size: 24px"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="delete_child option_group">
+                  <div class="row mt-2">
+                    <div class="col-11"></div>
+                  </div>
+                  <div class="row mt-2">
+                    <div class="col-3">
+                      Question Choice:
+                      <div class="form-check form-switch">
+                        <input
+                          class="check_option_hidden"
+                          value="0"
+                          type="hidden"
+                          name="item[0][answers][]"
+                        /><input
+                          class="form-check-input check_option"
+                          type="checkbox"
+                        /><label
+                          class="form-check-label"
+                          for="flexSwitchCheckDefault"
+                          >is correct?</label
+                        >
+                      </div>
+                    </div>
+                    <div class="col-8">
+                      <input
+                        type="text"
+                        name="item[0][option][]"
+                        class="form-control ans_item"
+                        placeholder="Question Choice"
+                      />
+                    </div>
+                    <div class="col-1">
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-danger delete_chapter_row_child"
+                      >
+                        <i class="far fa-trash-alt" style="font-size: 24px"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </td>
+          <td>
+            <button type="button" id="add" class="btn btn-success">
+              <i class="fas fa-plus" style="font-size: 24px"></i>
+            </button>
+          </td>
+        </tr>
+        <tr data-colid="1" class="parent_group">
+          <td colspan="2">
+            <div class="row mt-2">
+              <div class="option_group">
+                <div class="col-3"><b>Main Question:</b></div>
+                <div class="col-8">
+                  <input
+                    type="text"
+                    name="item[1][question][]"
+                    class="form-control question"
+                    placeholder="Main Question"
+                  />
+                </div>
+                <div class="col-1"></div>
+              </div>
+            </div>
+            <div class="row mt-2">
+              <div class="col-3">
+                Question Choice:
+                <div class="form-check form-switch">
+                  <input
+                    class="check_option_hidden"
+                    value="0"
+                    type="hidden"
+                    name="item[1][answers][]"
+                  /><input
+                    class="form-check-input check_option"
+                    type="checkbox"
+                  /><label class="form-check-label" for="flexSwitchCheckDefault"
+                    >is correct?</label
+                  >
+                </div>
+                <div class="col-8">
+                  <input
+                    type="text"
+                    name="item[1][option][]"
+                    class="form-control ans_item"
+                    placeholder="Question Choice"
+                  />
+                </div>
+                <div class="col-1">
+                  <button
+                    type="button"
+                    class="btn btn-sm btn-secondary add_chapter_row_child"
+                  >
+                    <i class="fas fa-plus-circle" style="font-size: 20px"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="delete_child option_group">
+                <div class="row mt-2">
+                  <div class="col-11"></div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-3">
+                    Question Choice:
+                    <div class="form-check form-switch">
+                      <input
+                        class="check_option_hidden"
+                        value="0"
+                        type="hidden"
+                        name="item[1][answers][]"
+                      /><input
+                        class="form-check-input check_option"
+                        type="checkbox"
+                      /><label
+                        class="form-check-label"
+                        for="flexSwitchCheckDefault"
+                        >is correct?</label
+                      >
+                    </div>
+                  </div>
+                  <div class="col-8">
+                    <input
+                      type="text"
+                      name="item[1][option][]"
+                      class="form-control ans_item"
+                      placeholder="Question Choice"
+                    />
+                  </div>
+                  <div class="col-1">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-danger delete_chapter_row_child"
+                    >
+                      <i class="far fa-trash-alt" style="font-size: 24px"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </td>
+          <td>
+            <button
+              type="button"
+              class="btn btn-danger btn_remove remoeve_parent"
+            >
+              <i class="far fa-trash-alt" style="font-size: 24px"></i>
+            </button>
+          </td>
+        </tr>
+        <tr data-colid="2" class="parent_group">
+          <td colspan="2">
+            <div class="row mt-2">
+              <div class="option_group">
+                <div class="col-3"><b>Main Question:</b></div>
+                <div class="col-8">
+                  <input
+                    type="text"
+                    name="item[2][question][]"
+                    class="form-control question"
+                    placeholder="Main Question"
+                  />
+                </div>
+                <div class="col-1"></div>
+              </div>
+            </div>
+            <div class="row mt-2">
+              <div class="col-3">
+                Question Choice:
+                <div class="form-check form-switch">
+                  <input
+                    class="check_option_hidden"
+                    value="0"
+                    type="hidden"
+                    name="item[2][answers][]"
+                  /><input
+                    class="form-check-input check_option"
+                    type="checkbox"
+                  /><label class="form-check-label" for="flexSwitchCheckDefault"
+                    >is correct?</label
+                  >
+                </div>
+                <div class="col-8">
+                  <input
+                    type="text"
+                    name="item[2][option][]"
+                    class="form-control ans_item"
+                    placeholder="Question Choice"
+                  />
+                </div>
+                <div class="col-1">
+                  <button
+                    type="button"
+                    class="btn btn-sm btn-secondary add_chapter_row_child"
+                  >
+                    <i class="fas fa-plus-circle" style="font-size: 20px"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </td>
+          <td>
+            <button
+              type="button"
+              class="btn btn-danger btn_remove remoeve_parent"
+            >
+              <i class="far fa-trash-alt" style="font-size: 24px"></i>
+            </button>
+          </td>
+        </tr>
+        <tr data-colid="3" class="parent_group">
+          <td colspan="2">
+            <div class="row mt-2">
+              <div class="option_group">
+                <div class="col-3"><b>Main Question:</b></div>
+                <div class="col-8">
+                  <input
+                    type="text"
+                    name="item[3][question][]"
+                    class="form-control question"
+                    placeholder="Main Question"
+                  />
+                </div>
+                <div class="col-1"></div>
+              </div>
+            </div>
+            <div class="row mt-2">
+              <div class="col-3">
+                Question Choice:
+                <div class="form-check form-switch">
+                  <input
+                    class="check_option_hidden"
+                    value="0"
+                    type="hidden"
+                    name="item[3][answers][]"
+                  /><input
+                    class="form-check-input check_option"
+                    type="checkbox"
+                  /><label class="form-check-label" for="flexSwitchCheckDefault"
+                    >is correct?</label
+                  >
+                </div>
+                <div class="col-8">
+                  <input
+                    type="text"
+                    name="item[3][option][]"
+                    class="form-control ans_item"
+                    placeholder="Question Choice"
+                  />
+                </div>
+                <div class="col-1">
+                  <button
+                    type="button"
+                    class="btn btn-sm btn-secondary add_chapter_row_child"
+                  >
+                    <i class="fas fa-plus-circle" style="font-size: 20px"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </td>
+          <td>
+            <button
+              type="button"
+              class="btn btn-danger btn_remove remoeve_parent"
+            >
+              <i class="far fa-trash-alt" style="font-size: 24px"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="row">
+      <div class="col-3"></div>
+      <div class="col-8">
+        <input
+          type="submit"
+          class="btn btn-success"
+          name="submit"
+          id="submit"
+          value="Submit"
+        />
+      </div>
+      <div class="col-1"></div>
+    </div>
+  </body>
+</html>

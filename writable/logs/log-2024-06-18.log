@@ -1,0 +1,1401 @@
+INFO - 2024-06-18 00:15:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-18 00:15:37 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'school_tutor_db' in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('104.251.219.20', 'root', 'root', 'school_tutor_db', 3306, '', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'school_tutor_db' in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-06-18 00:15:37 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'school_tutor_db'
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\' AND tc.course_type_name = \'Online_Live_Coaching\'')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-18 00:20:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-18 00:20:23 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'school_tutor_db' in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('104.251.219.20', 'root', 'root', 'school_tutor_db', 3306, '', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'school_tutor_db' in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-06-18 00:20:23 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'school_tutor_db'
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\' AND tc.course_type_name = \'Online_Live_Coaching\'')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-18 00:20:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-18 00:20:24 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'school_tutor_db' in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('104.251.219.20', 'root', 'root', 'school_tutor_db', 3306, '', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/public/index.php(80): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'school_tutor_db' in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/public/index.php(80): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-06-18 00:20:24 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'school_tutor_db'
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\' AND tc.course_type_name = \'Online_Live_Coaching\'')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-18 00:20:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-18 00:20:24 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'school_tutor_db' in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('104.251.219.20', 'root', 'root', 'school_tutor_db', 3306, '', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'school_tutor_db' in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-06-18 00:20:24 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'school_tutor_db'
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\' AND tc.course_type_name = \'Online_Live_Coaching\'')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-18 00:20:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-18 00:20:25 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'school_tutor_db' in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('104.251.219.20', 'root', 'root', 'school_tutor_db', 3306, '', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'school_tutor_db' in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-06-18 00:20:25 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'school_tutor_db'
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\' AND tc.course_type_name = \'Online_Live_Coaching\'')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-18 00:26:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-18 00:26:51 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'school_tutor_db' in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('104.251.219.20', 'root', 'root', 'school_tutor_db', 3306, '', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'school_tutor_db' in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-06-18 00:26:51 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'school_tutor_db'
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\' AND tc.course_type_name = \'Online_Live_Coaching\'')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-18 00:52:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-18 00:52:44 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'school_tutor_db' in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('104.251.219.20', 'root', 'root', 'school_tutor_db', 3306, '', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'school_tutor_db' in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-06-18 00:52:44 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'school_tutor_db'
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\' AND tc.course_type_name = \'Online_Live_Coaching\'')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-18 01:23:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-18 01:23:42 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'school_tutor_db' in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('104.251.219.20', 'root', 'root', 'school_tutor_db', 3306, '', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'school_tutor_db' in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-06-18 01:23:42 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'school_tutor_db'
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\' AND tc.course_type_name = \'Online_Live_Coaching\'')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-18 01:39:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-18 01:39:18 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'school_tutor_db' in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('104.251.219.20', 'root', 'root', 'school_tutor_db', 3306, '', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/app/Controllers/HomepageController.php(74): CodeIgniter\Database\BaseConnection->query('SELECT * FROM  ...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'school_tutor_db' in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/app/Controllers/HomepageController.php(74): CodeIgniter\Database\BaseConnection->query('SELECT * FROM  ...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-06-18 01:39:18 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'school_tutor_db'
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Controllers/HomepageController.php(74): CodeIgniter\Database\BaseConnection->query('SELECT * FROM  teacher_course 
+                                                    WHERE course_id = \'homepage_assets\' AND course_status = \'Approved\'')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-18 02:25:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-18 02:25:53 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'school_tutor_db' in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('104.251.219.20', 'root', 'root', 'school_tutor_db', 3306, '', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'school_tutor_db' in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-06-18 02:25:53 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'school_tutor_db'
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\' AND tc.course_type_name = \'Online_Live_Coaching\'')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-18 02:57:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-18 02:57:54 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'school_tutor_db' in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('104.251.219.20', 'root', 'root', 'school_tutor_db', 3306, '', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'school_tutor_db' in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-06-18 02:57:54 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'school_tutor_db'
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\' AND tc.course_type_name = \'Online_Live_Coaching\'')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-18 03:36:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-18 03:36:29 --> mysqli_sql_exception: Table 'school_tutor_db.teacher_course' doesn't exist in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query(' SELECT tc.*, r...', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT tc.*, r...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT tc.*, r...')
+#3 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-06-18 03:36:29 --> Table 'school_tutor_db.teacher_course' doesn't exist
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 APPPATH/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\' AND tc.course_type_name = \'Online_Live_Coaching\'')
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-18 03:37:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-18 03:37:05 --> mysqli_sql_exception: Table 'school_tutor_db.teacher_course' doesn't exist in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query(' SELECT tc.*, r...', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT tc.*, r...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT tc.*, r...')
+#3 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-06-18 03:37:05 --> Table 'school_tutor_db.teacher_course' doesn't exist
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 APPPATH/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\' AND tc.course_type_name = \'Online_Live_Coaching\'')
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-18 03:58:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-18 03:58:05 --> mysqli_sql_exception: Expression #3 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'school_tutor_db.course_feedback.course_id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query(' SELECT tc.*, r...', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT tc.*, r...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT tc.*, r...')
+#3 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-06-18 03:58:05 --> Expression #3 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'school_tutor_db.course_feedback.course_id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 APPPATH/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\' AND tc.course_type_name = \'Online_Live_Coaching\'')
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-18 03:58:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-18 03:58:50 --> mysqli_sql_exception: Expression #3 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'school_tutor_db.course_feedback.course_id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(306): mysqli->query(' SELECT tc.*, r...', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT tc.*, r...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT tc.*, r...')
+#3 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-06-18 03:58:50 --> Expression #3 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'school_tutor_db.course_feedback.course_id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 APPPATH/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\' AND tc.course_type_name = \'Online_Live_Coaching\'')
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-18 03:59:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 04:08:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 04:09:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 04:09:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 04:09:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 04:09:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 04:09:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 04:45:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 04:45:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 05:10:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 05:22:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 05:49:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 06:07:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 06:32:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 06:45:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 07:44:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 07:49:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 07:59:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 08:15:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 08:38:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 08:39:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 08:57:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-18 08:57:28 --> Undefined variable: course_teacher_id
+in APPPATH/Controllers/HomepageController.php on line 83.
+ 1 APPPATH/Controllers/HomepageController.php(83): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', '/var/www/html/app/Controllers/HomepageController.php', 83, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-18 09:01:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-18 09:01:01 --> Undefined variable: course_teacher_id
+in APPPATH/Controllers/HomepageController.php on line 83.
+ 1 APPPATH/Controllers/HomepageController.php(83): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: course_teacher_id', '/var/www/html/app/Controllers/HomepageController.php', 83, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'logo.png')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-18 09:13:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 09:57:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 10:04:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 11:32:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 11:32:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 11:32:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 11:32:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 11:41:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 11:42:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 11:51:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 12:48:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 12:48:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 12:58:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 12:58:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 12:58:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:07:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 13:15:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:17:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:19:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:19:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:19:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:19:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:19:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:19:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:19:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:19:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:19:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:19:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:19:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:19:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:19:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:19:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:19:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:19:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:19:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:19:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 14:26:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-18 15:06:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-18 15:06:09 --> Error connecting to the database: mysqli_sql_exception: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('104.251.219.20', 'root', 'root', 'school_tutor_db', 3306, '', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-06-18 15:06:09 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\' AND tc.course_type_name = \'Online_Live_Coaching\'')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-18 15:25:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-18 15:25:34 --> Error connecting to the database: mysqli_sql_exception: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('104.251.219.20', 'root', 'root', 'school_tutor_db', 3306, '', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-06-18 15:25:34 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\' AND tc.course_type_name = \'Online_Live_Coaching\'')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-18 15:47:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-18 15:47:44 --> Error connecting to the database: mysqli_sql_exception: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('104.251.219.20', 'root', 'root', 'school_tutor_db', 3306, '', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/app/Controllers/CourseCategoryDetailsController.php(40): CodeIgniter\Database\BaseConnection->query('SELECT course_c...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\CourseCategoryDetailsController->academicCourse()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseCategoryDetailsController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/app/Controllers/CourseCategoryDetailsController.php(40): CodeIgniter\Database\BaseConnection->query('SELECT course_c...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\CourseCategoryDetailsController->academicCourse()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseCategoryDetailsController))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-06-18 15:47:44 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Controllers/CourseCategoryDetailsController.php(40): CodeIgniter\Database\BaseConnection->query('SELECT course_category.course_category_name ,course_category.course_category_id
+                    From course_category LEFT JOIN course_section ON course_section.course_section_id = course_category.course_section_id
+                    WHERE course_section.course_section_name = \'Academic_Course\'')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\CourseCategoryDetailsController->academicCourse()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CourseCategoryDetailsController))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-18 16:13:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-18 16:13:13 --> Error connecting to the database: mysqli_sql_exception: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('104.251.219.20', 'root', 'root', 'school_tutor_db', 3306, '', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-06-18 16:13:13 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\' AND tc.course_type_name = \'Online_Live_Coaching\'')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-18 16:47:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-18 16:47:38 --> Error connecting to the database: mysqli_sql_exception: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('104.251.219.20', 'root', 'root', 'school_tutor_db', 3306, '', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-06-18 16:47:38 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\' AND tc.course_type_name = \'Online_Live_Coaching\'')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-18 17:04:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-18 17:04:49 --> Error connecting to the database: mysqli_sql_exception: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('104.251.219.20', 'root', 'root', 'school_tutor_db', 3306, '', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-06-18 17:04:49 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\' AND tc.course_type_name = \'Online_Live_Coaching\'')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-18 17:24:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-18 17:24:15 --> Error connecting to the database: mysqli_sql_exception: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('104.251.219.20', 'root', 'root', 'school_tutor_db', 3306, '', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-06-18 17:24:15 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\' AND tc.course_type_name = \'Online_Live_Coaching\'')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-18 18:38:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-18 18:38:14 --> Error connecting to the database: mysqli_sql_exception: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('104.251.219.20', 'root', 'root', 'school_tutor_db', 3306, '', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-06-18 18:38:14 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\' AND tc.course_type_name = \'Online_Live_Coaching\'')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-18 18:38:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-18 18:38:40 --> Error connecting to the database: mysqli_sql_exception: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('104.251.219.20', 'root', 'root', 'school_tutor_db', 3306, '', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-06-18 18:38:40 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\' AND tc.course_type_name = \'Online_Live_Coaching\'')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-18 18:38:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-18 18:38:40 --> Error connecting to the database: mysqli_sql_exception: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('104.251.219.20', 'root', 'root', 'school_tutor_db', 3306, '', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/public/index.php(80): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/public/index.php(80): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-06-18 18:38:40 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\' AND tc.course_type_name = \'Online_Live_Coaching\'')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(80): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-18 18:38:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-18 18:38:40 --> Error connecting to the database: mysqli_sql_exception: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('104.251.219.20', 'root', 'root', 'school_tutor_db', 3306, '', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-06-18 18:38:40 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\' AND tc.course_type_name = \'Online_Live_Coaching\'')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-18 18:38:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-18 18:38:40 --> Error connecting to the database: mysqli_sql_exception: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('104.251.219.20', 'root', 'root', 'school_tutor_db', 3306, '', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-06-18 18:38:40 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\' AND tc.course_type_name = \'Online_Live_Coaching\'')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-18 19:02:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-18 19:02:29 --> Error connecting to the database: mysqli_sql_exception: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('104.251.219.20', 'root', 'root', 'school_tutor_db', 3306, '', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-06-18 19:02:29 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\' AND tc.course_type_name = \'Online_Live_Coaching\'')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-18 19:07:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-18 19:07:03 --> Error connecting to the database: mysqli_sql_exception: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('104.251.219.20', 'root', 'root', 'school_tutor_db', 3306, '', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-06-18 19:07:03 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\' AND tc.course_type_name = \'Online_Live_Coaching\'')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-18 19:07:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-18 19:07:07 --> Error connecting to the database: mysqli_sql_exception: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('104.251.219.20', 'root', 'root', 'school_tutor_db', 3306, '', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-06-18 19:07:07 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\' AND tc.course_type_name = \'Online_Live_Coaching\'')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-18 21:08:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-18 21:08:07 --> Error connecting to the database: mysqli_sql_exception: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('104.251.219.20', 'root', 'root', 'school_tutor_db', 3306, '', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-06-18 21:08:07 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\' AND tc.course_type_name = \'Online_Live_Coaching\'')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-18 21:18:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-18 21:18:26 --> Error connecting to the database: mysqli_sql_exception: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('104.251.219.20', 'root', 'root', 'school_tutor_db', 3306, '', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-06-18 21:18:26 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\' AND tc.course_type_name = \'Online_Live_Coaching\'')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-18 22:56:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-18 22:56:42 --> Error connecting to the database: mysqli_sql_exception: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('104.251.219.20', 'root', 'root', 'school_tutor_db', 3306, '', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-06-18 22:56:42 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\' AND tc.course_type_name = \'Online_Live_Coaching\'')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-18 23:54:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-18 23:54:51 --> Error connecting to the database: mysqli_sql_exception: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('104.251.219.20', 'root', 'root', 'school_tutor_db', 3306, '', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connection refused in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/app/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, r...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+#4 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#5 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-06-18 23:54:51 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Controllers/HomepageController.php(24): CodeIgniter\Database\BaseConnection->query(' SELECT tc.*, rt.feedback_rating,rt.number_of_student,tr.teacher_name,tr.last_educational_institute,tr.teacher_pro_his
+        FROM teacher_course AS tc
+        LEFT JOIN (SELECT AVG(feedback_rating) AS feedback_rating, COUNT(student_id) AS number_of_student,course_id FROM course_feedback GROUP BY teacher_course_id
+        ) AS rt
+        ON  rt.course_id = tc.course_id 
+        LEFT JOIN ( SELECT teacher_registration.teacher_name, teacher_profile.last_educational_institute,teacher_profile.teacher_pro_his, teacher_registration.teacher_id FROM teacher_registration 
+            LEFT JOIN teacher_profile ON teacher_registration.teacher_id = teacher_profile.teacher_id 
+        ) AS tr
+        ON  tr.teacher_id = tc.course_teacher_id
+        WHERE tc.course_status !=\'pending\' AND tc.course_type_name = \'Online_Live_Coaching\'')
+ 3 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomepageController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()

@@ -1,0 +1,202 @@
+<?= $this->extend('homepage/layout') ?>
+
+<?= $this->section('content') ?>
+<main id="main" class="my-5">
+
+    <!------Left Menu--------------->
+    <?php echo $this->include("teacher/teacherDashboard_menu"); ?>
+    <!-------------------------------->
+
+    <div class="col-lg-9 entries">
+        <!---------------------------------------------------------------------------->
+        <section style="background-color: #eee;">
+            <div class="container py-2">
+                <!-- <div class="row">
+          <div class="col">
+            <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-4">
+              <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item active" aria-current="page"><?php echo "Welcome To " . $_SESSION['name'] . "  at Teacher Dashboard"; ?></li>
+              </ol>
+            </nav>
+          </div>
+        </div> -->
+
+                <div class="row">
+                    <div class="col-lg-12 bg-success ">
+                        <div class="card  m-1">
+                            <ul class="list-group list-group-flush">
+                                <?php
+                  foreach($myCourse as $course)
+                  {
+                  ?>
+                                <li class="list-group-item d-flex justify-content-center">
+                                    <h5><?php echo $course->coures_title; ?></h5>
+                                </li>
+                                <?php
+                 }
+                ?>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="row my-1">
+                    <div class="col-lg-4">
+                        <?php
+            foreach ($results as $row) {
+            }
+            ?>
+                        <div class="card mb-2">
+                            <div class="card-body text-center">
+                                <img src="<?= base_url() ?>/public/TeacherUploads/<?= $row->teacher_pic; ?>"
+                                    alt="teacher" class="rounded-circle img-fluid" style="width: 150px;">
+                                <h5 class="my-3"><?php echo $_SESSION['name']; ?>
+                                </h5>
+                                <div class="d-flex justify-content-center mb-2">
+                                    <a type="button" href="<?php echo site_url('/teacher/profile') ?>"
+                                        class="btn btn-primary btn-sm">Profile Update</a>
+                                    <!-- <button type="button" class="btn btn-outline-primary ms-1">Message</button> -->
+                                </div>
+                                <h5 style="color: tomato;">আপনার প্রোফাইল আপডেট করা থাকলে কোর্স তিরীর সুযোগ পাবেন</h5>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="card mb-2">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <p class="mb-0"><b>কোর্স</b></p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <p class="text-muted mb-0"><b>ছাত্র-ছাত্রী</b></p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <p class="text-muted mb-0"><b>বিস্তারিত</b></p>
+                                    </div>
+                                </div>
+                                <hr>
+
+
+                                <?php
+                foreach ($student_list_show as $row) {
+                  //echo "Student ID".$row['selected_student_id'];
+                  $course_id = $row['course_id'];
+                ?>
+                                <?php
+                  $db = \Config\Database::connect();
+                  $query   = $db->query("SELECT * FROM  teacher_course WHERE course_id = '$course_id'");
+                  $results = $query->getResult();
+                  ?>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <p class="mb-0"><?php echo $results[0]->coures_title; ?></p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <p class="text-muted mb-0"><?php echo $row['Course_enrolled_student_number']; ?>
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <p class="mb-1">
+                                            <button type="button" data-course_id=<?php echo $course_id; ?>
+                                                class="btn btn-outline-secondary btn-sm details-button">
+                                                View</button>
+                                        </p>
+                                    </div>
+                                </div>
+                                <hr>
+
+                                <?php } ?>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!---------------------------------------------------------------------------->
+
+    </div><!-- End blog entries list -->
+
+
+    </div>
+
+    </div>
+    </section><!-- End Blog Section -->
+
+
+    <!--################# Modal Boby######################################-->
+    <!-- The Modal -->
+    <div class="modal" id="modaldatashow">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Enrolled Student List</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+
+
+                    <table class="table table-striped">
+                        <thead>
+                            <tr class="table-primary">
+                                <th scope="col">ID</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Mobile</th>
+                                <th scope="col">City</th>
+                                <th scope="col">Edu Level</th>
+                                <th scope="col">Last Edu</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="result_data">
+
+                        </tbody>
+                    </table>
+
+
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!---##################################################################-->
+
+
+
+
+</main><!-- End #main -->
+<?= $this->endSection() ?>
+
+<?= $this->section('custom-script') ?>
+<script type="text/javascript">
+$(document).ready(function() {
+    // get Edit Product
+    $('.details-button').on('click', function() {
+        // get data from button edit
+        const course_id = $(this).data('course_id');
+        $.post('<?= site_url("/teacher/course-enrolled") ?>', {
+                id: course_id
+            })
+            .done(function(data) {
+                $("#result_data").html(data);
+                $('#modaldatashow').modal('show');
+            });
+    });
+});
+</script>
+<?= $this->endSection() ?>
