@@ -25,7 +25,7 @@ class ExamController extends BaseController
         if (isset($_SESSION['id'])) {
            $teacher_id = $_SESSION['id'];  
            $query   = $this->db->query("SELECT * FROM  teacher_course 
-                        Where course_teacher_id = '$teacher_id' ");
+                        Where course_teacher_id = '$teacher_id' AND course_status = 'approved' ");
            $data['courseList'] = $query->getResult();
 
             return view('examsystem/examsetupView', $data);

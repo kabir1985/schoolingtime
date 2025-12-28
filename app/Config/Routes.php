@@ -54,7 +54,7 @@ $routes->group('student', static function ($routes) {
 
 $routes->group('teacher', static function ($routes) {
     $routes->get('register', 'TeacherregistrationController::index');
-    $routes->get('create', 'TeacherregistrationController::store');
+    $routes->post('create', 'TeacherregistrationController::store');
     $routes->get('login-view', 'TeacherloginController::index');
     $routes->get('login', 'TeacherloginController::login_store');
     $routes->get('dashboard', 'TeacherDashboardController::index', ['filter' => 'authGuard']);

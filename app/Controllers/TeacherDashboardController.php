@@ -128,7 +128,7 @@ class TeacherDashboardController extends BaseController
         //$db = \Config\Database::connect();
 
         $query   = $this->db->query("SELECT * FROM  teacher_course 
-                     Where course_teacher_id = '$teacher_id' AND course_type_name != 'Question_And_Exam' ");
+                     Where course_teacher_id = '$teacher_id' AND course_type_name != 'Question_And_Exam' AND course_status = 'approved' ");
         $data['courseContents'] = $query->getResult();
         return view('teacher/TeacherCourseContentView', $data);
     }
@@ -287,7 +287,7 @@ class TeacherDashboardController extends BaseController
         if (isset($_SESSION['id'])) {
             $teacher_id = $_SESSION['id'];
             $query   = $this->db->query("SELECT * FROM  teacher_course 
-                        Where course_teacher_id = '$teacher_id' AND course_type_name != 'Question_And_Exam'");
+                        Where course_teacher_id = '$teacher_id' AND course_type_name != 'Question_And_Exam' AND course_status = 'approved'");
             $data['results'] = $query->getResult();
             return view('teacher/TeacherCourseIncludeView', $data);
         }
@@ -298,7 +298,7 @@ class TeacherDashboardController extends BaseController
         if (isset($_SESSION['id'])) {
             $teacher_id = $_SESSION['id'];
             $query   = $this->db->query("SELECT course_id,coures_title FROM  teacher_course 
-                        Where course_teacher_id = '$teacher_id'");
+                        Where course_teacher_id = '$teacher_id' AND course_status = 'approved' ");
             $data['results'] = $query->getResult();
             return view('teacher/batch_create', $data);
         }

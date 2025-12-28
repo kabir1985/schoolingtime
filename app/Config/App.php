@@ -18,7 +18,7 @@ class App extends BaseConfig
      */
     //live url// public string $baseURL = 'https://www.schoolingtime.com/';
     //public string $baseURL = 'http://schoolingtime.com/';
-    public string $baseURL = 'http://localhost/sctime20251125/';
+    public string $baseURL = 'http://localhost/schoolingtime/';
 
 
     /**

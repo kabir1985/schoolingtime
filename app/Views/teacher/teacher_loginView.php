@@ -44,8 +44,8 @@
 
               <div class="col-md-12 text-center">
                 <!--<button type="submit">Send Message</button>-->
-                <button type="submit" class="btn btn-primary">Login</button>
-                <a href="<?php echo site_url('teacher/register'); ?>"> <button type="button" class="btn btn-warning">Sign Up</button></a>
+                <button type="submit" class="btn btn-primary">লগইন করুন</button>
+                <a href="<?php echo site_url('teacher/register'); ?>"> <button type="button" class="btn btn-warning">রেজিস্ট্রেশন করুন</button></a>
           </form>
 
         </div>
