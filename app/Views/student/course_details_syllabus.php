@@ -78,3 +78,84 @@
 </div>
 </section>				
 </p>
+
+<style>
+   /* Light container spacing */
+#faq {
+    padding: 30px 0;
+}
+
+/* Accordion item: just a soft border + radius */
+#faq .accordion-item {
+    border: 1px solid #e6e9f2;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+/* Accordion header */
+#faq .accordion-button {
+    background: #f5f7ff;
+    color: #2c3e50;
+    font-weight: 600;
+    padding: 14px 18px;
+}
+
+#faq .accordion-button:not(.collapsed) {
+    background: #e9edff;
+}
+
+/* Accordion body */
+#faq .accordion-body {
+    background: #ffffff;
+    padding: 16px 18px;
+}
+
+/* List row spacing */
+#faq .row.mb-0 {
+    padding: 6px 0;
+}
+
+/* Number circle: smaller & softer */
+.numberCircle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    background: #465FAB;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 6px;
+}
+
+/* Video button: subtle */
+.video-btn {
+    background: #f0f2ff;
+    border: 1px solid #d8dcff;
+    border-radius: 14px;
+    padding: 3px 12px;
+    font-size: 12px;
+    color: #465FAB;
+}
+
+.video-btn:hover {
+    background: #465FAB;
+    color: #fff;
+}
+
+/* PDF link: light emphasis */
+#faq a.btn-link {
+    color: #465FAB;
+    font-weight: 500;
+    padding-left: 0;
+}
+
+/* Exam link */
+#faq .fa-user-graduate {
+    color: #2f9e62;
+}
+
+    </style>

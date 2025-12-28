@@ -11,54 +11,7 @@ class HomepageController extends BaseController
     }
     public function index()
     {
-        // $sql = " SELECT 
-        //                 tc.course_type_name,
-        //                 tc.*, 
-        //                 rt.feedback_rating, 
-        //                 rt.number_of_student,
-        //                 tr.teacher_name,
-        //                 tr.last_educational_institute,
-        //                 tr.teacher_pro_his
-        //             FROM 
-        //                 teacher_course AS tc
-        //             LEFT JOIN (
-        //                 SELECT 
-        //                     AVG(feedback_rating) AS feedback_rating, 
-        //                     COUNT(student_id) AS number_of_student, 
-        //                     course_id,
-        //                     teacher_course_id
-        //                 FROM 
-        //                     course_feedback 
-        //                 GROUP BY 
-        //                     teacher_course_id, course_id
-        //             ) AS rt
-        //             ON rt.course_id = tc.course_id 
-        //             LEFT JOIN (
-        //                 SELECT 
-        //                     teacher_registration.teacher_name, 
-        //                     teacher_profile.last_educational_institute, 
-        //                     teacher_profile.teacher_pro_his, 
-        //                     teacher_registration.teacher_id 
-        //                 FROM 
-        //                     teacher_registration 
-        //                 LEFT JOIN 
-        //                     teacher_profile 
-        //                 ON 
-        //                     teacher_registration.teacher_id = teacher_profile.teacher_id 
-        //             ) AS tr
-        //             ON tr.teacher_id = tc.course_teacher_id
-        //             WHERE 
-        //                 tc.course_status != 'pending'
-        //             GROUP BY 
-        //                 tc.course_type_name, 
-        //                 tc.course_id,
-        //                 rt.feedback_rating,
-        //                 rt.number_of_student,
-        //                 tr.teacher_name, 
-        //                 tr.last_educational_institute, 
-        //                 tr.teacher_pro_his ";
-
-        $sql = "      SELECT 
+        $sql = " SELECT 
                             tc.course_type_name,
                             tc.*, 
                             rt.feedback_rating, 
