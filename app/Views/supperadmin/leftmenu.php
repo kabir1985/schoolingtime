@@ -23,6 +23,6 @@
             <li><a class="treeview-item" href="#"><i class="icon bi bi-circle-fill"></i> Form Samples</a></li>
           </ul>
         </li>
-        <li><a class="app-menu__item" href="#"><i class="app-menu__icon bi bi-code-square"></i><span class="app-menu__label">Docs</span></a></li>
+        <li><a class="app-menu__item" href="<?= site_url('supperAdminlogout');?>"><i class="app-menu__icon bi bi-code-square"></i><span class="app-menu__label">Logout</span></a></li>
       </ul>
     </aside>

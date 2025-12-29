@@ -23,12 +23,12 @@
                     $isYouTube = preg_match('/youtu\.be|youtube\.com/', $video->video_link);
                 ?>
                     <div class="row mb-0">
-                        <div class="col-md-9">
+                        <div class="col-md-10 video-item">
                             <span class="numberCircle"><?= $index + 1; ?></span>
-                            <?= esc($video->video_title); ?>
+                            <span class="video-title"><?= esc($video->video_title); ?></span>
                         </div>
                         <?php if ($isYouTube) : ?>
-                            <div class="col-md-3 text-end">
+                            <div class="col-md-2 text-end">
                                 <button class="btn-sm video-btn" data-bs-toggle="modal" data-src="<?= esc($video->video_link); ?>" data-bs-target="#myModal">
                                     <i class="fa-solid fa-video" style="color: #465FAB;"></i> ভিডিও 
                                 </button>
@@ -80,6 +80,37 @@
 </p>
 
 <style>
+.video-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;                 /* spacing between circle and text */
+}
+
+.numberCircle {
+    min-width: 28px;
+    min-height: 28px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: #0099cc;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    flex-shrink: 0;           /* prevents shrinking in flex */
+}
+
+.video-title {
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+
+
+
    /* Light container spacing */
 #faq {
     padding: 30px 0;

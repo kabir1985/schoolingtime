@@ -56,7 +56,7 @@
     </ul>
   </div><!-- End sidebar tags-->
   <h3 class="sidebar-title"> কোর্সটি শেয়ার করুন</h3>
-  <div class="sidebar-item tags">
+  <div class="sidebar-item tags" style="padding-left: 25px;">
     <ul>
       <li>
         <div id="demo"></div>
@@ -66,7 +66,7 @@
   <!----------------------------------------------->
   <div class="sidebar-title">
     <h3 class="sidebar-title"> কমিউনিটিতে জয়েন করুন</h3>
-    <div class="sidebar-item tags">
+    <div class="sidebar-item tags" style="padding-left: 25px;">
       <ul>
         <li>
           <div class="social-links mt-0">
@@ -111,11 +111,6 @@
     transform: scale(0.97);
     box-shadow: 0 4px 10px rgba(70, 95, 171, 0.2);
 }
-
-
-
-
-
 /* Keep list centered but text left aligned */
 .sidebar-item.categories ul {
     padding-left: 0;

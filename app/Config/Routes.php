@@ -8,7 +8,12 @@ $routes->get('/auth/callback', 'AuthController::callback');
 $routes->get('/', 'HomepageController::index');
 $routes->get('/affiliate', 'HomepageController::course_affiliate');
 $routes->get('/course-details-page/(:any)?', 'HomepageController::Course_details_view/$1');
-$routes->get('/supperadmin', 'SupperAdminController::index');
+
+$routes->get('loginSupperAdmin', 'SupperAdminController::index');
+$routes->post('/login-create','SupperAdminController::create');
+$routes->get('/supperadminview', 'SupperAdminController::supperAdminView');
+$routes->get('/supperAdminlogout', 'SupperAdminController::logout');
+
 $routes->get('supperadmin/courseStatus', 'CourseActiveInactiveController::index');
 $routes->post('/courseStatusUpdate', 'CourseActiveInactiveController::courseStatusUpdate');
 $routes->get('supperadmin/coursetypeadd', 'CourseTypeAddController::index');
