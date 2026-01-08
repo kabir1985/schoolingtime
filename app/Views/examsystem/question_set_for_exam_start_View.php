@@ -14,18 +14,39 @@
                 <div class="col-lg-9 bg-light entries mt-2">
 
                     <?php
-                        foreach ($question_set_selection as $row) {
-                            $question_set_title = $row->question_set_title;
-                            $question_set_id = $row->question_set_id;
-                            $exam_setup_id = $row->subject_id;
 
-                            $db = \Config\Database::connect();
-                            $query = $db->query("SELECT exam_duration, total_question, marks_per_right_answer, marks_per_wrong_answer
-                                        From exam_setup
-                                        WHERE exam_setup_id = '$exam_setup_id'");
-                            $exam_info = $query->getRow();
-                            if (isset($exam_info)) {
-                    ?>
+// if (!isset($_SESSION['student_id'])) {
+//     $_SESSION['message'] = "পরীক্ষার জন্য প্রথমে লগইন করতে হবে এবং কোর্সটি কিনতে হবে";
+//     return redirect()->to(base_url() . 'student/login');
+// }
+
+// else {
+$student_id = $_SESSION['student_id'];
+
+foreach ($question_set_selection as $row) {
+    $question_set_title = $row->question_set_title;
+    $question_set_id = $row->question_set_id;
+    $exam_setup_id = $row->subject_id;
+
+    $db = \Config\Database::connect();
+    // $query = $db->query("SELECT exam_duration, total_question, marks_per_right_answer, marks_per_wrong_answer
+    //                                     From exam_setup
+    //                                     WHERE exam_setup_id = '$exam_setup_id'");
+    // $exam_info = $query->getRow();
+
+    $query = $db->query("
+                    SELECT es.*, esp.student_id, esp.status
+                    FROM exam_setup AS es
+                    LEFT JOIN exam_start_process AS esp
+                        ON es.exam_setup_id = esp.exam_setup_id
+                        AND esp.student_id = ?
+                    WHERE es.exam_setup_id = ?
+                ", [$student_id, $exam_setup_id]);
+
+    $exam_info = $query->getRow();
+
+    if ($exam_info && $exam_info->student_id === null) {
+        ?>
                     <article class="entry">
 
                         <div class="row">
@@ -89,8 +110,11 @@
 
                     </article><!-- End blog entry -->
                     <?php
+} else {echo "<div class='d-flex justify-content-center align-items-center' style='min-height:150px;'>
+    <span class='text-danger fw-bold fs-5 fs-md-4'>আপনি ইতিমধ্যে এই পরীক্ষাটি দিয়েছেন। দুঃখিত আর দিতে পারবেন না।</span>
+  </div>";}
 }
-}
+//}
 ?>
 
                 </div>

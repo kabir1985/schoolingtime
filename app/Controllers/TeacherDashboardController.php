@@ -299,6 +299,8 @@ class TeacherDashboardController extends BaseController
             $teacher_id = $_SESSION['id'];
             $query   = $this->db->query("SELECT course_id,coures_title FROM  teacher_course 
                         Where course_teacher_id = '$teacher_id' AND course_status = 'approved' ");
+
+
             $data['results'] = $query->getResult();
             return view('teacher/batch_create', $data);
         }

@@ -55,7 +55,9 @@ class StudentDashboardController extends BaseController
             $data['purchaseCourseList'] = $query->getResult();
 
             return view('student/examSystemView', $data);
-        } else {
+        } 
+        
+        else {
             $_SESSION['message'] = "পরীক্ষার জন্য প্রথমে লগইন করতে হবে এবং কোর্সটি কিনতে হবে";
             return redirect()->to(base_url() . 'student/login');
         }

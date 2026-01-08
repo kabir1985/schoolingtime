@@ -1,0 +1,1327 @@
+INFO - 2026-01-06 05:58:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 05:58:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 05:58:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-01-06 05:58:11 --> mysqli_sql_exception: Unknown column 'homepage_assets' in 'where clause' in C:\laragon\www\schoolingtime\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\schoolingtime\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query(' SELECT *  FROM...', 0)
+#1 C:\laragon\www\schoolingtime\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM...')
+#2 C:\laragon\www\schoolingtime\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM...')
+#3 C:\laragon\www\schoolingtime\app\Controllers\HomepageController.php(126): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM...')
+#4 C:\laragon\www\schoolingtime\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-ico...')
+#5 C:\laragon\www\schoolingtime\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 C:\laragon\www\schoolingtime\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\schoolingtime\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2026-01-06 05:58:11 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Controllers\HomepageController.php(126): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-icon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-01-06 05:58:11 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 3 APPPATH\Controllers\HomepageController.php(126): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-icon.png')
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-01-06 05:58:11 --> [Caused by] mysqli_sql_exception: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 4 APPPATH\Controllers\HomepageController.php(126): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'apple-touch-icon.png')
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-01-06 05:58:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-01-06 05:58:11 --> mysqli_sql_exception: Unknown column 'homepage_assets' in 'where clause' in C:\laragon\www\schoolingtime\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\schoolingtime\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query(' SELECT *  FROM...', 0)
+#1 C:\laragon\www\schoolingtime\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM...')
+#2 C:\laragon\www\schoolingtime\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM...')
+#3 C:\laragon\www\schoolingtime\app\Controllers\HomepageController.php(126): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM...')
+#4 C:\laragon\www\schoolingtime\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+#5 C:\laragon\www\schoolingtime\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+#6 C:\laragon\www\schoolingtime\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\schoolingtime\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2026-01-06 05:58:11 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Controllers\HomepageController.php(126): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-01-06 05:58:11 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 3 APPPATH\Controllers\HomepageController.php(126): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-01-06 05:58:11 --> [Caused by] mysqli_sql_exception: Unknown column 'homepage_assets' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 4 APPPATH\Controllers\HomepageController.php(126): CodeIgniter\Database\BaseConnection->query(' SELECT *  FROM course_batch
+                                WHERE course_id = homepage_assets')
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\HomepageController->Course_details_view('homepage_assets', 'img', 'favicon.png')
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomepageController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-01-06 06:09:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 06:09:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 06:09:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 06:09:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 06:10:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 06:10:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 06:10:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 06:10:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 06:10:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 06:10:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 06:10:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 06:10:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 06:10:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 06:10:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 06:10:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 06:10:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-01-06 06:10:26 --> ErrorException: Undefined variable $student_id
+in APPPATH\Views\examsystem\question_ready_exam_view.php on line 64.
+ 1 APPPATH\Views\examsystem\question_ready_exam_view.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $student_id', 'C:\\laragon\\www\\schoolingtime\\app\\Views\\examsystem\\question_ready_exam_view.php', 64)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\schoolingtime\\app\\Views\\examsystem\\question_ready_exam_view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('examsystem/question_ready_exam_view', [], true)
+ 5 APPPATH\Controllers\QuestionAnswerController.php(143): view('examsystem/question_ready_exam_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\QuestionAnswerController->currentTest('homepage_assets', 'img', 'favicon.png')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionAnswerController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-01-06 06:10:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-01-06 06:10:26 --> ErrorException: Undefined variable $student_id
+in APPPATH\Views\examsystem\question_ready_exam_view.php on line 64.
+ 1 APPPATH\Views\examsystem\question_ready_exam_view.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $student_id', 'C:\\laragon\\www\\schoolingtime\\app\\Views\\examsystem\\question_ready_exam_view.php', 64)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\schoolingtime\\app\\Views\\examsystem\\question_ready_exam_view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('examsystem/question_ready_exam_view', [], true)
+ 5 APPPATH\Controllers\QuestionAnswerController.php(143): view('examsystem/question_ready_exam_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\QuestionAnswerController->currentTest('homepage_assets', 'img', 'apple-touch-icon.png')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionAnswerController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-01-06 06:10:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 06:10:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 06:10:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 06:10:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-01-06 06:10:51 --> mysqli_sql_exception: Expression #6 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'sctime_db.qa.your_answer_id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in C:\laragon\www\schoolingtime\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\schoolingtime\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('\r\n            S...', 0)
+#1 C:\laragon\www\schoolingtime\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('\r\n            S...')
+#2 C:\laragon\www\schoolingtime\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n            S...')
+#3 C:\laragon\www\schoolingtime\app\Controllers\ExamResultController.php(82): CodeIgniter\Database\BaseConnection->query('\r\n            S...', Array)
+#4 C:\laragon\www\schoolingtime\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\ExamResultController->generateReport('EXAM-25335D8B66', 'STD25344B7F3D')
+#5 C:\laragon\www\schoolingtime\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExamResultController))
+#6 C:\laragon\www\schoolingtime\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\schoolingtime\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2026-01-06 06:10:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Expression #6 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'sctime_db.qa.your_answer_id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Controllers\ExamResultController.php(82): CodeIgniter\Database\BaseConnection->query('
+            SELECT
+                qb.id AS question_id,
+                qb.subject_id,
+                qb.question_title,
+                qs.question_set_id,
+    
+                -- Aggregate all options as JSON
+                JSON_ARRAYAGG(
+                    JSON_OBJECT(
+                        \'question_id\', qo.question_id,
+                        \'question_answer_id\', qo.question_answer_id,
+                        \'question_option\', qo.question_option,
+                        \'correct_answer\', qo.correct_answer
+                    )
+                ) AS options,
+    
+                -- Student\'s selected answer ID (NULL if not answered)
+                qa.your_answer_id,
+    
+                -- Student\'s answer text (NULL if not answered)
+                (SELECT question_option
+                 FROM question_option
+                 WHERE question_answer_id = qa.your_answer_id
+                 LIMIT 1) AS your_answer_text,
+    
+                -- Correct answer text
+                (SELECT question_option
+                 FROM question_option
+                 WHERE question_id = qb.id AND correct_answer = \'1\'
+                 LIMIT 1) AS correct_answer_text
+    
+            FROM question_set qs
+            INNER JOIN question_bank qb ON qb.id = qs.question_id
+            LEFT JOIN question_option qo ON qo.question_id = qb.id
+            LEFT JOIN question_answer qa ON qa.question_id = qb.id AND qa.user_id = ?
+    
+            WHERE qs.subject_id = ?
+            AND qs.question_set_id = ?
+    
+            GROUP BY qb.id, qb.subject_id, qb.question_title, qs.question_set_id
+            ORDER BY qb.id
+        ', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\ExamResultController->generateReport('EXAM-25335D8B66', 'STD25344B7F3D')
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExamResultController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-01-06 06:10:51 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Expression #6 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'sctime_db.qa.your_answer_id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT
+                qb.id AS question_id,
+                qb.subject_id,
+                qb.question_title,
+                qs.question_set_id,
+    
+                -- Aggregate all options as JSON
+                JSON_ARRAYAGG(
+                    JSON_OBJECT(
+                        \'question_id\', qo.question_id,
+                        \'question_answer_id\', qo.question_answer_id,
+                        \'question_option\', qo.question_option,
+                        \'correct_answer\', qo.correct_answer
+                    )
+                ) AS options,
+    
+                -- Student\'s selected answer ID (NULL if not answered)
+                qa.your_answer_id,
+    
+                -- Student\'s answer text (NULL if not answered)
+                (SELECT question_option
+                 FROM question_option
+                 WHERE question_answer_id = qa.your_answer_id
+                 LIMIT 1) AS your_answer_text,
+    
+                -- Correct answer text
+                (SELECT question_option
+                 FROM question_option
+                 WHERE question_id = qb.id AND correct_answer = \'1\'
+                 LIMIT 1) AS correct_answer_text
+    
+            FROM question_set qs
+            INNER JOIN question_bank qb ON qb.id = qs.question_id
+            LEFT JOIN question_option qo ON qo.question_id = qb.id
+            LEFT JOIN question_answer qa ON qa.question_id = qb.id AND qa.user_id = \'STD25344B7F3D\'
+    
+            WHERE qs.subject_id = \'EXAM-25335D8B66\'
+            AND qs.question_set_id = \'QSet-002\'
+    
+            GROUP BY qb.id, qb.subject_id, qb.question_title, qs.question_set_id
+            ORDER BY qb.id
+        ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT
+                qb.id AS question_id,
+                qb.subject_id,
+                qb.question_title,
+                qs.question_set_id,
+    
+                -- Aggregate all options as JSON
+                JSON_ARRAYAGG(
+                    JSON_OBJECT(
+                        \'question_id\', qo.question_id,
+                        \'question_answer_id\', qo.question_answer_id,
+                        \'question_option\', qo.question_option,
+                        \'correct_answer\', qo.correct_answer
+                    )
+                ) AS options,
+    
+                -- Student\'s selected answer ID (NULL if not answered)
+                qa.your_answer_id,
+    
+                -- Student\'s answer text (NULL if not answered)
+                (SELECT question_option
+                 FROM question_option
+                 WHERE question_answer_id = qa.your_answer_id
+                 LIMIT 1) AS your_answer_text,
+    
+                -- Correct answer text
+                (SELECT question_option
+                 FROM question_option
+                 WHERE question_id = qb.id AND correct_answer = \'1\'
+                 LIMIT 1) AS correct_answer_text
+    
+            FROM question_set qs
+            INNER JOIN question_bank qb ON qb.id = qs.question_id
+            LEFT JOIN question_option qo ON qo.question_id = qb.id
+            LEFT JOIN question_answer qa ON qa.question_id = qb.id AND qa.user_id = \'STD25344B7F3D\'
+    
+            WHERE qs.subject_id = \'EXAM-25335D8B66\'
+            AND qs.question_set_id = \'QSet-002\'
+    
+            GROUP BY qb.id, qb.subject_id, qb.question_title, qs.question_set_id
+            ORDER BY qb.id
+        ')
+ 3 APPPATH\Controllers\ExamResultController.php(82): CodeIgniter\Database\BaseConnection->query('
+            SELECT
+                qb.id AS question_id,
+                qb.subject_id,
+                qb.question_title,
+                qs.question_set_id,
+    
+                -- Aggregate all options as JSON
+                JSON_ARRAYAGG(
+                    JSON_OBJECT(
+                        \'question_id\', qo.question_id,
+                        \'question_answer_id\', qo.question_answer_id,
+                        \'question_option\', qo.question_option,
+                        \'correct_answer\', qo.correct_answer
+                    )
+                ) AS options,
+    
+                -- Student\'s selected answer ID (NULL if not answered)
+                qa.your_answer_id,
+    
+                -- Student\'s answer text (NULL if not answered)
+                (SELECT question_option
+                 FROM question_option
+                 WHERE question_answer_id = qa.your_answer_id
+                 LIMIT 1) AS your_answer_text,
+    
+                -- Correct answer text
+                (SELECT question_option
+                 FROM question_option
+                 WHERE question_id = qb.id AND correct_answer = \'1\'
+                 LIMIT 1) AS correct_answer_text
+    
+            FROM question_set qs
+            INNER JOIN question_bank qb ON qb.id = qs.question_id
+            LEFT JOIN question_option qo ON qo.question_id = qb.id
+            LEFT JOIN question_answer qa ON qa.question_id = qb.id AND qa.user_id = ?
+    
+            WHERE qs.subject_id = ?
+            AND qs.question_set_id = ?
+    
+            GROUP BY qb.id, qb.subject_id, qb.question_title, qs.question_set_id
+            ORDER BY qb.id
+        ', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\ExamResultController->generateReport('EXAM-25335D8B66', 'STD25344B7F3D')
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExamResultController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-01-06 06:10:51 --> [Caused by] mysqli_sql_exception: Expression #6 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'sctime_db.qa.your_answer_id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('
+            SELECT
+                qb.id AS question_id,
+                qb.subject_id,
+                qb.question_title,
+                qs.question_set_id,
+    
+                -- Aggregate all options as JSON
+                JSON_ARRAYAGG(
+                    JSON_OBJECT(
+                        \'question_id\', qo.question_id,
+                        \'question_answer_id\', qo.question_answer_id,
+                        \'question_option\', qo.question_option,
+                        \'correct_answer\', qo.correct_answer
+                    )
+                ) AS options,
+    
+                -- Student\'s selected answer ID (NULL if not answered)
+                qa.your_answer_id,
+    
+                -- Student\'s answer text (NULL if not answered)
+                (SELECT question_option
+                 FROM question_option
+                 WHERE question_answer_id = qa.your_answer_id
+                 LIMIT 1) AS your_answer_text,
+    
+                -- Correct answer text
+                (SELECT question_option
+                 FROM question_option
+                 WHERE question_id = qb.id AND correct_answer = \'1\'
+                 LIMIT 1) AS correct_answer_text
+    
+            FROM question_set qs
+            INNER JOIN question_bank qb ON qb.id = qs.question_id
+            LEFT JOIN question_option qo ON qo.question_id = qb.id
+            LEFT JOIN question_answer qa ON qa.question_id = qb.id AND qa.user_id = \'STD25344B7F3D\'
+    
+            WHERE qs.subject_id = \'EXAM-25335D8B66\'
+            AND qs.question_set_id = \'QSet-002\'
+    
+            GROUP BY qb.id, qb.subject_id, qb.question_title, qs.question_set_id
+            ORDER BY qb.id
+        ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT
+                qb.id AS question_id,
+                qb.subject_id,
+                qb.question_title,
+                qs.question_set_id,
+    
+                -- Aggregate all options as JSON
+                JSON_ARRAYAGG(
+                    JSON_OBJECT(
+                        \'question_id\', qo.question_id,
+                        \'question_answer_id\', qo.question_answer_id,
+                        \'question_option\', qo.question_option,
+                        \'correct_answer\', qo.correct_answer
+                    )
+                ) AS options,
+    
+                -- Student\'s selected answer ID (NULL if not answered)
+                qa.your_answer_id,
+    
+                -- Student\'s answer text (NULL if not answered)
+                (SELECT question_option
+                 FROM question_option
+                 WHERE question_answer_id = qa.your_answer_id
+                 LIMIT 1) AS your_answer_text,
+    
+                -- Correct answer text
+                (SELECT question_option
+                 FROM question_option
+                 WHERE question_id = qb.id AND correct_answer = \'1\'
+                 LIMIT 1) AS correct_answer_text
+    
+            FROM question_set qs
+            INNER JOIN question_bank qb ON qb.id = qs.question_id
+            LEFT JOIN question_option qo ON qo.question_id = qb.id
+            LEFT JOIN question_answer qa ON qa.question_id = qb.id AND qa.user_id = \'STD25344B7F3D\'
+    
+            WHERE qs.subject_id = \'EXAM-25335D8B66\'
+            AND qs.question_set_id = \'QSet-002\'
+    
+            GROUP BY qb.id, qb.subject_id, qb.question_title, qs.question_set_id
+            ORDER BY qb.id
+        ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT
+                qb.id AS question_id,
+                qb.subject_id,
+                qb.question_title,
+                qs.question_set_id,
+    
+                -- Aggregate all options as JSON
+                JSON_ARRAYAGG(
+                    JSON_OBJECT(
+                        \'question_id\', qo.question_id,
+                        \'question_answer_id\', qo.question_answer_id,
+                        \'question_option\', qo.question_option,
+                        \'correct_answer\', qo.correct_answer
+                    )
+                ) AS options,
+    
+                -- Student\'s selected answer ID (NULL if not answered)
+                qa.your_answer_id,
+    
+                -- Student\'s answer text (NULL if not answered)
+                (SELECT question_option
+                 FROM question_option
+                 WHERE question_answer_id = qa.your_answer_id
+                 LIMIT 1) AS your_answer_text,
+    
+                -- Correct answer text
+                (SELECT question_option
+                 FROM question_option
+                 WHERE question_id = qb.id AND correct_answer = \'1\'
+                 LIMIT 1) AS correct_answer_text
+    
+            FROM question_set qs
+            INNER JOIN question_bank qb ON qb.id = qs.question_id
+            LEFT JOIN question_option qo ON qo.question_id = qb.id
+            LEFT JOIN question_answer qa ON qa.question_id = qb.id AND qa.user_id = \'STD25344B7F3D\'
+    
+            WHERE qs.subject_id = \'EXAM-25335D8B66\'
+            AND qs.question_set_id = \'QSet-002\'
+    
+            GROUP BY qb.id, qb.subject_id, qb.question_title, qs.question_set_id
+            ORDER BY qb.id
+        ')
+ 4 APPPATH\Controllers\ExamResultController.php(82): CodeIgniter\Database\BaseConnection->query('
+            SELECT
+                qb.id AS question_id,
+                qb.subject_id,
+                qb.question_title,
+                qs.question_set_id,
+    
+                -- Aggregate all options as JSON
+                JSON_ARRAYAGG(
+                    JSON_OBJECT(
+                        \'question_id\', qo.question_id,
+                        \'question_answer_id\', qo.question_answer_id,
+                        \'question_option\', qo.question_option,
+                        \'correct_answer\', qo.correct_answer
+                    )
+                ) AS options,
+    
+                -- Student\'s selected answer ID (NULL if not answered)
+                qa.your_answer_id,
+    
+                -- Student\'s answer text (NULL if not answered)
+                (SELECT question_option
+                 FROM question_option
+                 WHERE question_answer_id = qa.your_answer_id
+                 LIMIT 1) AS your_answer_text,
+    
+                -- Correct answer text
+                (SELECT question_option
+                 FROM question_option
+                 WHERE question_id = qb.id AND correct_answer = \'1\'
+                 LIMIT 1) AS correct_answer_text
+    
+            FROM question_set qs
+            INNER JOIN question_bank qb ON qb.id = qs.question_id
+            LEFT JOIN question_option qo ON qo.question_id = qb.id
+            LEFT JOIN question_answer qa ON qa.question_id = qb.id AND qa.user_id = ?
+    
+            WHERE qs.subject_id = ?
+            AND qs.question_set_id = ?
+    
+            GROUP BY qb.id, qb.subject_id, qb.question_title, qs.question_set_id
+            ORDER BY qb.id
+        ', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\ExamResultController->generateReport('EXAM-25335D8B66', 'STD25344B7F3D')
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExamResultController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-01-06 06:11:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 06:12:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 06:12:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 06:12:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 06:12:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 06:12:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 06:12:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 06:12:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 06:13:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 06:13:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 06:13:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 06:13:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 06:13:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 06:14:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 06:14:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 06:14:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 06:15:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 06:20:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 06:22:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 06:22:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 06:22:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 06:22:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 06:22:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 06:25:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-01-06 06:25:10 --> mysqli_sql_exception: Unknown column 'course_status' in 'where clause' in C:\laragon\www\schoolingtime\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\schoolingtime\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\schoolingtime\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\schoolingtime\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\schoolingtime\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\schoolingtime\app\Controllers\QuestionSetController.php(26): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\schoolingtime\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\QuestionSetController->index()
+#6 C:\laragon\www\schoolingtime\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+#7 C:\laragon\www\schoolingtime\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\schoolingtime\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2026-01-06 06:25:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'course_status' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `exam_setup`
+WHERE `course_teacher_id` = :course_teacher_id:
+AND `course_status` = :course_status:', [...], false)
+ 2 APPPATH\Controllers\QuestionSetController.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\QuestionSetController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-01-06 06:25:10 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'course_status' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `exam_setup`
+WHERE `course_teacher_id` = \'TEA2416113B98\'
+AND `course_status` = \'approved\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `exam_setup`
+WHERE `course_teacher_id` = \'TEA2416113B98\'
+AND `course_status` = \'approved\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `exam_setup`
+WHERE `course_teacher_id` = :course_teacher_id:
+AND `course_status` = :course_status:', [...], false)
+ 4 APPPATH\Controllers\QuestionSetController.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\QuestionSetController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-01-06 06:25:10 --> [Caused by] mysqli_sql_exception: Unknown column 'course_status' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `exam_setup`
+WHERE `course_teacher_id` = \'TEA2416113B98\'
+AND `course_status` = \'approved\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `exam_setup`
+WHERE `course_teacher_id` = \'TEA2416113B98\'
+AND `course_status` = \'approved\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `exam_setup`
+WHERE `course_teacher_id` = \'TEA2416113B98\'
+AND `course_status` = \'approved\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `exam_setup`
+WHERE `course_teacher_id` = :course_teacher_id:
+AND `course_status` = :course_status:', [...], false)
+ 5 APPPATH\Controllers\QuestionSetController.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\QuestionSetController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-01-06 06:33:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 06:33:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 06:41:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 06:41:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 06:46:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-01-06 06:46:49 --> ErrorException: Undefined variable $course_name
+in APPPATH\Views\examsystem\questionSetView.php on line 38.
+ 1 APPPATH\Views\examsystem\questionSetView.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $course_name', 'C:\\laragon\\www\\schoolingtime\\app\\Views\\examsystem\\questionSetView.php', 38)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\schoolingtime\\app\\Views\\examsystem\\questionSetView.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('examsystem/questionSetView', [], true)
+ 5 APPPATH\Controllers\QuestionSetController.php(27): view('examsystem/questionSetView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\QuestionSetController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-01-06 06:47:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-01-06 06:47:38 --> ErrorException: Undefined variable $course_name
+in APPPATH\Views\examsystem\questionSetView.php on line 38.
+ 1 APPPATH\Views\examsystem\questionSetView.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $course_name', 'C:\\laragon\\www\\schoolingtime\\app\\Views\\examsystem\\questionSetView.php', 38)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\schoolingtime\\app\\Views\\examsystem\\questionSetView.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('examsystem/questionSetView', [], true)
+ 5 APPPATH\Controllers\QuestionSetController.php(27): view('examsystem/questionSetView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\QuestionSetController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-01-06 06:50:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 06:50:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 06:50:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 06:50:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 06:54:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-01-06 06:54:34 --> ErrorException: Undefined variable $results1
+in APPPATH\Views\examsystem\questionSetView.php on line 39.
+ 1 APPPATH\Views\examsystem\questionSetView.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $results1', 'C:\\laragon\\www\\schoolingtime\\app\\Views\\examsystem\\questionSetView.php', 39)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\schoolingtime\\app\\Views\\examsystem\\questionSetView.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('examsystem/questionSetView', [], true)
+ 5 APPPATH\Controllers\QuestionSetController.php(27): view('examsystem/questionSetView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\QuestionSetController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-01-06 06:55:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 06:55:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:02:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-01-06 07:02:19 --> ErrorException: Undefined property: stdClass::$coures_title
+in APPPATH\Views\examsystem\questionSetView.php on line 38.
+ 1 APPPATH\Views\examsystem\questionSetView.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$coures_title', 'C:\\laragon\\www\\schoolingtime\\app\\Views\\examsystem\\questionSetView.php', 38)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\schoolingtime\\app\\Views\\examsystem\\questionSetView.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('examsystem/questionSetView', [], true)
+ 5 APPPATH\Controllers\QuestionSetController.php(43): view('examsystem/questionSetView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\QuestionSetController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-01-06 07:02:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-01-06 07:02:23 --> ErrorException: Undefined property: stdClass::$coures_title
+in APPPATH\Views\examsystem\questionSetView.php on line 38.
+ 1 APPPATH\Views\examsystem\questionSetView.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$coures_title', 'C:\\laragon\\www\\schoolingtime\\app\\Views\\examsystem\\questionSetView.php', 38)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\schoolingtime\\app\\Views\\examsystem\\questionSetView.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('examsystem/questionSetView', [], true)
+ 5 APPPATH\Controllers\QuestionSetController.php(43): view('examsystem/questionSetView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\QuestionSetController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-01-06 07:02:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:05:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:05:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:05:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:08:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:08:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:08:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:08:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:09:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:09:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:10:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:10:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:10:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:17:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:17:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:18:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:18:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:18:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:18:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:19:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:19:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:19:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:19:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:19:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:19:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:19:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:19:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:19:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:20:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:20:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:25:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:26:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:26:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:26:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:28:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:28:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:28:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:28:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:28:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-01-06 07:28:22 --> ErrorException: Undefined array key "question_set_id"
+in APPPATH\Controllers\QuestionSetController.php on line 104.
+ 1 APPPATH\Controllers\QuestionSetController.php(104): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "question_set_id"', 'C:\\laragon\\www\\schoolingtime\\app\\Controllers\\QuestionSetController.php', 104)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\QuestionSetController->question_set_insert_db()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-01-06 07:28:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-01-06 07:28:23 --> ErrorException: Undefined array key "question_set_id"
+in APPPATH\Controllers\QuestionSetController.php on line 104.
+ 1 APPPATH\Controllers\QuestionSetController.php(104): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "question_set_id"', 'C:\\laragon\\www\\schoolingtime\\app\\Controllers\\QuestionSetController.php', 104)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\QuestionSetController->question_set_insert_db()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionSetController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-01-06 07:28:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:28:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:28:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:28:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:28:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:28:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:28:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:28:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:29:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:29:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:29:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:29:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:29:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:29:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:29:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:29:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:29:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:29:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:29:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-01-06 07:29:45 --> ErrorException: Undefined variable $student_id
+in APPPATH\Views\examsystem\question_ready_exam_view.php on line 64.
+ 1 APPPATH\Views\examsystem\question_ready_exam_view.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $student_id', 'C:\\laragon\\www\\schoolingtime\\app\\Views\\examsystem\\question_ready_exam_view.php', 64)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\schoolingtime\\app\\Views\\examsystem\\question_ready_exam_view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('examsystem/question_ready_exam_view', [], true)
+ 5 APPPATH\Controllers\QuestionAnswerController.php(143): view('examsystem/question_ready_exam_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\QuestionAnswerController->currentTest('homepage_assets', 'img', 'apple-touch-icon.png')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionAnswerController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-01-06 07:29:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-01-06 07:29:45 --> ErrorException: Undefined variable $student_id
+in APPPATH\Views\examsystem\question_ready_exam_view.php on line 64.
+ 1 APPPATH\Views\examsystem\question_ready_exam_view.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $student_id', 'C:\\laragon\\www\\schoolingtime\\app\\Views\\examsystem\\question_ready_exam_view.php', 64)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\schoolingtime\\app\\Views\\examsystem\\question_ready_exam_view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('examsystem/question_ready_exam_view', [], true)
+ 5 APPPATH\Controllers\QuestionAnswerController.php(143): view('examsystem/question_ready_exam_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\QuestionAnswerController->currentTest('homepage_assets', 'img', 'favicon.png')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionAnswerController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-01-06 07:29:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:29:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:29:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:29:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:59:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:59:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:59:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:59:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:59:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:59:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:59:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:59:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 07:59:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 08:01:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 08:01:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 08:01:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 08:01:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 08:01:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 08:01:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 08:01:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 08:01:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 08:01:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 08:01:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 08:02:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 08:02:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 08:02:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 08:02:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 08:02:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 08:02:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 08:02:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 08:04:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 08:04:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 08:04:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 08:04:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 08:04:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 08:04:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 08:04:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-01-06 08:04:17 --> ErrorException: Undefined variable $student_id
+in APPPATH\Views\examsystem\question_ready_exam_view.php on line 64.
+ 1 APPPATH\Views\examsystem\question_ready_exam_view.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $student_id', 'C:\\laragon\\www\\schoolingtime\\app\\Views\\examsystem\\question_ready_exam_view.php', 64)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\schoolingtime\\app\\Views\\examsystem\\question_ready_exam_view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('examsystem/question_ready_exam_view', [], true)
+ 5 APPPATH\Controllers\QuestionAnswerController.php(143): view('examsystem/question_ready_exam_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\QuestionAnswerController->currentTest('homepage_assets', 'img', 'apple-touch-icon.png')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionAnswerController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-01-06 08:04:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-01-06 08:04:17 --> ErrorException: Undefined variable $student_id
+in APPPATH\Views\examsystem\question_ready_exam_view.php on line 64.
+ 1 APPPATH\Views\examsystem\question_ready_exam_view.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $student_id', 'C:\\laragon\\www\\schoolingtime\\app\\Views\\examsystem\\question_ready_exam_view.php', 64)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\schoolingtime\\app\\Views\\examsystem\\question_ready_exam_view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('examsystem/question_ready_exam_view', [], true)
+ 5 APPPATH\Controllers\QuestionAnswerController.php(143): view('examsystem/question_ready_exam_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\QuestionAnswerController->currentTest('homepage_assets', 'img', 'favicon.png')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionAnswerController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-01-06 08:04:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 08:04:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 08:04:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 08:04:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 08:04:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 08:04:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 08:04:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 09:16:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 09:16:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 09:16:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 09:25:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 09:25:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 09:25:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 09:25:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 09:25:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 09:25:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 09:29:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 09:29:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 09:29:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 09:29:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 09:29:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 09:29:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 09:29:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 09:29:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 09:29:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 09:29:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 09:37:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 09:37:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 09:37:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 09:38:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 09:38:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 09:38:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 09:44:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 09:44:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 09:44:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 09:44:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:04:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-01-06 10:04:36 --> ErrorException: Undefined variable $db
+in APPPATH\Views\examsystem\question_set_for_exam_start_View.php on line 37.
+ 1 APPPATH\Views\examsystem\question_set_for_exam_start_View.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $db', 'C:\\laragon\\www\\schoolingtime\\app\\Views\\examsystem\\question_set_for_exam_start_View.php', 37)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\schoolingtime\\app\\Views\\examsystem\\question_set_for_exam_start_View.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('examsystem/question_set_for_exam_start_View', [], true)
+ 5 APPPATH\Controllers\QuestionAnswerController.php(75): view('examsystem/question_set_for_exam_start_View', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\QuestionAnswerController->question_set_exam_start('EXAM-25335D8B66')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionAnswerController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-01-06 10:04:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:04:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:04:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:04:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:04:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:04:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:04:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:04:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:05:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:05:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:05:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:05:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:06:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:06:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:06:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:06:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:06:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:06:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:06:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:07:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:07:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:07:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:07:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:07:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:07:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:09:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:09:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:09:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:09:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:09:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:09:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:09:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:09:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:09:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:09:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:09:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:09:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:09:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:09:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:09:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:09:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:09:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:09:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:09:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:10:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:10:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:10:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:10:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:10:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:10:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:17:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:18:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:18:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:18:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:20:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:20:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:20:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:20:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:20:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:21:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:21:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:21:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:21:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:21:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:21:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:22:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:22:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:22:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-01-06 10:22:00 --> ErrorException: Undefined variable $student_id
+in APPPATH\Views\examsystem\question_ready_exam_view.php on line 64.
+ 1 APPPATH\Views\examsystem\question_ready_exam_view.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $student_id', 'C:\\laragon\\www\\schoolingtime\\app\\Views\\examsystem\\question_ready_exam_view.php', 64)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\schoolingtime\\app\\Views\\examsystem\\question_ready_exam_view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('examsystem/question_ready_exam_view', [], true)
+ 5 APPPATH\Controllers\QuestionAnswerController.php(152): view('examsystem/question_ready_exam_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\QuestionAnswerController->currentTest('homepage_assets', 'img', 'apple-touch-icon.png')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionAnswerController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-01-06 10:22:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-01-06 10:22:00 --> ErrorException: Undefined variable $student_id
+in APPPATH\Views\examsystem\question_ready_exam_view.php on line 64.
+ 1 APPPATH\Views\examsystem\question_ready_exam_view.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $student_id', 'C:\\laragon\\www\\schoolingtime\\app\\Views\\examsystem\\question_ready_exam_view.php', 64)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\schoolingtime\\app\\Views\\examsystem\\question_ready_exam_view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('examsystem/question_ready_exam_view', [], true)
+ 5 APPPATH\Controllers\QuestionAnswerController.php(152): view('examsystem/question_ready_exam_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\QuestionAnswerController->currentTest('homepage_assets', 'img', 'favicon.png')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionAnswerController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-01-06 10:22:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:22:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:22:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:22:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:22:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:22:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:22:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:22:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:22:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:22:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-01-06 10:22:15 --> ErrorException: Undefined variable $student_id
+in APPPATH\Views\examsystem\question_ready_exam_view.php on line 64.
+ 1 APPPATH\Views\examsystem\question_ready_exam_view.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $student_id', 'C:\\laragon\\www\\schoolingtime\\app\\Views\\examsystem\\question_ready_exam_view.php', 64)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\schoolingtime\\app\\Views\\examsystem\\question_ready_exam_view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('examsystem/question_ready_exam_view', [], true)
+ 5 APPPATH\Controllers\QuestionAnswerController.php(152): view('examsystem/question_ready_exam_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\QuestionAnswerController->currentTest('homepage_assets', 'img', 'favicon.png')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionAnswerController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-01-06 10:22:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-01-06 10:22:15 --> ErrorException: Undefined variable $student_id
+in APPPATH\Views\examsystem\question_ready_exam_view.php on line 64.
+ 1 APPPATH\Views\examsystem\question_ready_exam_view.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $student_id', 'C:\\laragon\\www\\schoolingtime\\app\\Views\\examsystem\\question_ready_exam_view.php', 64)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\schoolingtime\\app\\Views\\examsystem\\question_ready_exam_view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('examsystem/question_ready_exam_view', [], true)
+ 5 APPPATH\Controllers\QuestionAnswerController.php(152): view('examsystem/question_ready_exam_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\QuestionAnswerController->currentTest('homepage_assets', 'img', 'apple-touch-icon.png')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionAnswerController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-01-06 10:22:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:22:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:22:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:22:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:22:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:22:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:22:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:22:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:22:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:22:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:22:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:22:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:22:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:22:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:22:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:22:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:24:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:24:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-01-06 10:24:34 --> ErrorException: Undefined variable $student_id
+in APPPATH\Views\examsystem\question_ready_exam_view.php on line 64.
+ 1 APPPATH\Views\examsystem\question_ready_exam_view.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $student_id', 'C:\\laragon\\www\\schoolingtime\\app\\Views\\examsystem\\question_ready_exam_view.php', 64)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\schoolingtime\\app\\Views\\examsystem\\question_ready_exam_view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('examsystem/question_ready_exam_view', [], true)
+ 5 APPPATH\Controllers\QuestionAnswerController.php(152): view('examsystem/question_ready_exam_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\QuestionAnswerController->currentTest('homepage_assets', 'img', 'favicon.png')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionAnswerController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-01-06 10:24:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-01-06 10:24:34 --> ErrorException: Undefined variable $student_id
+in APPPATH\Views\examsystem\question_ready_exam_view.php on line 64.
+ 1 APPPATH\Views\examsystem\question_ready_exam_view.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $student_id', 'C:\\laragon\\www\\schoolingtime\\app\\Views\\examsystem\\question_ready_exam_view.php', 64)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\schoolingtime\\app\\Views\\examsystem\\question_ready_exam_view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('examsystem/question_ready_exam_view', [], true)
+ 5 APPPATH\Controllers\QuestionAnswerController.php(152): view('examsystem/question_ready_exam_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\QuestionAnswerController->currentTest('homepage_assets', 'img', 'apple-touch-icon.png')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionAnswerController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-01-06 10:24:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:24:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:24:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:24:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:24:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:24:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:24:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:24:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:24:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:24:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:24:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:25:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:25:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:25:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:25:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:25:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:25:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:25:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:25:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:25:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:25:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:25:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-01-06 10:25:39 --> ErrorException: Undefined variable $student_id
+in APPPATH\Views\examsystem\question_ready_exam_view.php on line 64.
+ 1 APPPATH\Views\examsystem\question_ready_exam_view.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $student_id', 'C:\\laragon\\www\\schoolingtime\\app\\Views\\examsystem\\question_ready_exam_view.php', 64)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\schoolingtime\\app\\Views\\examsystem\\question_ready_exam_view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('examsystem/question_ready_exam_view', [], true)
+ 5 APPPATH\Controllers\QuestionAnswerController.php(152): view('examsystem/question_ready_exam_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\QuestionAnswerController->currentTest('homepage_assets', 'img', 'favicon.png')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionAnswerController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-01-06 10:25:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-01-06 10:25:39 --> ErrorException: Undefined variable $student_id
+in APPPATH\Views\examsystem\question_ready_exam_view.php on line 64.
+ 1 APPPATH\Views\examsystem\question_ready_exam_view.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $student_id', 'C:\\laragon\\www\\schoolingtime\\app\\Views\\examsystem\\question_ready_exam_view.php', 64)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\schoolingtime\\app\\Views\\examsystem\\question_ready_exam_view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('examsystem/question_ready_exam_view', [], true)
+ 5 APPPATH\Controllers\QuestionAnswerController.php(152): view('examsystem/question_ready_exam_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\QuestionAnswerController->currentTest('homepage_assets', 'img', 'apple-touch-icon.png')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionAnswerController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-01-06 10:26:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:26:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:26:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:26:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:26:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:26:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:26:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-01-06 10:26:35 --> ErrorException: Undefined variable $student_id
+in APPPATH\Views\examsystem\question_ready_exam_view.php on line 64.
+ 1 APPPATH\Views\examsystem\question_ready_exam_view.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $student_id', 'C:\\laragon\\www\\schoolingtime\\app\\Views\\examsystem\\question_ready_exam_view.php', 64)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\schoolingtime\\app\\Views\\examsystem\\question_ready_exam_view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('examsystem/question_ready_exam_view', [], true)
+ 5 APPPATH\Controllers\QuestionAnswerController.php(152): view('examsystem/question_ready_exam_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\QuestionAnswerController->currentTest('homepage_assets', 'img', 'favicon.png')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionAnswerController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-01-06 10:26:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-01-06 10:26:35 --> ErrorException: Undefined variable $student_id
+in APPPATH\Views\examsystem\question_ready_exam_view.php on line 64.
+ 1 APPPATH\Views\examsystem\question_ready_exam_view.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $student_id', 'C:\\laragon\\www\\schoolingtime\\app\\Views\\examsystem\\question_ready_exam_view.php', 64)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\schoolingtime\\app\\Views\\examsystem\\question_ready_exam_view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('examsystem/question_ready_exam_view', [], true)
+ 5 APPPATH\Controllers\QuestionAnswerController.php(152): view('examsystem/question_ready_exam_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\QuestionAnswerController->currentTest('homepage_assets', 'img', 'apple-touch-icon.png')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionAnswerController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-01-06 10:54:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:54:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-01-06 10:54:05 --> ErrorException: Undefined variable $student_id
+in APPPATH\Views\examsystem\question_ready_exam_view.php on line 64.
+ 1 APPPATH\Views\examsystem\question_ready_exam_view.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $student_id', 'C:\\laragon\\www\\schoolingtime\\app\\Views\\examsystem\\question_ready_exam_view.php', 64)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\schoolingtime\\app\\Views\\examsystem\\question_ready_exam_view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('examsystem/question_ready_exam_view', [], true)
+ 5 APPPATH\Controllers\QuestionAnswerController.php(152): view('examsystem/question_ready_exam_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\QuestionAnswerController->currentTest('homepage_assets', 'img', 'apple-touch-icon.png')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionAnswerController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-01-06 10:54:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-01-06 10:54:05 --> ErrorException: Undefined variable $student_id
+in APPPATH\Views\examsystem\question_ready_exam_view.php on line 64.
+ 1 APPPATH\Views\examsystem\question_ready_exam_view.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $student_id', 'C:\\laragon\\www\\schoolingtime\\app\\Views\\examsystem\\question_ready_exam_view.php', 64)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\schoolingtime\\app\\Views\\examsystem\\question_ready_exam_view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('examsystem/question_ready_exam_view', [], true)
+ 5 APPPATH\Controllers\QuestionAnswerController.php(152): view('examsystem/question_ready_exam_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\QuestionAnswerController->currentTest('homepage_assets', 'img', 'favicon.png')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionAnswerController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-01-06 10:54:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:54:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:54:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:54:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:54:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 10:57:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:01:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:01:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:01:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:02:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:02:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:03:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:03:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:03:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:03:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:03:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:03:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:03:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:03:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:03:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:03:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:04:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:04:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:04:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:04:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:09:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:09:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:09:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:09:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:09:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:09:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:09:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:09:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:09:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:09:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:09:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:09:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:09:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:09:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:09:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:09:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:09:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:09:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:09:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:09:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:09:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:09:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:10:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:10:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:10:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:10:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:10:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:10:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:10:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:12:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:12:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:12:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:12:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:12:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:13:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:13:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:13:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:13:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:13:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:13:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:13:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:14:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:14:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:14:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:14:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:14:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:14:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:14:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:14:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:14:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:14:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:14:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:14:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:14:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:14:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:15:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:15:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:15:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:15:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:15:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:15:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:15:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:15:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:15:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:15:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:15:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-01-06 11:15:55 --> ErrorException: Undefined variable $student_id
+in APPPATH\Views\examsystem\question_ready_exam_view.php on line 64.
+ 1 APPPATH\Views\examsystem\question_ready_exam_view.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $student_id', 'C:\\laragon\\www\\schoolingtime\\app\\Views\\examsystem\\question_ready_exam_view.php', 64)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\schoolingtime\\app\\Views\\examsystem\\question_ready_exam_view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('examsystem/question_ready_exam_view', [], true)
+ 5 APPPATH\Controllers\QuestionAnswerController.php(152): view('examsystem/question_ready_exam_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\QuestionAnswerController->currentTest('homepage_assets', 'img', 'favicon.png')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionAnswerController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-01-06 11:15:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-01-06 11:15:55 --> ErrorException: Undefined variable $student_id
+in APPPATH\Views\examsystem\question_ready_exam_view.php on line 64.
+ 1 APPPATH\Views\examsystem\question_ready_exam_view.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $student_id', 'C:\\laragon\\www\\schoolingtime\\app\\Views\\examsystem\\question_ready_exam_view.php', 64)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\schoolingtime\\app\\Views\\examsystem\\question_ready_exam_view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('examsystem/question_ready_exam_view', [], true)
+ 5 APPPATH\Controllers\QuestionAnswerController.php(152): view('examsystem/question_ready_exam_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\QuestionAnswerController->currentTest('homepage_assets', 'img', 'apple-touch-icon.png')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionAnswerController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-01-06 11:15:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:16:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:16:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:16:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:16:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:16:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:16:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:16:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:16:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:17:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:17:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:17:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:17:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:17:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:17:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:17:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:17:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:17:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:17:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:17:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:17:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:17:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-01-06 11:17:48 --> ErrorException: Undefined variable $student_id
+in APPPATH\Views\examsystem\question_ready_exam_view.php on line 64.
+ 1 APPPATH\Views\examsystem\question_ready_exam_view.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $student_id', 'C:\\laragon\\www\\schoolingtime\\app\\Views\\examsystem\\question_ready_exam_view.php', 64)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\schoolingtime\\app\\Views\\examsystem\\question_ready_exam_view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('examsystem/question_ready_exam_view', [], true)
+ 5 APPPATH\Controllers\QuestionAnswerController.php(152): view('examsystem/question_ready_exam_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\QuestionAnswerController->currentTest('homepage_assets', 'img', 'apple-touch-icon.png')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionAnswerController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-01-06 11:17:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-01-06 11:17:48 --> ErrorException: Undefined variable $student_id
+in APPPATH\Views\examsystem\question_ready_exam_view.php on line 64.
+ 1 APPPATH\Views\examsystem\question_ready_exam_view.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $student_id', 'C:\\laragon\\www\\schoolingtime\\app\\Views\\examsystem\\question_ready_exam_view.php', 64)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\schoolingtime\\app\\Views\\examsystem\\question_ready_exam_view.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('examsystem/question_ready_exam_view', [], true)
+ 5 APPPATH\Controllers\QuestionAnswerController.php(152): view('examsystem/question_ready_exam_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\QuestionAnswerController->currentTest('homepage_assets', 'img', 'favicon.png')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\QuestionAnswerController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-01-06 11:17:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:17:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:18:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:18:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:18:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:18:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:18:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:18:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:18:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:18:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:19:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:19:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:19:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:21:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:21:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:21:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:21:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:21:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:21:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:23:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:23:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:23:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:24:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:24:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:24:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:24:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:24:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:26:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:26:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-06 11:26:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

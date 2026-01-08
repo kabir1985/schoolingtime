@@ -44,7 +44,7 @@ class ExamController extends BaseController
                   From exam_setup
                   LEFT Join teacher_course
                   ON exam_setup.exam_subject_course_id = teacher_course.course_id
-                  Where exam_setup.course_teacher_id = '$teacher_id' ");
+                  Where exam_setup.course_teacher_id = '$teacher_id' AND teacher_course.course_status = 'approved' ");
             $data['exam_info'] = $query->getResult();
             return view('examsystem/questionBankView', $data);
         } else {

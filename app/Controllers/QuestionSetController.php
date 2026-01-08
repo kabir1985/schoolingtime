@@ -18,14 +18,31 @@ class QuestionSetController extends BaseController
   public function index()
   {
 
+    // if (isset($_SESSION['id'])) {
+    //   $teacher_id = $_SESSION['id'];
+    //   $builder = $this->db->table('exam_setup');
+    //   $builder->where('course_teacher_id', $teacher_id);
+    //   $query = $builder->get();
+    //   $data['exam_setup_info'] = $query->getResult();
+    //   return view('examsystem/questionSetView', $data);
+    // }
+
+
     if (isset($_SESSION['id'])) {
       $teacher_id = $_SESSION['id'];
+  
       $builder = $this->db->table('exam_setup');
-      $builder->where('course_teacher_id', $teacher_id);
+      $builder->select('exam_setup.*, teacher_course.course_status, teacher_course.coures_title ');
+      $builder->join('teacher_course', 'teacher_course.course_id = exam_setup.exam_subject_course_id', 'left');
+      $builder->where('exam_setup.course_teacher_id', $teacher_id);
+      $builder->where('teacher_course.course_status', 'approved');
+  
       $query = $builder->get();
       $data['exam_setup_info'] = $query->getResult();
+  
       return view('examsystem/questionSetView', $data);
-    }
+  }
+
   }
 
 
