@@ -3,20 +3,56 @@
 <div class="container" data-aos="fade-up">
 <div class="row">
 <div class="col-lg-12">
+
+<?php
+// ================= SESSION & LIMIT LOGIC =================
+$session = session();
+
+$studentId = $session->get('student_id');
+$purchasedCourses = $session->get('purchased_courses') ?? [];
+// student/studentDashboardView.php পেজ থেকে সেশন দিয়ে আনা হল।
+
+// default: show only 3 chapters
+$limit = 3;
+
+// logged in + this course purchased → show all
+if (!empty($studentId) && in_array($course_id, $purchasedCourses)) {
+    $limit = count($course_contents);
+}
+// =========================================================
+?>
+
 <div class="accordion accordion-flush" id="faqlist1">
+
 <?php $serial_no = 1; ?>
 <?php foreach ($course_contents as $content) : ?>
+
+    <?php if ($serial_no > $limit) break; ?>
+
     <div class="accordion-item">
         <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-<?= $serial_no; ?>">
-                <?php echo $content->chapter_name;?>
+            <button class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq-content-<?= $serial_no; ?>">
+                <?= esc($content->chapter_name); ?>
             </button>
         </h2>
-        <div id="faq-content-<?= $serial_no; ?>" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
+
+        <div id="faq-content-<?= $serial_no; ?>"
+             class="accordion-collapse collapse"
+             data-bs-parent="#faqlist1">
+
             <div class="accordion-body">
+
                 <?php
                 $db = \Config\Database::connect();
-                $contentQuery = $db->query("SELECT video_title, pdf_file_path, video_link FROM course_content WHERE chapter_id = '$content->chapter_id'");
+                $contentQuery = $db->query(
+                    "SELECT video_title, pdf_file_path, video_link
+                     FROM course_content
+                     WHERE chapter_id = ?",
+                    [$content->chapter_id]
+                );
                 $videos = $contentQuery->getResult();
 
                 foreach ($videos as $index => $video) :
@@ -27,10 +63,14 @@
                             <span class="numberCircle"><?= $index + 1; ?></span>
                             <span class="video-title"><?= esc($video->video_title); ?></span>
                         </div>
+
                         <?php if ($isYouTube) : ?>
                             <div class="col-md-2 text-end">
-                                <button class="btn-sm video-btn" data-bs-toggle="modal" data-src="<?= esc($video->video_link); ?>" data-bs-target="#myModal">
-                                    <i class="fa-solid fa-video" style="color: #465FAB;"></i> ভিডিও 
+                                <button class="btn-sm video-btn"
+                                        data-bs-toggle="modal"
+                                        data-src="<?= esc($video->video_link); ?>"
+                                        data-bs-target="#myModal">
+                                    <i class="fa-solid fa-video"></i> ভিডিও
                                 </button>
                             </div>
                         <?php else : ?>
@@ -43,8 +83,11 @@
                     <?php if (!empty($video->pdf_file_path)) : ?>
                         <div class="row">
                             <div class="col-md-12">
-                                <a href="<?= base_url('public/notes/' . esc($video->pdf_file_path)); ?>" target="_blank" class="btn btn-link">
-                                    <i class="far fa-file-pdf" style="color:tomato;"></i> পিডিএফ নোট পড়ুন
+                                <a href="<?= base_url('public/notes/' . esc($video->pdf_file_path)); ?>"
+                                   target="_blank"
+                                   class="btn btn-link">
+                                    <i class="far fa-file-pdf" style="color:tomato;"></i>
+                                    পিডিএফ নোট পড়ুন
                                 </a>
                             </div>
                         </div>
@@ -53,30 +96,49 @@
                 <?php endforeach; ?>
 
                 <?php
-                // Fetch and display exams related to this chapter
-                $examQuery = $db->query("SELECT * FROM exam_setup WHERE subject_chapter_id = ? AND exam_subject_course_id = ?", [$content->chapter_id, $course_id]);
+                // ================= Exams =================
+                $examQuery = $db->query(
+                    "SELECT * FROM exam_setup
+                     WHERE subject_chapter_id = ?
+                     AND exam_subject_course_id = ?",
+                    [$content->chapter_id, $course_id]
+                );
                 $exams = $examQuery->getResult();
+
                 foreach ($exams as $exam) :
                 ?>
                     <div class="row">
                         <div class="col-md-12">
-                            <!-- <a href="<?//= site_url('exam/question-set-exam-start/' . esc($exam->exam_setup_id)); ?>" class="btn btn-link"> -->
-                            <a href="<?= site_url('student/exam-system/'); ?>" class="btn btn-link">   
-                            <i class="fas fa-user-graduate"></i> পরীক্ষা দিন | <?= esc($exam->exam_name); ?>
+                            <a href="<?= site_url('student/exam-system/'); ?>"
+                               class="btn btn-link">
+                                <i class="fas fa-user-graduate"></i>
+                                পরীক্ষা দিন | <?= esc($exam->exam_name); ?>
                             </a>
                         </div>
                     </div>
                 <?php endforeach; ?>
+
             </div>
         </div>
     </div>
+
     <?php $serial_no++; ?>
-<?php endforeach; //exit('sdfdsfdsfs'); ?>
+
+<?php endforeach; ?>
+
+</div>
+
+<?php if (empty($studentId) || !in_array($course_id, $purchasedCourses)) : ?>
+    <div class="alert alert-warning text-center mt-3">
+        🔒 সম্পূর্ণ কোর্স দেখতে লগইন করে কোর্সটি কিনুন
+    </div>
+<?php endif; ?>
+
 </div>
 </div>
 </div>
-</div>
-</section>				
+</section>
+				
 </p>
 
 <style>

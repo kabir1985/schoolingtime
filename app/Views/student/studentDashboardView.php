@@ -83,7 +83,11 @@ $session = \Config\Services::session();
                           <div class="card-body">
                             <h5 class="card-title"><?php
                                                     $db = \Config\Database::connect();
-                                                    $row->course_id;
+                                                   $row->course_id;
+                                                  ///////////////purchased course session e set kora//////////////////
+                                                  $session = session();
+                                                  $session->set('purchased_courses', array_column($course_purchase_info, 'course_id'));
+                                                  //////////////////////////////////
                                                     $builder = $db->table('teacher_course');
                                                     $builder->where('course_id', $row->course_id);
                                                     $query   = $builder->get();

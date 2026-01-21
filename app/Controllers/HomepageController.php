@@ -95,32 +95,13 @@ class HomepageController extends BaseController
                     $course_info_query = $this->db->query($sql, [$course_id]);
                     $data['course_info'] = $course_info_query->getRow();
 
-
-
         //**************************************************************************************************** */
-
-        // Fetch course contents separately for better organization
-
-        //     $course_contents_query = $this->db->query("SELECT chapter_id, chapter_name, course_content_id, video_title, pdf_file_path, video_link 
-        //                                 FROM course_content 
-        //                                 WHERE course_id = '$course_id' 
-        //                                 GROUP BY chapter_id, chapter_name 
-        //                                 ORDER BY course_content_id");
-
-
-        // $data['course_contents'] = $course_contents_query->getResult();
-
-
-
         $course_contents_query = $this->db->query("
         SELECT chapter_id, chapter_name, course_content_id, video_title, pdf_file_path, video_link
         FROM course_content
         WHERE course_id = '$course_id'
-        ORDER BY chapter_id, course_content_id
-    ");
-    $data['course_contents'] = $course_contents_query->getResult();
-
-
+        ORDER BY chapter_id, course_content_id ");
+        $data['course_contents'] = $course_contents_query->getResult();
 
         $course_batch_query = $this->db->query(" SELECT *  FROM course_batch
                                 WHERE course_id = $course_id");

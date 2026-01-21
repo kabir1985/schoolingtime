@@ -1,4 +1,4 @@
-<?= $this->extend('homepage/layout') ?>
+j<?= $this->extend('homepage/layout') ?>
 
 <?= $this->section('content') ?>
 <main id="main" class="mt-5">
@@ -72,7 +72,7 @@
                                                         </p>
                                                         <div class="flex-container bg-light ">
                                                             <div>কোর্স ফি:&nbsp;<?php echo $row->course_price; ?>&nbsp;টাকা</div>
-                                                            <div>শুরুঃ&nbsp;<?php echo $row->course_start_date; ?></div>
+                                                            <div>শুরুঃ&nbsp;<?php //echo $row->course_start_date; ?></div>
                                                         </div>
                                                     </div>
 

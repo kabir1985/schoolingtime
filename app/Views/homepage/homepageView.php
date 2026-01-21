@@ -1,7 +1,7 @@
   <?= $this->extend('homepage/layout') ?>
 
   <?= $this->section('page_title') ?>
-  SchoolingTime - Online Learning Platform in Bangladesh.
+              SchoolingTime - Online Learning Platform in Bangladesh.
   <?= $this->endSection() ?>
 
 
