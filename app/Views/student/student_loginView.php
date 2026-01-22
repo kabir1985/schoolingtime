@@ -28,11 +28,13 @@
                 <form action="<?php echo site_url('student/login-insert') ?>" method="get">
 
                   <!-- Email input -->
+                  <label for="email" class="form-label">Email Address</label>
                   <div class="form-outline mb-2">
                     <input type="email" class="form-control" name="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" placeholder="Your Email" required>
                   </div>
 
                   <!-- Password input -->
+                  <label for="password" class="form-label">Password</label>
                   <div class="form-outline mb-2">
                     <input type="password" class="form-control" name="password" placeholder="Your Password" required>
                   </div>
@@ -102,5 +104,121 @@
   .py-5 {
     padding-bottom: 1rem !important;
   }
+
+
+/* ===== Overall Typography ===== */
+body {
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+}
+
+/* ===== Headline Improvement ===== */
+h2 {
+  line-height: 1.4;
+}
+
+/* ===== Paragraph Readability ===== */
+p {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* ===== Card Enhancement ===== */
+.card {
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== Card Padding Balance ===== */
+.card-body {
+  padding-top: 2.5rem !important;
+  padding-bottom: 2rem !important;
+}
+
+/* ===== Form Label Styling ===== */
+.form-label {
+  font-weight: 500;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+/* ===== Input Field Enhancement ===== */
+.form-control {
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  padding: 10px 12px;
+  font-size: 15px;
+}
+
+.form-control:focus {
+  border-color: #0099cc;
+  box-shadow: 0 0 0 0.15rem rgba(0, 153, 204, 0.25);
+}
+
+/* ===== Login Button Upgrade ===== */
+.btn-primary {
+  background: linear-gradient(135deg, #0099cc, #007fa6) !important;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 30px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #007fa6, #006b8c) !important;
+  transform: translateY(-1px);
+}
+
+/* ===== Divider Styling ===== */
+.divider:before,
+.divider:after {
+  background: linear-gradient(to right, transparent, #ccc, transparent);
+}
+
+/* ===== Google Button Styling ===== */
+.google.btn {
+  border-radius: 30px;
+  font-size: 15px;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.google.btn:hover {
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
+
+/* ===== Link Styling ===== */
+a {
+  text-decoration: none;
+  color: #0099cc;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Mobile Optimization ===== */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 28px;
+  }
+
+  .card-body {
+    padding: 1.5rem !important;
+  }
+}
+
+
 </style>
 <?= $this->endSection() ?>

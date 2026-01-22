@@ -2,12 +2,12 @@
 
 <?= $this->section('content') ?>
 <main id="main" class="pt-1">
-    <!-- Section: Design Block -->
     <section>
-        <!-- Jumbotron -->
         <div class="px-4 py-5 px-md-5 text-center text-lg-start" style="background-color: hsl(0, 0%, 96%)">
             <div class="container">
                 <div class="row gx-lg-5 align-items-center">
+
+                    <!-- LEFT CONTENT -->
                     <div class="col-lg-6 mb-0 mb-lg-0">
                         <h3 class="mb-4 display-6 fw-bold ls-tight">
                             এখানে রেজিস্ট্রেশন করার মাধ্যমে <br />
@@ -15,93 +15,208 @@
                         </h3>
                         <hr>
                         <p style="color: hsl(217, 10%, 50.8%); text-align:justify;">
-                            <i class="fa fa-paper-plane" aria-hidden="true"></i>
-                            বাংলা ভাষায় নির্মিত একটি অনলাইন লার্নিং প্ল্যাটফর্ম, শিক্ষার্থীরা এখানে রেজিস্ট্রেশন এর মাধ্যমে যে কোন সময় যে কোন জায়গায় বসে আমাদের শিক্ষা সেবা গ্রহণ পারবে। আমাদের সাথে থাকার জন্য আপনাকে অনেক ধন্যবাদ।
+                            <i class="fa fa-paper-plane"></i>
+                            বাংলা ভাষায় নির্মিত একটি অনলাইন লার্নিং প্ল্যাটফর্ম, শিক্ষার্থীরা এখানে রেজিস্ট্রেশন এর মাধ্যমে যে কোন সময় যে কোন জায়গায় বসে আমাদের শিক্ষা সেবা গ্রহণ পারবে।
                         </p>
                         <p style="color: hsl(217, 10%, 50.8%); text-align:justify;">
-                            <i class="fa fa-paper-plane" aria-hidden="true"></i>
-                            পৃথিবীর যেকোন প্রান্তে বসে ইন্টারনেটের কল্যাণে ভিডিও রেকর্ডিং কোর্স, সরাসরি কোচিং ক্লাস, কুইজ, ভাষা কোর্স, ফ্রিল্যান্সিং জব ইত্যাদির মাধ্যমে নিজেকে একুশ শতকের চ্যালেঞ্জ মোকাবেলার যোগ্য নাগরিক হিসেবে গড়ে তোলার প্রত্যয়ে স্কুলিং টাইমের সংগেই থাকুন। নিজেকে প্রতিষ্ঠার মাধ্যমে অন্যদের থেকে এগিয়ে থাকুন।
+                            <i class="fa fa-paper-plane"></i>
+                            ভিডিও কোর্স, লাইভ ক্লাস, কুইজ ও আধুনিক শিক্ষাসেবার মাধ্যমে নিজেকে দক্ষ করে তুলুন।
                         </p>
                     </div>
 
+                    <!-- RIGHT FORM -->
                     <div class="col-lg-6 mb-5 mb-lg-0">
                         <div class="card">
                             <div class="card-body py-5 px-md-5">
-                                <!-- Display error message if available -->
+
+                                <!-- ERROR MESSAGE -->
                                 <?php if (session()->getFlashdata('error')): ?>
                                     <div class="alert alert-danger">
                                         <?= session()->getFlashdata('error') ?>
                                     </div>
                                 <?php endif; ?>
 
-                                <form action="<?php echo site_url('student/registration-insert') ?>" method="post">
-                                    <!-- Name input -->
-                                    <div class="form-outline mb-2">
-                                        <input type="text" name="name" minlength="4" class="form-control" placeholder="Your Name" required>
-                                    </div>
-                                    <!-- Email input -->
-                                    <div class="form-outline mb-2">
-                                        <input type="email" class="form-control" name="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" title="Input Valid Email Address" placeholder="Your Email">
-                                    </div>
-                                    <!-- Mobile input -->
-                                    <div class="form-outline mb-2">
-                                        <input type="text" class="form-control" minlength="10" name="mobile" placeholder="Your Mobile" required>
+                                <form action="<?= site_url('student/registration-insert') ?>" method="post">
+
+                                    <!-- NAME -->
+                                    <div class="form-floating mb-2">
+                                        <input type="text" class="form-control"
+                                               id="name" name="name"
+                                               minlength="4"
+                                               placeholder="নাম লিখুন" required>
+                                        <label for="name">নাম <span class="text-danger">*</span></label>
                                     </div>
 
-                                    <!-- Password input -->
-                                    <div class="form-outline mb-2">
-                                        <input type="password" class="form-control" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" placeholder="Your Password">
+                                    <!-- EMAIL -->
+                                    <div class="form-floating mb-2">
+                                        <input type="email" class="form-control"
+                                               id="email" name="email"
+                                               pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+                                               title="সঠিক ইমেইল ঠিকানা লিখুন"
+                                               placeholder="ইমেইল লিখুন" required>
+                                        <label for="email">ইমেইল ঠিকানা <span class="text-danger">*</span></label>
                                     </div>
 
-                                    <!-- Captcha question -->
-                                    <div class="form-outline mb-2">
-                                        <label class="captcha-label"><?= esc($captchaQuestion) ?></label>
-                                        <input type="text" name="captcha" class="form-control" placeholder="Your Answer" required>
+                                    <!-- MOBILE -->
+                                    <div class="form-floating mb-2">
+                                        <input type="text" class="form-control"
+                                               id="mobile" name="mobile"
+                                               minlength="10"
+                                               placeholder="মোবাইল নাম্বার লিখুন" required>
+                                        <label for="mobile">মোবাইল নাম্বার <span class="text-danger">*</span></label>
                                     </div>
 
+                                    <!-- PASSWORD -->
+                                    <div class="form-floating mb-2">
+                                        <input type="password" class="form-control"
+                                               id="password" name="password"
+                                               pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"
+                                               title="কমপক্ষে ১টি বড়, ১টি ছোট হাতের অক্ষর ও সংখ্যা থাকতে হবে"
+                                               placeholder="পাসওয়ার্ড লিখুন" required>
+                                        <label for="password">পাসওয়ার্ড <span class="text-danger">*</span></label>
+                                    </div>
+
+                                    <!-- CAPTCHA -->
+                                    <label class="captcha-label mb-1">
+                                        <?= esc($captchaQuestion) ?> <span class="text-danger">*</span>
+                                    </label>
+                                    <div class="form-outline mb-3">
+                                        <input type="text" name="captcha"
+                                               class="form-control"
+                                               placeholder="উত্তর লিখুন" required>
+                                    </div>
+
+                                    <!-- SUBMIT -->
                                     <div class="form-group my-2">
-                                        <button type="submit" class="btn btn-info form-control" style="color:white;">
-                                            <i class="fa fa-user-plus"></i> Student Registration
+                                        <button type="submit" class="btn btn-info form-control text-white">
+                                            <i class="fa fa-user-plus"></i> স্টুডেন্ট রেজিস্ট্রেশন
                                         </button>
                                     </div>
                                 </form>
+
                                 <div class="text-center">
-                                    <p>Already have an account? <a href="<?php echo site_url('student/login'); ?>">Login here</a></p>
+                                    <p>আগেই একাউন্ট আছে?
+                                        <a href="<?= site_url('student/login'); ?>">লগইন করুন</a>
+                                    </p>
                                 </div>
+
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
-        <!-- Jumbotron -->
     </section>
-    <!-- Section: Design Block -->
 </main>
 <?= $this->endSection() ?>
 
 <?= $this->section('custom-style') ?>
-<style type="text/css">
-    .divider:after,
-    .divider:before {
-        content: "";
-        flex: 1;
-        height: 1px;
-        background: #eee;
-    }
-
+<style>
     .text-primary {
         color: #0099cc !important;
     }
 
-    /* Custom styles for captcha label */
-    .captcha-label {
-        background-color: #EEEDEB; /* Set background color to green */
-        color: tomato; /* Optional: change text color for better contrast */
-        padding: 8px; /* Add some padding */
-        width: 100%; /* Make the label width 100% */
-        display: block; /* Ensures the label behaves like a block element */
-        border-radius: 4px; /* Optional: add rounded corners */
+    .form-floating label {
+        font-size: 14px;
     }
+
+    .captcha-label {
+        background-color: #EEEDEB;
+        color: tomato;
+        padding: 8px;
+        display: block;
+        border-radius: 4px;
+    }
+
+    .text-danger {
+        font-weight: bold;
+    }
+
+/* ===== Card Enhancement ===== */
+.card {
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== Headline Styling ===== */
+h3 {
+    line-height: 1.4;
+}
+
+/* ===== Paragraph Readability ===== */
+p {
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* ===== Floating Input Enhancement ===== */
+.form-floating > .form-control {
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.form-floating > .form-control:focus {
+    border-color: #0099cc;
+    box-shadow: 0 0 0 0.15rem rgba(0, 153, 204, 0.25);
+}
+
+/* ===== Floating Label Color ===== */
+.form-floating label {
+    color: #6c757d;
+}
+
+.form-floating > .form-control:focus + label {
+    color: #0099cc;
+}
+
+/* ===== Required Star Highlight ===== */
+.text-danger {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* ===== Button Upgrade ===== */
+.btn-info {
+    background: linear-gradient(135deg, #0099cc, #007fa6);
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.btn-info:hover {
+    background: linear-gradient(135deg, #007fa6, #006b8c);
+    transform: translateY(-1px);
+}
+
+/* ===== Captcha Box Improvement ===== */
+.captcha-label {
+    font-size: 15px;
+    background: linear-gradient(135deg, #f7f7f7, #ececec);
+    border-left: 4px solid #0099cc;
+}
+
+/* ===== Mobile Optimization ===== */
+@media (max-width: 768px) {
+    .px-md-5 {
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+    }
+
+    h3 {
+        font-size: 26px;
+    }
+}
+
+
 </style>
 <?= $this->endSection() ?>
