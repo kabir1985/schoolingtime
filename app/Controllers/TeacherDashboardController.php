@@ -136,69 +136,83 @@ class TeacherDashboardController extends BaseController
     public function TeacherCourseContentInsert()
     {
         /////////pdf file insertion///////////////////////////
-
-        if ($this->request->getFile('file') != '') {
+    
+        $pdf_file = '';     // ✅ prevent undefined variable warning
+        $avatar   = null;   // ✅ prevent undefined variable warning
+    
+        if ($this->request->getFile('file')) {
+    
             helper(['form', 'url']);
-
+    
             $validated = $this->validate([
                 'file' => [
                     'uploaded[file]',
-                    // 'mime_in[file,image/jpg,image/jpeg,image/gif,image/png,application/pdf]',
                     'mime_in[file,application/pdf]',
                     'max_size[file,4096]',
                 ],
             ]);
-
-            $msg = 'Please select a valid file';
-            //exit(WRITEPATH);
+    
             if ($validated) {
+    
                 $avatar = $this->request->getFile('file');
-                // $avatar->move(WRITEPATH . 'uploads');
-
-                //$avatar->move(WRITEPATH . 'assets/images');
-                $avatar->move(ROOTPATH . 'public/notes/');
+    
+                if ($avatar->isValid() && !$avatar->hasMoved()) {
+                    $avatar->move(ROOTPATH . 'public/notes/');
+                    $pdf_file = $avatar->getClientName(); // ✅ only set if uploaded
+                }
+    
             }
-
-            $pdf_file = $avatar->getClientName();
-        } else {
-            $pdf_file = '';
+            // ❌ no else, so no undefined variable warning
         }
+    
         ///////////////////////////////////////////////////////////////
-        $dataList =  $_REQUEST;
-
+    
+        $dataList = $_REQUEST ?? [];   // ✅ prevent undefined warning
+    
         $chapter_name_array = isset($dataList['chapter_name']) ? $dataList['chapter_name'] : [];
-
+    
         $dataTosave = [];
+    
         foreach ($chapter_name_array as $key => $value) {
-
+    
             $day_no = date('z');
-            $unique_text = substr(md5(microtime(true) . mt_Rand()), -5);
+            $unique_text = substr(md5(microtime(true) . mt_rand()), -5);
             $chapter_id = strtoupper('Chap' . date('y') . str_pad($day_no, 2, '0', STR_PAD_LEFT) . '' . $unique_text);
-            for ($k = 0; $k < count($dataList['video_title'][$key]); $k++) {
-
-                $item = [
-                    "course_id" => $dataList['course_id'],
-                    "chapter_id" => $chapter_id,
-                    "chapter_name" => $value[0],
-                    "video_title" => $dataList['video_title'][$key][$k],
-                    "video_link" => $dataList['video_link'][$key][$k],
-                    "pdf_file_path" => $pdf_file
-                ];
-                array_push($dataTosave, $item);
+    
+            if (!empty($dataList['video_title'][$key])) {   // ✅ avoid undefined index
+    
+                for ($k = 0; $k < count($dataList['video_title'][$key]); $k++) {
+    
+                    $item = [
+                        "course_id"     => $dataList['course_id'] ?? '',
+                        "chapter_id"    => $chapter_id,
+                        "chapter_name"  => is_array($value) ? ($value[0] ?? '') : $value, // ✅ safe
+                        "video_title"   => $dataList['video_title'][$key][$k] ?? '',
+                        "video_link"    => $dataList['video_link'][$key][$k] ?? '',
+                        "pdf_file_path" => $pdf_file
+                    ];
+    
+                    array_push($dataTosave, $item);
+                }
             }
         }
-
+    
         if (count($dataTosave)) {
+    
             $this->TeacherCourseContentStoreDbModelObject->insertBatch($dataTosave);
-
+    
             $_SESSION['isLoggedIn'] = true;
-            $_SESSION['message'] = "Course Content Creation Successful ";
+            $_SESSION['message']   = "Course Content Creation Successful ";
+    
             return redirect()->to(base_url() . 'teacher/course-content-view');
+    
         } else {
+    
             $_SESSION['message'] = "Course Content Creation Fail!";
             return redirect()->to(base_url() . 'teacher/course-content-view');
         }
     }
+    
     public function TeacherCourseContentFromDb()
     {
         $course_id = $_GET['id'];
@@ -298,7 +312,7 @@ class TeacherDashboardController extends BaseController
         if (isset($_SESSION['id'])) {
             $teacher_id = $_SESSION['id'];
             $query   = $this->db->query("SELECT course_id,coures_title FROM  teacher_course 
-                        Where course_teacher_id = '$teacher_id' AND course_status = 'approved' ");
+                        Where course_teacher_id = '$teacher_id' ");
 
 
             $data['results'] = $query->getResult();

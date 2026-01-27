@@ -14,7 +14,13 @@
                    যেমনঃ 
                       পদার্থ বিজ্ঞান 
                       রসায়ন বিজ্ঞান
-                      গণিত ">হেল্প এখানে
+                      গণিত
+
+                      ৩. Video Link এ youtube লিঙ্ক বসাতে চাইলে ভিডিওর উপর রাইট মাউস ক্লিক করে copy embed code পেস্ট করে src থেকে https://www.youtube.com/embed/zqJHo3uwZ90 টাইপের অংশ টুকু নিতে হবে।
+                      ৪। Recorded Video Course/ Recorded class এর ক্ষেত্রে পিডিএফ আপলোড করতে হবে না।
+                      ">
+                    
+                      হেল্প এখানে
           </button>
         </p>
         <hr>
@@ -62,7 +68,7 @@
                         <!-- https://www.geeksforgeeks.org/upload-pdf-file-to-mysql-database-for-multiple-records-using-php/ -->
 
                         <div class="row mt-1">
-                          <div class="col-3">পিডিএফ নোট আপলোড</div>
+                          <div class="col-3">পিডিএফ নোট আপলোড (not for recorded video course)</div>
                           <div class="col-9"><input class="form-control rounded-0" name="file" type="file" id="formFile"></div>
                         </div>
                     </td>
