@@ -17,17 +17,6 @@ class QuestionSetController extends BaseController
 
   public function index()
   {
-
-    // if (isset($_SESSION['id'])) {
-    //   $teacher_id = $_SESSION['id'];
-    //   $builder = $this->db->table('exam_setup');
-    //   $builder->where('course_teacher_id', $teacher_id);
-    //   $query = $builder->get();
-    //   $data['exam_setup_info'] = $query->getResult();
-    //   return view('examsystem/questionSetView', $data);
-    // }
-
-
     if (isset($_SESSION['id'])) {
       $teacher_id = $_SESSION['id'];
   
@@ -127,7 +116,7 @@ class QuestionSetController extends BaseController
     $this->QuestionSetInsertModelObject->insertBatch($dataTosave);
 
     $this->db->transComplete();
-    echo "Question Insert Successfull";
+    echo "আপনি সফলভাবে প্রশ্ন তিরী করেছেন ।";
   }
 
 }

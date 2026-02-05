@@ -94,8 +94,9 @@ foreach ($question_set_selection as $row) {
                                     <p>পরীক্ষা নির্দেশনা</p>
                                     <ul>
                                         <li>পরীক্ষায় পাস করার জন্য কমপক্ষে ৪০% মার্কস পেতে হবে।</li>
-                                        <li>পুনরায় পরীক্ষা অর্থাৎ রিটেক পরীক্ষার জন্য কমপক্ষে ১ দিন অপেক্ষা করতে হবে।
-                                        </li>
+                                        <li>পুনরায় পরীক্ষা অর্থাৎ রিটেক পরীক্ষার দেয়া যাবে না।</li>
+                                        <li>নির্দিষ্ট সময়ের পর আর উত্তর দেয়া যাবে না, সিস্টেম অটোমেটিক সাবমিট করে দিবে।</li>
+                                        <!-- <li></li> -->
                                     </ul>
                                     <div class="read-more d-flex align-text-center">
                                         <a href="<?php echo site_url('exam/exam-question-show') . '/' . $question_set_id . '/' . $exam_setup_id . '/' . $exam_info->exam_duration; ?>"

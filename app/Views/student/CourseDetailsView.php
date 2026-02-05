@@ -129,36 +129,63 @@ $this->endSection();
     });
     ///////////////////////////////////////////////////////////////////////////////////
 
-    ///////////////////////////////////////////////////////////////////////////////////
+    //////////////////////Video Show Start/////////////////////////////////////////////////////////////
 
     // Gets the video src from the data-src on each button
-
     var $videoSrc;
-    $('.video-btn').click(function() {
-      $videoSrc = $(this).data("src");
-    });
-    // console.log($videoSrc);
 
-    // when the modal is opened autoplay it  
-    $('#myModal').on('shown.bs.modal', function(e) {
-      // console.log($videoSrc.trim());
-      // set the video src to autoplay and not to show related video. Youtube related video is like a box of chocolates... you never know what you're gonna get
-      if ($videoSrc.trim() != "#") {
-        $("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
-        $("#no_video").hide();
-        $("#video").show();
-      } else {
-        $("#video").hide();
+$('.video-btn').click(function() {
+    $videoSrc = $(this).data("src"); // get video URL
+});
+
+// When the modal opens
+$('#myModal').on('shown.bs.modal', function(e) {
+    $("#video").hide();
+    $("#video_html5").hide();
+    $("#no_video").hide();
+
+    if (!$videoSrc || $videoSrc.trim() === "#") {
         $("#no_video").show();
-      }
+        return;
+    }
 
-    })
+    // Detect YouTube
+    var youtubeMatch = $videoSrc.match(/(?:youtube\.com\/(?:embed\/|watch\?v=)|youtu\.be\/)([a-zA-Z0-9_-]+)/);
+    if (youtubeMatch) {
+        var videoId = youtubeMatch[1];
+        $("#video").attr('src', "https://www.youtube.com/embed/" + videoId + "?autoplay=1&modestbranding=1&rel=0");
+        $("#video").show();
+        return;
+    }
 
-    // stop playing the youtube video when I close the modal
-    $('#myModal').on('hide.bs.modal', function(e) {
-      // a poor man's stop video
-      $("#video").attr('src', $videoSrc);
-    })
+    // Detect Vimeo
+    var vimeoMatch = $videoSrc.match(/vimeo\.com\/(\d+)/);
+    if (vimeoMatch) {
+        var videoId = vimeoMatch[1];
+        $("#video").attr('src', "https://player.vimeo.com/video/" + videoId + "?autoplay=1");
+        $("#video").show();
+        return;
+    }
+
+    // Detect direct video URL (.mp4, .webm, .ogg)
+    if ($videoSrc.match(/\.(mp4|webm|ogg)$/i)) {
+        $("#video_html5").attr('src', $videoSrc);
+        $("#video_html5")[0].play();
+        $("#video_html5").show();
+        return;
+    }
+
+    // If no match, show No Video
+    $("#no_video").show();
+});
+
+// Reset modal on close
+$('#myModal').on('hidden.bs.modal', function () {
+    $("#video").attr('src', '').hide();
+    $("#video_html5").attr('src', '').hide();
+    $("#no_video").hide();
+});
+////////////////////////////Video show End/////////////////////////////////////////////////
 
 
 

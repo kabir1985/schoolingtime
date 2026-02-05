@@ -1,5 +1,4 @@
 <?php
-
 function renderCourseTabItem($course) {
     ob_start();
     ?>
@@ -27,7 +26,7 @@ function renderCourseTabItem($course) {
                 </p>
                 <div class="flex-container bg-light ">
                     <div>কোর্স ফি:&nbsp;<?php echo $course->course_price; ?>&nbsp;টাকা</div>
-                    <div>শুরুঃ&nbsp;<?php echo $course->course_start_date; ?></div>
+                    <!-- <div>শুরুঃ&nbsp;<?php //echo $course->course_start_date; ?></div> -->
                 </div>
             </div>
         </a>

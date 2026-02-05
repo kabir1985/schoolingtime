@@ -5,21 +5,54 @@
 <div class="col-lg-12">
 
 <?php
-// ================= SESSION & LIMIT LOGIC =================
+// ================= SESSION & DB =================
 $session = session();
+$db = \Config\Database::connect();
 
-$studentId = $session->get('student_id');
+// ================= SESSION DATA =================
+// টিচার লগিন করলে
+$teacher_id         = $session->get('id');
+$teacher_course_ids = $session->get('course_ids') ?? []; //TeacherDashboardController.php controller AND //teacher/teacherDashboardView.php
+// echo $teacher_id;
+// //echo $teacher_course_ids;
+// echo "<pre>";
+//  print_r($teacher_course_ids);
+//  echo "</pre>";
+//  exit();
+
+
+//স্টুডেন্ট লগিন করলে
+$studentId        = $session->get('student_id');
 $purchasedCourses = $session->get('purchased_courses') ?? [];
-// student/studentDashboardView.php পেজ থেকে সেশন দিয়ে আনা হল।
 
-// default: show only 3 chapters
-$limit = 3;
+// ================= DEFAULT =================
+$limit = 3; // default only 3 chapters
+$isTeacherAllowed = false;
+$isStudentAllowed = false;
 
-// logged in + this course purchased → show all
+// ================= STUDENT CHECK =================
 if (!empty($studentId) && in_array($course_id, $purchasedCourses)) {
     $limit = count($course_contents);
+    $isStudentAllowed = true;
 }
-// =========================================================
+
+// ================= TEACHER CHECK =================
+if (!empty($teacher_id) && !empty($teacher_course_ids)) {
+
+    $builder = $db->table('teacher_course');
+    $builder->where('course_teacher_id', $teacher_id);
+    $builder->where('course_id', $course_id);
+    $builder->where('course_status', 'approved');
+    $builder->whereIn('course_id', $teacher_course_ids);
+  
+
+    $teacherCourse = $builder->get()->getRow();
+
+    if ($teacherCourse) {
+        $limit = count($course_contents);
+        $isTeacherAllowed = true;
+    }
+}
 ?>
 
 <div class="accordion accordion-flush" id="faqlist1">
@@ -46,7 +79,7 @@ if (!empty($studentId) && in_array($course_id, $purchasedCourses)) {
             <div class="accordion-body">
 
                 <?php
-                $db = \Config\Database::connect();
+                // ================= CONTENT =================
                 $contentQuery = $db->query(
                     "SELECT video_title, pdf_file_path, video_link
                      FROM course_content
@@ -58,45 +91,44 @@ if (!empty($studentId) && in_array($course_id, $purchasedCourses)) {
                 foreach ($videos as $index => $video) :
                     $isYouTube = preg_match('/youtu\.be|youtube\.com/', $video->video_link);
                 ?>
-                    <div class="row mb-0">
-                        <div class="col-md-10 video-item">
-                            <span class="numberCircle"><?= $index + 1; ?></span>
-                            <span class="video-title"><?= esc($video->video_title); ?></span>
-                        </div>
-
-                        <?php if ($isYouTube) : ?>
-                            <div class="col-md-2 text-end">
-                                <button class="btn-sm video-btn"
-                                        data-bs-toggle="modal"
-                                        data-src="<?= esc($video->video_link); ?>"
-                                        data-bs-target="#myModal">
-                                    <i class="fa-solid fa-video"></i> ভিডিও
-                                </button>
-                            </div>
-                        <?php else : ?>
-                            <div class="col-md-12">
-                                <?= esc($video->video_link); ?>
-                            </div>
-                        <?php endif; ?>
+                <div class="row mb-0">
+                    <div class="col-md-10 video-item">
+                        <span class="numberCircle"><?= $index + 1; ?></span>
+                        <span class="video-title"><?= esc($video->video_title); ?></span>
                     </div>
 
-                    <?php if (!empty($video->pdf_file_path)) : ?>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <a href="<?= base_url('public/notes/' . esc($video->pdf_file_path)); ?>"
-                                   target="_blank"
-                                   class="btn btn-link">
-                                    <i class="far fa-file-pdf" style="color:tomato;"></i>
-                                    পিডিএফ নোট পড়ুন
-                                </a>
-                            </div>
-                        </div>
+                    <?php if ($isYouTube) : ?>
+                    <div class="col-md-2 text-end">
+                        <button class="btn-sm video-btn"
+                                data-bs-toggle="modal"
+                                data-src="<?= esc($video->video_link); ?>"
+                                data-bs-target="#myModal">
+                            <i class="fa-solid fa-video"></i> ভিডিও
+                        </button>
+                    </div>
+                    <?php else : ?>
+                    <div class="col-md-12">
+                        <?= esc($video->video_link); ?>
+                    </div>
                     <?php endif; ?>
+                </div>
 
+                <?php if (!empty($video->pdf_file_path)) : ?>
+                <div class="row">
+                    <div class="col-md-12">
+                        <a href="<?= base_url('public/notes/' . esc($video->pdf_file_path)); ?>"
+                           target="_blank"
+                           class="btn btn-link">
+                            <i class="far fa-file-pdf" style="color:tomato;"></i>
+                            পিডিএফ নোট পড়ুন
+                        </a>
+                    </div>
+                </div>
+                <?php endif; ?>
                 <?php endforeach; ?>
 
                 <?php
-                // ================= Exams =================
+                // ================= EXAM =================
                 $examQuery = $db->query(
                     "SELECT * FROM exam_setup
                      WHERE subject_chapter_id = ?
@@ -107,39 +139,37 @@ if (!empty($studentId) && in_array($course_id, $purchasedCourses)) {
 
                 foreach ($exams as $exam) :
                 ?>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <a href="<?= site_url('student/exam-system/'); ?>"
-                               class="btn btn-link">
-                                <i class="fas fa-user-graduate"></i>
-                                পরীক্ষা দিন | <?= esc($exam->exam_name); ?>
-                            </a>
-                        </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <a href="<?= site_url('student/exam-system'); ?>"
+                           class="btn btn-link">
+                            <i class="fas fa-user-graduate"></i>
+                            পরীক্ষা দিন | <?= esc($exam->exam_name); ?>
+                        </a>
                     </div>
+                </div>
                 <?php endforeach; ?>
 
             </div>
         </div>
     </div>
 
-    <?php $serial_no++; ?>
-
-<?php endforeach; ?>
+<?php $serial_no++; endforeach; ?>
 
 </div>
 
-<?php if (empty($studentId) || !in_array($course_id, $purchasedCourses)) : ?>
-    <div class="alert alert-warning text-center mt-3">
-        🔒 সম্পূর্ণ কোর্স দেখতে লগইন করে কোর্সটি কিনুন
-    </div>
+<?php if (!$isTeacherAllowed && !$isStudentAllowed) : ?>
+<div class="alert alert-warning text-center mt-3">
+    🔒 সম্পূর্ণ কোর্স দেখতে লগইন করে কোর্সটি কিনুন
+</div>
 <?php endif; ?>
 
 </div>
 </div>
 </div>
-</section>
-				
+</section>			
 </p>
+
 
 <style>
 .video-item {

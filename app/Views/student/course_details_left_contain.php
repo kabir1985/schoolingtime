@@ -44,7 +44,7 @@ function formatDateToBangla($date) {
     // Only show batch information if remaining seats are greater than 0
     if ($remainingSeats > 0) { ?>
     <div class="entry-footer">
-	  <i class="bi bi-watch"></i>
+	  <i class="bi bi-collection"></i>
 	  <ul class="cats">
 		  <li><a href="#">ব্যাচ:</a></li>
 		  <li><a href="#"><?= convertToBangla($batch_info->batch_id); ?></a></li>
@@ -74,21 +74,22 @@ function formatDateToBangla($date) {
 
 
 <!---------------------------------->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-	  <div class="modal-content">
-		  <div class="modal-body">
-			  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></span>
-			  </button>
-			  <!-- 16:9 aspect ratio -->
-			  <div class="ratio ratio-16x9 text-center">
-				  <iframe class="embed-responsive-item" src="" id="video" allowscriptaccess="always" allow="autoplay"></iframe>
-				  <h1 id="no_video">No Video Found !</h1>
-			  </div>
-		  </div>
-	  </div>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-body text-center">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="ratio ratio-16x9">
+          <iframe id="video" src="" frameborder="0" allow="autoplay; fullscreen" allowfullscreen style="display:none;"></iframe>
+          <video id="video_html5" controls style="width:100%; display:none;"></video>
+          <h1 id="no_video" style="display:none;">No Video Found !</h1>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
+
 <!-------------------------------->
 
 <article class="entry entry-single">

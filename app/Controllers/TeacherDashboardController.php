@@ -40,7 +40,7 @@ class TeacherDashboardController extends BaseController
             $query   = $this->db->query("SELECT * FROM teacher_profile WHERE teacher_id = '$teacher_id'");
             $data['results'] = $query->getResult();
 
-            $query   = $this->db->query("SELECT coures_title FROM  teacher_course  WHERE course_teacher_id = '$teacher_id' AND course_status = 'approved' ");
+            $query   = $this->db->query("SELECT * FROM  teacher_course  WHERE course_teacher_id = '$teacher_id' AND course_status = 'approved' ");
             $data['myCourse'] = $query->getResult();
 
             return view('teacher/teacherDashboardView', $data);
@@ -128,7 +128,7 @@ class TeacherDashboardController extends BaseController
         //$db = \Config\Database::connect();
 
         $query   = $this->db->query("SELECT * FROM  teacher_course 
-                     Where course_teacher_id = '$teacher_id' AND course_type_name != 'Question_And_Exam' AND course_status = 'approved' ");
+                     Where course_teacher_id = '$teacher_id' AND course_status = 'approved' ");
         $data['courseContents'] = $query->getResult();
         return view('teacher/TeacherCourseContentView', $data);
     }
@@ -301,7 +301,7 @@ class TeacherDashboardController extends BaseController
         if (isset($_SESSION['id'])) {
             $teacher_id = $_SESSION['id'];
             $query   = $this->db->query("SELECT * FROM  teacher_course 
-                        Where course_teacher_id = '$teacher_id' AND course_type_name != 'Question_And_Exam' AND course_status = 'approved'");
+                        Where course_teacher_id = '$teacher_id'  AND course_status = 'approved'");
             $data['results'] = $query->getResult();
             return view('teacher/TeacherCourseIncludeView', $data);
         }
@@ -377,7 +377,8 @@ class TeacherDashboardController extends BaseController
                 "end_date" => $batchInfo->end_date,
                 "time_slot" => $batchInfo->time_slot,
                 "weekly_days" => $batchInfo->weekly_days,
-                "max_seats" => $batchInfo->max_seats
+                "max_seats" => $batchInfo->max_seats,
+                "status"    => $batchInfo->status
             ];
             array_push($response, $item);
         }
@@ -405,7 +406,8 @@ class TeacherDashboardController extends BaseController
             'end_date'  => $_GET['end_date_edit'],
             'time_slot' => $_GET['time_slot'],
             'weekly_days' => implode(', ', $daysArray), // convert days array to string
-            'max_seats' => $_GET['max_seats']
+            'max_seats' => $_GET['max_seats'],
+            'status'   => $_GET['batch_status'] 
         ];
         $update =  $this->BatchModelObject->where('batch_id', $batch_id)->set($data)->update();
         if ($update) {
@@ -442,27 +444,92 @@ class TeacherDashboardController extends BaseController
         echo $response;
     }
     ///////////////////////////////////////////////////////////////////////////
+    // public function courseInclude_insert_db()
+    // {
+    //     // $teacher_id = $_SESSION['id'];
+    //     $data = [
+    //         'course_id'  => $this->request->getVar('course_id'),
+    //         'course_duration'       => $this->request->getVar('course_duration'),
+    //         'live_class'        => $this->request->getVar('live_class'),
+    //         'course_exam'       => $this->request->getVar('course_exam'),
+    //         'course_model_test'    => $this->request->getVar('course_model_test'),
+    //         'class_time'    => $this->request->getVar('class_time')
+    //     ];
+    //     $course_include_section = $this->CourseIncludeModelObject->insert($data);
+    //     if ($course_include_section > 0) {
+    //         $_SESSION['isLoggedIn'] = true;
+    //         $_SESSION['message'] = "Course Include Section Data Creation Successful ";
+    //         return redirect()->to(base_url() . 'teacher/course-view');
+    //     } else {
+    //         $_SESSION['message'] = "Unable to Create Course!";
+    //         return redirect()->to(base_url() . 'teacher/course-include');
+    //     }
+    // }
+
+
     public function courseInclude_insert_db()
     {
-        // $teacher_id = $_SESSION['id'];
-        $data = [
-            'course_id'  => $this->request->getVar('course_id'),
-            'course_duration'       => $this->request->getVar('course_duration'),
-            'live_class'        => $this->request->getVar('live_class'),
-            'course_exam'       => $this->request->getVar('course_exam'),
-            'course_model_test'    => $this->request->getVar('course_model_test'),
-            'class_time'    => $this->request->getVar('class_time')
+        // -----------------------------
+        // 1. Validation (All fields required)
+        // -----------------------------
+        $rules = [
+            'course_id'          => 'required',
+            'course_duration'    => 'required',
+            'live_class'         => 'required',
+            'course_exam'        => 'required',
+            'course_model_test'  => 'required',
+            'class_time'         => 'required',
         ];
+    
+        if (!$this->validate($rules)) {
+            $_SESSION['message'] = "সব ফিল্ড সঠিকভাবে পূরণ করুন, বিশেষ করে কোর্স সিলেকশন";
+            return redirect()->to(base_url() . 'teacher/course-include');
+        }
+    
+        // -----------------------------
+        // 2. Duplicate Course Check
+        // -----------------------------
+        $course_id = $this->request->getVar('course_id');
+    
+        $alreadyExists = $this->CourseIncludeModelObject
+            ->where('course_id', $course_id)
+            ->first();
+    
+        if ($alreadyExists) {
+            $_SESSION['message'] = "এই কোর্সের তথ্য ইতোমধ্যে যুক্ত করা হয়েছে!";
+            return redirect()->to(base_url() . 'teacher/course-include');
+        }
+    
+        // -----------------------------
+        // 3. Insert Data (Your Original Logic)
+        // -----------------------------
+        $data = [
+            'course_id'           => $course_id,
+            'course_duration'     => $this->request->getVar('course_duration'),
+            'live_class'          => $this->request->getVar('live_class'),
+            'course_exam'         => $this->request->getVar('course_exam'),
+            'course_model_test'   => $this->request->getVar('course_model_test'),
+            'class_time'          => $this->request->getVar('class_time')
+        ];
+    
         $course_include_section = $this->CourseIncludeModelObject->insert($data);
-        if ($course_include_section > 0) {
+    
+        if ($course_include_section) {
             $_SESSION['isLoggedIn'] = true;
-            $_SESSION['message'] = "Course Include Section Data Creation Successful ";
+            $_SESSION['message'] = "Course Include Section Data Creation Successful";
             return redirect()->to(base_url() . 'teacher/course-view');
         } else {
             $_SESSION['message'] = "Unable to Create Course!";
             return redirect()->to(base_url() . 'teacher/course-include');
         }
     }
+    
+
+
+
+
+
+
 
     public function teacher_profile_update($teacher_id = 0)
     {

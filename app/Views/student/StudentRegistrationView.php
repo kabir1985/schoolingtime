@@ -5,7 +5,7 @@
     <section>
         <div class="px-4 py-5 px-md-5 text-center text-lg-start" style="background-color: hsl(0, 0%, 96%)">
             <div class="container">
-                <div class="row gx-lg-5 align-items-center">
+                <div class="row gx-lg-5 align-items-left pt-2">
 
                     <!-- LEFT CONTENT -->
                     <div class="col-lg-6 mb-0 mb-lg-0">

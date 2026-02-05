@@ -8,7 +8,7 @@
      <!-----##########################This is content space which will change in every page-##################################-------------->
      <div class="container bg-light " data-aos="fade-up">
        <header class="section-header" style="padding-bottom: 2px !important;">
-         <p>Course Include Section Creation</p>
+         <p>Course Include/ কোর্সে আরো পাবেন Creation</p>
          <hr>
        </header>
        <div class="container">

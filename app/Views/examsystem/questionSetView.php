@@ -42,14 +42,6 @@ foreach ($exam_setup_info as $row) {
                     <option selected disabled>Please Select Question Set</option>
                     <?php
 
-////////////////////Course Name from Teacher Course Table/////////////////////
-// $db = \Config\Database::connect();
-// $query = $db->query("SELECT * FROM question_set_setup ");
-// $results = $query->getResult();
-// foreach ($results as $row) {
-//     $question_set_id = $row->question_set_id;
-//     $question_set_title = $row->question_set_title;
-
                   $db = \Config\Database::connect();
                   $builder = $db->table('question_set_setup');
                   $results = $builder->get()->getResult();
@@ -106,26 +98,19 @@ foreach ($exam_setup_info as $row) {
 
 <?=$this->section('custom-script')?>
 <script type="text/javascript">
-// $('#sampleTable').DataTable();
 $(document).ready(function() {
-
 
     $('.form-select').on("change", function() {
 
         var course_id = $("#exam_name_id option:selected").attr('data-course_id');
         var question_set_id = $("#question_set_name option:selected").attr('data-question_set_id');
 
-        //alert(course_id);
-
-        // if (course_id != null && question_set_id != null) {
         var question_insert_url = "<?=site_url('/exam/question-set-creation')?>";
-
 
         var targetTable = $('#questionDataTable').DataTable({
             paging: false,
-            scrollY: "500px", // Enables vertical scrolling
-            scrollCollapse: true, // Collapses empty space when fewer rows exist
-            // searching: false,
+            scrollY: "500px",
+            scrollCollapse: true,
             "bDestroy": true,
 
             ajax: {
@@ -162,38 +147,46 @@ $(document).ready(function() {
 
     });
 
-
-
+    // -----------------------------
+    // Click submit with front-end validation
+    // -----------------------------
     $('.click_checkbox').on('click', function() {
 
         var course_id = $("#exam_name_id option:selected").attr('data-course_id');
         var question_set_id = $("#question_set_name option:selected").attr('data-question_set_id');
-        //alert(question_set_id);
-        var question_id_array = new Array();
-        $.each($('#questionDataTable :checkbox:checked'), function(a, b) {
+
+        if (!course_id) {
+            alert("দয়া করে বিষয় নির্বাচন করুন!");
+            return false;
+        }
+
+        if (!question_set_id) {
+            alert("দয়া করে সেট নির্বাচন করুন!");
+            return false;
+        }
+
+        var question_id_array = [];
+        $.each($('#questionDataTable :checkbox:checked'), function() {
             question_id_array.push(this.value);
         });
 
-        //alert(question_id_array);
+        if (question_id_array.length === 0) {
+            alert("দয়া করে অন্তত একটি প্রশ্ন সিলেক্ট করুন!");
+            return false;
+        }
 
+        // AJAX POST
         $.post('<?=site_url("/exam/question-insert-into-set");?>', {
                 id: question_id_array,
                 question_set_id,
                 course_id,
             })
             .done(function(data) {
-                alert("Data Loaded: " + data);
-                location.reload(); //reload without time
-                // $("#response").html(data);
-                // $('#modaldatashow').modal('show');
+                alert("চমৎকার : " + data);
+                location.reload();
             });
-
-
     });
 
-    // console.log(question_id_array);
 });
-
-// e.preventDefault();
 </script>
 <?=$this->endSection()?>

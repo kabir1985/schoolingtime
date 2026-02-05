@@ -70,17 +70,6 @@ class HomepageController extends BaseController
 
     public function Course_details_view($course_id)
     {
-
-      //  echo $course_id;
-       // exit();
-       //*************************************************************************************************** */
-        //         $course_info_query = $this->db->query("SELECT tc.*, tp.*, ci.*
-        //                      FROM teacher_course tc 
-        //                      LEFT JOIN teacher_profile tp ON tc.course_teacher_id = tp.teacher_id
-        //                      LEFT JOIN course_include ci ON tc.course_id = ci.course_id
-        //                      WHERE tc.course_id = '$course_id' AND tc.course_status = 'approved'");
-        // $data['course_info'] = $course_info_query->getRow();
-
         $sql = "SELECT 
                     tc.*, 
                     tp.*, 
@@ -103,9 +92,22 @@ class HomepageController extends BaseController
         ORDER BY chapter_id, course_content_id ");
         $data['course_contents'] = $course_contents_query->getResult();
 
-        $course_batch_query = $this->db->query(" SELECT *  FROM course_batch
-                                WHERE course_id = $course_id");
+        // $course_batch_query = $this->db->query(" SELECT *  FROM course_batch
+        //                         WHERE course_id = $course_id");
+        // $data['course_batch'] = $course_batch_query->getResult();
+
+        $course_batch_query = $this->db->query(
+            "SELECT batch_id, course_id, start_date, weekly_days, time_slot, max_seats, booked_seats
+             FROM course_batch
+             WHERE course_id = ?
+               AND status = 'active'
+               AND booked_seats < max_seats
+             ORDER BY batch_id ASC",
+            [$course_id]
+        );
+        
         $data['course_batch'] = $course_batch_query->getResult();
+
 
         // Check if course information exists before setting up metadata
         if ($data['course_info']) {

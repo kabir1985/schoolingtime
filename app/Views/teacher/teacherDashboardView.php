@@ -25,15 +25,28 @@
                     <div class="col-lg-12 bg-success ">
                         <div class="card  m-1">
                             <ul class="list-group list-group-flush">
-                                <?php
-                  foreach($myCourse as $course)
-                  {
-                  ?>
+                            <?php
+                            $course_ids = [];   // ✅ MUST initialize
+                            foreach($myCourse as $course)
+                            {
+                                $course_ids[] = $course->course_id; // ✅ correct
+                            ?>
                                 <li class="list-group-item d-flex justify-content-center">
                                     <h5><?php echo $course->coures_title; ?></h5>
                                 </li>
                                 <?php
-                 }
+                            }
+
+                                                 // Remove duplicates if needed
+                    $course_ids = array_unique($course_ids);
+
+                    // Store in session
+                    $_SESSION['course_ids'] = $course_ids;
+
+                    // echo "<pre>";
+                    // print_r($_SESSION['course_ids']);
+                    // echo "</pre>";
+                    // exit();
                 ?>
                             </ul>
                         </div>
@@ -82,10 +95,11 @@
 
 
                                 <?php
+                               
                 foreach ($student_list_show as $row) {
                   //echo "Student ID".$row['selected_student_id'];
                   $course_id = $row['course_id'];
-                ?>
+                             ?>
                                 <?php
                   $db = \Config\Database::connect();
                   $query   = $db->query("SELECT * FROM  teacher_course WHERE course_id = '$course_id'");
@@ -109,14 +123,38 @@
                                 </div>
                                 <hr>
 
-                                <?php } ?>
+                                <?php }
+                                                               
+                                ?>
 
                             </div>
                         </div>
                     </div>
                 </div>
+
+
+                <!-- //////////////////////////////////////////////////// -->
+                <style> li {color:green !important;}</style>
+                    <div><h2>শিক্ষক এর জন্য নির্দেশনা</h2></div>
+                    <ol class="list-group list-group-numbered">
+                    <li class="list-group-item">
+                        শিক্ষক লগইন করার পর প্রথমে --> প্রোফাইল সেটআপ --> কোর্স তৈরি করুন-->ব্যাচ তৈরি করুন
+                    </li>
+                    <li class="list-group-item">
+                        ওয়েবসাইট এডমিন কে কল করে তিরী করা কোর্স পাবলিশ করে নিতে হবে।
+                    </li>
+                    <li class="list-group-item">
+                        কোর্স পাবলিশ হওয়ার পর অন্যান্য মেনুগুলো কাজ করবে
+                    </li>
+                    </ol>
+
+                  <!-- //////////////////////////////////////////////////////// -->
             </div>
         </section>
+
+
+
+
 
         <!---------------------------------------------------------------------------->
 
@@ -131,42 +169,42 @@
 
     <!--################# Modal Boby######################################-->
     <!-- The Modal -->
-    <div class="modal" id="modaldatashow">
+    <div class="modal fade" id="modaldatashow" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
 
                 <!-- Modal Header -->
-                <div class="modal-header">
-                    <h4 class="modal-title">Enrolled Student List</h4>
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title">Enrolled Student List</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
 
-                <!-- Modal body -->
+                <!-- Modal Body -->
                 <div class="modal-body">
 
-
-                    <table class="table table-striped">
-                        <thead>
-                            <tr class="table-primary">
-                                <th scope="col">ID</th>
-                                <th scope="col">Name</th>
-                                <th scope="col">Email</th>
-                                <th scope="col">Mobile</th>
-                                <th scope="col">City</th>
-                                <th scope="col">Edu Level</th>
-                                <th scope="col">Last Edu</th>
-                            </tr>
-                        </thead>
-
-                        <tbody id="result_data">
-
-                        </tbody>
-                    </table>
-
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped table-hover">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>Batch ID</th>
+                                    <th>Student ID</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Mobile</th>
+                                    <th>City</th>
+                                    <th>Edu Level</th>
+                                    <th>Last Edu</th>
+                                </tr>
+                            </thead>
+                            <tbody id="result_data">
+                                <!-- Dynamic rows from AJAX/PHP -->
+                            </tbody>
+                        </table>
+                    </div>
 
                 </div>
 
-                <!-- Modal footer -->
+                <!-- Modal Footer -->
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
                 </div>
@@ -174,6 +212,7 @@
             </div>
         </div>
     </div>
+
     <!---##################################################################-->
 
 

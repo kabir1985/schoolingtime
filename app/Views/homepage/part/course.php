@@ -30,7 +30,7 @@
                             'Online_Video_Course' => 'রেকর্ডেট ভিডিও কোর্স',
                             'Online_Live_Coaching' => 'অনলাইন লাইভ কোচিং',
                             'Share_Your_Notes' => 'শেয়ার নোট',
-                            'Question_And_Exam' => 'ভর্তি ও চাকুরী পরীক্ষা'
+                            'Question_And_Exam' => 'পরীক্ষা কোর্স'
                         ];
                         foreach ($courseTypes as $courseType): ?>
                             <li class="nav-item">

@@ -55,7 +55,7 @@
                                 <?php
                                 $courseID = $item["course_id"];
                                 $db = \Config\Database::connect();
-                                $query = $db->query("SELECT batch_id, weekly_days, max_seats, booked_seats, time_slot FROM course_batch WHERE course_id ='$courseID'");
+                                $query = $db->query("SELECT batch_id, weekly_days, max_seats, booked_seats, time_slot FROM course_batch WHERE course_id ='$courseID' AND status = 'active' ");
                                 $batch_info = $query->getResult();
                                 $batchAvailable = false; // Track whether a batch with available seats exists
                                 foreach ($batch_info as $row) {

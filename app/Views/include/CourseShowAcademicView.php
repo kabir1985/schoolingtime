@@ -41,7 +41,7 @@
                   $course_status = $row->course_status;
                 ?>
                     <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                    <a href="<?php echo site_url('/CourseDetailsHomepage') . '/' . $row->course_id; ?>">
+                    <a href="<?php echo site_url('/course-details-page') . '/' . $row->course_id; ?>">
                       <!-- <div class="service-box blue">
                         <img src="<?= base_url() ?>/public/CourseUploads/<?= $row->course_pic; ?>" alt="avatar" class="img-fluid img-thumbnail" style="width:316px; height:200px">
                         <h4><?php echo $row->coures_title; ?></h4>
@@ -73,7 +73,7 @@
                                                         </p>
                                                         <div class="flex-container bg-light ">
                                                             <div>কোর্স ফি:&nbsp;<?php echo $row->course_price; ?>&nbsp;টাকা</div>
-                                                            <div>শুরুঃ&nbsp;<?php echo $row->course_start_date; ?></div>
+                                                            <!-- <div>শুরুঃ&nbsp;<?php //echo $row->course_start_date; ?></div> -->
                                                         </div>
                                                     </div>
 
